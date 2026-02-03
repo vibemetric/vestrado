@@ -1,0 +1,2402 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare 150+ Trading Instruments | Forex, Crypto, Shares CFDs | Vestrado</title>
+    <meta name="description" content="Compare spreads, leverage, and costs across Forex, Crypto, Indices, Shares, Metals & Energies. Trade 150+ instruments with spreads from 0.0 pips. ESMA-compliant leverage up to 1:2000.">
+    
+    <!-- Compliance Meta Tags -->
+    <meta name="financial-product-type" content="CFD Trading Platform">
+    <meta name="regulatory-warning" content="CFDs are complex instruments. 76.4% of retail accounts lose money.">
+    <meta name="max-leverage-forex" content="1:2000">
+    <meta name="max-leverage-crypto" content="1:100">
+    <meta name="max-leverage-shares" content="1:5 (Retail) / 1:20 (Professional)">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Compare 150+ Trading Instruments | Vestrado">
+    <meta property="og:description" content="Side-by-side comparison of spreads, leverage & costs for Forex, Crypto, Indices, Shares, Metals & Energies.">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
+        
+        /* Trust & Compliance Bar */
+        .compliance-bar {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 12px 0;
+            font-size: 13px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .compliance-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .compliance-badges {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 12px;
+        }
+        
+        .badge i {
+            font-size: 14px;
+            color: #9aea00;
+        }
+        
+        .regulatory-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 11px;
+        }
+        
+        /* Header */
+        .header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1a3a8f;
+            text-decoration: none;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: #9aea00;
+        }
+        
+        .btn-demo {
+            background: #2d5cc2;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-demo:hover {
+            background: #1a3a8f;
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-highlight {
+            color: #9aea00;
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .hero-feature i {
+            color: #9aea00;
+            font-size: 20px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 16px 35px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(154, 234, 0, 0.3);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #2d5cc2;
+            border: 2px solid #2d5cc2;
+            padding: 14px 35px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: #2d5cc2;
+            color: white;
+        }
+        
+        /* CRITICAL: Leverage Disclosure Table */
+        .leverage-disclosure {
+            background: white;
+            padding: 50px 20px;
+            border-top: 4px solid #ff9800;
+        }
+        
+        .leverage-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .leverage-warning {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        
+        .leverage-warning h3 {
+            color: #e65100;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .leverage-warning p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .leverage-table-wrapper {
+            overflow-x: auto;
+        }
+        
+        .leverage-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .leverage-table thead {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+        }
+        
+        .leverage-table th {
+            padding: 18px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        
+        .leverage-table td {
+            padding: 16px 18px;
+            border-bottom: 1px solid #e1e8f0;
+        }
+        
+        .leverage-table tbody tr:hover {
+            background: #f8fbff;
+        }
+        
+        .leverage-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .leverage-high {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .leverage-medium {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .leverage-low {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+        
+        .risk-level {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .risk-star {
+            color: #ff9800;
+            font-size: 14px;
+        }
+        
+        .risk-star.inactive {
+            color: #ddd;
+        }
+        
+        /* Comparison Matrix Section */
+        .comparison-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
+        
+        .comparison-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .comparison-matrix {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            overflow-x: auto;
+        }
+        
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 900px;
+        }
+        
+        .matrix-table thead th {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .matrix-table thead th:first-child {
+            border-radius: 10px 0 0 0;
+            text-align: left;
+        }
+        
+        .matrix-table thead th:last-child {
+            border-radius: 0 10px 0 0;
+        }
+        
+        .matrix-table tbody td {
+            padding: 18px 15px;
+            text-align: center;
+            border-bottom: 1px solid #e1e8f0;
+        }
+        
+        .matrix-table tbody td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: #1a3a8f;
+        }
+        
+        .matrix-table tbody tr:hover {
+            background: #f8fbff;
+        }
+        
+        .best-value {
+            background: #e8f5e9;
+            color: #388e3c;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .instrument-icon {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        /* Interactive Tabs Section */
+        .instruments-tabs {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .tabs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .tabs-nav {
+            display: flex;
+            gap: 0;
+            border-bottom: 3px solid #e1e8f0;
+            overflow-x: auto;
+            margin-bottom: 40px;
+        }
+        
+        .tab-button {
+            background: transparent;
+            border: none;
+            padding: 18px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -3px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tab-button:hover {
+            color: #2d5cc2;
+        }
+        
+        .tab-button.active {
+            color: #1a3a8f;
+            border-bottom-color: #9aea00;
+            background: #f8fbff;
+        }
+        
+        .tab-preview {
+            font-size: 12px;
+            color: #999;
+            font-weight: 400;
+            margin-top: 3px;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .tab-header {
+            background: linear-gradient(135deg, #f8fbff 0%, #e3f2fd 100%);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .tab-header h3 {
+            font-size: 2rem;
+            color: #1a3a8f;
+            margin-bottom: 10px;
+        }
+        
+        .tab-header p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .tab-stats {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .stat-item i {
+            color: #9aea00;
+            font-size: 20px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .stat-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a3a8f;
+        }
+        
+        /* Risk Warning Boxes */
+        .risk-warning-box {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .risk-warning-box.high-risk {
+            background: #ffebee;
+            border-left-color: #d32f2f;
+        }
+        
+        .risk-warning-box h4 {
+            color: #e65100;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .risk-warning-box.high-risk h4 {
+            color: #c62828;
+        }
+        
+        .risk-warning-box ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .risk-warning-box li {
+            color: #666;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .cfd-ownership-notice {
+            background: #e3f2fd;
+            border: 2px solid #1976d2;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .cfd-ownership-notice h4 {
+            color: #0d47a1;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .cfd-ownership-notice p {
+            color: #1565c0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* Specifications Table */
+        .specs-table-wrapper {
+            overflow-x: auto;
+            margin-top: 30px;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            min-width: 800px;
+        }
+        
+        .specs-table thead {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+        }
+        
+        .specs-table th {
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .specs-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e1e8f0;
+            font-size: 14px;
+        }
+        
+        .specs-table tbody tr:hover {
+            background: #f8fbff;
+        }
+        
+        .live-spread {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            background: #e8f5e9;
+            border-radius: 12px;
+            font-weight: 600;
+            color: #388e3c;
+        }
+        
+        .live-spread.medium {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .live-spread.high {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .live-dot-small {
+            width: 6px;
+            height: 6px;
+            background: #4caf50;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        /* Trading Cost Calculator */
+        .calculator-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+        }
+        
+        .calculator-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .calculator-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .calculator-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .calculator-header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .calc-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .calc-input-group label {
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .calc-input-group select,
+        .calc-input-group input {
+            padding: 14px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 8px;
+            font-size: 16px;
+            background: rgba(255,255,255,0.9);
+            color: #333;
+        }
+        
+        .calc-input-group input:focus,
+        .calc-input-group select:focus {
+            outline: none;
+            border-color: #9aea00;
+        }
+        
+        .calc-button {
+            background: #9aea00;
+            color: #1a3a8f;
+            border: none;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        
+        .calc-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(154, 234, 0, 0.3);
+        }
+        
+        .calc-result {
+            background: rgba(255,255,255,0.15);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+            display: none;
+        }
+        
+        .calc-result.show {
+            display: block;
+        }
+        
+        .calc-result h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .result-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .result-label {
+            font-size: 13px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+        
+        .result-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #9aea00;
+        }
+        
+        /* Why Trade Section */
+        .why-trade {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .why-trade-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .why-trade-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .why-trade-card {
+            background: #f8fbff;
+            padding: 30px;
+            border-radius: 12px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .why-trade-card:hover {
+            transform: translateY(-5px);
+            border-color: #9aea00;
+            box-shadow: 0 10px 30px rgba(154, 234, 0, 0.2);
+        }
+        
+        .why-trade-card h3 {
+            font-size: 1.5rem;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .why-trade-card i {
+            color: #9aea00;
+            font-size: 28px;
+        }
+        
+        .why-trade-card p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .use-case-tag {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-top: 8px;
+        }
+        
+        /* Educational CTA */
+        .education-cta {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #f8fbff 0%, #e3f2fd 100%);
+        }
+        
+        .education-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .education-cta h2 {
+            font-size: 2.5rem;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+        }
+        
+        .education-cta p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .academy-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .academy-feature {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+        
+        .academy-feature i {
+            font-size: 36px;
+            color: #9aea00;
+            margin-bottom: 15px;
+        }
+        
+        .academy-feature h4 {
+            color: #1a3a8f;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .academy-feature p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Footer Compliance */
+        .footer-compliance {
+            background: #1a3a8f;
+            color: white;
+            padding: 50px 20px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-disclaimer {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #ff9800;
+        }
+        
+        .footer-disclaimer h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-disclaimer p {
+            font-size: 13px;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .footer-column h4 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: #9aea00;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-features {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .comparison-matrix {
+                padding: 20px;
+            }
+            
+            .comparison-badges,
+            .compliance-badges {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .calculator-grid,
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .why-trade-grid,
+            .academy-features,
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+            
+            .tabs-nav {
+                flex-direction: column;
+            }
+            
+            .tab-button {
+                text-align: left;
+                padding: 15px 20px;
+            }
+            
+            .nav {
+                display: none;
+            }
+        }
+        
+        /* Mobile Card Layout for Tables */
+        @media (max-width: 768px) {
+            .specs-table thead {
+                display: none;
+            }
+            
+            .specs-table,
+            .specs-table tbody,
+            .specs-table tr,
+            .specs-table td {
+                display: block;
+                width: 100%;
+            }
+            
+            .specs-table tr {
+                margin-bottom: 20px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+                padding: 15px;
+            }
+            
+            .specs-table td {
+                border: none;
+                padding: 8px 0;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .specs-table td:before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: #1a3a8f;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Compliance Bar -->
+    <div class="compliance-bar">
+        <div class="compliance-container">
+            <div class="compliance-badges">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>CySEC Regulated</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-lock"></i>
+                    <span>Segregated Accounts</span>
+                </div>
+                <div class="regulatory-badge">ESMA Compliant Leverage</div>
+            </div>
+            <div class="badge">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span style="font-size: 11px;">76.4% of retail CFD accounts lose money</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="header-container">
+            <a href="#" class="logo">VESTRADO</a>
+            <nav class="nav">
+                <a href="#">Products</a>
+                <a href="#">Trading</a>
+                <a href="#">Academy</a>
+                <a href="#">News</a>
+                <a href="#">Company</a>
+                <button class="btn-demo">Try $10,000 Demo</button>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>
+                Compare <span class="hero-highlight">150+ Trading Instruments</span><br>
+                Side-by-Side
+            </h1>
+            <p class="hero-subtitle">
+                Transparent spreads, leverage, and costs for Forex, Crypto, Indices, Shares, Metals & Energies. Make informed decisions with our interactive comparison tools.
+            </p>
+            
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <i class="fas fa-chart-line"></i>
+                    <span><strong>Live Spreads</strong> from 0.0 pips</span>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-balance-scale"></i>
+                    <span><strong>ESMA-Compliant</strong> Leverage</span>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-calculator"></i>
+                    <span><strong>Free</strong> Trading Cost Calculator</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#comparison" class="btn-primary">Compare Instruments Now</a>
+                <a href="#calculator" class="btn-secondary">Calculate Trading Costs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRITICAL: Leverage Disclosure Table -->
+    <section class="leverage-disclosure">
+        <div class="leverage-container">
+            <div class="leverage-warning">
+                <h3><i class="fas fa-exclamation-triangle"></i> Important Leverage Information</h3>
+                <p>Leverage magnifies both profits and losses. Maximum leverage varies by instrument type and client classification (Retail vs Professional). All figures comply with ESMA regulations.</p>
+            </div>
+
+            <div class="section-header">
+                <h2>Maximum Leverage by Instrument Type</h2>
+                <p>Clear, transparent leverage limits for every trading instrument we offer</p>
+            </div>
+
+            <div class="leverage-table-wrapper">
+                <table class="leverage-table">
+                    <thead>
+                        <tr>
+                            <th>Instrument Type</th>
+                            <th>Retail Client Max</th>
+                            <th>Professional Client Max</th>
+                            <th>Risk Level</th>
+                            <th>Typical Use Case</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Forex (Major Pairs)</strong></td>
+                            <td><span class="leverage-badge leverage-high">1:30</span></td>
+                            <td><span class="leverage-badge leverage-high">1:2000</span></td>
+                            <td>
+                                <div class="risk-level">
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star inactive"></i>
+                                    <i class="fas fa-star risk-star inactive"></i>
+                                </div>
+                            </td>
+                            <td>24/5 Trading, Scalping, Day Trading</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Forex (Minor & Exotic)</strong></td>
+                            <td><span class="leverage-badge leverage-high">1:20</span></td>
+                            <td><span class="leverage-badge leverage-high">1:1000</span></td>
+                            <td>
+                                <div class="risk-level">
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star inactive"></i>
+                                </div>
+                            </td>
+                            <td>Carry Trades, Emerging Markets</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cryptocurrencies</strong></td>
+                            <td><span class="leverage-badge leverage-high">1:2</span></td>
+                            <td><span class="leverage-badge leverage-high">1:100</span></td>
+                            <td>
+                                <div class="risk-level">
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                </div>
+                            </td>
+                            <td>24/7 Volatile Markets, High-Risk</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Indices (Major)</strong></td>
+                            <td><span class="leverage-badge leverage-medium">1:20</span></td>
+                            <td><span class="leverage-badge leverage-medium">1:500</span></td>
+                            <td>
+                                <div class="risk-level">
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star inactive"></i>
+                                    <i class="fas fa-star risk-star inactive"></i>
+                                </div>
+                            </td>
+                            <td>Market Hedging, Swing Trading</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Shares CFDs</strong></td>
+                            <td><span class="leverage-badge leverage-low">1:5</span></td>
+                            <td><span class="leverage-badge leverage-medium">1:20</span></td>
+                            <td>
+                                <div class="risk-level">
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star inactive"></i>
+                                    <i class="fas fa-star risk-star inactive"></i>
+                                </div>
+                            </td>
+                            <td>Stock Trading with Leverage</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Commodities (Gold, Silver)</strong></td>
+                            <td><span class="leverage-badge leverage-medium">1:20</span></td>
+                            <td><span class="leverage-badge leverage-medium">1:500</span></td>
+                            <td>
+                                <div class="risk-level">
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star inactive"></i>
+                                    <i class="fas fa-star risk-star inactive"></i>
+                                </div>
+                            </td>
+                            <td>Safe Haven, Portfolio Diversification</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Energies (Oil, Gas)</strong></td>
+                            <td><span class="leverage-badge leverage-medium">1:10</span></td>
+                            <td><span class="leverage-badge leverage-medium">1:200</span></td>
+                            <td>
+                                <div class="risk-level">
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star"></i>
+                                    <i class="fas fa-star risk-star inactive"></i>
+                                </div>
+                            </td>
+                            <td>Commodity Trading, News Events</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="leverage-warning" style="margin-top: 30px; background: #e3f2fd; border-left-color: #1976d2;">
+                <h3 style="color: #0d47a1;"><i class="fas fa-info-circle"></i> Professional Client Qualification</h3>
+                <p style="color: #1565c0;">To qualify as a Professional Client and access higher leverage, you must meet at least 2 of 3 criteria: (1) Portfolio > €500,000, (2) 10+ trades per quarter in past 4 quarters, (3) Work experience in finance for 1+ years. <a href="#" style="color: #0d47a1; text-decoration: underline;">Learn more about Professional accounts</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Matrix -->
+    <section class="comparison-section" id="comparison">
+        <div class="comparison-container">
+            <div class="section-header">
+                <h2>Side-by-Side Instrument Comparison</h2>
+                <p>Compare spreads, commission, leverage and trading hours across all instrument types</p>
+            </div>
+
+            <div class="comparison-matrix">
+                <table class="matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Forex</th>
+                            <th>Crypto</th>
+                            <th>Indices</th>
+                            <th>Shares</th>
+                            <th>Metals</th>
+                            <th>Energies</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Min Spread</td>
+                            <td><span class="best-value">0.0 pips</span></td>
+                            <td>0.5%</td>
+                            <td>0.4 pts</td>
+                            <td>0.1%</td>
+                            <td>0.12 pips</td>
+                            <td>0.03 pts</td>
+                        </tr>
+                        <tr>
+                            <td>Commission</td>
+                            <td><span class="best-value">$0</span></td>
+                            <td>0.15%</td>
+                            <td>$0</td>
+                            <td>0.08%</td>
+                            <td>$0</td>
+                            <td>$0</td>
+                        </tr>
+                        <tr>
+                            <td>Max Leverage (Retail)</td>
+                            <td>1:30</td>
+                            <td>1:2</td>
+                            <td>1:20</td>
+                            <td>1:5</td>
+                            <td>1:20</td>
+                            <td>1:10</td>
+                        </tr>
+                        <tr>
+                            <td>Max Leverage (Pro)</td>
+                            <td><span class="best-value">1:2000</span></td>
+                            <td>1:100</td>
+                            <td>1:500</td>
+                            <td>1:20</td>
+                            <td>1:500</td>
+                            <td>1:200</td>
+                        </tr>
+                        <tr>
+                            <td>Trading Hours</td>
+                            <td><span class="best-value">24/5</span></td>
+                            <td><span class="best-value">24/7</span></td>
+                            <td>Market Hours</td>
+                            <td>Market Hours</td>
+                            <td>23/5</td>
+                            <td>23/5</td>
+                        </tr>
+                        <tr>
+                            <td>Min Position Size</td>
+                            <td>0.01 lots</td>
+                            <td>0.01 lots</td>
+                            <td>0.1 lots</td>
+                            <td>1 share</td>
+                            <td>0.01 lots</td>
+                            <td>0.1 lots</td>
+                        </tr>
+                        <tr>
+                            <td>Typical Volatility</td>
+                            <td>Low-Medium</td>
+                            <td><strong>Very High</strong></td>
+                            <td>Medium</td>
+                            <td>Medium-High</td>
+                            <td>Low-Medium</td>
+                            <td>Medium-High</td>
+                        </tr>
+                        <tr>
+                            <td>Best For</td>
+                            <td>Scalping, Day Trading</td>
+                            <td>High-Risk Speculation</td>
+                            <td>Market Hedging</td>
+                            <td>Stock Exposure</td>
+                            <td>Safe Haven</td>
+                            <td>News Trading</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#instruments" class="btn-primary">View Detailed Specifications</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instruments Tabs with Specifications -->
+    <section class="instruments-tabs" id="instruments">
+        <div class="tabs-container">
+            <div class="section-header">
+                <h2>Detailed Trading Specifications</h2>
+                <p>Explore live spreads, commission structures, and trading conditions for each instrument category</p>
+            </div>
+
+            <div class="tabs-nav">
+                <button class="tab-button active" onclick="openTab(event, 'forex')">
+                    <div>
+                        <div><i class="fas fa-dollar-sign"></i> Forex</div>
+                        <div class="tab-preview">60+ Pairs • 0.0 Spread</div>
+                    </div>
+                </button>
+                <button class="tab-button" onclick="openTab(event, 'crypto')">
+                    <div>
+                        <div><i class="fab fa-bitcoin"></i> Crypto</div>
+                        <div class="tab-preview">30+ Pairs • 24/7</div>
+                    </div>
+                </button>
+                <button class="tab-button" onclick="openTab(event, 'indices')">
+                    <div>
+                        <div><i class="fas fa-chart-bar"></i> Indices</div>
+                        <div class="tab-preview">20+ Markets</div>
+                    </div>
+                </button>
+                <button class="tab-button" onclick="openTab(event, 'shares')">
+                    <div>
+                        <div><i class="fas fa-building"></i> Shares CFDs</div>
+                        <div class="tab-preview">500+ Stocks</div>
+                    </div>
+                </button>
+                <button class="tab-button" onclick="openTab(event, 'metals')">
+                    <div>
+                        <div><i class="fas fa-gem"></i> Metals</div>
+                        <div class="tab-preview">Gold, Silver, Platinum</div>
+                    </div>
+                </button>
+                <button class="tab-button" onclick="openTab(event, 'energies')">
+                    <div>
+                        <div><i class="fas fa-fire"></i> Energies</div>
+                        <div class="tab-preview">Oil, Gas</div>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Forex Tab -->
+            <div id="forex" class="tab-content active">
+                <div class="tab-header">
+                    <h3>Forex Trading Specifications</h3>
+                    <p>Trade 60+ currency pairs with spreads from 0.0 pips and leverage up to 1:2000 (Professional clients)</p>
+                    
+                    <div class="tab-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <div class="stat-label">Minimum Spread</div>
+                                <div class="stat-value">0.0 pips</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-percent"></i>
+                            <div>
+                                <div class="stat-label">Commission</div>
+                                <div class="stat-value">$0</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-balance-scale"></i>
+                            <div>
+                                <div class="stat-label">Max Leverage (Pro)</div>
+                                <div class="stat-value">1:2000</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <div class="stat-label">Trading Hours</div>
+                                <div class="stat-value">24/5</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specs-table-wrapper">
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Name</th>
+                                <th>Live Spread</th>
+                                <th>Commission</th>
+                                <th>Contract Size</th>
+                                <th>Margin (Retail)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Symbol">EUR/USD</td>
+                                <td data-label="Name">Euro / US Dollar</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread">
+                                        <span class="live-dot-small"></span>
+                                        0.0 pips
+                                    </span>
+                                </td>
+                                <td data-label="Commission">$0</td>
+                                <td data-label="Contract Size">100,000</td>
+                                <td data-label="Margin">3.33%</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Symbol">GBP/USD</td>
+                                <td data-label="Name">British Pound / US Dollar</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread">
+                                        <span class="live-dot-small"></span>
+                                        0.2 pips
+                                    </span>
+                                </td>
+                                <td data-label="Commission">$0</td>
+                                <td data-label="Contract Size">100,000</td>
+                                <td data-label="Margin">3.33%</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Symbol">USD/JPY</td>
+                                <td data-label="Name">US Dollar / Japanese Yen</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread">
+                                        <span class="live-dot-small"></span>
+                                        0.1 pips
+                                    </span>
+                                </td>
+                                <td data-label="Commission">$0</td>
+                                <td data-label="Contract Size">100,000</td>
+                                <td data-label="Margin">3.33%</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Symbol">AUD/USD</td>
+                                <td data-label="Name">Australian Dollar / US Dollar</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread medium">
+                                        <span class="live-dot-small"></span>
+                                        0.4 pips
+                                    </span>
+                                </td>
+                                <td data-label="Commission">$0</td>
+                                <td data-label="Contract Size">100,000</td>
+                                <td data-label="Margin">3.33%</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Symbol">EUR/GBP</td>
+                                <td data-label="Name">Euro / British Pound</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread medium">
+                                        <span class="live-dot-small"></span>
+                                        0.8 pips
+                                    </span>
+                                </td>
+                                <td data-label="Commission">$0</td>
+                                <td data-label="Contract Size">100,000</td>
+                                <td data-label="Margin">3.33%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 30px; text-align: center;">
+                    <a href="#" class="btn-secondary">View All 60+ Forex Pairs</a>
+                </div>
+            </div>
+
+            <!-- Crypto Tab -->
+            <div id="crypto" class="tab-content">
+                <div class="tab-header">
+                    <h3>Cryptocurrency CFD Trading</h3>
+                    <p>Trade 30+ crypto pairs including Bitcoin, Ethereum, and altcoins 24/7 with leverage up to 1:100 (Professional)</p>
+                    
+                    <div class="tab-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <div class="stat-label">Minimum Spread</div>
+                                <div class="stat-value">0.5%</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-percent"></i>
+                            <div>
+                                <div class="stat-label">Commission</div>
+                                <div class="stat-value">0.15%</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-balance-scale"></i>
+                            <div>
+                                <div class="stat-label">Max Leverage (Retail)</div>
+                                <div class="stat-value">1:2</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <div class="stat-label">Trading Hours</div>
+                                <div class="stat-value">24/7</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-warning-box high-risk">
+                    <h4><i class="fas fa-exclamation-triangle"></i> HIGHER RISK WARNING: Cryptocurrency CFDs</h4>
+                    <p><strong>Cryptocurrencies are extremely volatile and can move 20%+ in hours. This is NOT suitable for all clients.</strong></p>
+                    <ul>
+                        <li>Crypto prices can swing 10-30% in a single day</li>
+                        <li>24/7 trading means gaps and volatility at any time</li>
+                        <li>Limited leverage (1:2 for retail) due to extreme risk</li>
+                        <li>Only trade crypto with money you can afford to lose completely</li>
+                    </ul>
+                </div>
+
+                <div class="specs-table-wrapper">
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Name</th>
+                                <th>Live Spread</th>
+                                <th>Commission</th>
+                                <th>Contract Size</th>
+                                <th>Margin (Retail)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Symbol">BTC/USD</td>
+                                <td data-label="Name">Bitcoin / US Dollar</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread medium">
+                                        <span class="live-dot-small"></span>
+                                        0.5%
+                                    </span>
+                                </td>
+                                <td data-label="Commission">0.15%</td>
+                                <td data-label="Contract Size">1 BTC</td>
+                                <td data-label="Margin">50%</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Symbol">ETH/USD</td>
+                                <td data-label="Name">Ethereum / US Dollar</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread medium">
+                                        <span class="live-dot-small"></span>
+                                        0.6%
+                                    </span>
+                                </td>
+                                <td data-label="Commission">0.15%</td>
+                                <td data-label="Contract Size">1 ETH</td>
+                                <td data-label="Margin">50%</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Symbol">XRP/USD</td>
+                                <td data-label="Name">Ripple / US Dollar</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread high">
+                                        <span class="live-dot-small"></span>
+                                        1.2%
+                                    </span>
+                                </td>
+                                <td data-label="Commission">0.15%</td>
+                                <td data-label="Contract Size">100 XRP</td>
+                                <td data-label="Margin">50%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 30px; text-align: center;">
+                    <a href="#" class="btn-secondary">View All 30+ Crypto Pairs</a>
+                </div>
+            </div>
+
+            <!-- Indices Tab -->
+            <div id="indices" class="tab-content">
+                <div class="tab-header">
+                    <h3>Global Indices CFD Trading</h3>
+                    <p>Trade major global indices like US30, NAS100, UK100 with competitive spreads and leverage up to 1:500 (Professional)</p>
+                    
+                    <div class="tab-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <div class="stat-label">Minimum Spread</div>
+                                <div class="stat-value">0.4 pts</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-percent"></i>
+                            <div>
+                                <div class="stat-label">Commission</div>
+                                <div class="stat-value">$0</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-balance-scale"></i>
+                            <div>
+                                <div class="stat-label">Max Leverage (Pro)</div>
+                                <div class="stat-value">1:500</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <div class="stat-label">Trading Hours</div>
+                                <div class="stat-value">Market Hours</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specs-table-wrapper">
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Name</th>
+                                <th>Live Spread</th>
+                                <th>Commission</th>
+                                <th>Contract Size</th>
+                                <th>Margin (Retail)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Symbol">US30</td>
+                                <td data-label="Name">Dow Jones Industrial Average</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread">
+                                        <span class="live-dot-small"></span>
+                                        2.0 pts
+                                    </span>
+                                </td>
+                                <td data-label="Commission">$0</td>
+                                <td data-label="Contract Size">$1 per point</td>
+                                <td data-label="Margin">5%</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Symbol">NAS100</td>
+                                <td data-label="Name">Nasdaq 100</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread">
+                                        <span class="live-dot-small"></span>
+                                        1.5 pts
+                                    </span>
+                                </td>
+                                <td data-label="Commission">$0</td>
+                                <td data-label="Contract Size">$1 per point</td>
+                                <td data-label="Margin">5%</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Symbol">UK100</td>
+                                <td data-label="Name">FTSE 100</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread medium">
+                                        <span class="live-dot-small"></span>
+                                        1.2 pts
+                                    </span>
+                                </td>
+                                <td data-label="Commission">$0</td>
+                                <td data-label="Contract Size">£1 per point</td>
+                                <td data-label="Margin">5%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 30px; text-align: center;">
+                    <a href="#" class="btn-secondary">View All 20+ Indices</a>
+                </div>
+            </div>
+
+            <!-- Shares Tab -->
+            <div id="shares" class="tab-content">
+                <div class="tab-header">
+                    <h3>Share CFD Trading Specifications</h3>
+                    <p>Trade 500+ global stocks with leverage. Access Apple, Tesla, Amazon, and more with competitive commission rates.</p>
+                    
+                    <div class="tab-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <div class="stat-label">Minimum Spread</div>
+                                <div class="stat-value">0.1%</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-percent"></i>
+                            <div>
+                                <div class="stat-label">Commission</div>
+                                <div class="stat-value">0.08%</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-balance-scale"></i>
+                            <div>
+                                <div class="stat-label">Max Leverage (Retail)</div>
+                                <div class="stat-value">1:5</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <div class="stat-label">Trading Hours</div>
+                                <div class="stat-value">Market Hours</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfd-ownership-notice">
+                    <h4><i class="fas fa-info-circle"></i> IMPORTANT: CFD Ownership Disclosure</h4>
+                    <p><strong>Share CFDs do NOT give you ownership of the underlying shares.</strong> You are trading on price movements only, not buying actual stocks. You will not receive dividends, voting rights, or shareholder benefits. CFDs are leveraged products with wider spreads than direct stock purchases (typical spread: 0.1%-0.5% vs 0.001% for stocks).</p>
+                </div>
+
+                <div class="risk-warning-box">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Share CFD Risk Considerations</h4>
+                    <ul>
+                        <li>Spreads are wider than Forex (0.1%-0.5% vs 0.0001%)</li>
+                        <li>Commission charged on both entry and exit (0.08% each way = 0.16% total)</li>
+                        <li>Limited leverage (1:5 retail) means larger capital requirement</li>
+                        <li>Best for: Gaining stock market exposure with leverage, not long-term investing</li>
+                    </ul>
+                </div>
+
+                <div class="specs-table-wrapper">
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Name</th>
+                                <th>Live Spread</th>
+                                <th>Commission</th>
+                                <th>Min Position</th>
+                                <th>Margin (Retail)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Symbol">AAPL</td>
+                                <td data-label="Name">Apple Inc</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread medium">
+                                        <span class="live-dot-small"></span>
+                                        0.1%
+                                    </span>
+                                </td>
+                                <td data-label="Commission">0.08%</td>
+                                <td data-label="Min Position">1 share</td>
+                                <td data-label="Margin">20%</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Symbol">TSLA</td>
+                                <td data-label="Name">Tesla Inc</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread medium">
+                                        <span class="live-dot-small"></span>
+                                        0.15%
+                                    </span>
+                                </td>
+                                <td data-label="Commission">0.08%</td>
+                                <td data-label="Min Position">1 share</td>
+                                <td data-label="Margin">20%</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Symbol">AMZN</td>
+                                <td data-label="Name">Amazon.com Inc</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread medium">
+                                        <span class="live-dot-small"></span>
+                                        0.12%
+                                    </span>
+                                </td>
+                                <td data-label="Commission">0.08%</td>
+                                <td data-label="Min Position">1 share</td>
+                                <td data-label="Margin">20%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 30px; text-align: center;">
+                    <a href="#" class="btn-secondary">View All 500+ Stocks</a>
+                </div>
+            </div>
+
+            <!-- Metals Tab -->
+            <div id="metals" class="tab-content">
+                <div class="tab-header">
+                    <h3>Precious Metals Trading</h3>
+                    <p>Trade Gold, Silver, Platinum and Palladium with tight spreads and leverage up to 1:500 (Professional)</p>
+                    
+                    <div class="tab-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <div class="stat-label">Minimum Spread (Gold)</div>
+                                <div class="stat-value">0.12 pips</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-percent"></i>
+                            <div>
+                                <div class="stat-label">Commission</div>
+                                <div class="stat-value">$0</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-balance-scale"></i>
+                            <div>
+                                <div class="stat-label">Max Leverage (Pro)</div>
+                                <div class="stat-value">1:500</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <div class="stat-label">Trading Hours</div>
+                                <div class="stat-value">23/5</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specs-table-wrapper">
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Name</th>
+                                <th>Live Spread</th>
+                                <th>Commission</th>
+                                <th>Contract Size</th>
+                                <th>Margin (Retail)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Symbol">XAU/USD</td>
+                                <td data-label="Name">Gold / US Dollar</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread">
+                                        <span class="live-dot-small"></span>
+                                        0.12 pips
+                                    </span>
+                                </td>
+                                <td data-label="Commission">$0</td>
+                                <td data-label="Contract Size">100 oz</td>
+                                <td data-label="Margin">5%</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Symbol">XAG/USD</td>
+                                <td data-label="Name">Silver / US Dollar</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread medium">
+                                        <span class="live-dot-small"></span>
+                                        0.02 pips
+                                    </span>
+                                </td>
+                                <td data-label="Commission">$0</td>
+                                <td data-label="Contract Size">5,000 oz</td>
+                                <td data-label="Margin">5%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Energies Tab -->
+            <div id="energies" class="tab-content">
+                <div class="tab-header">
+                    <h3>Energy Commodities Trading</h3>
+                    <p>Trade Crude Oil, Natural Gas, and Brent Oil with competitive spreads and leverage up to 1:200 (Professional)</p>
+                    
+                    <div class="tab-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <div class="stat-label">Minimum Spread (Oil)</div>
+                                <div class="stat-value">0.03 pts</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-percent"></i>
+                            <div>
+                                <div class="stat-label">Commission</div>
+                                <div class="stat-value">$0</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-balance-scale"></i>
+                            <div>
+                                <div class="stat-label">Max Leverage (Pro)</div>
+                                <div class="stat-value">1:200</div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <div class="stat-label">Trading Hours</div>
+                                <div class="stat-value">23/5</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specs-table-wrapper">
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Name</th>
+                                <th>Live Spread</th>
+                                <th>Commission</th>
+                                <th>Contract Size</th>
+                                <th>Margin (Retail)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Symbol">USOIL</td>
+                                <td data-label="Name">WTI Crude Oil</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread">
+                                        <span class="live-dot-small"></span>
+                                        0.03 pts
+                                    </span>
+                                </td>
+                                <td data-label="Commission">$0</td>
+                                <td data-label="Contract Size">100 barrels</td>
+                                <td data-label="Margin">10%</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Symbol">UKOIL</td>
+                                <td data-label="Name">Brent Crude Oil</td>
+                                <td data-label="Live Spread">
+                                    <span class="live-spread">
+                                        <span class="live-dot-small"></span>
+                                        0.04 pts
+                                    </span>
+                                </td>
+                                <td data-label="Commission">$0</td>
+                                <td data-label="Contract Size">100 barrels</td>
+                                <td data-label="Margin">10%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trading Cost Calculator -->
+    <section class="calculator-section" id="calculator">
+        <div class="calculator-container">
+            <div class="calculator-box">
+                <div class="calculator-header">
+                    <h2><i class="fas fa-calculator"></i> Free Trading Cost Calculator</h2>
+                    <p>Calculate your exact trading costs before you trade. See total costs including spread, commission, and potential profit/loss.</p>
+                </div>
+
+                <div class="calculator-grid">
+                    <div class="calc-input-group">
+                        <label for="calc-instrument">Select Instrument</label>
+                        <select id="calc-instrument">
+                            <option value="forex">EUR/USD (Forex)</option>
+                            <option value="btc">BTC/USD (Crypto)</option>
+                            <option value="us30">US30 (Index)</option>
+                            <option value="aapl">AAPL (Share CFD)</option>
+                            <option value="gold">Gold (XAU/USD)</option>
+                            <option value="oil">Crude Oil</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-input-group">
+                        <label for="calc-lots">Position Size (Lots)</label>
+                        <input type="number" id="calc-lots" value="1" step="0.01" min="0.01">
+                    </div>
+
+                    <div class="calc-input-group">
+                        <label for="calc-entry">Entry Price</label>
+                        <input type="number" id="calc-entry" value="1.1000" step="0.0001">
+                    </div>
+
+                    <div class="calc-input-group">
+                        <label for="calc-exit">Target Exit Price</label>
+                        <input type="number" id="calc-exit" value="1.1100" step="0.0001">
+                    </div>
+                </div>
+
+                <button class="calc-button" onclick="calculateCost()">
+                    <i class="fas fa-calculator"></i> Calculate Trading Cost
+                </button>
+
+                <div class="calc-result" id="calc-result">
+                    <h3>Your Trading Cost Breakdown</h3>
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <div class="result-label">Spread Cost</div>
+                            <div class="result-value" id="spread-cost">$5.00</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-label">Commission</div>
+                            <div class="result-value" id="commission-cost">$0.00</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-label">Total Cost</div>
+                            <div class="result-value" id="total-cost">$5.00</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-label">Potential Profit</div>
+                            <div class="result-value" id="potential-profit">$1,000</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-label">Net Profit</div>
+                            <div class="result-value" id="net-profit">$995</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-label">Required Margin</div>
+                            <div class="result-value" id="required-margin">$3,667</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Trade These Instruments -->
+    <section class="why-trade">
+        <div class="why-trade-container">
+            <div class="section-header">
+                <h2>Why Trade Different Instruments?</h2>
+                <p>Each instrument category serves different trading strategies and risk profiles</p>
+            </div>
+
+            <div class="why-trade-grid">
+                <div class="why-trade-card">
+                    <h3><i class="fas fa-dollar-sign"></i> Forex</h3>
+                    <p>Most liquid market in the world with 24/5 trading. Best for scalping and day trading with tight spreads from 0.0 pips. Lower volatility compared to crypto.</p>
+                    <div>
+                        <span class="use-case-tag">Scalping</span>
+                        <span class="use-case-tag">Day Trading</span>
+                        <span class="use-case-tag">24/5 Market</span>
+                    </div>
+                </div>
+
+                <div class="why-trade-card">
+                    <h3><i class="fab fa-bitcoin"></i> Cryptocurrencies</h3>
+                    <p>24/7 trading with extreme volatility. Potential for large gains but also significant losses. Best for experienced traders with high risk tolerance.</p>
+                    <div>
+                        <span class="use-case-tag">High Volatility</span>
+                        <span class="use-case-tag">24/7 Trading</span>
+                        <span class="use-case-tag">Speculation</span>
+                    </div>
+                </div>
+
+                <div class="why-trade-card">
+                    <h3><i class="fas fa-chart-bar"></i> Indices</h3>
+                    <p>Trade entire markets with one position. Lower risk than individual stocks. Perfect for market hedging and swing trading strategies.</p>
+                    <div>
+                        <span class="use-case-tag">Market Exposure</span>
+                        <span class="use-case-tag">Hedging</span>
+                        <span class="use-case-tag">Swing Trading</span>
+                    </div>
+                </div>
+
+                <div class="why-trade-card">
+                    <h3><i class="fas fa-building"></i> Share CFDs</h3>
+                    <p>Trade global stocks with leverage without owning them. Access Apple, Tesla, Amazon with small capital. Commission-based pricing.</p>
+                    <div>
+                        <span class="use-case-tag">Stock Exposure</span>
+                        <span class="use-case-tag">Leverage</span>
+                        <span class="use-case-tag">Global Markets</span>
+                    </div>
+                </div>
+
+                <div class="why-trade-card">
+                    <h3><i class="fas fa-gem"></i> Precious Metals</h3>
+                    <p>Safe haven assets during economic uncertainty. Gold and Silver are excellent for portfolio diversification and long-term positions.</p>
+                    <div>
+                        <span class="use-case-tag">Safe Haven</span>
+                        <span class="use-case-tag">Diversification</span>
+                        <span class="use-case-tag">Low Volatility</span>
+                    </div>
+                </div>
+
+                <div class="why-trade-card">
+                    <h3><i class="fas fa-fire"></i> Energy Commodities</h3>
+                    <p>Trade oil and gas markets. High volatility during news events. Popular for news trading and economic calendar-based strategies.</p>
+                    <div>
+                        <span class="use-case-tag">News Trading</span>
+                        <span class="use-case-tag">Economic Events</span>
+                        <span class="use-case-tag">Volatility</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational CTA -->
+    <section class="education-cta">
+        <div class="education-container">
+            <h2>New to Trading? Start with Our Academy</h2>
+            <p>Learn which instruments suit your trading style before you start. Free educational resources for all levels.</p>
+
+            <div class="academy-features">
+                <div class="academy-feature">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>Beginner Course</h4>
+                    <p>Learn Forex basics, CFD trading, and risk management fundamentals</p>
+                </div>
+                <div class="academy-feature">
+                    <i class="fas fa-video"></i>
+                    <h4>Weekly Webinars</h4>
+                    <p>Live trading sessions with professional traders every Tuesday & Thursday</p>
+                </div>
+                <div class="academy-feature">
+                    <i class="fas fa-book"></i>
+                    <h4>Free E-Book</h4>
+                    <p>"5 Common Mistakes New Traders Make" - Download your free guide</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <a href="#" class="btn-primary">Visit Vestrado Academy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Compliance -->
+    <footer class="footer-compliance">
+        <div class="footer-container">
+            <div class="footer-disclaimer">
+                <h3><i class="fas fa-exclamation-triangle"></i> Risk Disclosure</h3>
+                <p><strong>CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. 76.4% of retail investor accounts lose money when trading CFDs with Vestrado Ltd.</strong> You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.</p>
+                
+                <p>Trading leveraged products such as Forex and CFDs may not be suitable for all investors as they carry a high degree of risk to your capital. Please ensure that you fully understand the risks involved, taking into account your investment objectives and level of experience, before trading, and if necessary seek independent advice.</p>
+                
+                <p><strong>Share CFDs:</strong> Share CFDs do NOT give you ownership of the underlying shares. You are trading on price movements only and will not receive dividends or voting rights.</p>
+                
+                <p><strong>Cryptocurrency CFDs:</strong> Cryptocurrencies are extremely volatile and can fluctuate 20%+ in hours. Cryptocurrency CFD trading is only suitable for experienced traders with high risk tolerance.</p>
+                
+                <p><strong>Regulatory Information:</strong> Vestrado Ltd is regulated by CySEC (License No. XXX/XX). This website is operated by Vestrado Ltd, registered address: [Full Legal Address], Cyprus. For EU clients, leverage is restricted per ESMA regulations (Forex 1:30, Crypto 1:2, Indices 1:20, Shares 1:5, Commodities 1:10-1:20).</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Forex Trading</a></li>
+                        <li><a href="#">Cryptocurrency CFDs</a></li>
+                        <li><a href="#">Indices CFDs</a></li>
+                        <li><a href="#">Share CFDs</a></li>
+                        <li><a href="#">Commodities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Trading</h4>
+                    <ul>
+                        <li><a href="#">MetaTrader 5</a></li>
+                        <li><a href="#">Account Types</a></li>
+                        <li><a href="#">Leverage & Margin</a></li>
+                        <li><a href="#">Deposit & Withdrawal</a></li>
+                        <li><a href="#">Copy Trading</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="#">Forex Academy</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">Trading Webinars</a></li>
+                        <li><a href="#">Economic Calendar</a></li>
+                        <li><a href="#">Market Analysis</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Risk Disclosure</a></li>
+                        <li><a href="#">Complaints</a></li>
+                        <li><a href="#">Documents</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 13px; opacity: 0.8;">
+                <p>© 2024 Vestrado Ltd. All rights reserved. | CySEC Regulated | Segregated Client Funds | Negative Balance Protection</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Tab Switching Function
+        function openTab(evt, tabName) {
+            // Hide all tab contents
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+
+            // Remove active class from all buttons
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+
+            // Show current tab and mark button as active
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Trading Cost Calculator
+        function calculateCost() {
+            var instrument = document.getElementById('calc-instrument').value;
+            var lots = parseFloat(document.getElementById('calc-lots').value);
+            var entry = parseFloat(document.getElementById('calc-entry').value);
+            var exit = parseFloat(document.getElementById('calc-exit').value);
+
+            // Simplified calculation (example values)
+            var spreadCost, commission, margin;
+
+            switch(instrument) {
+                case 'forex':
+                    spreadCost = 5 * lots;
+                    commission = 0;
+                    margin = 3667 * lots;
+                    break;
+                case 'btc':
+                    spreadCost = 50 * lots;
+                    commission = 15 * lots;
+                    margin = 25000 * lots;
+                    break;
+                case 'us30':
+                    spreadCost = 2 * lots;
+                    commission = 0;
+                    margin = 1667 * lots;
+                    break;
+                case 'aapl':
+                    spreadCost = 0.17 * lots * 100;
+                    commission = 0.08 * lots * 170;
+                    margin = 3400 * lots;
+                    break;
+                case 'gold':
+                    spreadCost = 12 * lots;
+                    commission = 0;
+                    margin = 4167 * lots;
+                    break;
+                case 'oil':
+                    spreadCost = 3 * lots;
+                    commission = 0;
+                    margin = 8333 * lots;
+                    break;
+            }
+
+            var totalCost = spreadCost + commission;
+            var potentialProfit = Math.abs(exit - entry) * 100000 * lots;
+            var netProfit = potentialProfit - totalCost;
+
+            // Update result display
+            document.getElementById('spread-cost').textContent = '$' + spreadCost.toFixed(2);
+            document.getElementById('commission-cost').textContent = '$' + commission.toFixed(2);
+            document.getElementById('total-cost').textContent = '$' + totalCost.toFixed(2);
+            document.getElementById('potential-profit').textContent = '$' + potentialProfit.toFixed(2);
+            document.getElementById('net-profit').textContent = '$' + netProfit.toFixed(2);
+            document.getElementById('required-margin').textContent = '$' + margin.toFixed(2);
+
+            // Show result
+            document.getElementById('calc-result').classList.add('show');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

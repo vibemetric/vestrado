@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download MetaTrader 5 | Advanced Trading Platform | Vestrado</title>
+    <meta name="description" content="Download MetaTrader 5 for free. Trade Forex, Crypto, Stocks with 0.01s execution, 21 timeframes, Copy Trading & Expert Advisors. Available for Windows, Mac, iOS, Android & WebTrader.">
+    
+    <!-- Trust & Verification Meta Tags -->
+    <meta name="keywords" content="MT5 download, MetaTrader 5, trading platform, forex platform, copy trading, expert advisors, MQL5">
+    
+    <!-- CSS -->
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+        }
+        
+        /* Trust Bar */
+        .trust-bar {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 12px 0;
+            font-size: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+        
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .badge-icon {
+            font-size: 18px;
+            color: #9aea00;
+        }
+        
+        .live-stats {
+            background: rgba(255,255,255,0.15);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #9aea00;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        /* Header */
+        .header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 52px;
+            z-index: 999;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo-text {
+            font-size: 32px;
+            font-weight: 800;
+            color: #1a3a8f;
+            text-decoration: none;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .main-nav a:hover {
+            background: #f0f7ff;
+            color: #2d5cc2;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn-login {
+            background: transparent;
+            color: #2d5cc2;
+            border: 2px solid #2d5cc2;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .btn-login:hover {
+            background: #2d5cc2;
+            color: white;
+        }
+        
+        .btn-signup {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+        
+        .btn-signup:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(154, 234, 0, 0.3);
+        }
+        
+        /* Hero Section - MT5 Focused */
+        .hero {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(45, 92, 194, 0.05) 0%, transparent 70%);
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #1a3a8f;
+            font-weight: 800;
+        }
+        
+        .hero-highlight {
+            color: #9aea00;
+            background: rgba(154, 234, 0, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .software-disclaimer {
+            background: #fff8e6;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .software-disclaimer strong {
+            color: #1a3a8f;
+        }
+        
+        /* Download CTA Matrix */
+        .download-matrix {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            margin-top: 30px;
+        }
+        
+        .download-matrix h3 {
+            font-size: 1.3rem;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px 20px;
+            background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+            border: 2px solid #e1e8f0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .download-btn:hover {
+            border-color: #9aea00;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(154, 234, 0, 0.15);
+        }
+        
+        .download-btn.primary {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+        }
+        
+        .download-btn.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(154, 234, 0, 0.3);
+        }
+        
+        .download-icon {
+            font-size: 36px;
+        }
+        
+        .download-info {
+            flex: 1;
+        }
+        
+        .download-label {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .download-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: inherit;
+        }
+        
+        .download-badge {
+            background: #9aea00;
+            color: #1a3a8f;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        
+        .primary .download-badge {
+            background: rgba(255,255,255,0.3);
+            color: white;
+        }
+        
+        .webtrader-link {
+            text-align: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e1e8f0;
+        }
+        
+        .webtrader-link a {
+            color: #2d5cc2;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .webtrader-link a:hover {
+            color: #1a3a8f;
+            text-decoration: underline;
+        }
+        
+        .hero-demo-cta {
+            background: rgba(45, 92, 194, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .demo-badge {
+            background: #9aea00;
+            color: #1a3a8f;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        /* Quick Installation Guide */
+        .installation-guide {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1a3a8f;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .step-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+            border-radius: 12px;
+            border: 2px solid #e1e8f0;
+            transition: all 0.3s;
+        }
+        
+        .step-card:hover {
+            border-color: #9aea00;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 auto 20px;
+        }
+        
+        .step-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 10px;
+        }
+        
+        .step-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .step-time {
+            font-size: 12px;
+            color: #9aea00;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        /* MT5 vs MT4 Comparison */
+        .comparison-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+        }
+        
+        .comparison-table {
+            max-width: 900px;
+            margin: 40px auto 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th {
+            background: #f8fbff;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a3a8f;
+            border-bottom: 3px solid #9aea00;
+        }
+        
+        .comparison-table td {
+            padding: 18px 20px;
+            text-align: center;
+            color: #333;
+            border-bottom: 1px solid #e1e8f0;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table tr:hover {
+            background: #f8fbff;
+        }
+        
+        .comparison-table .feature-name {
+            text-align: left;
+            font-weight: 600;
+            color: #1a3a8f;
+        }
+        
+        .check-icon {
+            color: #9aea00;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .cross-icon {
+            color: #ccc;
+            font-size: 24px;
+        }
+        
+        .highlight-value {
+            color: #9aea00;
+            font-weight: 700;
+        }
+        
+        /* Technical Specs */
+        .tech-specs {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .spec-card {
+            background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+            padding: 35px 25px;
+            border-radius: 12px;
+            border: 2px solid #e1e8f0;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .spec-card:hover {
+            border-color: #9aea00;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .spec-icon {
+            font-size: 48px;
+            color: #2d5cc2;
+            margin-bottom: 20px;
+        }
+        
+        .spec-value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #9aea00;
+            margin-bottom: 10px;
+        }
+        
+        .spec-label {
+            font-size: 16px;
+            color: #1a3a8f;
+            font-weight: 600;
+        }
+        
+        .spec-description {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        
+        .trust-badge-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            align-items: center;
+        }
+        
+        .trust-badge-item {
+            text-align: center;
+        }
+        
+        .trust-badge-icon {
+            font-size: 36px;
+            color: #9aea00;
+            margin-bottom: 10px;
+        }
+        
+        .trust-badge-text {
+            font-size: 14px;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        /* Copy Trading Section */
+        .copy-trading {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+        }
+        
+        .copy-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        
+        .copy-info h3 {
+            font-size: 2rem;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+        }
+        
+        .copy-features {
+            margin: 30px 0;
+        }
+        
+        .copy-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .copy-feature-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .copy-feature-text h4 {
+            font-size: 16px;
+            color: #1a3a8f;
+            margin-bottom: 5px;
+        }
+        
+        .copy-feature-text p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .trader-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .trader-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .trader-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .trader-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 5px;
+        }
+        
+        .trader-status {
+            font-size: 13px;
+            color: #9aea00;
+            font-weight: 600;
+        }
+        
+        .trader-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 12px;
+            background: #f8fbff;
+            border-radius: 8px;
+        }
+        
+        .stat-value {
+            font-size: 20px;
+            font-weight: 800;
+            color: #9aea00;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .btn-copy-trader {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-copy-trader:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(154, 234, 0, 0.3);
+        }
+        
+        /* Platform Features */
+        .platform-features {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+            padding: 35px 25px;
+            border-radius: 12px;
+            border: 2px solid #e1e8f0;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            border-color: #9aea00;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 12px;
+        }
+        
+        .feature-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* For Developers */
+        .developers-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+        }
+        
+        .dev-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+        
+        .dev-features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .dev-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .dev-check {
+            width: 28px;
+            height: 28px;
+            background: #9aea00;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a3a8f;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .dev-text h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .dev-text p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.5;
+        }
+        
+        .dev-code-sample {
+            background: rgba(0,0,0,0.3);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .code-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .code-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .code-dot.red { background: #ff5f56; }
+        .code-dot.yellow { background: #ffbd2e; }
+        .code-dot.green { background: #27c93f; }
+        
+        .code-content {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #9aea00;
+            line-height: 1.8;
+        }
+        
+        .code-comment {
+            color: #888;
+        }
+        
+        /* System Requirements */
+        .system-requirements {
+            padding: 60px 20px;
+            background: #f8fbff;
+        }
+        
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .requirement-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid #e1e8f0;
+            transition: all 0.3s;
+        }
+        
+        .requirement-card:hover {
+            border-color: #9aea00;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .req-platform {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .req-icon {
+            font-size: 48px;
+            color: #2d5cc2;
+        }
+        
+        .req-platform h3 {
+            font-size: 22px;
+            color: #1a3a8f;
+        }
+        
+        .req-list {
+            list-style: none;
+        }
+        
+        .req-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .req-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .req-list li::before {
+            content: "✓";
+            color: #9aea00;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .req-text {
+            flex: 1;
+        }
+        
+        .req-text strong {
+            color: #1a3a8f;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 40px auto 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            background: #f8fbff;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #e1e8f0;
+        }
+        
+        .faq-question {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1a3a8f;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: rgba(154, 234, 0, 0.05);
+        }
+        
+        .faq-toggle {
+            font-size: 24px;
+            color: #2d5cc2;
+            transition: transform 0.3s;
+        }
+        
+        .faq-answer {
+            padding: 0 25px 20px;
+            color: #666;
+            line-height: 1.6;
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a3a8f;
+            color: white;
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #9aea00;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #9aea00;
+        }
+        
+        .risk-warning {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 40px;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .risk-warning h4 {
+            color: #ff9800;
+            margin-bottom: 10px;
+        }
+        
+        .risk-warning p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.6;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-container,
+            .copy-content,
+            .dev-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .specs-grid,
+            .features-grid,
+            .requirements-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .trust-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .main-nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps-grid,
+            .specs-grid,
+            .features-grid,
+            .requirements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-badges">
+                <div class="badge">
+                    <span class="badge-icon">🔒</span>
+                    <span>SSL Secured</span>
+                </div>
+                <div class="badge">
+                    <span class="badge-icon">🛡️</span>
+                    <span>Regulated Broker</span>
+                </div>
+                <div class="badge">
+                    <span class="badge-icon">⚡</span>
+                    <span>0.01s Execution</span>
+                </div>
+            </div>
+            <div class="live-stats">
+                <span class="live-dot"></span>
+                <span>1,247 traders online now</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo-text">VESTRADO</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#comparison">MT5 vs MT4</a></li>
+                    <li><a href="#copy-trading">Copy Trading</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-login">Login</a>
+                <a href="#" class="btn-signup">Start Trading</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="download">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Download <span class="hero-highlight">MetaTrader 5</span> for Free</h1>
+                <p class="hero-subtitle">Trade Forex, Crypto, Stocks & Commodities with the world's most powerful trading platform. Lightning-fast execution, 21 timeframes, and Copy Trading built-in.</p>
+                
+                <div class="software-disclaimer">
+                    <strong>✓ 100% Free Software</strong> • MetaTrader 5 is free trading software by MetaQuotes. By downloading, you accept MetaQuotes license terms. We strongly recommend starting with a <strong>FREE $10,000 Demo Account</strong> to test the platform risk-free before live trading.
+                </div>
+                
+                <div class="download-matrix">
+                    <h3>📥 Choose Your Platform</h3>
+                    <div class="download-grid">
+                        <!-- Windows - Most Popular -->
+                        <a href="#" class="download-btn primary">
+                            <div class="download-icon">💻</div>
+                            <div class="download-info">
+                                <div class="download-label">Download for</div>
+                                <div class="download-title">Windows</div>
+                                <span class="download-badge">⭐ Most Popular</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Mac -->
+                        <a href="#" class="download-btn">
+                            <div class="download-icon">🍎</div>
+                            <div class="download-info">
+                                <div class="download-label">Download for</div>
+                                <div class="download-title">Mac OS</div>
+                                <span class="download-badge">M1/M2 Compatible</span>
+                            </div>
+                        </a>
+                        
+                        <!-- iOS -->
+                        <a href="#" class="download-btn">
+                            <div class="download-icon">📱</div>
+                            <div class="download-info">
+                                <div class="download-label">Get it on</div>
+                                <div class="download-title">App Store</div>
+                                <span class="download-badge">Trade on the go</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Android -->
+                        <a href="#" class="download-btn">
+                            <div class="download-icon">🤖</div>
+                            <div class="download-info">
+                                <div class="download-label">Get it on</div>
+                                <div class="download-title">Google Play</div>
+                                <span class="download-badge">Trade on the go</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="webtrader-link">
+                        <a href="#">🌐 Launch WebTrader (No Download Required) →</a>
+                    </div>
+                </div>
+                
+                <div class="hero-demo-cta">
+                    <span class="demo-badge">RECOMMENDED</span>
+                    <span><strong>Try $10,000 Demo Account First</strong> • Test all features risk-free before investing real money</span>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/600x500/2d5cc2/ffffff?text=MT5+Interface+Screenshot" alt="MetaTrader 5 Platform Interface">
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Installation Guide -->
+    <section class="installation-guide">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>⚡ Get Started in 4 Easy Steps</h2>
+                <p class="section-subtitle">From download to your first trade in under 5 minutes</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Download MT5</div>
+                    <p class="step-description">Click the download button for your device. The installer will download automatically.</p>
+                    <p class="step-time">⏱️ 30 seconds</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Install & Open</div>
+                    <p class="step-description">Run the installer → Click "Next" → Install. Open MT5 when complete.</p>
+                    <p class="step-time">⏱️ 2 minutes</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Find Vestrado Server</div>
+                    <p class="step-description">In MT5, click "File" → "Open Account" → Search "Vestrado" in server list.</p>
+                    <p class="step-time">⏱️ 1 minute</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Login & Trade</div>
+                    <p class="step-description">Enter your Vestrado login credentials. Start trading 150+ instruments!</p>
+                    <p class="step-time">⏱️ 30 seconds</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MT5 vs MT4 Comparison -->
+    <section class="comparison-section" id="comparison">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Why Upgrade from MT4 to MT5?</h2>
+                <p class="section-subtitle">MT5 offers significantly more tools and faster performance</p>
+            </div>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>MetaTrader 5</th>
+                            <th>MetaTrader 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Number of Timeframes</td>
+                            <td><span class="highlight-value">21 Timeframes</span></td>
+                            <td>9 Timeframes</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Economic Calendar Built-in</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="cross-icon">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Depth of Market (DOM)</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="cross-icon">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Copy Trading Native</td>
+                            <td><span class="check-icon">✓</span> Built-in</td>
+                            <td>Via 3rd party plugins</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Average Execution Speed</td>
+                            <td><span class="highlight-value">0.01 seconds</span></td>
+                            <td>0.05 seconds</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Technical Indicators</td>
+                            <td><span class="highlight-value">80+ Indicators</span></td>
+                            <td>50+ Indicators</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Multi-Currency Testing</td>
+                            <td><span class="check-icon">✓</span></td>
+                            <td><span class="cross-icon">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">MQL Programming Language</td>
+                            <td>MQL5 (faster, OOP)</td>
+                            <td>MQL4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specs -->
+    <section class="tech-specs">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>⚡ Lightning-Fast Infrastructure</h2>
+                <p class="section-subtitle">Powered by Vestrado's High-Performance Servers</p>
+            </div>
+            
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <div class="spec-icon">⚡</div>
+                    <div class="spec-value">&lt;0.01s</div>
+                    <div class="spec-label">Average Execution Speed</div>
+                    <p class="spec-description">99% of market orders executed in under 10 milliseconds</p>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-icon">🛡️</div>
+                    <div class="spec-value">99.95%</div>
+                    <div class="spec-label">Server Uptime Guarantee</div>
+                    <p class="spec-description">Trade 24/5 with maximum reliability and stability</p>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-icon">🌐</div>
+                    <div class="spec-value">London LD4</div>
+                    <div class="spec-label">Equinix Data Center</div>
+                    <p class="spec-description">Ultra-low latency connection to major liquidity providers</p>
+                </div>
+            </div>
+            
+            <div class="trust-badge-row">
+                <div class="trust-badge-item">
+                    <div class="trust-badge-icon">✓</div>
+                    <div class="trust-badge-text">Zero Slippage on 95% Trades</div>
+                </div>
+                <div class="trust-badge-item">
+                    <div class="trust-badge-icon">✓</div>
+                    <div class="trust-badge-text">No Requotes Guarantee</div>
+                </div>
+                <div class="trust-badge-item">
+                    <div class="trust-badge-icon">✓</div>
+                    <div class="trust-badge-text">Expert Advisors Supported</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Copy Trading Section -->
+    <section class="copy-trading" id="copy-trading">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>📊 Copy Top Vestrado Traders Automatically</h2>
+                <p class="section-subtitle">Follow profitable strategies with 1-click. No experience required.</p>
+            </div>
+            
+            <div class="copy-content">
+                <div class="copy-info">
+                    <h3>Social Trading Built Into MT5</h3>
+                    <p>MetaTrader 5 has native copy trading features that let you automatically copy trades from experienced traders. Perfect for beginners or busy professionals.</p>
+                    
+                    <div class="copy-features">
+                        <div class="copy-feature-item">
+                            <div class="copy-feature-icon">👥</div>
+                            <div class="copy-feature-text">
+                                <h4>Browse 500+ Strategy Providers</h4>
+                                <p>View detailed performance stats, profit history, and risk metrics</p>
+                            </div>
+                        </div>
+                        
+                        <div class="copy-feature-item">
+                            <div class="copy-feature-icon">🎯</div>
+                            <div class="copy-feature-text">
+                                <h4>Filter by Performance</h4>
+                                <p>Sort by Profit %, Max Drawdown, Risk Level, Trading Style</p>
+                            </div>
+                        </div>
+                        
+                        <div class="copy-feature-item">
+                            <div class="copy-feature-icon">⚡</div>
+                            <div class="copy-feature-text">
+                                <h4>Instant 1-Click Copy</h4>
+                                <p>Start copying trades automatically. Stop anytime with no fees.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="copy-feature-item">
+                            <div class="copy-feature-icon">💰</div>
+                            <div class="copy-feature-text">
+                                <h4>Start with $500 Minimum</h4>
+                                <p>Diversify across multiple traders to reduce risk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trader-card">
+                    <div class="trader-header">
+                        <div class="trader-avatar">PM</div>
+                        <div>
+                            <div class="trader-name">@ProTrader_Mike</div>
+                            <div class="trader-status">🟢 Active • 2.5 years experience</div>
+                        </div>
+                    </div>
+                    
+                    <div class="trader-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">+45%</div>
+                            <div class="stat-label">YTD Return</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">8.2%</div>
+                            <div class="stat-label">Max Drawdown</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">487</div>
+                            <div class="stat-label">Copiers</div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-copy-trader">📋 Copy This Trader</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Features -->
+    <section class="platform-features" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>🚀 Powerful Trading Tools</h2>
+                <p class="section-subtitle">Everything you need for professional trading</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Advanced Charting</div>
+                    <p class="feature-description">21 timeframes, 80+ technical indicators, unlimited chart windows. Draw trendlines, channels, and Fibonacci levels with precision.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-title">One-Click Trading</div>
+                    <p class="feature-description">Execute trades directly from charts. Set Stop Loss and Take Profit levels visually. Modify orders with drag-and-drop.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <div class="feature-title">Multi-Asset Support</div>
+                    <p class="feature-description">Trade Forex, Crypto, Stocks, Indices, Commodities all in one platform. Switch markets seamlessly.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <div class="feature-title">Economic Calendar</div>
+                    <p class="feature-description">Built-in calendar with real-time updates on major economic events. Get alerts before high-impact news.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-title">Algorithmic Trading</div>
+                    <p class="feature-description">Run Expert Advisors (EAs) 24/7. Backtest strategies on historical data with genetic optimization.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <div class="feature-title">Price Alerts</div>
+                    <p class="feature-description">Set custom price alerts via push notifications, email, or sound. Never miss a trading opportunity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Developers Section -->
+    <section class="developers-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>👨‍💻 For Developers & Algo Traders</h2>
+                <p class="section-subtitle">Build custom indicators, Expert Advisors, and automated strategies</p>
+            </div>
+            
+            <div class="dev-content">
+                <div class="dev-features-list">
+                    <div class="dev-feature">
+                        <div class="dev-check">✓</div>
+                        <div class="dev-text">
+                            <h4>Full MQL5 Programming Support</h4>
+                            <p>Object-oriented programming, faster execution than MQL4, modern C++-like syntax</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dev-feature">
+                        <div class="dev-check">✓</div>
+                        <div class="dev-text">
+                            <h4>MetaEditor IDE Included</h4>
+                            <p>Professional development environment with debugging tools, code snippets, and syntax highlighting</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dev-feature">
+                        <div class="dev-check">✓</div>
+                        <div class="dev-text">
+                            <h4>Strategy Tester with Genetic Optimization</h4>
+                            <p>Backtest EAs on years of historical data. Optimize parameters automatically using genetic algorithms</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dev-feature">
+                        <div class="dev-check">✓</div>
+                        <div class="dev-text">
+                            <h4>MQL5 Market Access</h4>
+                            <p>3,000+ ready-made Expert Advisors, indicators, and utilities. Purchase or rent trading robots instantly</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dev-feature">
+                        <div class="dev-check">✓</div>
+                        <div class="dev-text">
+                            <h4>VPS Hosting Available</h4>
+                            <p>Run your EAs 24/7 with low-latency VPS located near trading servers. $15/month with free trial</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dev-code-sample">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                    </div>
+                    <div class="code-content">
+<span class="code-comment">// Simple MQL5 Expert Advisor Example</span>
+void OnTick()
+{
+  <span style="color: #fff;">double</span> ma_fast = iMA(_Symbol, PERIOD_H1, 10, 0, MODE_SMA, PRICE_CLOSE);
+  <span style="color: #fff;">double</span> ma_slow = iMA(_Symbol, PERIOD_H1, 50, 0, MODE_SMA, PRICE_CLOSE);
+  
+  <span style="color: #fff;">if</span>(ma_fast > ma_slow && PositionsTotal() == 0)
+  {
+    <span class="code-comment">// Buy signal</span>
+    <span style="color: #9aea00;">OrderSend</span>(_Symbol, ORDER_TYPE_BUY, 0.1, Ask, 5, ...);
+  }
+}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Requirements -->
+    <section class="system-requirements">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>💻 System Requirements</h2>
+                <p class="section-subtitle">Make sure your device meets these minimum specs</p>
+            </div>
+            
+            <div class="requirements-grid">
+                <!-- Windows -->
+                <div class="requirement-card">
+                    <div class="req-platform">
+                        <div class="req-icon">💻</div>
+                        <h3>Windows</h3>
+                    </div>
+                    <ul class="req-list">
+                        <li>
+                            <div class="req-text">
+                                <strong>OS:</strong> Windows 7 / 8 / 10 / 11 (32-bit or 64-bit)
+                            </div>
+                        </li>
+                        <li>
+                            <div class="req-text">
+                                <strong>RAM:</strong> Minimum 2GB (4GB recommended)
+                            </div>
+                        </li>
+                        <li>
+                            <div class="req-text">
+                                <strong>Disk Space:</strong> 500MB free space
+                            </div>
+                        </li>
+                        <li>
+                            <div class="req-text">
+                                <strong>Internet:</strong> Broadband connection required
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Mac -->
+                <div class="requirement-card">
+                    <div class="req-platform">
+                        <div class="req-icon">🍎</div>
+                        <h3>Mac OS</h3>
+                    </div>
+                    <ul class="req-list">
+                        <li>
+                            <div class="req-text">
+                                <strong>OS:</strong> macOS 10.13 (High Sierra) or later
+                            </div>
+                        </li>
+                        <li>
+                            <div class="req-text">
+                                <strong>Processor:</strong> Intel & M1/M2 chips compatible
+                            </div>
+                        </li>
+                        <li>
+                            <div class="req-text">
+                                <strong>RAM:</strong> 4GB minimum
+                            </div>
+                        </li>
+                        <li>
+                            <div class="req-text">
+                                <strong>Disk Space:</strong> 500MB free space
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Mobile -->
+                <div class="requirement-card">
+                    <div class="req-platform">
+                        <div class="req-icon">📱</div>
+                        <h3>Mobile</h3>
+                    </div>
+                    <ul class="req-list">
+                        <li>
+                            <div class="req-text">
+                                <strong>iOS:</strong> iOS 11.0 or later (iPhone, iPad, iPod touch)
+                            </div>
+                        </li>
+                        <li>
+                            <div class="req-text">
+                                <strong>Android:</strong> Android 5.0 (Lollipop) or later
+                            </div>
+                        </li>
+                        <li>
+                            <div class="req-text">
+                                <strong>Storage:</strong> 100MB free space
+                            </div>
+                        </li>
+                        <li>
+                            <div class="req-text">
+                                <strong>Internet:</strong> 3G/4G/5G or WiFi
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>❓ Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about MetaTrader 5</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I install MetaTrader 5 on my computer?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Download the MT5 installer from our download buttons above. Run the .exe file (Windows) or .dmg file (Mac), follow the on-screen instructions, and click "Install". The entire process takes about 2 minutes. After installation, open MT5, search for "Vestrado" in the server list, and login with your credentials.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is MetaTrader 5 free to download and use?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, MetaTrader 5 is completely free software developed by MetaQuotes. There are no download fees, no subscription fees, and no hidden costs. You only need to fund your Vestrado trading account when you're ready to start live trading.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I use Expert Advisors (EAs) on Vestrado MT5?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Vestrado MT5 fully supports Expert Advisors (automated trading robots). You can code your own EAs in MQL5, purchase them from the MQL5 Market, or use free EAs from the community. EAs can run 24/7 if you use VPS hosting.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's the difference between MT5 Desktop and WebTrader?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        MT5 Desktop is a full-featured application installed on your computer with all advanced tools (EAs, backtesting, custom indicators). WebTrader runs in your browser with no installation required—perfect for quick trades on shared computers or when traveling. Both platforms access the same Vestrado account.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I sync my MT5 across multiple devices?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Your Vestrado MT5 account syncs automatically across all devices via cloud. Charts, indicators, watchlists, and open positions are accessible from Desktop, Mobile, and WebTrader. Just login with the same credentials on each device.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How fast is trade execution on Vestrado MT5?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Vestrado's MT5 servers are located in London Equinix LD4 Data Center with average execution speed under 0.01 seconds (10 milliseconds). 99% of market orders are executed with zero slippage, and we guarantee no requotes on market orders.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>About Vestrado</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Why Choose Us</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Regulations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Trading</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Account Types</a></li>
+                        <li><a href="#">Deposit & Withdrawal</a></li>
+                        <li><a href="#">Leverage & Margin</a></li>
+                        <li><a href="#">Copy Trading</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Trading Tutorials</a></li>
+                        <li><a href="#">Platform Guides</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Risk Disclosure</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="risk-warning">
+                <h4>⚠️ Risk Warning</h4>
+                <p><strong>Trading Forex and CFDs involves significant risk and can result in the loss of your invested capital.</strong> You should not invest more than you can afford to lose and should ensure that you fully understand the risks involved. Trading leveraged products may not be suitable for all investors. Before trading, please take into consideration your level of experience, investment objectives and seek independent financial advice if necessary. Please read our Risk Disclosure and ensure that you fully understand the risks before you make any trading decisions.</p>
+                <p style="margin-top: 15px;"><strong>Vestrado Ltd</strong> is an International Business Company registered in St Vincent and Grenadines with registration number 25911 BC 2020. Registered address: First Floor, SVG Teachers Co-operative Credit Union Limited, Uptown Building, Corner of James and Middle Street, Kingstown, St. Vincent and the Grenadines.</p>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Copyright © 2024 Vestrado Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple FAQ Toggle Script -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

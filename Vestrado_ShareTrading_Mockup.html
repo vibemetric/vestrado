@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Apple, Tesla, Google Stock CFDs | Share Trading - Vestrado</title>
+    <meta name="description" content="Trade 60+ stock CFDs with Vestrado: Apple (AAPL), Tesla (TSLA), Google (GOOGL). Leverage up to 1:20, dividend adjustments, NYSE/NASDAQ/LSE access. CFD trading - no share ownership.">
+    
+    <!-- Trust & Verification Meta Tags -->
+    <meta name="trustpilot-review-count" content="4,857">
+    <meta name="trustpilot-rating" content="4.7">
+    <meta name="regulatory-compliance" content="FCA, ASIC, CySEC Regulated">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Trade Stock CFDs | Apple, Tesla, Google - Vestrado">
+    <meta property="og:description" content="Trade stock price movements with leverage. No share ownership, full trading flexibility.">
+    <meta property="og:image" content="https://vestrado.com/wp-content/uploads/2024/08/product-shares-webbanner-img.png">
+    
+    <!-- Stock Symbols Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialProduct",
+      "name": "Stock CFD Trading",
+      "description": "Trade stock CFDs on 60+ global companies",
+      "provider": {
+        "@type": "Organization",
+        "name": "Vestrado"
+      }
+    }
+    </script>
+    
+    <!-- TradingView Widget Script -->
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    
+    <!-- CSS -->
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
+        
+        /* Trust Bar */
+        .trust-bar {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 12px 0;
+            font-size: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 13px;
+        }
+        
+        .badge-icon {
+            background: #9aea00;
+            color: #1a3a8f;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .live-stats {
+            background: rgba(255,255,255,0.15);
+            padding: 6px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+        }
+        
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #9aea00;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 60px 20px;
+            margin-bottom: 50px;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-text .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .cfd-notice {
+            background: rgba(255,193,7,0.2);
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        
+        .cfd-notice strong {
+            color: #ffc107;
+        }
+        
+        .hero-benefits {
+            display: grid;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255,255,255,0.1);
+            padding: 12px 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .benefit-icon {
+            color: #9aea00;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: #1a3a8f;
+            border: none;
+            padding: 16px 30px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(154, 234, 0, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border: 2px solid white;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #1a3a8f;
+        }
+        
+        /* Live Stock Prices */
+        .price-dashboard {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .price-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .price-header h3 {
+            color: #1a3a8f;
+            font-size: 1.5rem;
+        }
+        
+        .market-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+        
+        .market-status.open {
+            color: #28a745;
+        }
+        
+        .market-status.closed {
+            color: #dc3545;
+        }
+        
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .price-card {
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .price-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .price-symbol {
+            font-weight: bold;
+            color: #1a3a8f;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .company-name {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .price-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin: 10px 0;
+        }
+        
+        .price-change {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .price-change.positive {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .price-change.negative {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        /* CFD vs Ownership Comparison */
+        .comparison-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            margin: 40px 0;
+        }
+        
+        .comparison-section h2 {
+            color: #1a3a8f;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table thead {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+        }
+        
+        .comparison-table th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .comparison-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .check {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .cross {
+            color: #dc3545;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        /* Dividend Policy Section */
+        .dividend-section {
+            background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
+            border-left: 4px solid #9aea00;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .dividend-section h3 {
+            color: #1a3a8f;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .dividend-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .dividend-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+        }
+        
+        .dividend-card h4 {
+            color: #1a3a8f;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .dividend-card .example {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        
+        /* Swap/Financing Section */
+        .swap-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            margin: 30px 0;
+        }
+        
+        .swap-section h3 {
+            color: #1a3a8f;
+            margin-bottom: 20px;
+        }
+        
+        .swap-formula {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .swap-formula code {
+            font-size: 1.1rem;
+            color: #1a3a8f;
+            font-weight: 600;
+        }
+        
+        .swap-calculator {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .calc-inputs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .calc-group label {
+            display: block;
+            color: #1a3a8f;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .calc-group select,
+        .calc-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e8f0;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        
+        .calc-result {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .calc-result h4 {
+            color: #856404;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .calc-result .big-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ff6b35;
+        }
+        
+        /* Market Hours Section */
+        .market-hours {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            margin: 30px 0;
+        }
+        
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .hours-item {
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            border-left: 4px solid #9aea00;
+        }
+        
+        .hours-item h4 {
+            color: #1a3a8f;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .hours-detail {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+            color: #555;
+        }
+        
+        .timezone-badge {
+            background: #e3f2fd;
+            color: #1a3a8f;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        /* Sector Filter */
+        .sector-filter {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+            justify-content: center;
+        }
+        
+        .sector-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #e1e8f0;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .sector-btn:hover,
+        .sector-btn.active {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            border-color: #1a3a8f;
+        }
+        
+        /* Stocks Table */
+        .specs-table-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            overflow-x: auto;
+            margin: 30px 0;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        .specs-table thead {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+        }
+        
+        .specs-table th {
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+        
+        .specs-table td {
+            padding: 15px 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .specs-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .highlight {
+            background: #9aea00;
+            color: #1a3a8f;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            display: inline-block;
+        }
+        
+        .sector-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .sector-tag.tech {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .sector-tag.finance {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .sector-tag.consumer {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        
+        .sector-tag.healthcare {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+        
+        .sector-tag.energy {
+            background: #ffe0b2;
+            color: #e64a19;
+        }
+        
+        .sector-tag.industrial {
+            background: #f1f8e9;
+            color: #689f38;
+        }
+        
+        /* Earnings Alert */
+        .earnings-alert {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%);
+            border: 2px solid #ff9800;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+        
+        .earnings-alert h4 {
+            color: #d32f2f;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .earnings-list {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .earnings-item {
+            background: white;
+            padding: 12px 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .earnings-date {
+            background: #ff6b35;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        /* Info Boxes */
+        .info-box {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .info-box.warning {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%);
+            border-left-color: #ff9800;
+        }
+        
+        .info-box h4 {
+            color: #1a3a8f;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-box ul {
+            margin: 10px 0 0 20px;
+            line-height: 1.8;
+        }
+        
+        /* Risk Warning */
+        .risk-warning {
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+            border: 2px solid #dc3545;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+        
+        .risk-warning h3 {
+            color: #d32f2f;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .risk-list {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .risk-list li {
+            margin: 10px 0;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 50px 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a3a8f;
+            color: white;
+            padding: 40px 20px 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-disclaimer {
+            font-size: 12px;
+            line-height: 1.7;
+            opacity: 0.8;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .price-grid,
+            .dividend-grid,
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .specs-table {
+                font-size: 12px;
+            }
+            
+            .specs-table th,
+            .specs-table td {
+                padding: 10px 6px;
+            }
+            
+            .calc-inputs {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .sector-filter {
+                flex-direction: column;
+            }
+            
+            .comparison-table {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-badges">
+                <div class="badge">
+                    <div class="badge-icon">✓</div>
+                    <span>FCA Regulated #923456</span>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🛡️</div>
+                    <span>Client Funds Protected</span>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">⭐</div>
+                    <span>4.7/5 on Trustpilot (4,857 reviews)</span>
+                </div>
+            </div>
+            <div class="live-stats">
+                <div class="live-dot"></div>
+                <span>1,247 traders online now</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Trade Stock Price Movements via CFDs</h1>
+                <p class="subtitle">Profit from both rising and falling prices of Apple, Tesla, Google, and 60+ global stocks. Trade with leverage without owning the underlying shares.</p>
+                
+                <div class="cfd-notice">
+                    <strong>🔍 Important:</strong> You trade Stock CFDs, not actual shares. No share ownership, voting rights, or direct dividends. You receive cash adjustments for dividends and pay overnight financing fees.
+                </div>
+                
+                <div class="hero-benefits">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">📊</span>
+                        <span><strong>60+ Stock CFDs</strong> - Apple, Tesla, Google, Amazon, Microsoft & more</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">⚡</span>
+                        <span><strong>Leverage up to 1:20</strong> - Maximize your capital efficiency</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">💰</span>
+                        <span><strong>Dividend adjustments</strong> - Long positions receive, shorts pay</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🌐</span>
+                        <span><strong>NYSE, NASDAQ, LSE access</strong> - Trade global markets</span>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="https://my.vestrado.com/register" class="btn-primary">Start Trading Stocks</a>
+                    <a href="https://my.vestrado.com/demo" class="btn-secondary">Try Free Demo</a>
+                </div>
+            </div>
+            
+            <div class="price-dashboard">
+                <div class="price-header">
+                    <h3>🔥 Live Stock Prices</h3>
+                    <div class="market-status open">
+                        <div class="live-dot"></div>
+                        NYSE Open
+                    </div>
+                </div>
+                <div class="price-grid">
+                    <div class="price-card">
+                        <div class="price-symbol">AAPL</div>
+                        <div class="company-name">Apple Inc.</div>
+                        <div class="price-value">$234.52</div>
+                        <div class="price-change positive">+2.34%</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-symbol">TSLA</div>
+                        <div class="company-name">Tesla Inc.</div>
+                        <div class="price-value">$412.80</div>
+                        <div class="price-change positive">+5.67%</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-symbol">GOOGL</div>
+                        <div class="company-name">Alphabet Inc.</div>
+                        <div class="price-value">$178.45</div>
+                        <div class="price-change negative">-1.23%</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-symbol">AMZN</div>
+                        <div class="company-name">Amazon.com</div>
+                        <div class="price-value">$215.67</div>
+                        <div class="price-change positive">+1.89%</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-symbol">MSFT</div>
+                        <div class="company-name">Microsoft Corp.</div>
+                        <div class="price-value">$456.23</div>
+                        <div class="price-change positive">+0.78%</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-symbol">NVDA</div>
+                        <div class="company-name">NVIDIA Corp.</div>
+                        <div class="price-value">$1,234.56</div>
+                        <div class="price-change positive">+3.45%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CFD vs Ownership Comparison -->
+    <div class="container">
+        <div class="comparison-section">
+            <h2>📊 Stock CFDs vs Buying Actual Shares</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 30px;">Understand the key differences to choose the right approach for your trading goals</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Stock CFDs (Vestrado)</th>
+                        <th>Actual Share Ownership</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Ownership</strong></td>
+                        <td><span class="cross">✗</span> No share ownership</td>
+                        <td><span class="check">✓</span> You own the shares</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Leverage</strong></td>
+                        <td><span class="check">✓</span> Up to 1:20 leverage</td>
+                        <td><span class="cross">✗</span> No leverage (full capital required)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Short Selling</strong></td>
+                        <td><span class="check">✓</span> Easy short selling (profit from falling prices)</td>
+                        <td><span class="cross">✗</span> Complex/restricted short selling</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dividends</strong></td>
+                        <td><span class="check">✓</span> Cash adjustment (Long receive, Short pay)</td>
+                        <td><span class="check">✓</span> Full dividend payment</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Overnight Fees</strong></td>
+                        <td><span class="cross">✗</span> Yes (financing costs apply)</td>
+                        <td><span class="check">✓</span> No overnight fees</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Voting Rights</strong></td>
+                        <td><span class="cross">✗</span> No voting rights</td>
+                        <td><span class="check">✓</span> Full voting rights</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stamp Duty (UK)</strong></td>
+                        <td><span class="check">✓</span> No stamp duty</td>
+                        <td><span class="cross">✗</span> 0.5% stamp duty on purchases</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Best For</strong></td>
+                        <td><strong>Short-to-medium term trading</strong> (days to months)</td>
+                        <td><strong>Long-term investing</strong> (years)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Minimum Capital</strong></td>
+                        <td><span class="check">✓</span> Lower (due to leverage)</td>
+                        <td><span class="cross">✗</span> Higher (full share price)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="info-box" style="margin-top: 30px;">
+                <h4>💡 When to Choose Stock CFDs:</h4>
+                <ul>
+                    <li>You want to trade short-to-medium term (days, weeks, or a few months)</li>
+                    <li>You want to profit from both rising AND falling stock prices</li>
+                    <li>You want to maximize capital efficiency with leverage</li>
+                    <li>You want to avoid stamp duty (UK traders)</li>
+                    <li>You don't need voting rights or shareholder benefits</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dividend Policy Section -->
+    <div class="container">
+        <div class="dividend-section">
+            <h3>📈 Dividend Policy for Stock CFDs</h3>
+            <p style="color: #555; margin-bottom: 20px;">When you trade stock CFDs, you don't own the underlying shares, but you still receive cash adjustments for dividends:</p>
+            
+            <div class="dividend-grid">
+                <div class="dividend-card">
+                    <h4>Long Positions (BUY)</h4>
+                    <p><span class="check">✓</span> <strong>You RECEIVE dividend adjustments</strong></p>
+                    <p style="color: #666; margin: 10px 0;">If you hold a long CFD position when a stock goes ex-dividend, your account will be credited with the dividend amount (minus applicable tax).</p>
+                    
+                    <div class="example">
+                        <strong>Example:</strong><br>
+                        • You buy 10 lots of AAPL CFD<br>
+                        • AAPL declares $0.24 dividend<br>
+                        • You receive: $0.24 × 100 × 10 = <strong style="color: #28a745;">+$240 credit</strong>
+                    </div>
+                </div>
+                
+                <div class="dividend-card">
+                    <h4>Short Positions (SELL)</h4>
+                    <p><span class="cross">✗</span> <strong>You PAY dividend adjustments</strong></p>
+                    <p style="color: #666; margin: 10px 0;">If you hold a short CFD position when a stock goes ex-dividend, your account will be debited with the dividend amount.</p>
+                    
+                    <div class="example">
+                        <strong>Example:</strong><br>
+                        • You short 10 lots of MSFT CFD<br>
+                        • MSFT declares $0.75 dividend<br>
+                        • You pay: $0.75 × 100 × 10 = <strong style="color: #dc3545;">-$750 charge</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-box warning" style="margin-top: 25px;">
+                <h4>⚠️ Important Notes:</h4>
+                <ul>
+                    <li><strong>Ex-Dividend Date:</strong> Adjustments occur on the ex-dividend date, not the payment date</li>
+                    <li><strong>Tax Withholding:</strong> Some countries apply withholding tax (typically 15-30%)</li>
+                    <li><strong>Corporate Actions:</strong> Stock splits, rights issues handled similarly - see our <a href="#" style="color: #1a3a8f; font-weight: 600;">Corporate Actions Policy</a></li>
+                </ul>
+            </div>
+            
+            <div style="text-align: center; margin-top: 25px;">
+                <a href="#" style="color: #1a3a8f; font-weight: 600; text-decoration: underline;">📅 View Upcoming Dividend Calendar →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swap/Financing Fees Section -->
+    <div class="container">
+        <div class="swap-section">
+            <h3>💰 Overnight Financing Fees (Swap Rates)</h3>
+            <p style="color: #555; margin-bottom: 20px;"><strong>Important:</strong> Stock CFDs incur overnight financing fees if you hold positions past 5 PM ET (market close). This is a key difference from buying actual shares.</p>
+            
+            <div class="swap-formula">
+                <p style="margin-bottom: 10px; font-weight: 600;">Financing Formula:</p>
+                <code>Overnight Fee = (Position Size × Stock Price × Financing Rate) / 360 days</code>
+            </div>
+            
+            <div class="info-box warning">
+                <h4>📌 Typical Financing Rates:</h4>
+                <ul>
+                    <li><strong>Long Positions:</strong> LIBOR/SOFR + 2.5% annually (you PAY this fee)</li>
+                    <li><strong>Short Positions:</strong> LIBOR/SOFR - 2.5% annually (you may receive/pay depending on rate)</li>
+                    <li><strong>Daily Cost:</strong> Approximately 0.007% - 0.022% per day for most stocks</li>
+                </ul>
+            </div>
+            
+            <div class="swap-calculator">
+                <h4 style="color: #1a3a8f; margin-bottom: 20px;">🧮 Overnight Cost Calculator</h4>
+                
+                <div class="calc-inputs">
+                    <div class="calc-group">
+                        <label>Select Stock</label>
+                        <select id="stock-select" onchange="calculateSwap()">
+                            <option value="aapl|234.52|3.5">AAPL - Apple ($234.52)</option>
+                            <option value="tsla|412.80|4.5">TSLA - Tesla ($412.80)</option>
+                            <option value="googl|178.45|3.2">GOOGL - Alphabet ($178.45)</option>
+                            <option value="amzn|215.67|3.8">AMZN - Amazon ($215.67)</option>
+                            <option value="msft|456.23|3.0">MSFT - Microsoft ($456.23)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="calc-group">
+                        <label>Number of Lots</label>
+                        <input type="number" id="lots" value="1" min="0.01" step="0.01" onchange="calculateSwap()">
+                    </div>
+                    
+                    <div class="calc-group">
+                        <label>Holding Days</label>
+                        <input type="number" id="days" value="30" min="1" onchange="calculateSwap()">
+                    </div>
+                </div>
+                
+                <div class="calc-result">
+                    <h4>Estimated Total Financing Cost:</h4>
+                    <div class="big-number" id="swap-cost">$0.00</div>
+                    <p style="margin-top: 10px; font-size: 14px; color: #856404;">
+                        <em>* Calculated using current LIBOR rates. Actual rates may vary.</em>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="info-box" style="margin-top: 25px;">
+                <h4>💡 Minimizing Financing Costs:</h4>
+                <ul>
+                    <li><strong>Day Trading:</strong> Close positions before 5 PM ET to avoid overnight fees</li>
+                    <li><strong>Weekend Holding:</strong> Note that Friday positions incur 3 days of fees (Fri, Sat, Sun)</li>
+                    <li><strong>Long-Term Trades:</strong> Consider actual share ownership for holds beyond 3-6 months</li>
+                </ul>
+            </div>
+            
+            <div style="text-align: center; margin-top: 25px;">
+                <a href="#" style="color: #1a3a8f; font-weight: 600; text-decoration: underline;">📄 Download Full Swap Rate Schedule (PDF) →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Stock Market Hours -->
+    <div class="container">
+        <div class="market-hours">
+            <h3 style="color: #1a3a8f; margin-bottom: 10px;">🕒 Global Stock Market Trading Hours</h3>
+            <p style="color: #666; margin-bottom: 25px;">Each stock exchange has different trading hours. Know when your favorite stocks are available for trading:</p>
+            
+            <div class="hours-grid">
+                <div class="hours-item">
+                    <h4>🇺🇸 NYSE & NASDAQ (US Stocks)</h4>
+                    <div class="hours-detail">
+                        <span>Market Symbol:</span>
+                        <span><strong>AAPL, TSLA, GOOGL, AMZN, MSFT, etc.</strong></span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Local Time (ET):</span>
+                        <span><strong>9:30 AM - 4:00 PM</strong></span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>GMT/UTC:</span>
+                        <span><strong>2:30 PM - 9:00 PM <span class="timezone-badge">GMT</span></strong></span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Vietnam Time:</span>
+                        <span><strong>9:30 PM - 4:00 AM+1 <span class="timezone-badge">GMT+7</span></strong></span>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 13px; color: #666;">
+                        <strong>Pre-Market:</strong> 4:00 AM - 9:30 AM ET (Not available for CFDs)<br>
+                        <strong>After-Hours:</strong> 4:00 PM - 8:00 PM ET (Not available for CFDs)
+                    </p>
+                </div>
+                
+                <div class="hours-item">
+                    <h4>🇬🇧 London Stock Exchange (UK Stocks)</h4>
+                    <div class="hours-detail">
+                        <span>Market Symbol:</span>
+                        <span><strong>BP, HSBC, Unilever, Shell, etc.</strong></span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Local Time (GMT):</span>
+                        <span><strong>8:00 AM - 4:30 PM</strong></span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Vietnam Time:</span>
+                        <span><strong>3:00 PM - 11:30 PM <span class="timezone-badge">GMT+7</span></strong></span>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 13px; color: #666;">
+                        <strong>Note:</strong> UK stocks switch between GMT (winter) and BST (summer)
+                    </p>
+                </div>
+                
+                <div class="hours-item">
+                    <h4>🇪🇺 Euronext (European Stocks)</h4>
+                    <div class="hours-detail">
+                        <span>Market Symbol:</span>
+                        <span><strong>LVMH, Airbus, TotalEnergies, etc.</strong></span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Local Time (CET):</span>
+                        <span><strong>9:00 AM - 5:30 PM</strong></span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>GMT/UTC:</span>
+                        <span><strong>8:00 AM - 4:30 PM <span class="timezone-badge">GMT</span></strong></span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Vietnam Time:</span>
+                        <span><strong>3:00 PM - 11:30 PM <span class="timezone-badge">GMT+7</span></strong></span>
+                    </div>
+                </div>
+                
+                <div class="hours-item">
+                    <h4>🇭🇰 Hong Kong Stock Exchange</h4>
+                    <div class="hours-detail">
+                        <span>Market Symbol:</span>
+                        <span><strong>Alibaba, Tencent, Xiaomi, etc.</strong></span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Local Time (HKT):</span>
+                        <span><strong>9:30 AM - 4:00 PM</strong></span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Vietnam Time:</span>
+                        <span><strong>8:30 AM - 3:00 PM <span class="timezone-badge">GMT+7</span></strong></span>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 13px; color: #666;">
+                        <strong>Lunch Break:</strong> 12:00 PM - 1:00 PM HKT (No trading)
+                    </p>
+                </div>
+            </div>
+            
+            <div class="info-box warning" style="margin-top: 30px;">
+                <h4>📅 Exchange Holidays & Closures:</h4>
+                <ul>
+                    <li><strong>US Markets:</strong> Closed on Thanksgiving, Christmas, New Year's Day, Independence Day, etc.</li>
+                    <li><strong>UK Markets:</strong> Closed on Christmas, Boxing Day, Easter, etc.</li>
+                    <li><strong>Early Closures:</strong> Some markets close early on days before major holidays</li>
+                </ul>
+                <p style="margin-top: 15px;">
+                    <a href="#" style="color: #1a3a8f; font-weight: 600; text-decoration: underline;">📆 View Full Trading Calendar →</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Earnings Season Alert -->
+    <div class="container">
+        <div class="earnings-alert">
+            <h4>⚡ Upcoming Earnings Announcements</h4>
+            <p style="color: #666; margin-bottom: 15px;">Major earnings reports can cause significant price volatility. Plan your trades accordingly:</p>
+            
+            <div class="earnings-list">
+                <div class="earnings-item">
+                    <div>
+                        <strong style="color: #1a3a8f;">AAPL</strong> - Apple Inc. Q4 2024 Earnings
+                    </div>
+                    <div class="earnings-date">Feb 12, 2026</div>
+                </div>
+                <div class="earnings-item">
+                    <div>
+                        <strong style="color: #1a3a8f;">TSLA</strong> - Tesla Q4 2024 Earnings
+                    </div>
+                    <div class="earnings-date">Feb 15, 2026</div>
+                </div>
+                <div class="earnings-item">
+                    <div>
+                        <strong style="color: #1a3a8f;">GOOGL</strong> - Alphabet Q4 2024 Earnings
+                    </div>
+                    <div class="earnings-date">Feb 18, 2026</div>
+                </div>
+                <div class="earnings-item">
+                    <div>
+                        <strong style="color: #1a3a8f;">AMZN</strong> - Amazon Q4 2024 Earnings
+                    </div>
+                    <div class="earnings-date">Feb 20, 2026</div>
+                </div>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 14px; color: #856404;">
+                <strong>⚠️ Trading Tip:</strong> Expect higher volatility and wider spreads around earnings releases. Consider reducing position sizes or using stop-loss orders.
+            </p>
+        </div>
+    </div>
+
+    <!-- Stock List with Sector Filter -->
+    <div class="container">
+        <div class="specs-table-container">
+            <h3 style="color: #1a3a8f; margin-bottom: 15px; text-align: center;">📊 Complete Stock CFD List (60+ Instruments)</h3>
+            <p style="text-align: center; color: #666; margin-bottom: 25px;">All major US, UK, and European stocks available for CFD trading</p>
+            
+            <!-- Sector Filter -->
+            <div class="sector-filter">
+                <button class="sector-btn active" onclick="filterSector('all')">All Stocks</button>
+                <button class="sector-btn" onclick="filterSector('tech')">Technology</button>
+                <button class="sector-btn" onclick="filterSector('finance')">Finance</button>
+                <button class="sector-btn" onclick="filterSector('consumer')">Consumer</button>
+                <button class="sector-btn" onclick="filterSector('healthcare')">Healthcare</button>
+                <button class="sector-btn" onclick="filterSector('energy')">Energy</button>
+                <button class="sector-btn" onclick="filterSector('industrial')">Industrial</button>
+            </div>
+            
+            <table class="specs-table" id="stocks-table">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Company Name</th>
+                        <th>Sector</th>
+                        <th>Exchange</th>
+                        <th>Min Spread</th>
+                        <th>Margin (%)</th>
+                        <th>Max Leverage</th>
+                        <th>Contract Size</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Technology Sector -->
+                    <tr data-sector="tech">
+                        <td><strong>AAPL</strong></td>
+                        <td>Apple Inc.</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NASDAQ</td>
+                        <td><span class="highlight">$0.02</span></td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="tech">
+                        <td><strong>GOOGL</strong></td>
+                        <td>Alphabet Inc. (Class A)</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="tech">
+                        <td><strong>MSFT</strong></td>
+                        <td>Microsoft Corporation</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="tech">
+                        <td><strong>NVDA</strong></td>
+                        <td>NVIDIA Corporation</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.10</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="tech">
+                        <td><strong>META</strong></td>
+                        <td>Meta Platforms Inc.</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.05</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="tech">
+                        <td><strong>TSLA</strong></td>
+                        <td>Tesla Inc.</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.08</td>
+                        <td>10%</td>
+                        <td>1:10</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="tech">
+                        <td><strong>AMD</strong></td>
+                        <td>Advanced Micro Devices</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.05</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="tech">
+                        <td><strong>INTC</strong></td>
+                        <td>Intel Corporation</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.02</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="tech">
+                        <td><strong>ORCL</strong></td>
+                        <td>Oracle Corporation</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="tech">
+                        <td><strong>CRM</strong></td>
+                        <td>Salesforce Inc.</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NYSE</td>
+                        <td>$0.04</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    
+                    <!-- Consumer Sector -->
+                    <tr data-sector="consumer">
+                        <td><strong>AMZN</strong></td>
+                        <td>Amazon.com Inc.</td>
+                        <td><span class="sector-tag consumer">Consumer</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.04</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="consumer">
+                        <td><strong>NFLX</strong></td>
+                        <td>Netflix Inc.</td>
+                        <td><span class="sector-tag consumer">Consumer</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.10</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="consumer">
+                        <td><strong>DIS</strong></td>
+                        <td>Walt Disney Company</td>
+                        <td><span class="sector-tag consumer">Consumer</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="consumer">
+                        <td><strong>NKE</strong></td>
+                        <td>Nike Inc.</td>
+                        <td><span class="sector-tag consumer">Consumer</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="consumer">
+                        <td><strong>SBUX</strong></td>
+                        <td>Starbucks Corporation</td>
+                        <td><span class="sector-tag consumer">Consumer</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.02</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="consumer">
+                        <td><strong>MCD</strong></td>
+                        <td>McDonald's Corporation</td>
+                        <td><span class="sector-tag consumer">Consumer</span></td>
+                        <td>NYSE</td>
+                        <td>$0.04</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="consumer">
+                        <td><strong>KO</strong></td>
+                        <td>Coca-Cola Company</td>
+                        <td><span class="sector-tag consumer">Consumer</span></td>
+                        <td>NYSE</td>
+                        <td>$0.02</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="consumer">
+                        <td><strong>PEP</strong></td>
+                        <td>PepsiCo Inc.</td>
+                        <td><span class="sector-tag consumer">Consumer</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    
+                    <!-- Finance Sector -->
+                    <tr data-sector="finance">
+                        <td><strong>JPM</strong></td>
+                        <td>JPMorgan Chase & Co.</td>
+                        <td><span class="sector-tag finance">Finance</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="finance">
+                        <td><strong>BAC</strong></td>
+                        <td>Bank of America Corp.</td>
+                        <td><span class="sector-tag finance">Finance</span></td>
+                        <td>NYSE</td>
+                        <td>$0.02</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="finance">
+                        <td><strong>WFC</strong></td>
+                        <td>Wells Fargo & Company</td>
+                        <td><span class="sector-tag finance">Finance</span></td>
+                        <td>NYSE</td>
+                        <td>$0.02</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="finance">
+                        <td><strong>GS</strong></td>
+                        <td>Goldman Sachs Group</td>
+                        <td><span class="sector-tag finance">Finance</span></td>
+                        <td>NYSE</td>
+                        <td>$0.05</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="finance">
+                        <td><strong>MS</strong></td>
+                        <td>Morgan Stanley</td>
+                        <td><span class="sector-tag finance">Finance</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="finance">
+                        <td><strong>V</strong></td>
+                        <td>Visa Inc.</td>
+                        <td><span class="sector-tag finance">Finance</span></td>
+                        <td>NYSE</td>
+                        <td>$0.04</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="finance">
+                        <td><strong>MA</strong></td>
+                        <td>Mastercard Inc.</td>
+                        <td><span class="sector-tag finance">Finance</span></td>
+                        <td>NYSE</td>
+                        <td>$0.05</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="finance">
+                        <td><strong>AXP</strong></td>
+                        <td>American Express Co.</td>
+                        <td><span class="sector-tag finance">Finance</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    
+                    <!-- Healthcare Sector -->
+                    <tr data-sector="healthcare">
+                        <td><strong>JNJ</strong></td>
+                        <td>Johnson & Johnson</td>
+                        <td><span class="sector-tag healthcare">Healthcare</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="healthcare">
+                        <td><strong>PFE</strong></td>
+                        <td>Pfizer Inc.</td>
+                        <td><span class="sector-tag healthcare">Healthcare</span></td>
+                        <td>NYSE</td>
+                        <td>$0.02</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="healthcare">
+                        <td><strong>UNH</strong></td>
+                        <td>UnitedHealth Group</td>
+                        <td><span class="sector-tag healthcare">Healthcare</span></td>
+                        <td>NYSE</td>
+                        <td>$0.08</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="healthcare">
+                        <td><strong>ABBV</strong></td>
+                        <td>AbbVie Inc.</td>
+                        <td><span class="sector-tag healthcare">Healthcare</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="healthcare">
+                        <td><strong>TMO</strong></td>
+                        <td>Thermo Fisher Scientific</td>
+                        <td><span class="sector-tag healthcare">Healthcare</span></td>
+                        <td>NYSE</td>
+                        <td>$0.08</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="healthcare">
+                        <td><strong>MRK</strong></td>
+                        <td>Merck & Co. Inc.</td>
+                        <td><span class="sector-tag healthcare">Healthcare</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    
+                    <!-- Energy Sector -->
+                    <tr data-sector="energy">
+                        <td><strong>XOM</strong></td>
+                        <td>Exxon Mobil Corporation</td>
+                        <td><span class="sector-tag energy">Energy</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="energy">
+                        <td><strong>CVX</strong></td>
+                        <td>Chevron Corporation</td>
+                        <td><span class="sector-tag energy">Energy</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="energy">
+                        <td><strong>COP</strong></td>
+                        <td>ConocoPhillips</td>
+                        <td><span class="sector-tag energy">Energy</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="energy">
+                        <td><strong>SLB</strong></td>
+                        <td>Schlumberger Ltd.</td>
+                        <td><span class="sector-tag energy">Energy</span></td>
+                        <td>NYSE</td>
+                        <td>$0.02</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    
+                    <!-- Industrial Sector -->
+                    <tr data-sector="industrial">
+                        <td><strong>BA</strong></td>
+                        <td>Boeing Company</td>
+                        <td><span class="sector-tag industrial">Industrial</span></td>
+                        <td>NYSE</td>
+                        <td>$0.05</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="industrial">
+                        <td><strong>CAT</strong></td>
+                        <td>Caterpillar Inc.</td>
+                        <td><span class="sector-tag industrial">Industrial</span></td>
+                        <td>NYSE</td>
+                        <td>$0.05</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="industrial">
+                        <td><strong>GE</strong></td>
+                        <td>General Electric Co.</td>
+                        <td><span class="sector-tag industrial">Industrial</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="industrial">
+                        <td><strong>UPS</strong></td>
+                        <td>United Parcel Service</td>
+                        <td><span class="sector-tag industrial">Industrial</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    
+                    <!-- Additional Popular Stocks -->
+                    <tr data-sector="tech">
+                        <td><strong>ADBE</strong></td>
+                        <td>Adobe Inc.</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.08</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="tech">
+                        <td><strong>PYPL</strong></td>
+                        <td>PayPal Holdings Inc.</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="consumer">
+                        <td><strong>WMT</strong></td>
+                        <td>Walmart Inc.</td>
+                        <td><span class="sector-tag consumer">Consumer</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="consumer">
+                        <td><strong>HD</strong></td>
+                        <td>Home Depot Inc.</td>
+                        <td><span class="sector-tag consumer">Consumer</span></td>
+                        <td>NYSE</td>
+                        <td>$0.05</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="tech">
+                        <td><strong>CSCO</strong></td>
+                        <td>Cisco Systems Inc.</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.02</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="healthcare">
+                        <td><strong>AMGN</strong></td>
+                        <td>Amgen Inc.</td>
+                        <td><span class="sector-tag healthcare">Healthcare</span></td>
+                        <td>NASDAQ</td>
+                        <td>$0.05</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="finance">
+                        <td><strong>BRK.B</strong></td>
+                        <td>Berkshire Hathaway B</td>
+                        <td><span class="sector-tag finance">Finance</span></td>
+                        <td>NYSE</td>
+                        <td>$0.05</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="tech">
+                        <td><strong>IBM</strong></td>
+                        <td>IBM Corporation</td>
+                        <td><span class="sector-tag tech">Technology</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="healthcare">
+                        <td><strong>LLY</strong></td>
+                        <td>Eli Lilly and Company</td>
+                        <td><span class="sector-tag healthcare">Healthcare</span></td>
+                        <td>NYSE</td>
+                        <td>$0.10</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                    <tr data-sector="consumer">
+                        <td><strong>PG</strong></td>
+                        <td>Procter & Gamble Co.</td>
+                        <td><span class="sector-tag consumer">Consumer</span></td>
+                        <td>NYSE</td>
+                        <td>$0.03</td>
+                        <td>5%</td>
+                        <td>1:20</td>
+                        <td>100 shares</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="text-align: center; margin-top: 25px; color: #666;">
+                <em>* Spreads shown are minimum typical spreads. Actual spreads may vary based on market conditions and volatility.</em>
+            </p>
+        </div>
+    </div>
+
+    <!-- Stock-Specific Risk Warning -->
+    <div class="container">
+        <div class="risk-warning">
+            <h3>⚠️ Stock CFD-Specific Risks</h3>
+            <p style="margin-bottom: 15px; color: #555;"><strong>Stock CFDs carry unique risks beyond general CFD trading:</strong></p>
+            
+            <ul class="risk-list">
+                <li><strong>Earnings Gap Risk:</strong> Stocks can gap significantly (5-20%+) after earnings announcements, potentially bypassing your stop-loss orders. Always reduce position sizes before major earnings.</li>
+                
+                <li><strong>Trading Halts:</strong> Individual stocks can be halted during trading hours due to pending news, circuit breakers, or regulatory actions. You cannot close positions during halts.</li>
+                
+                <li><strong>Overnight Financing Accumulation:</strong> Unlike forex, stock CFD financing costs compound quickly. A 30-day hold can cost 2-3% of position value. Not suitable for long-term holds.</li>
+                
+                <li><strong>Dividend-Related Volatility:</strong> Stocks typically drop by the dividend amount on ex-dividend date. If you're short, you pay the dividend PLUS the price drop impact.</li>
+                
+                <li><strong>Sector Correlation Risk:</strong> Tech stocks often move together. Diversifying across Apple, Google, Microsoft may not reduce risk as much as expected.</li>
+                
+                <li><strong>Single-Stock Concentration:</strong> Unlike indices, individual stocks can lose 50%+ of value permanently (bankruptcy, fraud, product failure). Use appropriate position sizing.</li>
+            </ul>
+            
+            <div style="background: white; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                <p style="color: #d32f2f; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px;">
+                    ⚠️ ESMA Risk Warning:
+                </p>
+                <p style="color: #555; line-height: 1.7;">
+                    <strong>68% of retail investor accounts lose money when trading stock CFDs with this provider.</strong> You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money. CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="container">
+        <div class="cta-section">
+            <h2>Ready to Trade Stock CFDs?</h2>
+            <p>Access 60+ global stocks with competitive spreads and professional trading conditions</p>
+            <div class="cta-buttons">
+                <a href="https://my.vestrado.com/register" class="btn-primary">Open Live Account</a>
+                <a href="https://my.vestrado.com/demo" class="btn-secondary">Try Risk-Free Demo</a>
+            </div>
+            
+            <div style="margin-top: 30px; font-size: 14px; opacity: 0.8;">
+                <p>✓ No minimum deposit • ✓ 24/5 support • ✓ FCA regulated</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-disclaimer">
+                <p><strong>Risk Disclosure:</strong></p>
+                <p>Trading stocks and CFDs on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade stocks or CFDs you should carefully consider your investment objectives, level of experience, and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with stock CFD trading, and seek advice from an independent financial advisor if you have any doubts.</p>
+                
+                <p style="margin-top: 15px;"><strong>Important Clarifications:</strong></p>
+                <ul style="text-align: left; max-width: 800px; margin: 10px auto; line-height: 1.8;">
+                    <li>When you trade stock CFDs with Vestrado, you do NOT own the underlying shares</li>
+                    <li>You will NOT receive voting rights or attend shareholder meetings</li>
+                    <li>You receive cash adjustments for dividends, not actual dividend payments</li>
+                    <li>Overnight financing fees apply to all positions held past market close</li>
+                    <li>Past performance of stocks does not guarantee future results</li>
+                </ul>
+                
+                <p style="margin-top: 15px;"><strong>Vestrado Ltd</strong> is authorized and regulated by the Financial Conduct Authority (FCA) under reference number 923456. Registered address: 123 Financial Street, London, EC2M 1AB, United Kingdom. Company number: 12345678.</p>
+                
+                <p style="margin-top: 10px;">© 2024-2026 Vestrado Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Sector Filter Function
+        function filterSector(sector) {
+            const rows = document.querySelectorAll('#stocks-table tbody tr');
+            const buttons = document.querySelectorAll('.sector-btn');
+            
+            // Update button states
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter rows
+            rows.forEach(row => {
+                if (sector === 'all' || row.dataset.sector === sector) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+        
+        // Overnight Cost Calculator
+        function calculateSwap() {
+            const stockSelect = document.getElementById('stock-select');
+            const lots = parseFloat(document.getElementById('lots').value) || 1;
+            const days = parseInt(document.getElementById('days').value) || 30;
+            
+            const [symbol, price, rate] = stockSelect.value.split('|');
+            const stockPrice = parseFloat(price);
+            const annualRate = parseFloat(rate) / 100; // Convert percentage to decimal
+            
+            // Formula: (Position Size × Stock Price × Annual Rate) / 360 × Days
+            const positionSize = lots * 100; // Each lot = 100 shares
+            const dailyRate = annualRate / 360;
+            const totalCost = positionSize * stockPrice * dailyRate * days;
+            
+            document.getElementById('swap-cost').textContent = '$' + totalCost.toFixed(2);
+        }
+        
+        // Initialize calculator on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            calculateSwap();
+        });
+    </script>
+</body>
+</html>

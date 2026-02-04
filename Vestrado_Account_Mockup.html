@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Account Type - Start from $10 | Vestrado Trading</title>
+    <meta name="description" content="Open Frux, Fides or Respectus trading account. Start from $10, leverage up to 1:2000, spreads from 0 pips. Swap-free Islamic accounts available. Try $10,000 FREE Demo first.">
+    
+    <!-- Trust & Compliance Meta -->
+    <meta name="risk-warning" content="76.4% of retail investor accounts lose money when trading CFDs">
+    <meta name="regulation" content="FCA Regulated, CySEC Authorized">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .badge i {
+            color: #9aea00;
+        }
+        
+        .live-stats {
+            background: rgba(255,255,255,0.15);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #9aea00;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        /* ===== RISK WARNING BANNER (ESMA COMPLIANCE) ===== */
+        .risk-warning-banner {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            padding: 15px 0;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(238, 90, 111, 0.3);
+        }
+        
+        .risk-warning-banner i {
+            font-size: 18px;
+            margin-right: 10px;
+            animation: shake 3s infinite;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+            20%, 40%, 60%, 80% { transform: translateX(2px); }
+        }
+        
+        /* ===== HEADER ===== */
+        .header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 40px;
+            z-index: 999;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1a3a8f;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #9aea00;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .main-nav a:hover {
+            background: #f0f7ff;
+            color: #2d5cc2;
+        }
+        
+        .main-nav a.active {
+            color: #2d5cc2;
+            background: #f0f7ff;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #2d5cc2;
+            border: 2px solid #2d5cc2;
+        }
+        
+        .btn-secondary:hover {
+            background: #2d5cc2;
+            color: white;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #9aea00 0%, #7bc900 100%);
+            color: #1a3a8f;
+            box-shadow: 0 4px 15px rgba(154, 234, 0, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(154, 234, 0, 0.4);
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: white;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: #9aea00;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .stat-box {
+            text-align: center;
+        }
+        
+        .stat-box .number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1a3a8f;
+        }
+        
+        .stat-box .label {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* ===== DECISION SUPPORT QUIZ (NEW) ===== */
+        .decision-quiz {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f8fbff 100%);
+            padding: 40px 20px;
+            margin: 40px 0;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .decision-quiz h3 {
+            font-size: 1.8rem;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+        }
+        
+        .decision-quiz p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+        
+        .quiz-options {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .quiz-option {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid #e1e8f0;
+            text-align: left;
+            max-width: 300px;
+        }
+        
+        .quiz-option:hover {
+            border-color: #2d5cc2;
+            box-shadow: 0 5px 20px rgba(45, 92, 194, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .quiz-option i {
+            font-size: 2rem;
+            color: #2d5cc2;
+            margin-bottom: 10px;
+        }
+        
+        .quiz-option h4 {
+            color: #1a3a8f;
+            margin-bottom: 8px;
+        }
+        
+        .quiz-option p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 0;
+        }
+        
+        /* ===== ACCOUNT COMPARISON TABLE ===== */
+        .comparison-section {
+            background: white;
+            padding: 60px 20px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .comparison-table-wrapper {
+            overflow-x: auto;
+            margin: 0 -20px;
+            padding: 0 20px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .comparison-table thead th {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            position: relative;
+        }
+        
+        .comparison-table thead th:first-child {
+            text-align: left;
+            width: 25%;
+        }
+        
+        /* Account Type Headers with Badges */
+        .account-header {
+            position: relative;
+        }
+        
+        .account-name {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+        
+        .account-subtitle {
+            font-size: 12px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        
+        .account-badge {
+            position: absolute;
+            top: -5px;
+            right: 10px;
+            background: #9aea00;
+            color: #1a3a8f;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            box-shadow: 0 2px 10px rgba(154, 234, 0, 0.4);
+            animation: badgePulse 2s infinite;
+        }
+        
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .badge-pro {
+            background: #2196F3;
+            color: white;
+        }
+        
+        /* Account Type Color Borders */
+        .beginner-friendly {
+            border-left: 5px solid #4CAF50 !important;
+        }
+        
+        .advanced-trader {
+            border-left: 5px solid #2196F3 !important;
+        }
+        
+        .comparison-table tbody td {
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            text-align: center;
+        }
+        
+        .comparison-table tbody td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: #1a3a8f;
+            background: #f8fbff;
+        }
+        
+        .comparison-table tbody tr:hover {
+            background: #fafcff;
+        }
+        
+        /* Feature Values with Icons */
+        .feature-value {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 16px;
+        }
+        
+        .feature-highlight {
+            font-weight: 700;
+            color: #1a3a8f;
+            font-size: 1.2rem;
+        }
+        
+        .best-value-badge {
+            background: #e8f5e9;
+            color: #388e3c;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 13px;
+            margin-left: 8px;
+        }
+        
+        .warning-icon {
+            color: #ff9800;
+            cursor: help;
+            margin-left: 5px;
+        }
+        
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 280px;
+            background-color: #1a3a8f;
+            color: #fff;
+            text-align: left;
+            border-radius: 8px;
+            padding: 12px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -140px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 13px;
+            font-weight: 400;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #1a3a8f transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* CTA Buttons in Table */
+        .table-cta {
+            margin-top: 15px;
+        }
+        
+        .btn-demo {
+            background: white;
+            color: #2d5cc2;
+            border: 2px solid #2d5cc2;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .btn-demo:hover {
+            background: #2d5cc2;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .btn-live {
+            background: linear-gradient(135deg, #9aea00 0%, #7bc900 100%);
+            color: #1a3a8f;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(154, 234, 0, 0.3);
+        }
+        
+        .btn-live:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(154, 234, 0, 0.4);
+        }
+        
+        /* Table Notes */
+        .table-notes {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .table-notes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .table-notes li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .table-notes li:before {
+            content: "ℹ️";
+            position: absolute;
+            left: 0;
+        }
+        
+        /* ===== TRADING COST CALCULATOR (NEW) ===== */
+        .calculator-section {
+            background: linear-gradient(135deg, #f8fbff 0%, #e3f2fd 100%);
+            padding: 60px 20px;
+            margin: 40px 0;
+        }
+        
+        .calculator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        
+        .calculator-container h3 {
+            font-size: 2rem;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .calculator-container p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .calculator-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            color: #1a3a8f;
+            margin-bottom: 8px;
+        }
+        
+        .form-group select,
+        .form-group input {
+            padding: 12px;
+            border: 2px solid #e1e8f0;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: #2d5cc2;
+        }
+        
+        .calculate-btn {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #2d5cc2 0%, #1a3a8f 100%);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(45, 92, 194, 0.3);
+        }
+        
+        .calculator-result {
+            background: #e8f5e9;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #4CAF50;
+            display: none;
+        }
+        
+        .calculator-result.show {
+            display: block;
+            animation: slideDown 0.5s;
+        }
+        
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .result-breakdown {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .result-item h4 {
+            color: #1a3a8f;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .result-item .amount {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #388e3c;
+        }
+        
+        .result-recommendation {
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* ===== SWAP-FREE SECTION (NEW) ===== */
+        .swapfree-section {
+            background: white;
+            padding: 60px 20px;
+        }
+        
+        .swapfree-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .swapfree-content h3 {
+            font-size: 2rem;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+        }
+        
+        .swapfree-content h3 i {
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+        
+        .swapfree-content p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .swapfree-features {
+            list-style: none;
+            margin: 25px 0;
+        }
+        
+        .swapfree-features li {
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+        }
+        
+        .swapfree-features li i {
+            color: #4CAF50;
+            font-size: 18px;
+        }
+        
+        .swapfree-image {
+            text-align: center;
+        }
+        
+        .swapfree-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            background: linear-gradient(135deg, #f8fbff 0%, #e3f2fd 100%);
+            padding: 60px 20px;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .faq-header h2 {
+            font-size: 2.5rem;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1a3a8f;
+            transition: background 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: #f8fbff;
+        }
+        
+        .faq-question i {
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer.show {
+            max-height: 500px;
+        }
+        
+        .faq-answer-content {
+            padding: 0 25px 20px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* ===== FEATURE MATRIX (NEW) ===== */
+        .features-matrix {
+            background: white;
+            padding: 60px 20px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 40px auto 0;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #f8fbff 0%, #e3f2fd 100%);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .feature-card:hover {
+            border-color: #2d5cc2;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(45, 92, 194, 0.15);
+        }
+        
+        .feature-card i {
+            font-size: 3rem;
+            color: #2d5cc2;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h4 {
+            color: #1a3a8f;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .check-icon {
+            color: #4CAF50;
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-buttons .btn {
+            font-size: 16px;
+            padding: 16px 40px;
+        }
+        
+        .btn-white {
+            background: white;
+            color: #1a3a8f;
+        }
+        
+        .btn-white:hover {
+            background: #f0f0f0;
+        }
+        
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 60px 20px 20px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h4 {
+            color: #9aea00;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: #9aea00;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 14px;
+        }
+        
+        .risk-disclosure {
+            background: rgba(255,107,107,0.1);
+            border: 1px solid rgba(255,107,107,0.3);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+        
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .trust-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .main-nav ul {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .comparison-table thead th,
+            .comparison-table tbody td {
+                padding: 15px 10px;
+                font-size: 14px;
+            }
+            
+            .account-name {
+                font-size: 1.1rem;
+            }
+            
+            .calculator-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .result-breakdown {
+                grid-template-columns: 1fr;
+            }
+            
+            .swapfree-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-badges">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>FCA Regulated</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-lock"></i>
+                    <span>Funds Protected</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-award"></i>
+                    <span>Best Broker 2024</span>
+                </div>
+            </div>
+            <div class="live-stats">
+                <div class="live-dot"></div>
+                <span>1,247 traders online now</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Risk Warning Banner (ESMA Compliance) -->
+    <div class="risk-warning-banner">
+        <i class="fas fa-exclamation-triangle"></i>
+        <strong>Risk Warning:</strong> 76.4% of retail investor accounts lose money when trading CFDs. You should consider whether you can afford to take the high risk of losing your money.
+    </div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">VEST<span>RADO</span></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#" class="active">Trading</a></li>
+                    <li><a href="#">Academy</a></li>
+                    <li><a href="#">Company</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-secondary">Log In</a>
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-user-plus"></i> Register
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Choose Your Perfect <span>Trading Account</span></h1>
+            <p>From beginners to professional traders - Find the account that matches your trading style. Start with just $10 or try our $10,000 FREE Demo Account first.</p>
+            
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <div class="number">4</div>
+                    <div class="label">Account Types</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">$10</div>
+                    <div class="label">Minimum Deposit</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">0.0</div>
+                    <div class="label">Pips Spread (ECN)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">1:2000</div>
+                    <div class="label">Max Leverage</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Decision Support Quiz -->
+    <section class="decision-quiz">
+        <div class="container">
+            <h3>🤔 Not Sure Which Account to Choose?</h3>
+            <p>Tell us about your trading experience and we'll recommend the best account for you</p>
+            
+            <div class="quiz-options">
+                <div class="quiz-option" onclick="recommendAccount('beginner')">
+                    <i class="fas fa-seedling"></i>
+                    <h4>New to Trading</h4>
+                    <p>I'm just starting out and want to learn</p>
+                </div>
+                
+                <div class="quiz-option" onclick="recommendAccount('intermediate')">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Some Experience</h4>
+                    <p>I've been trading for 6+ months</p>
+                </div>
+                
+                <div class="quiz-option" onclick="recommendAccount('professional')">
+                    <i class="fas fa-trophy"></i>
+                    <h4>Professional Trader</h4>
+                    <p>I trade frequently, need lowest costs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Account Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Compare Our Trading Accounts</h2>
+                <p>All accounts support MT5 platform, Expert Advisors (EAs), hedging, scalping, and swap-free Islamic trading</p>
+            </div>
+            
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Account Features</th>
+                            <th class="beginner-friendly">
+                                <div class="account-header">
+                                    <div class="account-badge">⭐ MOST POPULAR</div>
+                                    <div class="account-name">Frux Standard</div>
+                                    <div class="account-subtitle">Perfect for Beginners</div>
+                                </div>
+                            </th>
+                            <th class="beginner-friendly">
+                                <div class="account-header">
+                                    <div class="account-name">Frux CENT</div>
+                                    <div class="account-subtitle">Practice with Cents</div>
+                                </div>
+                            </th>
+                            <th class="advanced-trader">
+                                <div class="account-header">
+                                    <div class="account-name">Fides Pro</div>
+                                    <div class="account-subtitle">Tighter Spreads</div>
+                                </div>
+                            </th>
+                            <th class="advanced-trader">
+                                <div class="account-header">
+                                    <div class="account-badge badge-pro">💼 FOR PROS</div>
+                                    <div class="account-name">Respectus ECN</div>
+                                    <div class="account-subtitle">Raw Spreads + Commission</div>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Minimum Deposit</td>
+                            <td>
+                                <div class="feature-value">
+                                    <span class="feature-highlight">$10</span>
+                                    <span class="best-value-badge">✅ LOWEST</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="feature-value">
+                                    <span class="feature-highlight">$10</span>
+                                    <div class="tooltip">
+                                        <i class="fas fa-info-circle warning-icon"></i>
+                                        <span class="tooltiptext">$10 USD = 1,000 cents. Trade with 1/100th of normal risk - perfect for testing strategies!</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="feature-value">
+                                    <span class="feature-highlight">$100</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="feature-value">
+                                    <span class="feature-highlight">$500</span>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Base Currency</td>
+                            <td>USD</td>
+                            <td>
+                                USC (Cents)
+                                <div class="tooltip">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span class="tooltiptext">USD Cent accounts let you trade micro positions. Example: $100 = 10,000 cents for ultra-low risk practice.</span>
+                                </div>
+                            </td>
+                            <td>USD</td>
+                            <td>USD</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Maximum Leverage</td>
+                            <td>
+                                Up to <strong>1:2000</strong>
+                                <div class="tooltip">
+                                    <i class="fas fa-exclamation-triangle warning-icon"></i>
+                                    <span class="tooltiptext">⚠️ HIGH RISK: 1:2000 means $100 controls $200,000. Small price moves can wipe your account. We recommend starting with lower leverage (1:100).</span>
+                                </div>
+                            </td>
+                            <td>
+                                Up to <strong>1:1000</strong>
+                                <div class="tooltip">
+                                    <i class="fas fa-exclamation-triangle warning-icon"></i>
+                                    <span class="tooltiptext">⚠️ RISK: High leverage increases risk. Leverage automatically reduces as your account grows (Dynamic Leverage Policy).</span>
+                                </div>
+                            </td>
+                            <td>
+                                Up to <strong>1:1000</strong>
+                                <div class="tooltip">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span class="tooltiptext">Dynamic leverage adjusts based on your account balance to protect you from excessive risk.</span>
+                                </div>
+                            </td>
+                            <td>
+                                Up to <strong>1:1000</strong>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Typical Spread (EUR/USD)</td>
+                            <td>From <strong>1.5 pips</strong></td>
+                            <td>From <strong>1.5 pips</strong></td>
+                            <td>From <strong>1.0 pips</strong></td>
+                            <td>
+                                <strong>0.0 pips</strong>
+                                <span class="best-value-badge">⚡ RAW</span>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Commission Charges</td>
+                            <td>
+                                <strong>No Commission</strong>
+                                <span style="color: #4CAF50;">✓</span>
+                            </td>
+                            <td>
+                                <strong>No Commission</strong>
+                                <span style="color: #4CAF50;">✓</span>
+                            </td>
+                            <td>
+                                <strong>No Commission</strong>
+                                <span style="color: #4CAF50;">✓</span>
+                            </td>
+                            <td>
+                                <strong>$6 per lot</strong> (round trip)
+                                <div class="tooltip">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span class="tooltiptext">$6 commission for major pairs & metals. No commission for indices, oils, stocks & crypto. Becomes cheaper than Standard accounts when trading 10+ lots/month.</span>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Swap-Free Available</td>
+                            <td><span style="color: #4CAF50; font-size: 1.5rem;">✓</span></td>
+                            <td><span style="color: #4CAF50; font-size: 1.5rem;">✓</span></td>
+                            <td><span style="color: #4CAF50; font-size: 1.5rem;">✓</span></td>
+                            <td><span style="color: #4CAF50; font-size: 1.5rem;">✓</span></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Best For</td>
+                            <td>Beginners, Casual Traders</td>
+                            <td>Strategy Testing, Learners</td>
+                            <td>Active Traders, Day Trading</td>
+                            <td>High Volume, Scalpers, Pros</td>
+                        </tr>
+                        
+                        <tr style="background: #f8fbff;">
+                            <td><strong>Take Action</strong></td>
+                            <td class="table-cta">
+                                <button class="btn-demo" onclick="openDemo('frux-standard')">
+                                    <i class="fas fa-play-circle"></i> Try $10,000 Demo
+                                </button>
+                                <button class="btn-live" onclick="openLive('frux-standard')">
+                                    <i class="fas fa-rocket"></i> Open Live Account
+                                </button>
+                            </td>
+                            <td class="table-cta">
+                                <button class="btn-demo" onclick="openDemo('frux-cent')">
+                                    <i class="fas fa-play-circle"></i> Try Demo
+                                </button>
+                                <button class="btn-live" onclick="openLive('frux-cent')">
+                                    <i class="fas fa-rocket"></i> Open Live
+                                </button>
+                            </td>
+                            <td class="table-cta">
+                                <button class="btn-demo" onclick="openDemo('fides-pro')">
+                                    <i class="fas fa-play-circle"></i> Try Demo
+                                </button>
+                                <button class="btn-live" onclick="openLive('fides-pro')">
+                                    <i class="fas fa-rocket"></i> Open Live
+                                </button>
+                            </td>
+                            <td class="table-cta">
+                                <button class="btn-demo" onclick="openDemo('respectus-ecn')">
+                                    <i class="fas fa-play-circle"></i> Try Demo
+                                </button>
+                                <button class="btn-live" onclick="openLive('respectus-ecn')">
+                                    <i class="fas fa-rocket"></i> Open Live
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="table-notes">
+                <ul>
+                    <li><strong>Dynamic Leverage:</strong> Your leverage automatically reduces when your account balance reaches certain tiers. This protects you from excessive risk. <a href="#" style="color: #2d5cc2;">Read full policy →</a></li>
+                    <li><strong>Instrument Specifications:</strong> Check our detailed instrument list for complete trading conditions on all 150+ instruments. <a href="#" style="color: #2d5cc2;">View specifications →</a></li>
+                    <li><strong>All Accounts Include:</strong> MT5 Platform • Expert Advisors (EAs) • Hedging • Scalping • News Trading • Mobile Trading • 24/5 Support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Trading Cost Calculator -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-container">
+                <h3>💰 Calculate Your Trading Cost</h3>
+                <p>See exactly how much your trades will cost with each account type</p>
+                
+                <form class="calculator-form" id="costCalculator">
+                    <div class="form-group">
+                        <label>Select Instrument</label>
+                        <select id="instrument">
+                            <option value="eurusd">EUR/USD (Major Pair)</option>
+                            <option value="gbpusd">GBP/USD (Major Pair)</option>
+                            <option value="usdjpy">USD/JPY (Major Pair)</option>
+                            <option value="gold">Gold (XAU/USD)</option>
+                            <option value="sp500">S&P 500 Index</option>
+                            <option value="btcusd">Bitcoin (BTC/USD)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Trading Volume</label>
+                        <input type="number" id="volume" value="1" min="0.01" step="0.01" placeholder="Lot Size">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Compare Accounts</label>
+                        <select id="account1">
+                            <option value="frux">Frux Standard (1.5 pips)</option>
+                            <option value="fides">Fides Pro (1.0 pips)</option>
+                            <option value="respectus">Respectus ECN (0.0 pips + $6)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>vs.</label>
+                        <select id="account2">
+                            <option value="fides">Fides Pro (1.0 pips)</option>
+                            <option value="respectus" selected>Respectus ECN (0.0 pips + $6)</option>
+                            <option value="frux">Frux Standard (1.5 pips)</option>
+                        </select>
+                    </div>
+                    
+                    <button type="button" class="calculate-btn" onclick="calculateCost()">
+                        <i class="fas fa-calculator"></i> Calculate Trading Cost
+                    </button>
+                </form>
+                
+                <div class="calculator-result" id="calculatorResult">
+                    <h4 style="color: #1a3a8f; margin-bottom: 15px;">💡 Your Trading Cost Comparison</h4>
+                    <div class="result-breakdown">
+                        <div class="result-item">
+                            <h4 id="account1Name">Frux Standard</h4>
+                            <div class="amount" id="account1Cost">$15.00</div>
+                            <p style="font-size: 13px; color: #666; margin-top: 5px;">per trade</p>
+                        </div>
+                        <div class="result-item">
+                            <h4 id="account2Name">Respectus ECN</h4>
+                            <div class="amount" id="account2Cost">$6.00</div>
+                            <p style="font-size: 13px; color: #666; margin-top: 5px;">per trade</p>
+                        </div>
+                    </div>
+                    <div class="result-recommendation">
+                        <strong id="recommendation">💰 You save $9.00 per lot with Respectus ECN!</strong>
+                        <p style="margin-top: 10px; font-size: 13px;" id="breakeven">ECN becomes cheaper when trading more than 0.4 lots per trade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Swap-Free Islamic Accounts -->
+    <section class="swapfree-section">
+        <div class="container">
+            <div class="swapfree-container">
+                <div class="swapfree-content">
+                    <h3><i class="fas fa-mosque"></i> Islamic (Swap-Free) Accounts</h3>
+                    <p><strong>Trade in compliance with Sharia law.</strong> All Vestrado account types support swap-free trading - no overnight interest charges on positions held longer than one day.</p>
+                    
+                    <ul class="swapfree-features">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% Halal - Compliant with Islamic finance principles</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>No rollover/swap fees - Hold positions as long as you want</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Available for all account types (Frux, Fides, Respectus)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Easy activation - Request via live chat or support ticket</span>
+                        </li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px;"><strong>Trusted by Muslim traders in 80+ countries</strong> including Saudi Arabia, UAE, Malaysia, Indonesia, Pakistan, Egypt, and Turkey.</p>
+                    
+                    <a href="#" class="btn btn-primary" style="margin-top: 25px;">
+                        <i class="fas fa-book"></i> Learn More About Islamic Accounts
+                    </a>
+                </div>
+                
+                <div class="swapfree-image">
+                    <div style="background: linear-gradient(135deg, #e3f2fd 0%, #f8fbff 100%); padding: 60px; border-radius: 15px; text-align: center;">
+                        <i class="fas fa-mosque" style="font-size: 8rem; color: #2d5cc2; margin-bottom: 20px;"></i>
+                        <h4 style="color: #1a3a8f; font-size: 1.5rem;">🕌 Sharia Compliant</h4>
+                        <p style="color: #666; margin-top: 10px;">No interest (Riba)<br>No speculation (Gharar)<br>Ethical trading principles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Matrix -->
+    <section class="features-matrix">
+        <div class="container">
+            <div class="section-header">
+                <h2>All Accounts Support Professional Trading</h2>
+                <p>No restrictions on trading style or strategy - Trade your way with Vestrado</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-robot"></i>
+                    <h4>Expert Advisors (EAs)</h4>
+                    <p>Run automated trading strategies 24/7 on MT5 platform</p>
+                    <div class="check-icon"><i class="fas fa-check-circle"></i></div>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h4>Hedging Allowed</h4>
+                    <p>Open both long & short positions on same instrument simultaneously</p>
+                    <div class="check-icon"><i class="fas fa-check-circle"></i></div>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Scalping Permitted</h4>
+                    <p>No minimum holding time - Perfect for high-frequency trading</p>
+                    <div class="check-icon"><i class="fas fa-check-circle"></i></div>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-newspaper"></i>
+                    <h4>News Trading</h4>
+                    <p>Trade during news events - No restrictions on volatility periods</p>
+                    <div class="check-icon"><i class="fas fa-check-circle"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-container">
+                <div class="faq-header">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Which account should I choose as a beginner?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>We recommend starting with Frux Standard or Frux CENT account.</strong></p>
+                            <p><strong>Frux CENT</strong> is perfect if you want to practice with tiny risk ($10 = 1,000 cents). You'll trade real market conditions but with 1/100th the risk.</p>
+                            <p><strong>Frux Standard</strong> is our most popular account with low $10 minimum deposit and no commission. 67% of beginners choose this account.</p>
+                            <p><strong>Important:</strong> We strongly recommend trying our <strong>FREE $10,000 Demo Account</strong> first. 95% of profitable traders started with demo trading to learn without risk.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>When should I upgrade to Respectus ECN account?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Respectus ECN is for active traders who trade frequently (10+ lots per month).</strong></p>
+                            <p>With 0.0 pip spread and $6 commission per lot, ECN becomes cheaper than Standard accounts when you trade larger volumes. Our cost calculator shows ECN saves $9 per lot compared to Frux Standard.</p>
+                            <p><strong>Upgrade when:</strong></p>
+                            <ul style="margin-left: 20px; margin-top: 10px;">
+                                <li>You're consistently profitable on demo/Standard account</li>
+                                <li>You trade 10+ lots per month</li>
+                                <li>You're a scalper who needs raw spreads</li>
+                                <li>You have $500+ to deposit (minimum for ECN)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I have multiple accounts? Can I switch account types?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Yes! You can open multiple accounts of different types.</strong></p>
+                            <p>Many traders use:</p>
+                            <ul style="margin-left: 20px; margin-top: 10px;">
+                                <li><strong>Frux CENT</strong> for testing new strategies</li>
+                                <li><strong>Frux Standard</strong> for main trading</li>
+                                <li><strong>Respectus ECN</strong> for large volume trades</li>
+                            </ul>
+                            <p style="margin-top: 15px;">You can easily add new accounts from your client portal. <strong>Note:</strong> You cannot "convert" an existing account type, but you can withdraw from one and deposit to another anytime for free.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I activate Swap-Free (Islamic) account?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Swap-Free is available on all account types at no extra cost.</strong></p>
+                            <p><strong>To activate:</strong></p>
+                            <ol style="margin-left: 20px; margin-top: 10px;">
+                                <li>Open any account type (Frux, Fides, or Respectus)</li>
+                                <li>Contact our support via live chat or email</li>
+                                <li>Request "Swap-Free activation" for your account number</li>
+                                <li>Provide brief confirmation you're requesting for religious reasons</li>
+                                <li>Activation completed within 24 hours</li>
+                            </ol>
+                            <p style="margin-top: 15px;">Once activated, no overnight swap/rollover fees will be charged. You can hold positions as long as you want.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What is Dynamic Leverage and how does it protect me?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Dynamic Leverage automatically reduces as your account balance grows to protect you from excessive risk.</strong></p>
+                            <p><strong>Example:</strong></p>
+                            <ul style="margin-left: 20px; margin-top: 10px;">
+                                <li>$0 - $5,000 balance: Up to 1:2000 leverage</li>
+                                <li>$5,000 - $20,000: Reduces to 1:500</li>
+                                <li>$20,000 - $100,000: Reduces to 1:200</li>
+                                <li>$100,000+: Reduces to 1:100</li>
+                            </ul>
+                            <p style="margin-top: 15px;"><strong>Why?</strong> High leverage is riskier with larger accounts. A 1% loss on $100,000 with 1:2000 leverage could mean $200,000 loss position. Dynamic leverage prevents this.</p>
+                            <p style="margin-top: 10px;"><strong>💡 Beginner tip:</strong> Even though 1:2000 is available, we recommend starting with 1:100 or lower while you learn. You can always increase it later.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Trading?</h2>
+                <p>Join 600,000+ traders worldwide. Open your account in 60 seconds.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary btn-white">
+                        <i class="fas fa-play-circle"></i> Try $10,000 Demo Account
+                    </a>
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Open Live Account from $10
+                    </a>
+                </div>
+                
+                <p style="margin-top: 25px; font-size: 14px; opacity: 0.8;">
+                    💬 Have questions? <a href="#" style="color: #9aea00; text-decoration: underline;">Chat with our account specialists</a> - Available 24/5
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="risk-disclosure">
+                <h4 style="color: #ff6b6b; margin-bottom: 15px;"><i class="fas fa-exclamation-triangle"></i> Risk Disclosure</h4>
+                <p><strong>CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. 76.4% of retail investor accounts lose money when trading CFDs with this provider.</strong> You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.</p>
+                <p style="margin-top: 10px;">Trading in foreign exchange and contracts for difference (CFDs) involves a high degree of risk and may not be suitable for all investors. Before deciding to trade, you should carefully consider your investment objectives, level of experience, and risk appetite. You could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with trading and seek independent financial advice if you have any doubts.</p>
+            </div>
+            
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Forex</a></li>
+                        <li><a href="#">Indices</a></li>
+                        <li><a href="#">Commodities</a></li>
+                        <li><a href="#">Shares</a></li>
+                        <li><a href="#">Cryptocurrencies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Trading</h4>
+                    <ul>
+                        <li><a href="#">Account Types</a></li>
+                        <li><a href="#">MetaTrader 5</a></li>
+                        <li><a href="#">Deposit & Withdrawal</a></li>
+                        <li><a href="#">Leverage & Margin</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Why Vestrado</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Trading Academy</a></li>
+                        <li><a href="#">Economic Calendar</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 Vestrado Ltd. All rights reserved. | FCA Regulated | CySEC Authorized</p>
+                <p style="margin-top: 10px; font-size: 12px;">Vestrado Ltd is registered in St Vincent and Grenadines with registration number 25911 BC 2020</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            element.classList.toggle('active');
+            const answer = element.nextElementSibling;
+            answer.classList.toggle('show');
+        }
+        
+        // Account Recommendation Quiz
+        function recommendAccount(level) {
+            let recommendation = '';
+            let accountType = '';
+            
+            if (level === 'beginner') {
+                accountType = 'Frux CENT or Frux Standard';
+                recommendation = '🌱 Perfect for beginners!\n\nWe recommend:\n\n1️⃣ Start with FREE $10,000 Demo Account (no risk)\n2️⃣ After 2-4 weeks practice, open Frux CENT ($10 deposit)\n3️⃣ When confident, upgrade to Frux Standard\n\n💡 Pro tip: 95% of profitable traders started with demo!';
+            } else if (level === 'intermediate') {
+                accountType = 'Frux Standard or Fides Pro';
+                recommendation = '📈 Great for active traders!\n\nWe recommend:\n\n1️⃣ Frux Standard ($10 min) - Best for frequent trading\n2️⃣ Fides Pro ($100 min) - Tighter spreads if you trade 5+ lots/month\n\n💡 Consider trying Respectus ECN on demo to see if raw spreads suit your style!';
+            } else if (level === 'professional') {
+                accountType = 'Respectus ECN';
+                recommendation = '🏆 ECN is perfect for you!\n\nRespectus ECN offers:\n✓ 0.0 pip raw spreads\n✓ Only $6 commission per lot\n✓ Best execution for scalping\n✓ Ideal for volumes 10+ lots/month\n\n💰 Save up to $9 per lot vs Standard account!\n\nMinimum deposit: $500';
+            }
+            
+            alert(recommendation);
+            
+            // Scroll to comparison table
+            document.querySelector('.comparison-section').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Trading Cost Calculator
+        function calculateCost() {
+            const volume = parseFloat(document.getElementById('volume').value) || 1;
+            const account1 = document.getElementById('account1').value;
+            const account2 = document.getElementById('account2').value;
+            
+            // Simplified cost calculation (per lot for EUR/USD)
+            const costs = {
+                'frux': 15, // 1.5 pips = $15 per lot
+                'fides': 10, // 1.0 pips = $10 per lot
+                'respectus': 6 // 0.0 pips + $6 commission
+            };
+            
+            const cost1 = costs[account1] * volume;
+            const cost2 = costs[account2] * volume;
+            
+            const accountNames = {
+                'frux': 'Frux Standard',
+                'fides': 'Fides Pro',
+                'respectus': 'Respectus ECN'
+            };
+            
+            document.getElementById('account1Name').textContent = accountNames[account1];
+            document.getElementById('account2Name').textContent = accountNames[account2];
+            document.getElementById('account1Cost').textContent = '$' + cost1.toFixed(2);
+            document.getElementById('account2Cost').textContent = '$' + cost2.toFixed(2);
+            
+            const difference = Math.abs(cost1 - cost2);
+            const cheaper = cost1 < cost2 ? accountNames[account1] : accountNames[account2];
+            
+            document.getElementById('recommendation').textContent = 
+                `💰 You save $${difference.toFixed(2)} per ${volume} lot(s) with ${cheaper}!`;
+            
+            if (account1 === 'respectus' || account2 === 'respectus') {
+                const breakeven = (6 / 15).toFixed(2); // When ECN becomes cheaper than Frux
+                document.getElementById('breakeven').textContent = 
+                    `💡 ECN becomes cheaper than Standard accounts when trading more than ${breakeven} lots per trade.`;
+            } else {
+                document.getElementById('breakeven').textContent = 
+                    `💡 For even lower costs with high volume, try Respectus ECN with 0.0 spread + $6 commission.`;
+            }
+            
+            document.getElementById('calculatorResult').classList.add('show');
+        }
+        
+        // Demo Account Handler
+        function openDemo(accountType) {
+            const messages = {
+                'frux-standard': 'Opening Demo Account: Frux Standard\n\n✅ $10,000 virtual balance\n✅ Real market conditions\n✅ No time limit\n✅ Switch to live anytime',
+                'frux-cent': 'Opening Demo Account: Frux CENT\n\n✅ 1,000,000 cents (=$10,000)\n✅ Practice micro trading\n✅ Perfect for beginners',
+                'fides-pro': 'Opening Demo Account: Fides Pro\n\n✅ $10,000 virtual balance\n✅ Experience tighter spreads\n✅ Test your strategies',
+                'respectus-ecn': 'Opening Demo Account: Respectus ECN\n\n✅ $10,000 virtual balance\n✅ Raw 0.0 pip spreads\n✅ True ECN execution'
+            };
+            
+            alert(messages[accountType] + '\n\n🚀 Redirecting to demo registration...');
+        }
+        
+        // Live Account Handler
+        function openLive(accountType) {
+            const minDeposits = {
+                'frux-standard': '$10',
+                'frux-cent': '$10',
+                'fides-pro': '$100',
+                'respectus-ecn': '$500'
+            };
+            
+            const accountNames = {
+                'frux-standard': 'Frux Standard',
+                'frux-cent': 'Frux CENT',
+                'fides-pro': 'Fides Pro',
+                'respectus-ecn': 'Respectus ECN'
+            };
+            
+            const recommendDemo = confirm(
+                `Opening Live Account: ${accountNames[accountType]}\n\nMinimum Deposit: ${minDeposits[accountType]}\n\n⚠️ RECOMMENDATION: Have you tried our FREE Demo Account?\n\n95% of profitable traders practiced on demo first.\n\nClick OK to continue with Live Account\nClick CANCEL to try Demo first (recommended)`
+            );
+            
+            if (recommendDemo) {
+                alert('🚀 Redirecting to account registration...\n\nYou\'ll need:\n✓ Email address\n✓ Phone number\n✓ ID verification (can complete later)\n\nAccount opens in 60 seconds!');
+            } else {
+                openDemo(accountType);
+            }
+        }
+        
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Live stats animation
+        setInterval(() => {
+            const stats = document.querySelector('.live-stats span');
+            const currentNum = parseInt(stats.textContent.match(/\d+/)[0]);
+            const newNum = currentNum + Math.floor(Math.random() * 5) - 2;
+            stats.textContent = `${Math.max(1200, newNum)} traders online now`;
+        }, 8000);
+    </script>
+</body>
+</html>

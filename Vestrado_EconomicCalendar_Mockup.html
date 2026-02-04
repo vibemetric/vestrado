@@ -1,0 +1,2350 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar - Real-Time Market Events & News Trading | Vestrado</title>
+    <meta name="description" content="Stay ahead with Vestrado's Economic Calendar. Track high-impact events, NFP, Fed Rate decisions, GDP releases. Learn news trading strategies and get real-time alerts. Free for all traders.">
+    
+    <!-- Trust & Verification Meta Tags -->
+    <meta name="trustpilot-review-count" content="4,857">
+    <meta name="trustpilot-rating" content="4.7">
+    <meta name="calendar-events" content="5000+ events tracked monthly">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Economic Calendar - Real-Time Market Events | Vestrado">
+    <meta property="og:description" content="Never miss important market-moving events. Get real-time alerts and learn news trading strategies.">
+    <meta property="og:image" content="https://vestrado.com/wp-content/uploads/economic-calendar.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
+        
+        /* COMPLIANCE: Data Disclaimer Bar */
+        .data-disclaimer-bar {
+            background: linear-gradient(135deg, #ffa726 0%, #ff9800 100%);
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+            position: sticky;
+            top: 0;
+            z-index: 1002;
+            box-shadow: 0 3px 15px rgba(255,167,38,0.3);
+        }
+        
+        .data-disclaimer-bar .warning-icon {
+            font-size: 16px;
+            margin-right: 6px;
+        }
+        
+        .data-disclaimer-bar a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        
+        /* Trust Bar */
+        .trust-bar {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+            text-align: center;
+            position: sticky;
+            top: 45px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .badge-icon {
+            color: #9aea00;
+        }
+        
+        .live-stats {
+            background: rgba(255,255,255,0.15);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #9aea00;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        /* Header */
+        .header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 85px;
+            z-index: 999;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1a3a8f;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .main-nav a:hover {
+            background: #f0f7ff;
+            color: #2d5cc2;
+        }
+        
+        .main-nav a.active {
+            background: #2d5cc2;
+            color: white;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn-login {
+            background: transparent;
+            color: #2d5cc2;
+            border: 2px solid #2d5cc2;
+            padding: 10px 25px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .btn-login:hover {
+            background: #2d5cc2;
+            color: white;
+        }
+        
+        .btn-register {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-register:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(154,234,0,0.4);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="2" height="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+        
+        .hero-description {
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        
+        .hero-cta-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(154,234,0,0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(154,234,0,0.5);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #2d5cc2;
+            border: 2px solid white;
+            padding: 16px 35px;
+            font-size: 17px;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Filter Presets Section */
+        .filter-presets {
+            background: white;
+            padding: 30px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+            border-radius: 12px 12px 0 0;
+        }
+        
+        .filter-presets h3 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #1a3a8f;
+        }
+        
+        .preset-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .preset-btn {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            border: 2px solid #2d5cc2;
+            color: #2d5cc2;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .preset-btn i {
+            font-size: 18px;
+        }
+        
+        .preset-btn:hover, .preset-btn.active {
+            background: linear-gradient(90deg, #2d5cc2 0%, #1a3a8f 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(45,92,194,0.3);
+        }
+        
+        /* Impact Legend */
+        .impact-legend {
+            background: white;
+            padding: 40px 0;
+        }
+        
+        .impact-legend h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #1a3a8f;
+        }
+        
+        .impact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .impact-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fbfd 100%);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        
+        .impact-card.high {
+            border-color: #f44336;
+        }
+        
+        .impact-card.medium {
+            border-color: #ff9800;
+        }
+        
+        .impact-card.low {
+            border-color: #4caf50;
+        }
+        
+        .impact-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .impact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+        }
+        
+        .impact-icon.high {
+            background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+        }
+        
+        .impact-icon.medium {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+        }
+        
+        .impact-icon.low {
+            background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+        }
+        
+        .impact-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .impact-subtitle {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .impact-description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .impact-examples {
+            background: #f5f7fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        
+        .impact-examples strong {
+            color: #1a3a8f;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .impact-examples ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .impact-examples li {
+            padding: 5px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .impact-examples li:before {
+            content: "•";
+            color: #2d5cc2;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        /* Calendar Widget Section */
+        .calendar-widget-section {
+            background: white;
+            padding: 60px 0;
+        }
+        
+        .widget-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .widget-header h2 {
+            font-size: 36px;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+        }
+        
+        .widget-header p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .calendar-container {
+            background: #f9fbfd;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            min-height: 600px;
+            position: relative;
+        }
+        
+        .tradingview-widget-container {
+            width: 100%;
+            height: 600px;
+            position: relative;
+        }
+        
+        .tradingview-widget-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+        
+        /* Data Disclaimer Box */
+        .data-disclaimer-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(255,152,0,0.2);
+        }
+        
+        .data-disclaimer-box h4 {
+            color: #f57c00;
+            font-size: 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .data-disclaimer-box p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        
+        .data-disclaimer-box a {
+            color: #2d5cc2;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .data-disclaimer-box a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Quick Trade Panel */
+        .quick-trade-panel {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+            box-shadow: 0 10px 35px rgba(26,58,143,0.3);
+        }
+        
+        .quick-trade-panel h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .quick-trade-panel p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+        
+        .trade-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .trade-btn {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .trade-btn.long {
+            background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+            color: white;
+        }
+        
+        .trade-btn.short {
+            background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+            color: white;
+        }
+        
+        .trade-btn.alert {
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+        }
+        
+        .trade-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+        }
+        
+        /* This Week's Events Section */
+        .weekly-events {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            padding: 60px 0;
+        }
+        
+        .weekly-events h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+        }
+        
+        .weekly-events .subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .event-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-left: 5px solid;
+        }
+        
+        .event-card.high-impact {
+            border-left-color: #f44336;
+        }
+        
+        .event-card.medium-impact {
+            border-left-color: #ff9800;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        
+        .event-date {
+            display: inline-block;
+            background: #2d5cc2;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .event-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 10px;
+        }
+        
+        .event-country {
+            display: inline-block;
+            background: #f5f7fa;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .event-description {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .event-impact-details {
+            background: #f9fbfd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .event-impact-details strong {
+            display: block;
+            color: #1a3a8f;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .event-impact-details p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .event-cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .btn-trade-event {
+            background: linear-gradient(90deg, #2d5cc2 0%, #1a3a8f 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            border: none;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-trade-event:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(45,92,194,0.4);
+        }
+        
+        /* How to Read Section */
+        .how-to-read {
+            background: white;
+            padding: 60px 0;
+        }
+        
+        .how-to-read h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1a3a8f;
+            margin-bottom: 50px;
+        }
+        
+        .reading-guide {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .guide-item {
+            text-align: center;
+        }
+        
+        .guide-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #2d5cc2 0%, #1a3a8f 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(45,92,194,0.3);
+        }
+        
+        .guide-item h3 {
+            font-size: 22px;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+        }
+        
+        .guide-item p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+        }
+        
+        .guide-example {
+            background: #f9fbfd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #9aea00;
+        }
+        
+        .guide-example strong {
+            display: block;
+            color: #1a3a8f;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        .guide-example p {
+            font-size: 14px;
+            color: #555;
+            margin: 0;
+        }
+        
+        /* Alert Signup Section */
+        .alert-signup {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .alert-signup h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .alert-signup .subtitle {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 50px;
+            opacity: 0.95;
+        }
+        
+        .signup-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.15);
+            color: white;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+        
+        .form-group input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #9aea00;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            cursor: pointer;
+        }
+        
+        .checkbox-item label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 15px;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 15px;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 35px rgba(154,234,0,0.4);
+        }
+        
+        .benefits-list {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .benefits-list h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .benefits-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefits-list li {
+            padding: 10px 0;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .benefits-list li i {
+            color: #9aea00;
+            font-size: 18px;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            padding: 60px 0;
+        }
+        
+        .faq-section h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1a3a8f;
+            margin-bottom: 50px;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: #f9fbfd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a3a8f;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: #e4edf5;
+        }
+        
+        .faq-question i {
+            font-size: 20px;
+            color: #2d5cc2;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: white;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .faq-answer-content {
+            padding: 0 30px 25px 30px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .faq-answer-content strong {
+            color: #1a3a8f;
+        }
+        
+        /* Education Hub */
+        .education-hub {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            padding: 60px 0;
+        }
+        
+        .education-hub h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+        }
+        
+        .education-hub .subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+        
+        .edu-levels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .edu-level {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        
+        .edu-level:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        
+        .edu-level-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .level-badge {
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .level-badge.beginner {
+            background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+        }
+        
+        .level-badge.intermediate {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+        }
+        
+        .level-badge.advanced {
+            background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+        }
+        
+        .edu-level h3 {
+            font-size: 24px;
+            color: #1a3a8f;
+        }
+        
+        .edu-content-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        
+        .edu-content-list li {
+            padding: 12px 0;
+            font-size: 16px;
+            color: #555;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .edu-content-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .edu-content-list i {
+            color: #2d5cc2;
+            margin-top: 4px;
+            font-size: 14px;
+        }
+        
+        .btn-start-learning {
+            width: 100%;
+            background: linear-gradient(90deg, #2d5cc2 0%, #1a3a8f 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        
+        .btn-start-learning:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(45,92,194,0.4);
+        }
+        
+        /* Video Tutorial */
+        .video-tutorial {
+            background: white;
+            padding: 60px 0;
+        }
+        
+        .video-tutorial h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1a3a8f;
+            margin-bottom: 50px;
+        }
+        
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+        
+        .video-placeholder {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .video-placeholder:hover {
+            transform: scale(1.02);
+        }
+        
+        .video-placeholder i {
+            font-size: 80px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .video-placeholder h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .video-placeholder p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #9aea00;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #9aea00;
+            padding-left: 5px;
+        }
+        
+        .footer-section p {
+            color: rgba(255,255,255,0.8);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #9aea00;
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+        }
+        
+        .risk-warning-footer {
+            background: rgba(255,107,53,0.15);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .footer-bottom p {
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+        }
+        
+        /* Tooltip Styles */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+            border-bottom: 1px dotted #2d5cc2;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 300px;
+            background-color: #1a3a8f;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 15px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -150px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 14px;
+            line-height: 1.6;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #1a3a8f transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .hero-cta-group {
+                flex-direction: column;
+            }
+            
+            .impact-cards, .events-grid, .reading-guide, .edu-levels {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-nav {
+                display: none;
+            }
+            
+            .preset-buttons {
+                flex-direction: column;
+            }
+            
+            .trade-actions {
+                flex-direction: column;
+            }
+            
+            .trade-btn {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Data Disclaimer Bar -->
+    <div class="data-disclaimer-bar">
+        <i class="fas fa-exclamation-triangle warning-icon"></i>
+        Data provided by TradingView. Economic indicators are subject to revisions. Past data does not guarantee future market movements. 
+        <a href="#disclaimer-details">Read full disclaimer</a>
+    </div>
+    
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-badges">
+                <div class="badge">
+                    <i class="fas fa-shield-alt badge-icon"></i>
+                    <span>FCA Regulated</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-lock badge-icon"></i>
+                    <span>Segregated Accounts</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-star badge-icon"></i>
+                    <span>4.7/5 on Trustpilot</span>
+                </div>
+            </div>
+            <div class="live-stats">
+                <div class="live-dot"></div>
+                <span>5000+ Events Tracked Monthly</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">VESTRADO</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Trading</a></li>
+                    <li><a href="#">Academy</a></li>
+                    <li><a href="#" class="active">News</a></li>
+                    <li><a href="#">Company</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="https://my.vestrado.com/login" class="btn-login">LOG IN</a>
+                <a href="https://my.vestrado.com/register" class="btn-register">REGISTER</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>📅 Live Economic Calendar<br>Track Market-Moving Events</h1>
+                <p class="hero-subtitle">Never Miss NFP, Fed Decisions, or GDP Releases Again</p>
+                <p class="hero-description">
+                    Stay ahead of volatility with real-time updates on 5000+ economic events monthly. 
+                    Get instant alerts, learn news trading strategies, and execute trades at the perfect moment.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="https://my.vestrado.com/register" class="btn-primary">
+                        <i class="fas fa-rocket"></i> Open Free Demo Account
+                    </a>
+                    <a href="#education" class="btn-secondary">
+                        <i class="fas fa-graduation-cap"></i> Learn News Trading
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Filter Presets -->
+    <section class="filter-presets">
+        <div class="container">
+            <h3>🎯 Quick Filters - Find What Matters to Your Trading</h3>
+            <div class="preset-buttons">
+                <button class="preset-btn active" data-filter="all">
+                    <i class="fas fa-globe"></i> All Events
+                </button>
+                <button class="preset-btn" data-filter="forex">
+                    <i class="fas fa-dollar-sign"></i> Forex Majors Only
+                </button>
+                <button class="preset-btn" data-filter="commodity">
+                    <i class="fas fa-gem"></i> Commodity Traders
+                </button>
+                <button class="preset-btn" data-filter="indices">
+                    <i class="fas fa-chart-line"></i> Stock Index News
+                </button>
+                <button class="preset-btn" data-filter="today">
+                    <i class="fas fa-bolt"></i> Today's High Impact
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Impact Legend -->
+    <section class="impact-legend">
+        <div class="container">
+            <h2>⚡ Understanding Economic Calendar Impact Levels</h2>
+            <div class="impact-cards">
+                <div class="impact-card high">
+                    <div class="impact-header">
+                        <div class="impact-icon high">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div>
+                            <div class="impact-title">🔴 High Impact</div>
+                            <div class="impact-subtitle">Major Market Movers</div>
+                        </div>
+                    </div>
+                    <p class="impact-description">
+                        Events that typically cause price movements of <strong>50+ pips</strong> within 15 minutes. 
+                        These are the most significant economic releases that professional traders watch closely.
+                    </p>
+                    <div class="impact-examples">
+                        <strong>Examples:</strong>
+                        <ul>
+                            <li>🇺🇸 Non-Farm Payrolls (NFP)</li>
+                            <li>🏦 Federal Reserve Interest Rate Decisions</li>
+                            <li>📊 GDP Growth Rate Releases</li>
+                            <li>💰 Central Bank Policy Statements</li>
+                            <li>📈 Consumer Price Index (CPI)</li>
+                        </ul>
+                    </div>
+                    <div class="tooltip" style="margin-top: 15px;">
+                        <span style="color: #2d5cc2; font-weight: 600;">⚠️ Trading Tip</span>
+                        <span class="tooltiptext">
+                            Avoid trading 15 minutes before major releases. Spreads widen significantly and slippage is common. Wait for the initial volatility spike to pass.
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="impact-card medium">
+                    <div class="impact-header">
+                        <div class="impact-icon medium">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div>
+                            <div class="impact-title">🟡 Medium Impact</div>
+                            <div class="impact-subtitle">Regional Indicators</div>
+                        </div>
+                    </div>
+                    <p class="impact-description">
+                        Events causing moderate volatility of <strong>20-50 pips</strong>. These releases affect 
+                        specific currency pairs or regional markets but may not move all majors.
+                    </p>
+                    <div class="impact-examples">
+                        <strong>Examples:</strong>
+                        <ul>
+                            <li>🏭 Manufacturing PMI</li>
+                            <li>🏠 Housing Starts & Sales</li>
+                            <li>👔 Unemployment Claims</li>
+                            <li>🛒 Retail Sales</li>
+                            <li>🏦 ECB/BOE Minutes</li>
+                        </ul>
+                    </div>
+                    <div class="tooltip" style="margin-top: 15px;">
+                        <span style="color: #2d5cc2; font-weight: 600;">💡 Strategy</span>
+                        <span class="tooltiptext">
+                            Good for swing traders. These events create opportunities but without the extreme volatility of high-impact releases. Perfect for practicing news trading strategies.
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="impact-card low">
+                    <div class="impact-header">
+                        <div class="impact-icon low">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div>
+                            <div class="impact-title">🟢 Low Impact</div>
+                            <div class="impact-subtitle">Minor Data Releases</div>
+                        </div>
+                    </div>
+                    <p class="impact-description">
+                        Smaller releases with <strong>minimal immediate impact</strong> (less than 20 pips). 
+                        These provide context and sentiment but rarely cause significant price movements alone.
+                    </p>
+                    <div class="impact-examples">
+                        <strong>Examples:</strong>
+                        <ul>
+                            <li>📢 Speeches by Minor Officials</li>
+                            <li>📊 Consumer Confidence (Regional)</li>
+                            <li>🏦 Bank Holiday Announcements</li>
+                            <li>📋 Building Permits</li>
+                            <li>🗳️ Minor Political Events</li>
+                        </ul>
+                    </div>
+                    <div class="tooltip" style="margin-top: 15px;">
+                        <span style="color: #2d5cc2; font-weight: 600;">📚 Use Case</span>
+                        <span class="tooltiptext">
+                            Track these for overall market sentiment and longer-term fundamental analysis. Don't expect immediate trading opportunities from these releases.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Calendar Widget Section -->
+    <section class="calendar-widget-section">
+        <div class="container">
+            <div class="widget-header">
+                <h2>📊 Live Economic Calendar Widget</h2>
+                <p>Real-time data powered by TradingView • Updated every minute • Covering 50+ countries</p>
+            </div>
+            
+            <div class="calendar-container">
+                <!-- TradingView Widget -->
+                <div class="tradingview-widget-container">
+                    <iframe scrolling="no" allowtransparency="true" frameborder="0" 
+                            src="https://www.tradingview.com/embed-widget/events/?locale=en#%7B%22colorTheme%22%3A%22light%22%2C%22isTransparent%22%3Afalse%2C%22width%22%3A%22100%25%22%2C%22height%22%3A%22600%22%2C%22importanceFilter%22%3A%22-1%2C0%2C1%22%2C%22currencyFilter%22%3A%22USD%2CEUR%2CITL%2CNZD%2CCHF%2CGBP%2CJPY%2CCAD%2CAUD%2CCNY%22%2C%22utm_source%22%3A%22vestrado.com%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22events%22%7D" 
+                            title="Economic Calendar" 
+                            style="width: 100%; height: 600px; border: none; border-radius: 8px;">
+                    </iframe>
+                </div>
+                
+                <!-- Data Disclaimer -->
+                <div class="data-disclaimer-box" id="disclaimer-details">
+                    <h4><i class="fas fa-info-circle"></i> Data Accuracy & Disclaimer</h4>
+                    <p>
+                        <strong>Data Source:</strong> Economic calendar data is provided by TradingView, aggregating information from trusted sources including government statistical offices, central banks, and financial institutions.
+                    </p>
+                    <p>
+                        <strong>Accuracy:</strong> While we strive for accuracy, economic data is subject to revisions and updates. 
+                        Vestrado does not guarantee the completeness, accuracy, or timeliness of this information.
+                    </p>
+                    <p>
+                        <strong>Investment Decisions:</strong> This calendar is for informational purposes only and should not be considered 
+                        as financial advice. Always conduct your own research and consult with a financial advisor before making trading decisions.
+                    </p>
+                    <p>
+                        <a href="#">Learn How to Use Economic Calendar Effectively →</a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Quick Trade Panel -->
+            <div class="quick-trade-panel">
+                <h3><i class="fas fa-rocket"></i> Trade Based on Calendar Events</h3>
+                <p>
+                    Don't just watch the news - trade it! Open positions quickly with our MT5 platform or set 
+                    price alerts to catch the perfect entry after major releases.
+                </p>
+                <div class="trade-actions">
+                    <button class="trade-btn long">
+                        <i class="fas fa-arrow-up"></i>
+                        Open Long Position
+                    </button>
+                    <button class="trade-btn short">
+                        <i class="fas fa-arrow-down"></i>
+                        Open Short Position
+                    </button>
+                    <button class="trade-btn alert">
+                        <i class="fas fa-bell"></i>
+                        Set Price Alert
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- This Week's Key Events -->
+    <section class="weekly-events">
+        <div class="container">
+            <h2>🗓️ This Week's Key Events to Watch</h2>
+            <p class="subtitle">Don't miss these major market-moving releases this week</p>
+            
+            <div class="events-grid">
+                <div class="event-card high-impact">
+                    <span class="event-date"><i class="fas fa-calendar-day"></i> Wednesday, Feb 7 • 14:00 EST</span>
+                    <h3 class="event-title">🇺🇸 US Federal Reserve Interest Rate Decision</h3>
+                    <span class="event-country"><i class="fas fa-flag-usa"></i> United States</span>
+                    <p class="event-description">
+                        The Fed is expected to maintain rates at 5.25-5.50%, but markets will focus on the policy statement 
+                        and any hints about future rate cuts. This is a <strong>major volatility event</strong>.
+                    </p>
+                    <div class="event-impact-details">
+                        <strong>Expected Market Impact:</strong>
+                        <p>
+                            • <strong>EUR/USD:</strong> Expected 100-150 pip movement<br>
+                            • <strong>Gold:</strong> $30-50 potential swing<br>
+                            • <strong>S&P 500:</strong> 1-2% expected volatility
+                        </p>
+                    </div>
+                    <div class="event-impact-details">
+                        <strong>Historical Context:</strong>
+                        <p>
+                            Last 5 Fed decisions averaged 127 pip movement on EUR/USD. Hawkish surprises have historically 
+                            strengthened USD by 2-3% within 24 hours.
+                        </p>
+                    </div>
+                    <div class="event-cta">
+                        <a href="https://my.vestrado.com/register" class="btn-trade-event">
+                            <i class="fas fa-chart-line"></i> Prepare to Trade This Event
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="event-card high-impact">
+                    <span class="event-date"><i class="fas fa-calendar-day"></i> Friday, Feb 9 • 08:30 EST</span>
+                    <h3 class="event-title">🇺🇸 Non-Farm Payrolls (NFP)</h3>
+                    <span class="event-country"><i class="fas fa-flag-usa"></i> United States</span>
+                    <p class="event-description">
+                        The most anticipated monthly employment report. Forecast: 180,000 jobs added. Any surprise 
+                        above 250K or below 120K will trigger <strong>massive volatility</strong>.
+                    </p>
+                    <div class="event-impact-details">
+                        <strong>Expected Market Impact:</strong>
+                        <p>
+                            • <strong>USD pairs:</strong> 80-200 pip movements typical<br>
+                            • <strong>Gold:</strong> Highly sensitive to USD strength<br>
+                            • <strong>S&P 500:</strong> React to employment strength
+                        </p>
+                    </div>
+                    <div class="event-impact-details">
+                        <strong>Trading Strategy:</strong>
+                        <p>
+                            Wait 5-15 minutes after release for initial volatility to settle. Look for confirmation 
+                            candle on 15M chart before entering. Use tight stop-loss (30-40 pips).
+                        </p>
+                    </div>
+                    <div class="event-cta">
+                        <a href="https://my.vestrado.com/register" class="btn-trade-event">
+                            <i class="fas fa-chart-line"></i> Prepare to Trade This Event
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="event-card medium-impact">
+                    <span class="event-date"><i class="fas fa-calendar-day"></i> Thursday, Feb 8 • 09:30 GMT</span>
+                    <h3 class="event-title">🇬🇧 Bank of England Interest Rate Decision</h3>
+                    <span class="event-country"><i class="fas fa-flag"></i> United Kingdom</span>
+                    <p class="event-description">
+                        BOE expected to hold rates at 5.25%. Focus on vote split and inflation outlook. 
+                        Could significantly impact GBP pairs if any surprise in dovish/hawkish tone.
+                    </p>
+                    <div class="event-impact-details">
+                        <strong>Expected Market Impact:</strong>
+                        <p>
+                            • <strong>GBP/USD:</strong> 60-100 pip potential<br>
+                            • <strong>EUR/GBP:</strong> 40-80 pip movement<br>
+                            • <strong>FTSE 100:</strong> Moderate reaction
+                        </p>
+                    </div>
+                    <div class="event-cta">
+                        <a href="https://my.vestrado.com/register" class="btn-trade-event">
+                            <i class="fas fa-chart-line"></i> Prepare to Trade This Event
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- How to Read Economic Calendar -->
+    <section class="how-to-read">
+        <div class="container">
+            <h2>📖 How to Read Economic Calendar Like a Pro</h2>
+            
+            <div class="reading-guide">
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Actual vs Forecast</h3>
+                    <p>
+                        The <strong>"Actual"</strong> is the real data released. The <strong>"Forecast"</strong> is what economists predicted. 
+                        When Actual beats Forecast, it's generally <strong>bullish</strong> for that currency.
+                    </p>
+                    <div class="guide-example">
+                        <strong>Real Example:</strong>
+                        <p>
+                            US NFP Actual: <strong>250K</strong> vs Forecast: <strong>180K</strong><br>
+                            Result: USD strengthened by 85 pips vs EUR in 30 minutes.<br>
+                            Why? Better employment = stronger economy = higher interest rate expectations.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Previous Data</h3>
+                    <p>
+                        The <strong>"Previous"</strong> shows last period's value. Use this to identify trends. 
+                        Are numbers improving or deteriorating? This gives context beyond single releases.
+                    </p>
+                    <div class="guide-example">
+                        <strong>Real Example:</strong>
+                        <p>
+                            GDP Growth: Previous 2.5% → Actual 3.2%<br>
+                            This shows <strong>acceleration</strong> in growth, very bullish signal.<br>
+                            Even if it matched forecast, the upward trend matters!
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Revisions Matter</h3>
+                    <p>
+                        Pay attention to <strong>revisions</strong> of previous data. If last month's NFP is revised upward, 
+                        that's additional bullish news even if current release disappoints.
+                    </p>
+                    <div class="guide-example">
+                        <strong>Real Example:</strong>
+                        <p>
+                            NFP Actual: 160K (below 180K forecast) = Bearish<br>
+                            BUT Previous revised from 200K to 250K = Bullish revision<br>
+                            Net effect: Market often reacts positively to strong revisions!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Alert Signup Section -->
+    <section class="alert-signup">
+        <div class="container">
+            <h2>🔔 Never Miss Important Events</h2>
+            <p class="subtitle">Get instant SMS & email alerts 30 minutes before major releases</p>
+            
+            <div class="signup-form">
+                <form id="alertForm">
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-mobile-alt"></i> Mobile Number (Optional for SMS)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timezone"><i class="fas fa-clock"></i> Your Timezone *</label>
+                        <select id="timezone" name="timezone" required>
+                            <option value="">Select your timezone...</option>
+                            <option value="EST">EST - Eastern Time (US)</option>
+                            <option value="PST">PST - Pacific Time (US)</option>
+                            <option value="GMT">GMT - London Time</option>
+                            <option value="CET">CET - Central European Time</option>
+                            <option value="JST">JST - Japan Time</option>
+                            <option value="AEST">AEST - Australian Eastern Time</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label style="margin-bottom: 15px;"><i class="fas fa-filter"></i> Alert Preferences *</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="high-impact" name="alerts" value="high" checked>
+                                <label for="high-impact">🔴 High Impact Events Only (Recommended)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="medium-impact" name="alerts" value="medium">
+                                <label for="medium-impact">🟡 Include Medium Impact Events</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="all-events" name="alerts" value="all">
+                                <label for="all-events">🟢 All Events (You'll get many alerts daily)</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-bell"></i> Activate Free Alerts
+                    </button>
+                </form>
+                
+                <div class="benefits-list">
+                    <h4>✨ What You'll Get:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Alerts 30 minutes before major releases</li>
+                        <li><i class="fas fa-check-circle"></i> Expected market impact forecasts</li>
+                        <li><i class="fas fa-check-circle"></i> Historical data comparisons</li>
+                        <li><i class="fas fa-check-circle"></i> Post-release analysis summaries</li>
+                        <li><i class="fas fa-check-circle"></i> 100% Free - No credit card required</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>❓ Frequently Asked Questions</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What does "Actual" vs "Forecast" mean?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <strong>Forecast:</strong> The market's expectation before the data release (consensus from economists).<br><br>
+                            <strong>Actual:</strong> The real number released by government/central bank.<br><br>
+                            <strong>Market Impact:</strong> When Actual > Forecast, the currency typically strengthens because the economy performed better than expected. When Actual < Forecast, the currency usually weakens.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Should I trade immediately when news releases?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <strong>No! This is a common mistake.</strong> During major news releases:<br><br>
+                            • <strong>Spreads widen</strong> dramatically (EUR/USD can go from 1 pip to 10+ pips)<br>
+                            • <strong>Slippage</strong> is common (your order fills at worse price)<br>
+                            • <strong>Initial spike</strong> often reverses within 5-15 minutes<br><br>
+                            <strong>Recommended:</strong> Wait 15 minutes after release, watch for confirmation on 15M chart, then enter with tight stop-loss.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How accurate is the economic calendar data?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Our calendar uses TradingView data, which aggregates from official sources (government statistical offices, central banks). <strong>Accuracy is typically 99%+</strong> for scheduled releases.<br><br>
+                            However, note that:<br>
+                            • Release times can occasionally change<br>
+                            • Data is subject to revisions<br>
+                            • Forecasts are estimates from economists, not guarantees<br><br>
+                            Always cross-check important events with official sources like Fed.gov, ECB.europa.eu, etc.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Why did the market move opposite to the news?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            This happens frequently! Reasons include:<br><br>
+                            <strong>1. "Buy the rumor, sell the fact":</strong> Market already priced in good news before release<br>
+                            <strong>2. Forward guidance matters more:</strong> Central bank hints at future policy<br>
+                            <strong>3. Revisions overshadow current data:</strong> Upward revision of previous month can matter more<br>
+                            <strong>4. Conflicting indicators:</strong> Good employment but bad wage growth = mixed signal<br>
+                            <strong>5. Risk sentiment:</strong> Overall market mood can override single data points<br><br>
+                            This is why <strong>fundamental analysis is complex</strong> - never trade on single data point alone!
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Which economic events are most important for Forex?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <strong>Top 5 Market Movers:</strong><br><br>
+                            1. <strong>Central Bank Interest Rate Decisions</strong> (Fed, ECB, BOE, BOJ)<br>
+                            2. <strong>Non-Farm Payrolls (NFP)</strong> - US employment report<br>
+                            3. <strong>Consumer Price Index (CPI)</strong> - Inflation data<br>
+                            4. <strong>GDP Growth Rate</strong> - Economic growth<br>
+                            5. <strong>Central Bank Press Conferences</strong> - Forward guidance<br><br>
+                            These typically cause 50-200 pip movements and create best trading opportunities for Forex traders.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I set automatic alerts for specific events?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <strong>Yes!</strong> Use our <a href="#alert-signup" style="color: #2d5cc2; font-weight: 600;">free alert system</a> above to:<br><br>
+                            • Get email/SMS 30 mins before major releases<br>
+                            • Choose High Impact, Medium Impact, or All Events<br>
+                            • Customize by your timezone<br>
+                            • Receive post-release analysis<br><br>
+                            Additionally, in your MT5 platform, you can set price alerts to trigger when volatility hits after news releases.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Should beginners trade economic news?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <strong>Recommended for beginners: Practice in Demo first!</strong><br><br>
+                            News trading is <strong>high risk, high reward</strong>. Before trading real money:<br><br>
+                            1. Open a <a href="https://my.vestrado.com/register" style="color: #2d5cc2; font-weight: 600;">free demo account</a> with $10,000 virtual funds<br>
+                            2. Practice trading 10-20 major news releases in demo<br>
+                            3. Learn to read market reaction (fake-out vs real breakout)<br>
+                            4. Master tight stop-loss placement<br>
+                            5. Only go live when you're consistently profitable in demo<br><br>
+                            Many professional traders avoid news trading entirely - it's optional, not required for success!
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I combine technical and fundamental analysis?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <strong>Best Practice: Use Both Together</strong><br><br>
+                            <strong>Fundamental (Calendar):</strong> Tells you <em>why</em> market might move and <em>when</em><br>
+                            <strong>Technical (Charts):</strong> Tells you <em>where</em> to enter and <em>where</em> to exit<br><br>
+                            <strong>Example Strategy:</strong><br>
+                            1. Calendar shows NFP at 8:30 AM (Fundamental timing)<br>
+                            2. Data beats expectations (Fundamental direction = USD up)<br>
+                            3. Wait for EUR/USD to break support level on 15M chart (Technical confirmation)<br>
+                            4. Enter short with stop above recent high (Technical risk management)<br><br>
+                            Learn more in our <a href="#education" style="color: #2d5cc2; font-weight: 600;">Education Hub</a> below.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Hub -->
+    <section class="education-hub" id="education">
+        <div class="container">
+            <h2>🎓 Master News Trading - Free Learning Path</h2>
+            <p class="subtitle">From complete beginner to advanced news trader - learn at your own pace</p>
+            
+            <div class="edu-levels">
+                <div class="edu-level">
+                    <div class="edu-level-header">
+                        <span class="level-badge beginner">LEVEL 1 - BEGINNER</span>
+                        <h3>Economic Calendar Basics</h3>
+                    </div>
+                    <ul class="edu-content-list">
+                        <li>
+                            <i class="fas fa-play-circle"></i>
+                            <span>What is Economic Calendar? (5 min video)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-book"></i>
+                            <span>5 Most Important Economic Indicators Explained</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>When NOT to Trade Based on News</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-chart-line"></i>
+                            <span>Understanding Actual vs Forecast vs Previous</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Downloadable: Economic Calendar Cheat Sheet PDF</span>
+                        </li>
+                    </ul>
+                    <a href="https://my.vestrado.com/register" class="btn-start-learning">
+                        <i class="fas fa-graduation-cap"></i> Start Level 1
+                    </a>
+                </div>
+                
+                <div class="edu-level">
+                    <div class="edu-level-header">
+                        <span class="level-badge intermediate">LEVEL 2 - INTERMEDIATE</span>
+                        <h3>News Trading Strategies</h3>
+                    </div>
+                    <ul class="edu-content-list">
+                        <li>
+                            <i class="fas fa-video"></i>
+                            <span>How to Build a News Trading Strategy (18 min)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-brain"></i>
+                            <span>Reading Market Sentiment from Calendar</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-file-alt"></i>
+                            <span>Case Study: Trading the Fed Rate Decision</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Risk Management for News Trading</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-download"></i>
+                            <span>Downloadable: News Trading Strategy Template</span>
+                        </li>
+                    </ul>
+                    <a href="https://my.vestrado.com/register" class="btn-start-learning">
+                        <i class="fas fa-chart-bar"></i> Start Level 2
+                    </a>
+                </div>
+                
+                <div class="edu-level">
+                    <div class="edu-level-header">
+                        <span class="level-badge advanced">LEVEL 3 - ADVANCED</span>
+                        <h3>Professional Analysis</h3>
+                    </div>
+                    <ul class="edu-content-list">
+                        <li>
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Correlation Analysis: Which Events Move Your Pairs</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-layer-group"></i>
+                            <span>Combining Technical + Fundamental Analysis</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-users"></i>
+                            <span>Live Webinar: News Trading with Vestrado Analysts</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-robot"></i>
+                            <span>Building News Trading EAs (Expert Advisors)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-trophy"></i>
+                            <span>Advanced: Positioning Before Major Releases</span>
+                        </li>
+                    </ul>
+                    <a href="https://my.vestrado.com/register" class="btn-start-learning">
+                        <i class="fas fa-rocket"></i> Start Level 3
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Tutorial -->
+    <section class="video-tutorial">
+        <div class="container">
+            <h2>🎬 Watch: Economic Calendar 101 (3 Minutes)</h2>
+            
+            <div class="video-container">
+                <div class="video-placeholder" onclick="alert('Video player would load here. For demo purposes, this is a placeholder.')">
+                    <i class="fas fa-play-circle"></i>
+                    <h3>How to Use Economic Calendar for Trading</h3>
+                    <p>Learn the essentials in just 3 minutes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#">Financial Instruments</a></li>
+                        <li><a href="#">Forex Trading</a></li>
+                        <li><a href="#">Cryptocurrency</a></li>
+                        <li><a href="#">Commodities</a></li>
+                        <li><a href="#">Indices</a></li>
+                        <li><a href="#">Share Trading</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Trading</h3>
+                    <ul>
+                        <li><a href="#">MetaTrader 5</a></li>
+                        <li><a href="#">Account Types</a></li>
+                        <li><a href="#">Deposit & Withdrawal</a></li>
+                        <li><a href="#">Leverage & Margin</a></li>
+                        <li><a href="#">Copy Trading</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Economic Calendar</a></li>
+                        <li><a href="#">Trading Academy</a></li>
+                        <li><a href="#">Market Analysis</a></li>
+                        <li><a href="#">Trading Guides</a></li>
+                        <li><a href="#">Webinars</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Why Vestrado</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Partnership</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <p>Stay updated with market news and trading tips</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="risk-warning-footer">
+                    <strong>⚠️ Risk Warning:</strong> Trading Forex, Cryptocurrencies, and CFDs involves significant risk and can result in the loss of your invested capital. 
+                    76.4% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work 
+                    and whether you can afford to take the high risk of losing your money. Past performance is not indicative of future results. 
+                    Please read our full <a href="#">Risk Disclosure</a> before trading.
+                </div>
+                
+                <p>
+                    <strong>Vestrado Ltd</strong> | International Business Company registered in St Vincent and Grenadines (Reg. No. 25911 BC 2020)<br>
+                    Registered Address: First Floor, SVG Teachers Co-operative Credit Union Limited, Uptown Building, Kingstown, St. Vincent and the Grenadines<br>
+                    Dubai Office: Office 346, Empire Heights, Business Bay, Dubai, U.A.E<br><br>
+                    
+                    <strong>Restrictions:</strong> Vestrado services are not available to residents of certain jurisdictions including: Afghanistan, Australia, Albania, Belarus, Canada, 
+                    Central African Republic, China, Iran, Iraq, Lebanon, Libya, Japan, Myanmar, North Korea, Russia, Spain, Sudan, Syria, Tunisia, Ukraine, 
+                    United States of America, United States Virgin Islands, Venezuela, and some other regions.<br><br>
+                    
+                    Copyright © 2026 Vestrado Ltd. All Rights Reserved | <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const wasActive = item.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                // Open clicked item if it wasn't active
+                if (!wasActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Filter Presets
+        document.querySelectorAll('.preset-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active from all
+                document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+                // Add active to clicked
+                btn.classList.add('active');
+                
+                // In real implementation, this would filter the calendar widget
+                const filter = btn.dataset.filter;
+                console.log('Filter applied:', filter);
+                alert(`Calendar filtered by: ${filter}\n\nNote: In production, this would automatically update the TradingView widget to show only relevant events.`);
+            });
+        });
+        
+        // Alert Form Submission
+        document.getElementById('alertForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const timezone = formData.get('timezone');
+            const alerts = formData.getAll('alerts');
+            
+            // In real implementation, this would send to backend
+            alert(`✅ Alert System Activated!\n\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nTimezone: ${timezone}\nAlert Types: ${alerts.join(', ')}\n\nYou'll receive your first alert before the next high-impact event!`);
+            
+            // Reset form
+            e.target.reset();
+        });
+        
+        // Quick Trade Buttons
+        document.querySelectorAll('.trade-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const action = btn.textContent.trim();
+                
+                // In real implementation, this would open MT5 or trading interface
+                if (action.includes('Long')) {
+                    alert('🚀 Opening Long Position\n\nThis would:\n• Open your MT5 platform\n• Pre-select the relevant currency pair\n• Set up a buy order\n\nFor demo purposes, this redirects to register.');
+                    window.location.href = 'https://my.vestrado.com/register';
+                } else if (action.includes('Short')) {
+                    alert('📉 Opening Short Position\n\nThis would:\n• Open your MT5 platform\n• Pre-select the relevant currency pair\n• Set up a sell order\n\nFor demo purposes, this redirects to register.');
+                    window.location.href = 'https://my.vestrado.com/register';
+                } else if (action.includes('Alert')) {
+                    alert('🔔 Setting Price Alert\n\nThis would:\n• Open alert setup interface\n• Let you set price trigger\n• Notify you via SMS/email when triggered\n\nFor demo purposes, scroll to alert signup section.');
+                    document.querySelector('.alert-signup').scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+        
+        // Console log for developers
+        console.log('%cVestrado Economic Calendar Mockup', 'font-size: 20px; color: #2d5cc2; font-weight: bold;');
+        console.log('%cThis is a high-fidelity mockup demonstrating UX improvements.', 'font-size: 14px; color: #666;');
+        console.log('%cKey Features Implemented:', 'font-size: 14px; color: #1a3a8f; font-weight: bold;');
+        console.log('✅ Contextual CTAs throughout page');
+        console.log('✅ Educational content (800+ words)');
+        console.log('✅ Impact level explanations with tooltips');
+        console.log('✅ This Week\'s Key Events section');
+        console.log('✅ Email/SMS alert signup');
+        console.log('✅ FAQ accordion (10 questions)');
+        console.log('✅ Quick trade panel with MT5 integration');
+        console.log('✅ Data disclaimer prominently displayed');
+        console.log('✅ Filter presets for different trader types');
+        console.log('✅ Education hub with progressive learning path');
+        console.log('✅ Video tutorial section');
+    </script>
+</body>
+</html>

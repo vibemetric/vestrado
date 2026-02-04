@@ -1,0 +1,2419 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Deposit & Withdrawal | 0% Fees | Vestrado</title>
+    <meta name="description" content="Deposit instantly with 0% fees. Fast withdrawals in 1-24 hours. Multiple payment methods: Bank transfer, Credit card, USDT, E-wallets. Regulated & secure.">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ==================== RESET & BASE ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-blue: #1a3a8f;
+            --secondary-blue: #2d5cc2;
+            --accent-green: #9aea00;
+            --dark-text: #1a1a1a;
+            --gray-text: #666;
+            --light-bg: #f8fbff;
+            --border-color: #e1e8f0;
+            --success-green: #4CAF50;
+            --warning-orange: #ff9800;
+            --error-red: #f44336;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ==================== TRUST BAR ==================== */
+        .trust-bar {
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            padding: 12px 0;
+            font-size: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .trust-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .badge i {
+            color: var(--accent-green);
+        }
+        
+        .live-stats {
+            background: rgba(255,255,255,0.15);
+            padding: 6px 18px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+        
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+        }
+        
+        /* ==================== RISK WARNING BANNER ==================== */
+        .risk-warning {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 5px solid var(--warning-orange);
+            padding: 18px 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(255, 152, 0, 0.15);
+            animation: slideDown 0.5s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .risk-warning-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .risk-warning i {
+            font-size: 24px;
+            color: var(--warning-orange);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        
+        .risk-warning-text h4 {
+            color: #e65100;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+        
+        .risk-warning-text p {
+            color: #5d4037;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        
+        .risk-warning-text strong {
+            color: #d84315;
+        }
+        
+        /* ==================== HERO SECTION ==================== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .hero-highlights {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .highlight-item {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .highlight-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.25);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .highlight-item i {
+            font-size: 2rem;
+            color: var(--accent-green);
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .highlight-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .highlight-item p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        /* ==================== REGULATORY INFO ==================== */
+        .regulatory-section {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 12px;
+            border-left: 5px solid var(--secondary-blue);
+            box-shadow: 0 4px 20px rgba(45, 92, 194, 0.15);
+        }
+        
+        .regulatory-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .regulatory-icon {
+            font-size: 3rem;
+            color: var(--secondary-blue);
+        }
+        
+        .regulatory-text h3 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .regulatory-details {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+        
+        .reg-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #0d47a1;
+            font-weight: 600;
+        }
+        
+        .reg-item i {
+            color: var(--success-green);
+        }
+        
+        /* ==================== VERIFICATION SECTION ==================== */
+        .verification-required {
+            background: white;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            border: 2px solid #fff9c4;
+            position: relative;
+        }
+        
+        .verification-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .verification-header i {
+            font-size: 2.5rem;
+            color: var(--warning-orange);
+        }
+        
+        .verification-header h2 {
+            color: var(--primary-blue);
+            font-size: 2rem;
+        }
+        
+        .verification-subtitle {
+            color: var(--gray-text);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        
+        .verification-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .verification-step {
+            background: linear-gradient(135deg, #f8fbff 0%, #e3f2fd 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .verification-step:hover {
+            border-color: var(--secondary-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(45, 92, 194, 0.15);
+        }
+        
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(45, 92, 194, 0.3);
+        }
+        
+        .verification-step h4 {
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .verification-step p {
+            color: var(--gray-text);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .verification-timeline {
+            background: #fff3e0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px dashed var(--warning-orange);
+        }
+        
+        .verification-timeline i {
+            font-size: 2rem;
+            color: var(--warning-orange);
+            margin-bottom: 10px;
+        }
+        
+        .verification-timeline h4 {
+            color: #e65100;
+            margin-bottom: 8px;
+        }
+        
+        .verification-timeline p {
+            color: #5d4037;
+            font-weight: 600;
+        }
+        
+        .verify-now-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--success-green) 0%, #66bb6a 100%);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .verify-now-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(76, 175, 80, 0.5);
+        }
+        
+        /* ==================== SECTION HEADERS ==================== */
+        .section {
+            background: white;
+            padding: 60px 20px;
+            margin: 30px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-green) 0%, var(--success-green) 100%);
+            border-radius: 2px;
+        }
+        
+        .section-header p {
+            font-size: 1.15rem;
+            color: var(--gray-text);
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+        
+        /* ==================== PAYMENT METHODS TABLE ==================== */
+        .payment-table-wrapper {
+            overflow-x: auto;
+            margin: 0 -20px;
+            padding: 0 20px;
+        }
+        
+        .payment-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+        
+        .payment-table thead th {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            padding: 20px 15px;
+            text-align: left;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .payment-table thead th:nth-child(1) { width: 20%; }
+        .payment-table thead th:nth-child(2) { width: 15%; }
+        .payment-table thead th:nth-child(3) { width: 10%; }
+        .payment-table thead th:nth-child(4) { width: 10%; }
+        .payment-table thead th:nth-child(5) { width: 18%; }
+        .payment-table thead th:nth-child(6) { width: 15%; }
+        .payment-table thead th:nth-child(7) { width: 12%; }
+        
+        .payment-table tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .payment-table tbody tr:hover {
+            background: #fafcff;
+            transform: scale(1.01);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+        
+        .payment-table tbody td {
+            padding: 20px 15px;
+            font-size: 14px;
+        }
+        
+        .method-cell {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+        
+        .method-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--secondary-blue);
+            flex-shrink: 0;
+        }
+        
+        .method-name {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .method-name strong {
+            font-size: 15px;
+            color: var(--primary-blue);
+        }
+        
+        .method-name small {
+            font-size: 12px;
+            color: var(--gray-text);
+            font-weight: 400;
+        }
+        
+        .currency-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .currency-badge {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .fee-cell {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .fee-value {
+            font-weight: 700;
+            color: var(--success-green);
+            font-size: 16px;
+        }
+        
+        .fee-info {
+            color: var(--gray-text);
+            font-size: 13px;
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+        }
+        
+        .tooltip i {
+            color: var(--secondary-blue);
+            font-size: 14px;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 280px;
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: left;
+            border-radius: 8px;
+            padding: 12px;
+            position: absolute;
+            z-index: 10;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -140px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 13px;
+            font-weight: 400;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .time-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        
+        .time-instant {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .time-fast {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        
+        .time-slow {
+            background: #fce4ec;
+            color: #c2185b;
+        }
+        
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 15px rgba(45, 92, 194, 0.3);
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(45, 92, 194, 0.4);
+        }
+        
+        .withdrawal-btn {
+            background: linear-gradient(135deg, #388e3c 0%, #66bb6a 100%);
+            box-shadow: 0 3px 15px rgba(56, 142, 60, 0.3);
+        }
+        
+        .withdrawal-btn:hover {
+            box-shadow: 0 6px 25px rgba(56, 142, 60, 0.4);
+        }
+        
+        .recommended-badge {
+            background: var(--accent-green);
+            color: var(--primary-blue);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-left: 8px;
+            animation: badgePulse 2s infinite;
+        }
+        
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* ==================== FEE CALCULATOR ==================== */
+        .fee-calculator {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 5px 25px rgba(156, 39, 176, 0.15);
+        }
+        
+        .calculator-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .calculator-header h3 {
+            font-size: 2rem;
+            color: #6a1b9a;
+            margin-bottom: 10px;
+        }
+        
+        .calculator-header p {
+            color: #7b1fa2;
+        }
+        
+        .calculator-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            color: #6a1b9a;
+            font-size: 14px;
+        }
+        
+        .form-group input,
+        .form-group select {
+            padding: 12px 15px;
+            border: 2px solid #ce93d8;
+            border-radius: 8px;
+            font-size: 16px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #9c27b0;
+            box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.1);
+        }
+        
+        .calculate-btn {
+            grid-column: 1 / -1;
+            padding: 15px;
+            background: linear-gradient(135deg, #7b1fa2 0%, #9c27b0 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(123, 31, 162, 0.4);
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(123, 31, 162, 0.5);
+        }
+        
+        .calculator-result {
+            grid-column: 1 / -1;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .calculator-result.active {
+            display: block;
+            animation: slideDown 0.5s ease-out;
+        }
+        
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .result-row:last-child {
+            border-bottom: none;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-top: 10px;
+            padding-top: 20px;
+            border-top: 2px solid var(--accent-green);
+        }
+        
+        .result-label {
+            color: var(--gray-text);
+        }
+        
+        .result-value {
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+        
+        /* ==================== SECURITY FEATURES ==================== */
+        .security-section {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 50px 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .security-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .security-header h3 {
+            font-size: 2rem;
+            color: #1b5e20;
+            margin-bottom: 10px;
+        }
+        
+        .security-header p {
+            color: #2e7d32;
+            font-size: 1.1rem;
+        }
+        
+        .security-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .security-feature {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .security-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .security-feature i {
+            font-size: 2rem;
+            color: var(--success-green);
+            flex-shrink: 0;
+        }
+        
+        .security-feature-content h4 {
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .security-feature-content p {
+            color: var(--gray-text);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* ==================== COMPLIANCE SECTION ==================== */
+        .compliance-section {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid var(--warning-orange);
+        }
+        
+        .compliance-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .compliance-header i {
+            font-size: 2.5rem;
+            color: var(--warning-orange);
+        }
+        
+        .compliance-header h3 {
+            font-size: 1.8rem;
+            color: #e65100;
+        }
+        
+        .compliance-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .compliance-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .compliance-item i {
+            font-size: 1.5rem;
+            color: var(--success-green);
+        }
+        
+        .compliance-item strong {
+            color: #e65100;
+        }
+        
+        .compliance-disclaimer {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #5d4037;
+            line-height: 1.7;
+        }
+        
+        /* ==================== FAQ SECTION ==================== */
+        .faq-section {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+        }
+        
+        .faq-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .faq-header h3 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+        
+        .faq-header p {
+            color: var(--gray-text);
+            font-size: 1.1rem;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--light-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: var(--secondary-blue);
+        }
+        
+        .faq-question {
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: var(--light-bg);
+        }
+        
+        .faq-question h4 {
+            color: var(--primary-blue);
+            font-size: 1.15rem;
+            flex: 1;
+        }
+        
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--secondary-blue);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 25px;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 25px 25px 25px;
+        }
+        
+        .faq-answer p {
+            color: var(--gray-text);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+        
+        /* ==================== CTA SECTION ==================== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 60px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent-green);
+            color: var(--primary-blue);
+            padding: 18px 45px;
+            border-radius: 35px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 6px 30px rgba(154, 234, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(154, 234, 0, 0.6);
+        }
+        
+        .cta-btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: white;
+            padding: 18px 45px;
+            border-radius: 35px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border: 3px solid white;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn-secondary:hover {
+            background: white;
+            color: var(--primary-blue);
+            transform: translateY(-5px);
+        }
+        
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+        
+        .footer-disclaimer {
+            max-width: 1000px;
+            margin: 0 auto 30px;
+            font-size: 0.9rem;
+            color: #ccc;
+            line-height: 1.8;
+            text-align: left;
+        }
+        
+        .footer-disclaimer strong {
+            color: white;
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-green);
+        }
+        
+        .footer-copyright {
+            color: #999;
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+        
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .hero-highlights {
+                gap: 20px;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .payment-table {
+                font-size: 12px;
+            }
+            
+            .payment-table thead th,
+            .payment-table tbody td {
+                padding: 12px 8px;
+            }
+            
+            .method-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            
+            .cta-section p {
+                font-size: 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .verification-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* ==================== PRINT STYLES ==================== */
+        @media print {
+            .trust-bar,
+            .action-btn,
+            .cta-section,
+            .verify-now-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-content">
+                <div class="trust-badges">
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>CySEC Regulated</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-lock"></i>
+                        <span>Segregated Accounts</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>SSL Secured</span>
+                    </div>
+                </div>
+                <div class="live-stats">
+                    <div class="live-dot"></div>
+                    <span>24/7 Support Available</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Risk Warning Banner -->
+    <div class="container">
+        <div class="risk-warning">
+            <div class="risk-warning-content">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="risk-warning-text">
+                    <h4>⚠️ Risk Warning</h4>
+                    <p>Trading CFDs and Forex involves significant risk of loss. <strong>72% of retail investor accounts lose money</strong> when trading CFDs with this provider. Ensure you understand the risks and can afford potential losses before depositing funds.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Secure Deposit & Withdrawal</h1>
+                <p>Fund your account instantly with 0% deposit fees. Fast, secure, and transparent payment processing.</p>
+                
+                <div class="hero-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-bolt"></i>
+                        <h3>5-10 Minutes</h3>
+                        <p>Instant Deposits</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-percentage"></i>
+                        <h3>0% Fees</h3>
+                        <p>No Hidden Charges</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Bank-Grade</h3>
+                        <p>Security Encryption</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regulatory Information -->
+    <div class="container">
+        <div class="regulatory-section">
+            <div class="regulatory-content">
+                <i class="fas fa-certificate regulatory-icon"></i>
+                <div class="regulatory-text">
+                    <h3>Vestrado is Regulated & Licensed</h3>
+                    <div class="regulatory-details">
+                        <div class="reg-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>CySEC License: 425/23</span>
+                        </div>
+                        <div class="reg-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Entity: Vestrado Ltd</span>
+                        </div>
+                        <div class="reg-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Client Funds: Segregated at Tier-1 Banks</span>
+                        </div>
+                        <div class="reg-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Audited by Ernst & Young</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Verification Requirements -->
+    <div class="container">
+        <div class="verification-required">
+            <div class="verification-header">
+                <i class="fas fa-user-shield"></i>
+                <h2>⚡ Before Your First Withdrawal</h2>
+            </div>
+            <p class="verification-subtitle">For your security and regulatory compliance, please complete account verification to enable withdrawals:</p>
+            
+            <div class="verification-steps">
+                <div class="verification-step">
+                    <div class="step-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h4>1. Verify Identity</h4>
+                    <p>Upload government-issued ID (Passport or National ID card). Must be valid and clearly readable.</p>
+                </div>
+                
+                <div class="verification-step">
+                    <div class="step-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h4>2. Verify Address</h4>
+                    <p>Provide utility bill or bank statement (issued within last 3 months) showing your residential address.</p>
+                </div>
+                
+                <div class="verification-step">
+                    <div class="step-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h4>3. Verify Payment Method</h4>
+                    <p>For card deposits: Upload card photo (front, masking middle 8 digits). For bank: Confirm account ownership.</p>
+                </div>
+            </div>
+            
+            <div class="verification-timeline">
+                <i class="fas fa-clock"></i>
+                <h4>Verification Timeline</h4>
+                <p>⏱️ Processing takes 1-2 business days | ✅ Verify now to enable instant withdrawals</p>
+            </div>
+            
+            <center>
+                <a href="#" class="verify-now-btn">
+                    <i class="fas fa-check-circle"></i>
+                    Verify My Account Now
+                </a>
+            </center>
+        </div>
+    </div>
+
+    <!-- Deposit Methods Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Our Deposit Methods</h2>
+                <p>Choose from multiple secure payment options. Depositing funds is quick and easy – get started in just 60 seconds!</p>
+            </div>
+            
+            <div class="payment-table-wrapper">
+                <table class="payment-table">
+                    <thead>
+                        <tr>
+                            <th>Payment Method</th>
+                            <th>Currencies</th>
+                            <th>Minimum</th>
+                            <th>Maximum</th>
+                            <th>Fee Structure</th>
+                            <th>Processing Time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="method-cell">
+                                    <div class="method-icon">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                    <div class="method-name">
+                                        <strong>Local Bank Transfer</strong>
+                                        <small>🏦 Maybank, CIMB, BCA, Mandiri</small>
+                                    </div>
+                                </div>
+                                <span class="recommended-badge">⭐ Most Popular</span>
+                            </td>
+                            <td>
+                                <div class="currency-list">
+                                    <span class="currency-badge">MYR</span>
+                                    <span class="currency-badge">IDR</span>
+                                    <span class="currency-badge">THB</span>
+                                    <span class="currency-badge">SGD</span>
+                                    <span class="currency-badge">VND</span>
+                                    <span class="currency-badge">INR</span>
+                                </div>
+                            </td>
+                            <td><strong>USD 10</strong><br><small>(≈ MYR 45)</small></td>
+                            <td><strong>USD 10,000</strong><br><small>per transaction</small></td>
+                            <td>
+                                <div class="fee-cell">
+                                    <span class="fee-value">0%</span>
+                                    <div class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">
+                                            <strong>No Vestrado fees!</strong><br>
+                                            Your bank may charge 0.5-1% for currency conversion. We use mid-market rates + 0.5% markup (transparent pricing).
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="time-badge time-instant">
+                                    <i class="fas fa-bolt"></i> 5-10 Minutes
+                                </span>
+                            </td>
+                            <td>
+                                <a href="#" class="action-btn">
+                                    <i class="fas fa-arrow-right"></i> Deposit Now
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="method-cell">
+                                    <div class="method-icon">
+                                        <i class="fas fa-credit-card"></i>
+                                    </div>
+                                    <div class="method-name">
+                                        <strong>Credit/Debit Card</strong>
+                                        <small>💳 Visa, Mastercard</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="currency-list">
+                                    <span class="currency-badge">USD</span>
+                                </div>
+                            </td>
+                            <td><strong>USD 10</strong></td>
+                            <td><strong>USD 5,000</strong><br><small>per transaction</small></td>
+                            <td>
+                                <div class="fee-cell">
+                                    <span class="fee-value">0%</span>
+                                    <div class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">
+                                            <strong>No fees from Vestrado.</strong><br>
+                                            Your card issuer may charge cash advance fees (typically 2-3%). Check with your bank.
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="time-badge time-instant">
+                                    <i class="fas fa-bolt"></i> 5-10 Minutes
+                                </span>
+                            </td>
+                            <td>
+                                <a href="#" class="action-btn">
+                                    <i class="fas fa-arrow-right"></i> Deposit Now
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="method-cell">
+                                    <div class="method-icon">
+                                        <i class="fab fa-bitcoin"></i>
+                                    </div>
+                                    <div class="method-name">
+                                        <strong>USDT (Tether)</strong>
+                                        <small>🔗 ERC-20, TRC-20, BEP-20</small>
+                                    </div>
+                                </div>
+                                <span class="recommended-badge">⚡ Fastest</span>
+                            </td>
+                            <td>
+                                <div class="currency-list">
+                                    <span class="currency-badge">USD</span>
+                                </div>
+                            </td>
+                            <td><strong>USD 10</strong></td>
+                            <td><strong>USD 10,000</strong><br><small>per transaction</small></td>
+                            <td>
+                                <div class="fee-cell">
+                                    <span class="fee-value">0%</span>
+                                    <div class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">
+                                            <strong>⚠️ Important: Choose correct network!</strong><br>
+                                            • ERC-20 (Ethereum): Gas fee ≈ $5-30<br>
+                                            • TRC-20 (Tron): Gas fee ≈ $1<br>
+                                            • BEP-20 (BSC): Gas fee ≈ $0.50<br>
+                                            Wrong network = lost funds!
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="time-badge time-instant">
+                                    <i class="fas fa-bolt"></i> 5-10 Minutes
+                                </span>
+                            </td>
+                            <td>
+                                <a href="#" class="action-btn">
+                                    <i class="fas fa-arrow-right"></i> Deposit Now
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="method-cell">
+                                    <div class="method-icon">
+                                        <i class="fas fa-wallet"></i>
+                                    </div>
+                                    <div class="method-name">
+                                        <strong>E-Wallets</strong>
+                                        <small>📱 Skrill, Neteller, PayPal</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="currency-list">
+                                    <span class="currency-badge">USD</span>
+                                    <span class="currency-badge">INR</span>
+                                </div>
+                            </td>
+                            <td><strong>USD 10</strong></td>
+                            <td><strong>USD 10,000</strong><br><small>per transaction</small></td>
+                            <td>
+                                <div class="fee-cell">
+                                    <span class="fee-value">0%</span>
+                                    <div class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">
+                                            No Vestrado fees. E-wallet providers may charge 1-2% processing fee. Check with your provider.
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="time-badge time-instant">
+                                    <i class="fas fa-bolt"></i> 5-10 Minutes
+                                </span>
+                            </td>
+                            <td>
+                                <a href="#" class="action-btn">
+                                    <i class="fas fa-arrow-right"></i> Deposit Now
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="method-cell">
+                                    <div class="method-icon">
+                                        <i class="fas fa-exchange-alt"></i>
+                                    </div>
+                                    <div class="method-name">
+                                        <strong>Wire Transfer (International)</strong>
+                                        <small>🌍 SWIFT/IBAN</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="currency-list">
+                                    <span class="currency-badge">USD</span>
+                                </div>
+                            </td>
+                            <td><strong>USD 10</strong></td>
+                            <td><strong>USD 10,000</strong><br><small>per transaction</small></td>
+                            <td>
+                                <div class="fee-cell">
+                                    <span class="fee-value">USD 0</span>
+                                    <div class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">
+                                            <strong>Bank fees covered by Vestrado!</strong><br>
+                                            Typical wire fees: USD 15-35 (we reimburse). Intermediary bank fees: USD 10-25 (may apply). Contact us if charged.
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="time-badge time-slow">
+                                    <i class="fas fa-hourglass-half"></i> 2-7 Days
+                                </span>
+                            </td>
+                            <td>
+                                <a href="#" class="action-btn">
+                                    <i class="fas fa-arrow-right"></i> Deposit Now
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="method-cell">
+                                    <div class="method-icon">
+                                        <i class="fab fa-bitcoin"></i>
+                                    </div>
+                                    <div class="method-name">
+                                        <strong>Cryptocurrencies</strong>
+                                        <small>₿ BTC, ETH, USDC, LTC</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="currency-list">
+                                    <span class="currency-badge">USD</span>
+                                </div>
+                            </td>
+                            <td><strong>USD 10</strong></td>
+                            <td><strong>USD 10,000</strong><br><small>per transaction</small></td>
+                            <td>
+                                <div class="fee-cell">
+                                    <span class="fee-value">0%</span>
+                                    <div class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">
+                                            No Vestrado fees. Network gas fees apply (paid by you): BTC ≈ $2-10, ETH ≈ $5-30.
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="time-badge time-instant">
+                                    <i class="fas fa-bolt"></i> 5-10 Minutes
+                                </span>
+                            </td>
+                            <td>
+                                <a href="#" class="action-btn">
+                                    <i class="fas fa-arrow-right"></i> Deposit Now
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="background: #e3f2fd; padding: 20px; border-radius: 10px; margin-top: 30px; border-left: 4px solid var(--secondary-blue);">
+                <p style="margin: 0; color: #1565c0;">
+                    <i class="fas fa-info-circle"></i> <strong>Important Note:</strong> 
+                    All deposits are processed instantly during business hours (Mon-Fri 9 AM - 5 PM GMT). 
+                    Requests after 5 PM GMT processed next business day. Weekend deposits processed Monday morning. 
+                    For deposits over USD 10,000, contact our VIP Banking Team for preferential rates.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fee Calculator -->
+    <div class="container">
+        <div class="fee-calculator">
+            <div class="calculator-header">
+                <h3>💰 Deposit Fee Calculator</h3>
+                <p>Calculate exact costs before you deposit – no hidden surprises!</p>
+            </div>
+            
+            <form class="calculator-form" id="feeCalculator">
+                <div class="form-group">
+                    <label for="depositAmount">Deposit Amount (USD)</label>
+                    <input type="number" id="depositAmount" placeholder="100" min="10" value="1000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod">
+                        <option value="local_transfer">Local Bank Transfer</option>
+                        <option value="credit_card">Credit/Debit Card</option>
+                        <option value="usdt">USDT (Tether)</option>
+                        <option value="ewallet">E-Wallet</option>
+                        <option value="wire_transfer">Wire Transfer</option>
+                        <option value="crypto">Cryptocurrency</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="currency">Your Currency</label>
+                    <select id="currency">
+                        <option value="USD">USD (United States Dollar)</option>
+                        <option value="MYR">MYR (Malaysian Ringgit)</option>
+                        <option value="IDR">IDR (Indonesian Rupiah)</option>
+                        <option value="THB">THB (Thai Baht)</option>
+                        <option value="SGD">SGD (Singapore Dollar)</option>
+                        <option value="VND">VND (Vietnamese Dong)</option>
+                        <option value="INR">INR (Indian Rupee)</option>
+                    </select>
+                </div>
+                
+                <button type="button" class="calculate-btn" onclick="calculateFees()">
+                    <i class="fas fa-calculator"></i> Calculate Total Cost
+                </button>
+                
+                <div class="calculator-result" id="calculatorResult">
+                    <div class="result-row">
+                        <span class="result-label">Deposit Amount:</span>
+                        <span class="result-value" id="resultAmount">USD 0</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Vestrado Fee:</span>
+                        <span class="result-value" id="resultVestradoFee">USD 0 (0%)</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Estimated External Fees:</span>
+                        <span class="result-value" id="resultExternalFee">USD 0</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Exchange Rate Markup (0.5%):</span>
+                        <span class="result-value" id="resultExchangeFee">USD 0</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label" style="color: var(--primary-blue); font-weight: 700;">💵 You Will Receive:</span>
+                        <span class="result-value" style="color: var(--success-green); font-size: 1.5rem;" id="resultNet">USD 0</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Withdrawal Methods Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Our Withdrawal Methods</h2>
+                <p>Fast and secure fund withdrawals. Most requests processed within 1-24 hours after verification.</p>
+            </div>
+            
+            <div class="payment-table-wrapper">
+                <table class="payment-table">
+                    <thead>
+                        <tr>
+                            <th>Payment Method</th>
+                            <th>Currencies</th>
+                            <th>Minimum</th>
+                            <th>Maximum</th>
+                            <th>Fee Structure</th>
+                            <th>Processing Time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="method-cell">
+                                    <div class="method-icon">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                    <div class="method-name">
+                                        <strong>Local Bank Transfer</strong>
+                                        <small>🏦 Same banks as deposit</small>
+                                    </div>
+                                </div>
+                                <span class="recommended-badge">⭐ Most Popular</span>
+                            </td>
+                            <td>
+                                <div class="currency-list">
+                                    <span class="currency-badge">MYR</span>
+                                    <span class="currency-badge">IDR</span>
+                                    <span class="currency-badge">THB</span>
+                                    <span class="currency-badge">SGD</span>
+                                    <span class="currency-badge">VND</span>
+                                    <span class="currency-badge">INR</span>
+                                    <span class="currency-badge">BRL</span>
+                                    <span class="currency-badge">CLP</span>
+                                </div>
+                            </td>
+                            <td><strong>USD 100</strong><br><small>(≈ MYR 450)</small></td>
+                            <td><strong>USD 10,000</strong><br><small>per transaction</small></td>
+                            <td>
+                                <div class="fee-cell">
+                                    <span class="fee-value">0%</span>
+                                    <div class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">
+                                            <strong>No Vestrado fees!</strong><br>
+                                            Your receiving bank may charge receiving fees (typically USD 5-15). Check with your bank. We use mid-market rates.
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="time-badge time-instant">
+                                    <i class="fas fa-clock"></i> 1-24 Hours
+                                </span>
+                                <br><small style="color: #666;">Verified accounts only</small>
+                            </td>
+                            <td>
+                                <a href="#" class="action-btn withdrawal-btn">
+                                    <i class="fas fa-arrow-left"></i> Withdraw Now
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="method-cell">
+                                    <div class="method-icon">
+                                        <i class="fab fa-bitcoin"></i>
+                                    </div>
+                                    <div class="method-name">
+                                        <strong>USDT (Tether)</strong>
+                                        <small>🔗 ERC-20, TRC-20, BEP-20</small>
+                                    </div>
+                                </div>
+                                <span class="recommended-badge">⚡ Fastest</span>
+                            </td>
+                            <td>
+                                <div class="currency-list">
+                                    <span class="currency-badge">USD</span>
+                                </div>
+                            </td>
+                            <td><strong>USD 100</strong></td>
+                            <td><strong>USD 10,000</strong><br><small>per transaction</small></td>
+                            <td>
+                                <div class="fee-cell">
+                                    <span class="fee-value">0%</span>
+                                    <div class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">
+                                            <strong>Network fees:</strong><br>
+                                            • ERC-20: ≈ $10-40 (deducted from withdrawal)<br>
+                                            • TRC-20: ≈ $1 (recommended)<br>
+                                            • BEP-20: ≈ $0.50<br>
+                                            Exact fee varies by network congestion.
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="time-badge time-instant">
+                                    <i class="fas fa-clock"></i> 1-24 Hours
+                                </span>
+                            </td>
+                            <td>
+                                <a href="#" class="action-btn withdrawal-btn">
+                                    <i class="fas fa-arrow-left"></i> Withdraw Now
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="method-cell">
+                                    <div class="method-icon">
+                                        <i class="fas fa-credit-card"></i>
+                                    </div>
+                                    <div class="method-name">
+                                        <strong>Credit/Debit Card</strong>
+                                        <small>💳 Visa, Mastercard</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="currency-list">
+                                    <span class="currency-badge">USD</span>
+                                </div>
+                            </td>
+                            <td><strong>USD 100</strong></td>
+                            <td><strong>USD 5,000</strong><br><small>per transaction</small></td>
+                            <td>
+                                <div class="fee-cell">
+                                    <span class="fee-value">0%</span>
+                                    <div class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">
+                                            No Vestrado fees. Bank processing fees may apply. You can only withdraw to cards you previously deposited from.
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="time-badge time-slow">
+                                    <i class="fas fa-hourglass-half"></i> 3-5 Days
+                                </span>
+                                <br><small style="color: #666;">Bank processing time</small>
+                            </td>
+                            <td>
+                                <a href="#" class="action-btn withdrawal-btn">
+                                    <i class="fas fa-arrow-left"></i> Withdraw Now
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="method-cell">
+                                    <div class="method-icon">
+                                        <i class="fas fa-wallet"></i>
+                                    </div>
+                                    <div class="method-name">
+                                        <strong>E-Wallets</strong>
+                                        <small>📱 Skrill, Neteller, PayPal</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="currency-list">
+                                    <span class="currency-badge">USD</span>
+                                    <span class="currency-badge">BRL</span>
+                                    <span class="currency-badge">CLP</span>
+                                </div>
+                            </td>
+                            <td><strong>USD 100</strong></td>
+                            <td><strong>USD 10,000</strong><br><small>per transaction</small></td>
+                            <td>
+                                <div class="fee-cell">
+                                    <span class="fee-value">0%</span>
+                                    <div class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">
+                                            No Vestrado fees. E-wallet providers may charge 1-2% for currency conversion or withdrawal to bank.
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="time-badge time-fast">
+                                    <i class="fas fa-clock"></i> 1-48 Hours
+                                </span>
+                            </td>
+                            <td>
+                                <a href="#" class="action-btn withdrawal-btn">
+                                    <i class="fas fa-arrow-left"></i> Withdraw Now
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="method-cell">
+                                    <div class="method-icon">
+                                        <i class="fas fa-exchange-alt"></i>
+                                    </div>
+                                    <div class="method-name">
+                                        <strong>Wire Transfer (International)</strong>
+                                        <small>🌍 SWIFT/IBAN</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="currency-list">
+                                    <span class="currency-badge">USD</span>
+                                </div>
+                            </td>
+                            <td><strong>USD 100</strong></td>
+                            <td><strong>USD 10,000</strong><br><small>per transaction</small></td>
+                            <td>
+                                <div class="fee-cell">
+                                    <span class="fee-value">USD 0</span>
+                                    <div class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">
+                                            <strong>Processing fees covered by Vestrado!</strong><br>
+                                            Intermediary banks: USD 10-35 (may be deducted en-route). Receiving bank fees: Check with your bank. Contact support for fee reimbursement policy.
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="time-badge time-slow">
+                                    <i class="fas fa-hourglass-half"></i> 5-7 Days
+                                </span>
+                                <br><small style="color: #666;">International processing</small>
+                            </td>
+                            <td>
+                                <a href="#" class="action-btn withdrawal-btn">
+                                    <i class="fas fa-arrow-left"></i> Withdraw Now
+                                </a>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="method-cell">
+                                    <div class="method-icon">
+                                        <i class="fab fa-bitcoin"></i>
+                                    </div>
+                                    <div class="method-name">
+                                        <strong>Cryptocurrencies</strong>
+                                        <small>₿ BTC, ETH, USDC, LTC</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="currency-list">
+                                    <span class="currency-badge">USD</span>
+                                </div>
+                            </td>
+                            <td><strong>USD 100</strong></td>
+                            <td><strong>USD 10,000</strong><br><small>per transaction</small></td>
+                            <td>
+                                <div class="fee-cell">
+                                    <span class="fee-value">1%</span>
+                                    <div class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">
+                                            <strong>1% Vestrado processing fee</strong><br>
+                                            + Network gas fees (BTC ≈ $5-20, ETH ≈ $10-40). Example: USD 1000 withdrawal = USD 990 (minus gas fees).
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="time-badge time-instant">
+                                    <i class="fas fa-clock"></i> 1-24 Hours
+                                </span>
+                            </td>
+                            <td>
+                                <a href="#" class="action-btn withdrawal-btn">
+                                    <i class="fas fa-arrow-left"></i> Withdraw Now
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="background: #fff3e0; padding: 20px; border-radius: 10px; margin-top: 30px; border-left: 4px solid var(--warning-orange);">
+                <p style="margin: 0; color: #e65100;">
+                    <i class="fas fa-shield-alt"></i> <strong>Security Notice:</strong> 
+                    First-time withdrawals require account verification (1-2 business days). Large withdrawals (>USD 5,000) have a 24-hour security cooling period. Bank account name must match your Vestrado account name. For VIP withdrawals with higher limits, contact support@vestrado.com
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Features Section -->
+    <div class="container">
+        <div class="security-section">
+            <div class="security-header">
+                <h3>🔒 Your Withdrawal Security</h3>
+                <p>Multiple layers of protection for your funds</p>
+            </div>
+            
+            <div class="security-features">
+                <div class="security-feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div class="security-feature-content">
+                        <h4>Two-Factor Authentication (2FA)</h4>
+                        <p>Required for all withdrawal requests. Adds an extra layer of security using your mobile device.</p>
+                    </div>
+                </div>
+                
+                <div class="security-feature">
+                    <i class="fas fa-envelope"></i>
+                    <div class="security-feature-content">
+                        <h4>Email Confirmation</h4>
+                        <p>Every withdrawal request requires email verification. You'll receive a confirmation link to approve.</p>
+                    </div>
+                </div>
+                
+                <div class="security-feature">
+                    <i class="fas fa-clock"></i>
+                    <div class="security-feature-content">
+                        <h4>24-Hour Cooling Period</h4>
+                        <p>Large withdrawals (>USD 5,000) have a mandatory 24-hour security review to prevent fraud.</p>
+                    </div>
+                </div>
+                
+                <div class="security-feature">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="security-feature-content">
+                        <h4>IP Verification</h4>
+                        <p>Withdrawals from new locations trigger additional verification to protect your account.</p>
+                    </div>
+                </div>
+                
+                <div class="security-feature">
+                    <i class="fas fa-user-check"></i>
+                    <div class="security-feature-content">
+                        <h4>Name Matching</h4>
+                        <p>Bank account name must match your registered Vestrado account name for compliance.</p>
+                    </div>
+                </div>
+                
+                <div class="security-feature">
+                    <i class="fas fa-shield-virus"></i>
+                    <div class="security-feature-content">
+                        <h4>Fraud Detection System</h4>
+                        <p>AI-powered monitoring detects suspicious activity 24/7 to protect your funds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compliance Section -->
+    <div class="container">
+        <div class="compliance-section">
+            <div class="compliance-header">
+                <i class="fas fa-balance-scale"></i>
+                <h3>Regulatory Compliance</h3>
+            </div>
+            
+            <div class="compliance-list">
+                <div class="compliance-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>AML Compliance:</strong> Anti-Money Laundering regulations strictly enforced</span>
+                </div>
+                
+                <div class="compliance-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>KYC Requirements:</strong> Know Your Customer identity verification mandatory</span>
+                </div>
+                
+                <div class="compliance-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>CySEC Regulated:</strong> License #425/23 | Regular audits by Ernst & Young</span>
+                </div>
+                
+                <div class="compliance-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>GDPR Compliant:</strong> Your data protected under EU privacy regulations</span>
+                </div>
+            </div>
+            
+            <div class="compliance-disclaimer">
+                <strong>Important Disclaimer:</strong> All transactions are subject to compliance review in accordance with international AML/KYC regulations. We reserve the right to request additional documentation or decline transactions that raise compliance concerns. Deposits and withdrawals may be monitored for suspicious activity. For more information, please read our full <a href="#" style="color: var(--secondary-blue); text-decoration: underline;">Terms & Conditions</a> and <a href="#" style="color: var(--secondary-blue); text-decoration: underline;">AML/KYC Policy</a>.
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header">
+                <h3>Frequently Asked Questions (FAQs)</h3>
+                <p>Quick answers to common deposit & withdrawal questions</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How long does it take for my deposit to reflect in my account?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most deposits (Local Bank Transfer, Credit Card, USDT, E-Wallets, Cryptocurrencies) are processed <strong>instantly within 5-10 minutes</strong> during business hours. Wire transfers take 2-7 business days. Deposits made after 5 PM GMT or on weekends are processed the next business day.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Are there any fees for deposits or withdrawals?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Vestrado does NOT charge any deposit fees (0%).</strong> However, external fees may apply: your bank may charge currency conversion fees (0.5-1%), card issuers may charge cash advance fees (2-3%), and crypto networks charge gas fees. For withdrawals, most methods are also 0% except Cryptocurrencies (1% processing fee + network fees). We cover wire transfer fees. All fees are disclosed upfront in our payment tables above.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do I withdraw funds from my trading account?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Log in to your Vestrado account → Click "Withdraw" → Select your withdrawal method → Enter amount and bank/wallet details → Confirm with 2FA → Check email for confirmation link → Click to approve. Our Finance Team will process your request within the indicated timeframe (typically 1-24 hours for verified accounts).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What documents do I need to withdraw?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Before your first withdrawal, you must complete KYC verification by providing: <strong>1) Government-issued ID</strong> (Passport or National ID), <strong>2) Proof of Address</strong> (utility bill or bank statement less than 3 months old), and <strong>3) Payment Method Verification</strong> (for card: photo of card front with middle 8 digits masked; for bank: proof of account ownership). Verification typically takes 1-2 business days.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How long does account verification take?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standard verification takes <strong>1-2 business days</strong> once you submit all required documents. Our compliance team reviews during business hours (Mon-Fri 9 AM - 5 PM GMT). For urgent cases, contact support@vestrado.com with subject "Priority Verification" – we'll do our best to expedite.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I withdraw without verification?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>No.</strong> Due to international AML/KYC regulations, all withdrawals require completed account verification. This protects both you and Vestrado from fraud. You can deposit without verification, but we strongly recommend verifying your account immediately to enable instant withdrawals when you're ready.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do you protect my withdrawal requests?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We use multiple security layers: <strong>1) Two-Factor Authentication (2FA)</strong> required for all requests, <strong>2) Email Confirmation</strong> – you must click a link in your email to approve, <strong>3) IP Verification</strong> – requests from new locations trigger extra checks, <strong>4) 24-Hour Cooling Period</strong> for large withdrawals (>USD 5,000), and <strong>5) AI Fraud Detection</strong> monitoring 24/7.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What if someone tries to withdraw my funds?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Even if someone gains access to your account, they cannot withdraw funds without: <strong>1) Your 2FA code</strong> (on your mobile device), <strong>2) Access to your email</strong> to click confirmation link, and <strong>3) Matching bank account name</strong> to your registered name. If suspicious activity is detected, our system automatically freezes withdrawals and notifies you immediately via email and SMS.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do I need 2FA for withdrawals?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Yes, 2FA is mandatory</strong> for all withdrawal requests to protect your funds. You can set it up in Account Settings → Security → Enable 2FA. We support Google Authenticator, Microsoft Authenticator, and SMS-based 2FA. This takes 2 minutes to set up and adds critical security to your account.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Why does my credit card withdrawal take 3-5 days?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Credit card withdrawals take longer because they're processed as <strong>refunds</strong> by your card issuer, not direct transfers. Vestrado processes your request within 24 hours, but your bank's refund system requires 2-4 additional business days for the funds to appear in your card account. This is a standard banking limitation, not a Vestrado delay. For faster withdrawals, consider Local Bank Transfer (1-24 hours) or USDT (1-24 hours).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I deposit in my local currency?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Yes!</strong> We support multiple local currencies through Local Bank Transfer: MYR (Malaysian Ringgit), IDR (Indonesian Rupiah), THB (Thai Baht), SGD (Singapore Dollar), VND (Vietnamese Dong), INR (Indian Rupee), BRL (Brazilian Real), and more. Your deposit will be converted to USD at mid-market rate + 0.5% markup (transparent pricing). Use our Fee Calculator above to see exact conversion rates.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What if I need to deposit more than USD 10,000?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For deposits over USD 10,000: <strong>1) Contact our VIP Banking Team</strong> at vip@vestrado.com or call +357-XXX-XXXX, <strong>2) We offer preferential rates</strong> for large deposits, <strong>3) Wire Transfer up to USD 5 million</strong> available with dedicated account manager, <strong>4) Higher daily limits</strong> for verified VIP accounts (up to USD 500,000/day). We'll guide you through the entire process personally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <div class="container">
+        <div class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Start Trading?</h2>
+                <p>Open your account in 60 seconds. Fund with 0% fees. Start trading 100+ instruments instantly.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#" class="cta-btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Open Account Now
+                    </a>
+                    <a href="#" class="cta-btn-secondary">
+                        <i class="fas fa-headset"></i>
+                        Chat with Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-disclaimer">
+                <strong>Important Risk Disclosure:</strong>
+                CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. <strong>72% of retail investor accounts lose money when trading CFDs with this provider.</strong> You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money. Past performance is not a reliable indicator of future results.
+                
+                <strong>Fees & Charges:</strong>
+                0% Vestrado deposit fees. Your bank or payment provider may charge additional fees (typically 0.5-3% for currency conversion, USD 5-35 for wire transfers). Currency conversion rates include 0.5% markup on mid-market rate. Dormant accounts (12+ months inactive) may incur USD 10/month maintenance fee after 6 months of dormancy.
+                
+                <strong>Withdrawal Policy:</strong>
+                Withdrawals may be declined if KYC verification is incomplete, if suspicious activity is detected (AML compliance), or if withdrawal amount exceeds account balance. Bank account name must match registered Vestrado account name. First-time withdrawals require 1-2 business day verification. We reserve the right to request additional documentation.
+                
+                <strong>Regulatory Information:</strong>
+                Vestrado Ltd is licensed and regulated by the Cyprus Securities and Exchange Commission (CySEC) under license number 425/23. Registered address: 123 Trading Street, Limassol, Cyprus. Client funds are held in segregated accounts at tier-1 banks and are audited quarterly by Ernst & Young. This does not constitute investment advice.
+            </div>
+            
+            <div class="footer-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Risk Disclosure</a>
+                <a href="#">AML/KYC Policy</a>
+                <a href="#">Fees Schedule</a>
+                <a href="#">Contact Us</a>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2025 Vestrado Ltd. All rights reserved. | CySEC License: 425/23</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactive Features -->
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all other FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+        
+        // Fee Calculator
+        function calculateFees() {
+            const amount = parseFloat(document.getElementById('depositAmount').value) || 0;
+            const method = document.getElementById('paymentMethod').value;
+            const currency = document.getElementById('currency').value;
+            
+            let vestradoFee = 0;
+            let externalFee = 0;
+            let exchangeFee = 0;
+            
+            // Calculate based on method
+            switch(method) {
+                case 'local_transfer':
+                    // 0% Vestrado fee, 0.5% exchange rate markup if not USD
+                    if (currency !== 'USD') {
+                        exchangeFee = amount * 0.005;
+                    }
+                    externalFee = 0; // Bank fees paid by Vestrado
+                    break;
+                    
+                case 'credit_card':
+                    // 0% Vestrado fee, possible 2-3% cash advance fee (average 2.5%)
+                    externalFee = amount * 0.025;
+                    break;
+                    
+                case 'usdt':
+                    // 0% Vestrado fee, network fees (estimate TRC-20 = $1)
+                    externalFee = 1;
+                    break;
+                    
+                case 'ewallet':
+                    // 0% Vestrado fee, 1-2% provider fee (average 1.5%)
+                    externalFee = amount * 0.015;
+                    break;
+                    
+                case 'wire_transfer':
+                    // Fees covered by Vestrado
+                    vestradoFee = 0;
+                    externalFee = 0;
+                    break;
+                    
+                case 'crypto':
+                    // 0% Vestrado fee, network fees (estimate BTC = $5)
+                    externalFee = 5;
+                    break;
+            }
+            
+            const totalFees = vestradoFee + externalFee + exchangeFee;
+            const netAmount = amount - totalFees;
+            
+            // Update result display
+            document.getElementById('resultAmount').textContent = 'USD ' + amount.toFixed(2);
+            document.getElementById('resultVestradoFee').textContent = 'USD ' + vestradoFee.toFixed(2) + ' (0%)';
+            document.getElementById('resultExternalFee').textContent = 'USD ' + externalFee.toFixed(2);
+            document.getElementById('resultExchangeFee').textContent = 'USD ' + exchangeFee.toFixed(2);
+            document.getElementById('resultNet').textContent = 'USD ' + netAmount.toFixed(2);
+            
+            // Show result
+            document.getElementById('calculatorResult').classList.add('active');
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

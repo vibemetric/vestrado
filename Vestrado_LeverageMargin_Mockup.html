@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- COMPLIANCE-FIRST META DESCRIPTION -->
+    <title>Leverage & Margin Trading | Risk Management Guide | Vestrado</title>
+    <meta name="description" content="Understand leverage up to 1:2000 and margin requirements. RISK WARNING: 76.4% of retail CFD accounts lose money. High leverage amplifies both profits AND losses. Learn proper risk management before trading.">
+    
+    <!-- Trust & Verification -->
+    <meta name="regulation" content="CySEC Licensed, Negative Balance Protection">
+    <meta name="safety" content="Segregated Client Funds, Tier-1 Bank Custody">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Leverage & Margin: Complete Risk Management Guide | Vestrado">
+    <meta property="og:description" content="Learn how leverage and margin work. Calculate your requirements. Understand Margin Call & Stop Out levels. Trade responsibly with proper risk management.">
+    
+    <style>
+        /* ==================== RESET & BASE ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ==================== RISK WARNING BAR (TOP PRIORITY) ==================== */
+        .risk-warning-bar {
+            background: linear-gradient(90deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            padding: 12px 0;
+            font-size: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+            box-shadow: 0 2px 15px rgba(220, 53, 69, 0.3);
+        }
+        
+        .risk-warning-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .warning-icon {
+            font-size: 20px;
+            animation: pulse-warning 2s infinite;
+        }
+        
+        @keyframes pulse-warning {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .risk-percentage {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        /* ==================== TRUST BAR ==================== */
+        .trust-bar {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 10px 0;
+            font-size: 13px;
+            text-align: center;
+            position: sticky;
+            top: 45px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .badge-icon {
+            color: #9aea00;
+            font-weight: bold;
+        }
+        
+        /* ==================== HEADER ==================== */
+        .header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 80px;
+            z-index: 999;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1a3a8f;
+            text-decoration: none;
+        }
+        
+        .logo-highlight {
+            color: #9aea00;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .main-nav a:hover, .main-nav a.active {
+            background: #f0f7ff;
+            color: #2d5cc2;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .btn-outline {
+            background: white;
+            color: #2d5cc2;
+            border: 2px solid #2d5cc2;
+            padding: 10px 20px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-outline:hover {
+            background: #2d5cc2;
+            color: white;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(154, 234, 0, 0.3);
+        }
+        
+        /* ==================== HERO SECTION (EDUCATIONAL FOCUS) ==================== */
+        .hero {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            color: #1a3a8f;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .hero-highlight {
+            color: #9aea00;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .hero-cta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .cta-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .cta-card:hover {
+            transform: translateY(-5px);
+            border-color: #9aea00;
+            box-shadow: 0 8px 30px rgba(154, 234, 0, 0.2);
+        }
+        
+        .cta-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .cta-title {
+            font-weight: 600;
+            color: #1a3a8f;
+            margin-bottom: 5px;
+        }
+        
+        .cta-desc {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+        }
+        
+        .risk-level-chart {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .leverage-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .leverage-bar {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .leverage-label {
+            font-weight: 600;
+            min-width: 80px;
+            font-size: 14px;
+        }
+        
+        .bar-container {
+            flex: 1;
+            height: 30px;
+            background: #f0f0f0;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .bar-fill {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            color: white;
+            font-weight: 600;
+            font-size: 12px;
+            transition: width 1s ease;
+        }
+        
+        .bar-low { background: linear-gradient(90deg, #28a745, #20c997); }
+        .bar-medium { background: linear-gradient(90deg, #ffc107, #fd7e14); }
+        .bar-high { background: linear-gradient(90deg, #dc3545, #c82333); }
+        
+        /* ==================== EDUCATIONAL TABS ==================== */
+        .education-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: #1a3a8f;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .tab-btn {
+            padding: 15px 40px;
+            background: #f8fbff;
+            border: 2px solid #e1e8f0;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .tab-btn.active {
+            background: linear-gradient(90deg, #1a3a8f, #2d5cc2);
+            color: white;
+            border-color: #2d5cc2;
+        }
+        
+        .tab-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* ==================== LEVERAGE EXPLAINED (WITH EXAMPLES) ==================== */
+        .leverage-explained {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .explanation-card {
+            background: #f8fbff;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #9aea00;
+        }
+        
+        .explanation-card h3 {
+            font-size: 1.5rem;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+        }
+        
+        .explanation-card p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .example-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #e1e8f0;
+            margin-top: 15px;
+        }
+        
+        .example-title {
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .example-icon {
+            background: #9aea00;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .calculation-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .calculation-row:last-child {
+            border-bottom: none;
+            font-weight: bold;
+            color: #1a3a8f;
+            padding-top: 15px;
+        }
+        
+        .profit { color: #28a745; }
+        .loss { color: #dc3545; }
+        
+        /* ==================== LEVERAGE TABLE BY INSTRUMENT ==================== */
+        .leverage-table-section {
+            background: white;
+            padding: 60px 20px;
+        }
+        
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 30px;
+        }
+        
+        .leverage-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .leverage-table thead {
+            background: linear-gradient(90deg, #1a3a8f, #2d5cc2);
+            color: white;
+        }
+        
+        .leverage-table th {
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        
+        .leverage-table tbody tr {
+            background: white;
+            transition: background 0.3s;
+        }
+        
+        .leverage-table tbody tr:nth-child(even) {
+            background: #f8fbff;
+        }
+        
+        .leverage-table tbody tr:hover {
+            background: #e8f4ff;
+        }
+        
+        .leverage-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid #e1e8f0;
+        }
+        
+        .instrument-name {
+            font-weight: 600;
+            color: #1a3a8f;
+        }
+        
+        .leverage-value {
+            font-weight: 700;
+            color: #2d5cc2;
+        }
+        
+        .leverage-high {
+            color: #dc3545;
+        }
+        
+        .leverage-medium {
+            color: #ffc107;
+        }
+        
+        .leverage-low {
+            color: #28a745;
+        }
+        
+        .info-icon {
+            cursor: help;
+            color: #9aea00;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        
+        .volatility-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .volatility-low {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .volatility-medium {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .volatility-high {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        /* ==================== MARGIN CALCULATOR ==================== */
+        .calculator-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #f8fbff 0%, #e8f4ff 100%);
+        }
+        
+        .calculator-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .calculator-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .input-group label {
+            font-weight: 600;
+            color: #1a3a8f;
+            font-size: 14px;
+        }
+        
+        .input-group select,
+        .input-group input {
+            padding: 14px;
+            border: 2px solid #e1e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .input-group select:focus,
+        .input-group input:focus {
+            outline: none;
+            border-color: #9aea00;
+        }
+        
+        .calculate-btn {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 16px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-top: 10px;
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(154, 234, 0, 0.3);
+        }
+        
+        .calculator-results {
+            background: #f8fbff;
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #e1e8f0;
+        }
+        
+        .result-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            background: white;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #9aea00;
+        }
+        
+        .result-label {
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .result-value {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #1a3a8f;
+        }
+        
+        .result-highlight {
+            background: linear-gradient(90deg, #9aea00, #7bcb00);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .result-highlight-title {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .result-highlight-value {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+        
+        /* ==================== MARGIN CALL & STOP OUT (CRITICAL SECTION) ==================== */
+        .critical-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+        }
+        
+        .critical-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .alert-banner {
+            background: #dc3545;
+            color: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 5px 20px rgba(220, 53, 69, 0.3);
+        }
+        
+        .alert-icon {
+            font-size: 3rem;
+            animation: shake 2s infinite;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            10%, 30%, 50%, 70%, 90% { transform: rotate(-10deg); }
+            20%, 40%, 60%, 80% { transform: rotate(10deg); }
+        }
+        
+        .alert-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .alert-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .margin-levels {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .margin-level-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-top: 5px solid;
+        }
+        
+        .margin-call-card {
+            border-top-color: #ffc107;
+        }
+        
+        .stop-out-card {
+            border-top-color: #dc3545;
+        }
+        
+        .level-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .level-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        
+        .margin-call-icon {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .stop-out-icon {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .level-header h3 {
+            font-size: 1.5rem;
+            color: #1a3a8f;
+        }
+        
+        .level-percentage {
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 15px 0;
+        }
+        
+        .margin-call-card .level-percentage {
+            color: #ffc107;
+        }
+        
+        .stop-out-card .level-percentage {
+            color: #dc3545;
+        }
+        
+        .what-happens {
+            background: #f8fbff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .what-happens-title {
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .what-happens ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .what-happens li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .what-happens li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #9aea00;
+            font-weight: bold;
+        }
+        
+        .scenario-example {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 40px;
+            border: 2px solid #e1e8f0;
+        }
+        
+        .scenario-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .scenario-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .scenario-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+            background: #f8fbff;
+            border-radius: 8px;
+        }
+        
+        .step-number {
+            background: #1a3a8f;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-label {
+            font-weight: 600;
+            color: #1a3a8f;
+            margin-bottom: 5px;
+        }
+        
+        .step-value {
+            color: #666;
+        }
+        
+        /* ==================== FAQ SECTION (EXPANDED) ==================== */
+        .faq-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: #f8fbff;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #e1e8f0;
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            border-color: #9aea00;
+        }
+        
+        .faq-question {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1a3a8f;
+            font-size: 16px;
+            user-select: none;
+        }
+        
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: #9aea00;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 800px;
+        }
+        
+        .faq-answer-content {
+            padding: 0 25px 25px 25px;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .faq-example {
+            background: white;
+            padding: 15px;
+            border-left: 4px solid #9aea00;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+        
+        /* ==================== SUPPORT SECTION ==================== */
+        .support-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+        }
+        
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .support-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s;
+        }
+        
+        .support-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .support-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .support-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .support-card p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .btn-support {
+            background: white;
+            color: #1a3a8f;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-support:hover {
+            background: #9aea00;
+            transform: scale(1.05);
+        }
+        
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: #1a2332;
+            color: #8a94a6;
+            padding: 50px 20px 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: #8a94a6;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #9aea00;
+        }
+        
+        .footer-risk {
+            background: rgba(220, 53, 69, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid #dc3545;
+        }
+        
+        .footer-risk p {
+            font-size: 13px;
+            line-height: 1.7;
+            color: #b8c1d3;
+        }
+        
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        /* ==================== LIVE CHAT WIDGET ==================== */
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        
+        .chat-trigger {
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 30px rgba(154, 234, 0, 0.4);
+            transition: all 0.3s;
+            border: none;
+        }
+        
+        .chat-trigger:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 40px rgba(154, 234, 0, 0.6);
+        }
+        
+        .chat-icon {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .chat-tooltip {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            white-space: nowrap;
+            font-weight: 600;
+            color: #1a3a8f;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            .hero-grid,
+            .leverage-explained,
+            .margin-levels,
+            .calculator-grid,
+            .support-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-cta-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .tabs-container {
+                flex-direction: column;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- RISK WARNING BAR (TOP PRIORITY) -->
+    <div class="risk-warning-bar">
+        <div class="risk-warning-content">
+            <span class="warning-icon">⚠️</span>
+            <span>RISK WARNING:</span>
+            <span class="risk-percentage">76.4% of retail CFD accounts lose money</span>
+            <span>| High leverage increases risk of rapid losses | Trade responsibly</span>
+        </div>
+    </div>
+    
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="trust-badges">
+            <div class="badge">
+                <span class="badge-icon">✓</span>
+                <span>CySEC Regulated</span>
+            </div>
+            <div class="badge">
+                <span class="badge-icon">🛡️</span>
+                <span>Negative Balance Protection</span>
+            </div>
+            <div class="badge">
+                <span class="badge-icon">🏦</span>
+                <span>Segregated Client Funds</span>
+            </div>
+            <div class="badge">
+                <span class="badge-icon">📞</span>
+                <span>24/5 Risk Support</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">VEST<span class="logo-highlight">RADO</span></a>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#" class="active">Trading</a></li>
+                    <li><a href="#">Platforms</a></li>
+                    <li><a href="#">Academy</a></li>
+                    <li><a href="#">Company</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="btn-outline">Log In</button>
+                <button class="btn-primary">Open Demo Account</button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>Understand <span class="hero-highlight">Leverage & Margin</span> Before You Trade</h1>
+                    <p class="hero-subtitle">Learn how leverage amplifies both gains AND losses. Calculate your margin requirements. Understand Margin Call & Stop Out levels. Trade responsibly with proper risk management.</p>
+                    
+                    <div class="hero-cta-grid">
+                        <div class="cta-card" onclick="document.getElementById('calculator').scrollIntoView({behavior: 'smooth'})">
+                            <div class="cta-icon">📊</div>
+                            <div class="cta-title">Margin Calculator</div>
+                            <div class="cta-desc">Calculate requirements</div>
+                        </div>
+                        
+                        <div class="cta-card" onclick="document.getElementById('education').scrollIntoView({behavior: 'smooth'})">
+                            <div class="cta-icon">📖</div>
+                            <div class="cta-title">Learn the Basics</div>
+                            <div class="cta-desc">Beginner & Advanced</div>
+                        </div>
+                        
+                        <div class="cta-card" onclick="document.getElementById('faq').scrollIntoView({behavior: 'smooth'})">
+                            <div class="cta-icon">❓</div>
+                            <div class="cta-title">FAQ & Examples</div>
+                            <div class="cta-desc">Real scenarios</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="risk-level-chart">
+                        <div class="chart-title">Risk Levels by Leverage</div>
+                        <div class="leverage-bars">
+                            <div class="leverage-bar">
+                                <div class="leverage-label">1:30</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill bar-low" style="width: 30%;">Low Risk</div>
+                                </div>
+                            </div>
+                            <div class="leverage-bar">
+                                <div class="leverage-label">1:100</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill bar-medium" style="width: 55%;">Medium</div>
+                                </div>
+                            </div>
+                            <div class="leverage-bar">
+                                <div class="leverage-label">1:500</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill bar-high" style="width: 85%;">High Risk</div>
+                                </div>
+                            </div>
+                            <div class="leverage-bar">
+                                <div class="leverage-label">1:2000</div>
+                                <div class="bar-container">
+                                    <div class="bar-fill bar-high" style="width: 100%;">⚠️ Extreme</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- EDUCATIONAL TABS SECTION -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How Leverage & Margin Work</h2>
+                <p class="section-subtitle">Choose your experience level to see relevant information and examples</p>
+            </div>
+            
+            <div class="tabs-container">
+                <button class="tab-btn active" onclick="switchTab('beginner')">🎓 Beginner</button>
+                <button class="tab-btn" onclick="switchTab('advanced')">🚀 Advanced</button>
+            </div>
+            
+            <!-- BEGINNER TAB -->
+            <div id="beginner-tab" class="tab-content active">
+                <div class="leverage-explained">
+                    <div class="explanation-card">
+                        <h3>📌 What is Leverage?</h3>
+                        <p>Leverage is borrowed money from your broker that allows you to control a larger position than your actual capital. Think of it like a magnifying glass for your trades.</p>
+                        
+                        <div class="example-box">
+                            <div class="example-title">
+                                <div class="example-icon">💡</div>
+                                <span>Simple Example</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>Your Capital:</span>
+                                <span>$1,000</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>Leverage:</span>
+                                <span>1:100</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>Position You Control:</span>
+                                <span class="leverage-value">$100,000</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>If Market Moves 1%:</span>
+                                <span class="profit">+$1,000 (100% gain) OR <span class="loss">-$1,000 (100% loss)</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="explanation-card">
+                        <h3>💰 What is Margin?</h3>
+                        <p>Margin is the amount of money you need to keep in your account to open and maintain a leveraged position. It's like a security deposit.</p>
+                        
+                        <div class="example-box">
+                            <div class="example-title">
+                                <div class="example-icon">📐</div>
+                                <span>Calculation Formula</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>Position Size:</span>
+                                <span>$10,000</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>Leverage:</span>
+                                <span>1:50</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span><strong>Required Margin</strong> = Position ÷ Leverage</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>You Need:</span>
+                                <span class="leverage-value">$200 in your account</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="explanation-card" style="margin-top: 30px;">
+                    <h3>⚠️ Why Higher Leverage = Higher Risk</h3>
+                    <p>Higher leverage means smaller price movements can wipe out your account. Here's a comparison:</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+                        <div class="example-box">
+                            <div class="example-title">
+                                <div class="example-icon" style="background: #28a745;">✓</div>
+                                <span>1:10 Leverage (Safer)</span>
+                            </div>
+                            <p style="margin-top: 10px; font-size: 14px;">
+                                <strong>$1,000 account</strong><br>
+                                Controls: $10,000<br>
+                                To lose 100%: Market must move <span class="loss">-10%</span>
+                            </p>
+                        </div>
+                        
+                        <div class="example-box">
+                            <div class="example-title">
+                                <div class="example-icon" style="background: #dc3545;">⚠️</div>
+                                <span>1:500 Leverage (Risky)</span>
+                            </div>
+                            <p style="margin-top: 10px; font-size: 14px;">
+                                <strong>$1,000 account</strong><br>
+                                Controls: $500,000<br>
+                                To lose 100%: Market must move <span class="loss">-0.2%</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ADVANCED TAB -->
+            <div id="advanced-tab" class="tab-content">
+                <div class="leverage-explained">
+                    <div class="explanation-card">
+                        <h3>🎯 Dynamic Leverage & Position Sizing</h3>
+                        <p>Leverage is not fixed - it changes based on your position size (notional value). Larger positions = lower maximum leverage for risk management.</p>
+                        
+                        <div class="example-box">
+                            <div class="example-title">
+                                <div class="example-icon">📊</div>
+                                <span>Tiered Leverage Example</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>$0 - $50K notional:</span>
+                                <span class="leverage-value">Max 1:500</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>$50K - $200K:</span>
+                                <span class="leverage-value">Max 1:200</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>$200K - $1M:</span>
+                                <span class="leverage-value">Max 1:100</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>$1M+:</span>
+                                <span class="leverage-value">Max 1:50</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="explanation-card">
+                        <h3>🔄 Hedging & Margin Requirements</h3>
+                        <p>When hedging (having both long and short positions on the same instrument), margin requirements may be reduced or waived depending on broker policy.</p>
+                        
+                        <div class="example-box">
+                            <div class="example-title">
+                                <div class="example-icon">⚖️</div>
+                                <span>Hedged Position Scenario</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>Long EUR/USD: 1 lot</span>
+                                <span>Margin: $2,000</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>Short EUR/USD: 1 lot</span>
+                                <span>Additional Margin: $0 (hedged)</span>
+                            </div>
+                            <div class="calculation-row">
+                                <span>Total Required Margin:</span>
+                                <span class="leverage-value">$2,000 only</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="explanation-card" style="margin-top: 30px;">
+                    <h3>⚡ Correlation Risk Across Positions</h3>
+                    <p>Leverage risk compounds when holding multiple correlated positions. Example: Long EUR/USD + Long GBP/USD both lose if USD strengthens.</p>
+                    
+                    <div class="example-box" style="margin-top: 15px;">
+                        <div class="example-title">
+                            <div class="example-icon" style="background: #ffc107;">⚠️</div>
+                            <span>Risk Management Strategy</span>
+                        </div>
+                        <ul style="margin-top: 10px; padding-left: 20px; font-size: 14px; line-height: 1.8;">
+                            <li>Reduce leverage when holding multiple positions</li>
+                            <li>Monitor total exposure across correlated pairs</li>
+                            <li>Use stop-loss orders on every position</li>
+                            <li>Never risk more than 1-2% per trade</li>
+                            <li>Calculate total portfolio margin level regularly</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- LEVERAGE TABLE BY INSTRUMENT -->
+    <section class="leverage-table-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Maximum Leverage by Instrument</h2>
+                <p class="section-subtitle">Different assets have different maximum leverage based on their volatility and liquidity</p>
+            </div>
+            
+            <div class="table-wrapper">
+                <table class="leverage-table">
+                    <thead>
+                        <tr>
+                            <th>Instrument</th>
+                            <th>Maximum Leverage</th>
+                            <th>Typical Spread</th>
+                            <th>Volatility</th>
+                            <th>Why This Leverage?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="instrument-name">Forex Majors (EUR/USD, GBP/USD)</td>
+                            <td class="leverage-value leverage-high">1:500</td>
+                            <td>From 0.0 pip</td>
+                            <td><span class="volatility-badge volatility-low">Low</span></td>
+                            <td>Highly liquid, tight spreads <span class="info-icon" title="Majors are most stable, hence higher leverage allowed">ℹ️</span></td>
+                        </tr>
+                        <tr>
+                            <td class="instrument-name">Forex Minors & Exotics</td>
+                            <td class="leverage-value leverage-medium">1:200</td>
+                            <td>From 0.5 pip</td>
+                            <td><span class="volatility-badge volatility-medium">Medium</span></td>
+                            <td>Lower liquidity, wider spreads</td>
+                        </tr>
+                        <tr>
+                            <td class="instrument-name">Gold (XAU/USD)</td>
+                            <td class="leverage-value leverage-medium">1:100</td>
+                            <td>From 0.2 pip</td>
+                            <td><span class="volatility-badge volatility-medium">Medium</span></td>
+                            <td>Safe haven, moderate volatility</td>
+                        </tr>
+                        <tr>
+                            <td class="instrument-name">Silver, Oil, Commodities</td>
+                            <td class="leverage-value leverage-medium">1:100</td>
+                            <td>Varies</td>
+                            <td><span class="volatility-badge volatility-high">High</span></td>
+                            <td>Supply-demand driven volatility</td>
+                        </tr>
+                        <tr>
+                            <td class="instrument-name">Major Indices (S&P 500, NASDAQ)</td>
+                            <td class="leverage-value leverage-medium">1:100</td>
+                            <td>From 0.4 points</td>
+                            <td><span class="volatility-badge volatility-medium">Medium</span></td>
+                            <td>Market hours impact, gap risks</td>
+                        </tr>
+                        <tr>
+                            <td class="instrument-name">Cryptocurrencies (BTC, ETH)</td>
+                            <td class="leverage-value leverage-low">1:10</td>
+                            <td>From $5</td>
+                            <td><span class="volatility-badge volatility-high">Very High</span></td>
+                            <td>⚠️ Extreme volatility, 24/7 trading</td>
+                        </tr>
+                        <tr>
+                            <td class="instrument-name">Share CFDs (Tesla, Apple)</td>
+                            <td class="leverage-value leverage-low">1:20</td>
+                            <td>From $0.10</td>
+                            <td><span class="volatility-badge volatility-high">High</span></td>
+                            <td>Earnings reports, news-driven moves</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="background: #fff8e6; padding: 20px; border-radius: 10px; margin-top: 30px; border-left: 4px solid #ffc107;">
+                <strong style="color: #856404;">💡 Pro Tip:</strong> <span style="color: #666;">Just because maximum leverage is 1:500 doesn't mean you should use it. Most professional traders use leverage between 1:10 and 1:50 for better risk management.</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- MARGIN CALCULATOR -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Interactive Margin Calculator</h2>
+                <p class="section-subtitle">Calculate your required margin before opening a position</p>
+            </div>
+            
+            <div class="calculator-container">
+                <div class="calculator-grid">
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label for="instrument">Instrument</label>
+                            <select id="instrument">
+                                <option value="forex">Forex (EUR/USD)</option>
+                                <option value="gold">Gold (XAU/USD)</option>
+                                <option value="crypto">Bitcoin (BTC/USD)</option>
+                                <option value="indices">S&P 500 Index</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="lot-size">Lot Size</label>
+                            <input type="number" id="lot-size" value="1" step="0.01" min="0.01">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="leverage">Leverage</label>
+                            <select id="leverage">
+                                <option value="10">1:10 (Safest)</option>
+                                <option value="30">1:30</option>
+                                <option value="50">1:50</option>
+                                <option value="100">1:100</option>
+                                <option value="200">1:200</option>
+                                <option value="500">1:500 (Highest Risk)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="account-currency">Account Currency</label>
+                            <select id="account-currency">
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                            </select>
+                        </div>
+                        
+                        <button class="calculate-btn" onclick="calculateMargin()">Calculate Margin</button>
+                    </div>
+                    
+                    <div class="calculator-results">
+                        <div class="result-title">📊 Calculation Results</div>
+                        
+                        <div class="result-item">
+                            <span class="result-label">Position Size</span>
+                            <span class="result-value" id="result-position">$100,000</span>
+                        </div>
+                        
+                        <div class="result-item">
+                            <span class="result-label">Required Margin</span>
+                            <span class="result-value" id="result-margin">$1,000</span>
+                        </div>
+                        
+                        <div class="result-item">
+                            <span class="result-label">Margin %</span>
+                            <span class="result-value" id="result-margin-pct">1.0%</span>
+                        </div>
+                        
+                        <div class="result-highlight">
+                            <div class="result-highlight-title">Minimum Account Balance</div>
+                            <div class="result-highlight-value" id="result-min-balance">$1,500</div>
+                            <div style="font-size: 13px; margin-top: 10px; opacity: 0.9;">
+                                (Recommended: 150% of required margin)
+                            </div>
+                        </div>
+                        
+                        <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 20px; font-size: 13px; color: #856404;">
+                            ⚠️ <strong>Risk Warning:</strong> This is the minimum margin. We recommend having at least 2-3x this amount to avoid Margin Call if the trade moves against you.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- MARGIN CALL & STOP OUT (CRITICAL SECTION) -->
+    <section id="margin-call" class="critical-section">
+        <div class="container critical-container">
+            <div class="alert-banner">
+                <div class="alert-icon">🚨</div>
+                <div class="alert-content">
+                    <h2>Understanding Margin Call & Stop Out Levels</h2>
+                    <p>These are automatic safety mechanisms to protect you from losing more money than you have. EVERY trader must understand these levels before trading with leverage.</p>
+                </div>
+            </div>
+            
+            <div class="margin-levels">
+                <!-- MARGIN CALL -->
+                <div class="margin-level-card margin-call-card">
+                    <div class="level-header">
+                        <div class="level-icon margin-call-icon">⚠️</div>
+                        <div>
+                            <h3>Margin Call Level</h3>
+                            <div class="level-percentage">80%</div>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #666; margin-bottom: 20px;">
+                        When your Margin Level drops to 80%, you receive a <strong>warning notification</strong>. You still have control, but action is needed.
+                    </p>
+                    
+                    <div class="what-happens">
+                        <div class="what-happens-title">
+                            <span>📬</span> What Happens:
+                        </div>
+                        <ul>
+                            <li>Email & platform notification sent</li>
+                            <li>You can still open new positions</li>
+                            <li>Recommended: Add funds or close losing positions</li>
+                            <li>You have time to manage risk</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #fff8e6; padding: 15px; border-radius: 8px; margin-top: 15px; font-size: 14px;">
+                        <strong style="color: #856404;">💡 Formula:</strong><br>
+                        Margin Level = (Equity ÷ Used Margin) × 100%
+                    </div>
+                </div>
+                
+                <!-- STOP OUT -->
+                <div class="margin-level-card stop-out-card">
+                    <div class="level-header">
+                        <div class="level-icon stop-out-icon">🛑</div>
+                        <div>
+                            <h3>Stop Out Level</h3>
+                            <div class="level-percentage">50%</div>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #666; margin-bottom: 20px;">
+                        When your Margin Level drops to 50%, the system <strong>automatically starts closing</strong> your positions to prevent further losses.
+                    </p>
+                    
+                    <div class="what-happens">
+                        <div class="what-happens-title">
+                            <span>⚡</span> What Happens:
+                        </div>
+                        <ul>
+                            <li>Automatic closure begins IMMEDIATELY</li>
+                            <li>Most unprofitable position closed first</li>
+                            <li>Process continues until margin level > 50%</li>
+                            <li>You CANNOT open new positions</li>
+                            <li>No manual control during stop out</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #f8d7da; padding: 15px; border-radius: 8px; margin-top: 15px; font-size: 14px; color: #721c24;">
+                        <strong>⚠️ Critical:</strong> Stop Out is automatic and irreversible. Once triggered, you cannot prevent position closure.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SCENARIO EXAMPLE -->
+            <div class="scenario-example">
+                <div class="scenario-title">📖 Real-World Scenario: How Margin Call & Stop Out Work</div>
+                
+                <div class="scenario-steps">
+                    <div class="scenario-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-label">Starting Position</div>
+                            <div class="step-value">
+                                Account Balance: <strong>$10,000</strong><br>
+                                Open Position: 1 lot EUR/USD with 1:100 leverage<br>
+                                Required Margin: <strong>$1,000</strong><br>
+                                Free Margin: <strong>$9,000</strong><br>
+                                Margin Level: <strong class="profit">1000%</strong> (Healthy)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="scenario-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-label">Market Moves Against You</div>
+                            <div class="step-value">
+                                Floating Loss: <strong class="loss">-$9,200</strong><br>
+                                Current Equity: <strong>$800</strong><br>
+                                Margin Level: <strong style="color: #ffc107;">80%</strong> ⚠️<br>
+                                <span style="background: #fff3cd; padding: 5px 10px; border-radius: 4px; display: inline-block; margin-top: 5px;">📬 MARGIN CALL notification sent</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="scenario-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-label">You Take No Action - Market Continues Down</div>
+                            <div class="step-value">
+                                Floating Loss: <strong class="loss">-$9,500</strong><br>
+                                Current Equity: <strong>$500</strong><br>
+                                Margin Level: <strong class="loss">50%</strong> 🛑<br>
+                                <span style="background: #f8d7da; padding: 5px 10px; border-radius: 4px; display: inline-block; margin-top: 5px;">⚡ STOP OUT triggered - Position automatically closed</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="scenario-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-label">Final Result</div>
+                            <div class="step-value">
+                                Remaining Balance: <strong>$500</strong><br>
+                                Total Loss: <strong class="loss">-$9,500 (95% of account)</strong><br>
+                                <span style="background: #d4edda; padding: 5px 10px; border-radius: 4px; display: inline-block; margin-top: 5px; color: #155724;">✓ Negative Balance Protection: You cannot lose more than your deposit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: #e8f4ff; padding: 20px; border-radius: 8px; margin-top: 25px; border-left: 4px solid #2d5cc2;">
+                    <strong style="color: #1a3a8f;">🎓 Key Lesson:</strong>
+                    <p style="color: #666; margin-top: 10px; line-height: 1.7;">
+                        This trader lost 95% of their account because they used too much leverage (1:100) on a full lot position. With proper risk management (1-2% risk per trade), they would have used only 0.1 lots and lost just $200 instead of $9,500.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ SECTION (EXPANDED WITH EXAMPLES) -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Real questions from traders, answered with specific examples</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What leverage should I use as a beginner?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Recommendation:</strong> Start with 1:10 to 1:30 maximum. As you gain experience and develop consistent risk management, you can gradually increase.</p>
+                            
+                            <div class="faq-example">
+                                <strong>Why Low Leverage for Beginners?</strong><br>
+                                • Gives you more breathing room for market volatility<br>
+                                • Reduces risk of Margin Call<br>
+                                • Helps you focus on learning strategy, not survival<br>
+                                • Professional traders often use 1:10-1:50 even after years of experience
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I change my leverage after opening a position?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>No.</strong> Leverage is set when you open the position and cannot be changed while the position is active. You must close the position and re-open it with different leverage.</p>
+                            
+                            <div class="faq-example">
+                                <strong>Example:</strong><br>
+                                You open EUR/USD position with 1:100 leverage. Market moves against you, and you want to reduce risk by lowering leverage to 1:50.<br><br>
+                                <strong>Solution:</strong> Close the current position (at current loss), then re-open with 1:50 leverage. This will require more margin, so ensure you have sufficient balance.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How much margin do I need for 1 standard lot of EUR/USD?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>It depends on your leverage. Here's a quick reference:</p>
+                            
+                            <div class="faq-example">
+                                <strong>1 Standard Lot EUR/USD = $100,000 position</strong><br><br>
+                                • With 1:30 leverage → <strong>$3,333</strong> margin required<br>
+                                • With 1:50 leverage → <strong>$2,000</strong> margin required<br>
+                                • With 1:100 leverage → <strong>$1,000</strong> margin required<br>
+                                • With 1:500 leverage → <strong>$200</strong> margin required<br><br>
+                                
+                                <strong>Pro Tip:</strong> Always have at least 2-3x the required margin as free balance to avoid Margin Call.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What's the difference between Used Margin and Free Margin?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Used Margin:</strong> Money "locked" to maintain open positions<br>
+                            <strong>Free Margin:</strong> Money available to open new positions or absorb losses</p>
+                            
+                            <div class="faq-example">
+                                <strong>Example Calculation:</strong><br>
+                                Account Balance: $10,000<br>
+                                Open Position Margin: $1,000<br>
+                                Current Profit/Loss: +$500<br><br>
+                                
+                                <strong>Equity</strong> = Balance + P/L = $10,000 + $500 = $10,500<br>
+                                <strong>Used Margin</strong> = $1,000<br>
+                                <strong>Free Margin</strong> = Equity - Used Margin = $10,500 - $1,000 = $9,500<br>
+                                <strong>Margin Level</strong> = (Equity ÷ Used Margin) × 100 = 1050%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Is high leverage illegal or dangerous?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>Legal:</strong> High leverage (1:500+) is legal in many jurisdictions, but regulated differently by region. EU/UK limit retail traders to 1:30, while other regions allow much higher.</p>
+                            
+                            <p><strong>Dangerous:</strong> High leverage is not inherently dangerous IF used with proper risk management. The danger comes from position sizing, not leverage itself.</p>
+                            
+                            <div class="faq-example">
+                                <strong>Safe vs Risky Trading Example:</strong><br><br>
+                                
+                                <strong style="color: #28a745;">✓ SAFE: High leverage, small position</strong><br>
+                                $10,000 account, 1:500 leverage, 0.01 lot EUR/USD<br>
+                                Risk: $10 per 100 pip move (0.1% of account)<br><br>
+                                
+                                <strong style="color: #dc3545;">✗ RISKY: Low leverage, large position</strong><br>
+                                $10,000 account, 1:30 leverage, 1.0 lot EUR/USD<br>
+                                Risk: $1,000 per 100 pip move (10% of account)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I lose more money than I deposit?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p><strong>With Vestrado: NO.</strong> We provide Negative Balance Protection. If markets gap and your account goes negative, we absorb the loss and reset your balance to $0.</p>
+                            
+                            <div class="faq-example">
+                                <strong>Example Scenario:</strong><br>
+                                You have $1,000 in your account. Weekend gap causes $1,500 loss when markets reopen Monday.<br><br>
+                                
+                                <strong>Without Protection:</strong> You owe the broker $500<br>
+                                <strong>With Vestrado:</strong> Balance reset to $0, you owe nothing<br><br>
+                                
+                                <strong>Important:</strong> This protection applies to retail accounts. Professional accounts may have different terms. Always check your account classification.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SUPPORT SECTION -->
+    <section class="support-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">Need Help Understanding Leverage?</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Our risk management specialists are available 24/5 to answer your questions</p>
+            </div>
+            
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="support-icon">💬</div>
+                    <h3>Live Chat</h3>
+                    <p>Get instant answers from our leverage specialists</p>
+                    <button class="btn-support">Start Chat Now</button>
+                </div>
+                
+                <div class="support-card">
+                    <div class="support-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p>Speak with a risk management expert</p>
+                    <button class="btn-support">+44 XXX XXX XXX</button>
+                </div>
+                
+                <div class="support-card">
+                    <div class="support-icon">📚</div>
+                    <h3>Free Webinar</h3>
+                    <p>Join our "Leverage 101" live training session</p>
+                    <button class="btn-support">Register for Free</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Forex Trading</a></li>
+                        <li><a href="#">Cryptocurrency CFDs</a></li>
+                        <li><a href="#">Indices Trading</a></li>
+                        <li><a href="#">Commodities</a></li>
+                        <li><a href="#">Share CFDs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Trading</h4>
+                    <ul>
+                        <li><a href="#" style="color: #9aea00;">Leverage & Margin</a></li>
+                        <li><a href="#">MetaTrader 5</a></li>
+                        <li><a href="#">Account Types</a></li>
+                        <li><a href="#">Deposit & Withdrawal</a></li>
+                        <li><a href="#">Spreads & Fees</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="#">Trading Academy</a></li>
+                        <li><a href="#">Risk Management Guide</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Trading Glossary</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Vestrado</a></li>
+                        <li><a href="#">Regulation & Licenses</a></li>
+                        <li><a href="#">Security & Safety</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-risk">
+                <p><strong>RISK WARNING:</strong> Trading Forex and CFDs involves significant risk of loss and may not be suitable for all investors. 76.4% of retail investor accounts lose money when trading CFDs with this provider. You should not invest more than you can afford to lose and should ensure that you fully understand the risks involved. High leverage can work against you as well as for you. Before trading, please take into consideration your level of experience, investment objectives, and seek independent financial advice if necessary. It is your responsibility to ensure that you comply with your local laws and regulations.</p>
+                
+                <p style="margin-top: 15px;"><strong>IMPORTANT:</strong> Vestrado Ltd is authorized and regulated by the Cyprus Securities and Exchange Commission (CySEC) under license number XXX/XX. We provide Negative Balance Protection for all retail clients. Client funds are held in segregated accounts with Tier-1 banks.</p>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Vestrado Ltd. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Risk Disclosure</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- LIVE CHAT WIDGET -->
+    <div class="chat-widget">
+        <div class="chat-tooltip">💬 Questions about leverage?</div>
+        <button class="chat-trigger" onclick="alert('Live chat would open here')">
+            <div class="chat-icon">💬</div>
+        </button>
+    </div>
+    
+    <script>
+        // Tab Switching
+        function switchTab(tab) {
+            // Remove active class from all tabs and content
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            // Add active class to selected tab
+            event.target.classList.add('active');
+            document.getElementById(tab + '-tab').classList.add('active');
+        }
+        
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const wasActive = faqItem.classList.contains('active');
+            
+            // Close all FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked FAQ if it wasn't active
+            if (!wasActive) {
+                faqItem.classList.add('active');
+            }
+        }
+        
+        // Margin Calculator
+        function calculateMargin() {
+            const instrument = document.getElementById('instrument').value;
+            const lotSize = parseFloat(document.getElementById('lot-size').value);
+            const leverage = parseInt(document.getElementById('leverage').value);
+            
+            // Base contract sizes
+            const contractSizes = {
+                'forex': 100000,
+                'gold': 100,
+                'crypto': 1,
+                'indices': 50
+            };
+            
+            const contractSize = contractSizes[instrument] || 100000;
+            const positionSize = contractSize * lotSize;
+            const requiredMargin = positionSize / leverage;
+            const marginPercentage = (1 / leverage) * 100;
+            const recommendedBalance = requiredMargin * 1.5;
+            
+            // Update results
+            document.getElementById('result-position').textContent = '$' + positionSize.toLocaleString();
+            document.getElementById('result-margin').textContent = '$' + requiredMargin.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            document.getElementById('result-margin-pct').textContent = marginPercentage.toFixed(2) + '%';
+            document.getElementById('result-min-balance').textContent = '$' + recommendedBalance.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        }
+        
+        // Initial calculation
+        calculateMargin();
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

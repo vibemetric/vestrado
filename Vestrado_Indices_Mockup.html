@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Global Stock Indices CFDs - US30, UK100, GER40 | Vestrado - Ultra-Fast Execution</title>
+    <meta name="description" content="Trade Indices CFDs with Vestrado. US30 (Dow Jones), UK100 (FTSE), GER40 (DAX). Spreads from 1 pt, sub-20ms execution, leverage up to 1:100. High Risk Investment - 76.4% of retail accounts lose money.">
+    
+    <!-- Trust & Verification Meta Tags -->
+    <meta name="trustpilot-review-count" content="4,857">
+    <meta name="trustpilot-rating" content="4.7">
+    <meta name="verification" content="SSL secured, CySEC regulated, FCA authorized">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Trade Stock Indices CFDs - US30, UK100, GER40 | Vestrado">
+    <meta property="og:description" content="Ultra-fast execution (<20ms). Trade 10+ major indices. Spreads from 1 pt. FCA Regulated. High Risk - 76.4% lose money.">
+    <meta property="og:image" content="https://vestrado.com/wp-content/uploads/2024/08/product-indices-webbanner-img.png">
+    
+    <!-- CSS -->
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
+        
+        /* Trust Bar */
+        .trust-bar {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .badge i {
+            font-size: 16px;
+            color: #9aea00;
+        }
+        
+        .live-stats {
+            background: rgba(255,255,255,0.15);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #9aea00;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        /* CRITICAL: CFD Risk Warning Banner - Google Ads Compliance */
+        .risk-warning-banner {
+            background: linear-gradient(135deg, #d32f2f 0%, #c62828 100%);
+            color: white;
+            padding: 18px 20px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+            border-bottom: 3px solid #b71c1c;
+        }
+        
+        .risk-warning-banner strong {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .risk-warning-banner .risk-stat {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 3px 12px;
+            border-radius: 15px;
+            margin: 0 5px;
+            font-size: 15px;
+        }
+        
+        /* Header */
+        .header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 40px;
+            z-index: 999;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .main-nav a:hover {
+            background: #f0f4ff;
+            color: #2d5cc2;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        /* Hero Section - Indices Specific */
+        .hero {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,100 600,300 T1200,300" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/><path d="M0,350 Q300,150 600,350 T1200,350" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+        
+        .hero-highlight {
+            color: #9aea00;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero-subtitle {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-badge {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .hero-badge i {
+            color: #9aea00;
+        }
+        
+        /* Execution Speed Highlight - CRITICAL for Indices */
+        .execution-speed {
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            color: #1a3a8f;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(154, 234, 0, 0.3);
+        }
+        
+        .execution-speed h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .speed-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .speed-stat {
+            text-align: center;
+            background: rgba(255,255,255,0.3);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .speed-stat .number {
+            font-size: 2rem;
+            font-weight: 800;
+            display: block;
+        }
+        
+        .speed-stat .label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .benefit-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .benefit-icon {
+            color: #9aea00;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* CTA Buttons */
+        .cta-group {
+            display: flex;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: #1a3a8f;
+            border: none;
+            padding: 18px 35px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(154, 234, 0, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 16px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #1a3a8f;
+        }
+        
+        /* Demo Highlight Box */
+        .demo-highlight {
+            background: rgba(255,255,255,0.95);
+            color: #333;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .demo-highlight h3 {
+            color: #1a3a8f;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .demo-badge {
+            background: #9aea00;
+            color: #1a3a8f;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        
+        /* Platform Visual */
+        .platform-visual {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid rgba(255,255,255,0.2);
+            text-align: center;
+        }
+        
+        .platform-visual h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .platform-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .platform-feature {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        /* Section Containers */
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+        
+        /* ENHANCED: Indices Specifications Table with Full Names */
+        .indices-table-wrapper {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin: 40px 0;
+            overflow-x: auto;
+        }
+        
+        .indices-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        .indices-table thead {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+        }
+        
+        .indices-table th {
+            padding: 18px 15px;
+            text-align: left;
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .indices-table th .tooltip {
+            cursor: help;
+            margin-left: 5px;
+            color: #9aea00;
+        }
+        
+        .indices-table tbody tr {
+            border-bottom: 1px solid #e1e8f0;
+            transition: background 0.3s;
+        }
+        
+        .indices-table tbody tr:hover {
+            background: #f8fbff;
+        }
+        
+        .indices-table td {
+            padding: 18px 15px;
+        }
+        
+        .index-name {
+            font-weight: 700;
+            color: #1a3a8f;
+            font-size: 15px;
+        }
+        
+        .index-full-name {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            font-weight: 400;
+            margin-top: 3px;
+        }
+        
+        .spread-badge {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        
+        .leverage-info {
+            font-weight: 600;
+            color: #1a3a8f;
+        }
+        
+        /* Contract Size Calculator */
+        .calculator {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #2196f3;
+        }
+        
+        .calculator h3 {
+            color: #1a3a8f;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .calc-inputs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .calc-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .calc-group label {
+            font-weight: 600;
+            color: #1a3a8f;
+            font-size: 14px;
+        }
+        
+        .calc-group select,
+        .calc-group input {
+            padding: 12px;
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            font-size: 15px;
+            background: white;
+        }
+        
+        .calc-result {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(33, 150, 243, 0.2);
+        }
+        
+        .calc-result h4 {
+            color: #1a3a8f;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .big-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #2196f3;
+            margin: 10px 0;
+        }
+        
+        /* Why Trade Indices Section */
+        .comparison-section {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            margin: 50px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .comparison-item {
+            padding: 30px;
+            border-radius: 12px;
+            position: relative;
+        }
+        
+        .comparison-winner {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border: 3px solid #4caf50;
+        }
+        
+        .comparison-loser {
+            background: #f5f5f5;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .comparison-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: #4caf50;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        
+        .comparison-item h3 {
+            color: #1a3a8f;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .comparison-item ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .comparison-item ul li {
+            padding: 10px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .comparison-winner ul li::before {
+            content: "✓";
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .comparison-loser ul li::before {
+            content: "✗";
+            color: #f44336;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Trading Hours Section */
+        .trading-hours {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+        
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 25px;
+        }
+        
+        .hours-item {
+            background: #f8fbff;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #2196f3;
+        }
+        
+        .hours-item h4 {
+            color: #1a3a8f;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .hours-detail {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e1e8f0;
+        }
+        
+        .hours-detail:last-child {
+            border-bottom: none;
+        }
+        
+        .peak-badge {
+            background: #ff5722;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        
+        .rollover-warning {
+            background: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 8px;
+        }
+        
+        .rollover-warning h4 {
+            color: #e65100;
+            margin-bottom: 10px;
+        }
+        
+        /* Info Boxes */
+        .info-box {
+            background: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .info-box.warning {
+            background: #fff3e0;
+            border-left-color: #ff9800;
+        }
+        
+        .info-box h4 {
+            color: #1a3a8f;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .info-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .info-box ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .info-box ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2196f3;
+            font-weight: bold;
+        }
+        
+        /* Educational Cards */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .edu-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .edu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+        }
+        
+        .edu-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .edu-card h3 {
+            color: #1a3a8f;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .edu-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            background: white;
+            padding: 50px 20px;
+            margin: 50px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+        
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+        
+        .proof-item {
+            text-align: center;
+            padding: 25px;
+            border-radius: 10px;
+            background: #f8fbff;
+        }
+        
+        .proof-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1a3a8f;
+            margin-bottom: 10px;
+        }
+        
+        .proof-label {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #1a3a8f 0%, #0d1f4a 100%);
+            color: white;
+            padding: 50px 20px 30px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section a {
+            color: #b3c7e6;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #9aea00;
+        }
+        
+        .footer-disclaimer {
+            background: rgba(0,0,0,0.2);
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 10px;
+            font-size: 13px;
+            line-height: 1.8;
+            color: #b3c7e6;
+        }
+        
+        .footer-disclaimer h4 {
+            color: #ff9800;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+            color: #b3c7e6;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-group {
+                flex-direction: column;
+            }
+            
+            .speed-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .calc-inputs {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .proof-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Mobile Table: Convert to cards */
+            .indices-table thead {
+                display: none;
+            }
+            
+            .indices-table tbody tr {
+                display: block;
+                margin-bottom: 20px;
+                border: 2px solid #e1e8f0;
+                border-radius: 10px;
+                padding: 15px;
+            }
+            
+            .indices-table td {
+                display: block;
+                text-align: left;
+                padding: 10px 0;
+                border-bottom: 1px solid #f0f0f0;
+            }
+            
+            .indices-table td:last-child {
+                border-bottom: none;
+            }
+            
+            .indices-table td::before {
+                content: attr(data-label);
+                font-weight: 700;
+                display: block;
+                margin-bottom: 5px;
+                color: #1a3a8f;
+            }
+        }
+    </style>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-badges">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>FCA Regulated</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-lock"></i>
+                    <span>Segregated Accounts</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-star"></i>
+                    <span>TrustScore 4.7/5</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-users"></i>
+                    <span>600,000+ Traders</span>
+                </div>
+            </div>
+            <div class="live-stats">
+                <div class="live-dot"></div>
+                <span><strong>1,234</strong> traders online now</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CRITICAL: CFD Risk Warning Banner - Google Ads Compliance -->
+    <div class="risk-warning-banner">
+        <strong>⚠️ CFD RISK WARNING:</strong> 
+        <span class="risk-stat">76.4%</span> of retail investor accounts lose money when trading CFDs with this provider. 
+        You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money. 
+        <strong>Indices CFDs are high-risk derivative products.</strong>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://vestrado.com/wp-content/uploads/2024/08/2024-VTR-logo-x2.png" alt="Vestrado Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#indices">Indices</a></li>
+                    <li><a href="#specs">Specifications</a></li>
+                    <li><a href="#calculator">Calculator</a></li>
+                    <li><a href="#education">Learn</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-secondary" onclick="alert('Login functionality')">
+                    <i class="fas fa-sign-in-alt"></i> Log In
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>
+                    Trade <span class="hero-highlight">Global Stock Indices</span><br>
+                    with <span class="hero-highlight">Ultra-Fast Execution</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="hero-badge"><i class="fas fa-chart-line"></i> US30 • UK100 • GER40</span>
+                    <span class="hero-badge"><i class="fas fa-bolt"></i> Sub-20ms Execution</span>
+                    <span class="hero-badge"><i class="fas fa-chart-bar"></i> Spreads from 1 pt</span>
+                    <span class="hero-badge"><i class="fas fa-shield-alt"></i> FCA Regulated</span>
+                </div>
+                
+                <!-- CRITICAL: Execution Speed Highlight -->
+                <div class="execution-speed">
+                    <h3><i class="fas fa-tachometer-alt"></i> Lightning-Fast Order Execution</h3>
+                    <p style="margin-bottom: 15px;">Speed matters when trading volatile indices. Every millisecond counts.</p>
+                    <div class="speed-stats">
+                        <div class="speed-stat">
+                            <span class="number">&lt;20ms</span>
+                            <span class="label">Average Execution</span>
+                        </div>
+                        <div class="speed-stat">
+                            <span class="number">99.9%</span>
+                            <span class="label">Orders at Requested Price</span>
+                        </div>
+                        <div class="speed-stat">
+                            <span class="number">0</span>
+                            <span class="label">Requotes</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 14px; font-weight: 600;">
+                        <i class="fas fa-check-circle"></i> Direct Market Access • No Dealing Desk • Tier-1 Liquidity Providers
+                    </p>
+                </div>
+                
+                <!-- Benefits Grid -->
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span>Trade 10+ major global indices</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span>Diversification in 1 position</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span>Trade 24/5 - not limited to exchange hours</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span>Lower margin than individual stocks</span>
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="cta-group">
+                    <button class="btn-primary" onclick="alert('Start Demo Account')">
+                        <i class="fas fa-rocket"></i> TRY FREE $10,000 DEMO
+                    </button>
+                    <button class="btn-secondary" onclick="alert('Open Real Account')">
+                        Open Real Account
+                    </button>
+                </div>
+                
+                <!-- Demo Account Highlight -->
+                <div class="demo-highlight">
+                    <h3>
+                        <span class="demo-badge">RISK-FREE</span>
+                        Practice Trading US30, UK100, GER40 with Virtual Money
+                    </h3>
+                    <p style="color: #555; margin-bottom: 10px;">
+                        Perfect for testing indices trading strategies in real market conditions. Zero risk, real execution speed.
+                    </p>
+                    <p style="color: #1565c0; font-weight: 600; font-size: 14px;">
+                        <i class="fas fa-info-circle"></i> 92% of successful index traders started with Demo Accounts
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Platform Visual -->
+            <div class="platform-visual">
+                <h3><i class="fas fa-desktop"></i> MetaTrader 5 Platform</h3>
+                <p style="margin-bottom: 25px;">Professional indices trading with advanced charting and real-time analysis</p>
+                <div class="platform-features">
+                    <div class="platform-feature">
+                        <i class="fas fa-mobile-alt"></i> Desktop & Mobile
+                    </div>
+                    <div class="platform-feature">
+                        <i class="fas fa-robot"></i> Automated Trading
+                    </div>
+                    <div class="platform-feature">
+                        <i class="fas fa-chart-area"></i> 80+ Indicators
+                    </div>
+                    <div class="platform-feature">
+                        <i class="fas fa-mouse-pointer"></i> 1-Click Trading
+                    </div>
+                </div>
+                <button class="btn-primary" style="margin-top: 25px; width: 100%;" onclick="alert('Platform Demo')">
+                    <i class="fas fa-play"></i> Watch Platform Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Trade Indices Section -->
+    <section class="comparison-section" id="why-indices">
+        <div class="section-container">
+            <h2 class="section-title">Why Trade Indices Instead of Individual Stocks?</h2>
+            <p class="section-subtitle">
+                Understand the key advantages of trading index CFDs vs buying individual stocks
+            </p>
+            
+            <div class="comparison-grid">
+                <div class="comparison-item comparison-winner">
+                    <div class="comparison-badge">RECOMMENDED</div>
+                    <h3>📊 Trading US30 Index CFD</h3>
+                    <ul>
+                        <li><strong>Instant Diversification:</strong> Exposure to 30 top US companies in 1 click</li>
+                        <li><strong>Lower Capital:</strong> Trade with margin (1-2%) instead of full stock price</li>
+                        <li><strong>24/5 Trading:</strong> Not limited to NYSE hours (9:30-16:00 EST)</li>
+                        <li><strong>No Overnight Fees:</strong> On day trades (open & close same day)</li>
+                        <li><strong>Both Directions:</strong> Profit from up AND down markets</li>
+                        <li><strong>Fast Execution:</strong> Average fill time under 20ms</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-item comparison-loser">
+                    <h3>📈 Buying 30 Individual Stocks</h3>
+                    <ul>
+                        <li><strong>High Complexity:</strong> Must research and manage 30 different positions</li>
+                        <li><strong>Large Capital:</strong> Need full stock price × 30 companies (tens of thousands $$$)</li>
+                        <li><strong>Limited Hours:</strong> Can only trade during exchange hours (6.5 hours/day)</li>
+                        <li><strong>Transaction Costs:</strong> Pay commission on 30 separate buy/sell orders</li>
+                        <li><strong>No Short Selling:</strong> Complex process with borrowing fees</li>
+                        <li><strong>Settlement Delays:</strong> T+2 settlement for stock trades</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info-box" style="margin-top: 40px;">
+                <h4>💡 Example: How US30 Saves You Money</h4>
+                <p><strong>Scenario:</strong> You want exposure to the 30 companies in the Dow Jones index.</p>
+                <p style="margin-top: 10px;">
+                    <strong>Option 1 (Buying stocks):</strong> Need $50,000+ to buy 1 share of each company. Pay $30-50 in commissions. Limited to NYSE hours.<br>
+                    <strong>Option 2 (Trade US30 CFD):</strong> Need $700 margin for 1 lot (with 1:100 leverage). No commission. Trade 24/5. Get same market exposure.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Indices Specifications Table -->
+    <section class="section-container" id="specs">
+        <h2 class="section-title">Stock Indices Trading Specifications</h2>
+        <p class="section-subtitle">
+            All major global indices with clear pricing and margin requirements
+        </p>
+        
+        <div class="indices-table-wrapper">
+            <table class="indices-table">
+                <thead>
+                    <tr>
+                        <th>Index Name <span class="tooltip" title="Full index name and symbol">ℹ️</span></th>
+                        <th>Symbol</th>
+                        <th>Typical Spread</th>
+                        <th>Contract Size</th>
+                        <th>Margin (%) <span class="tooltip" title="Margin % = 100 ÷ Leverage">ℹ️</span></th>
+                        <th>Max Leverage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Index Name">
+                            <span class="index-name">US30</span>
+                            <span class="index-full-name">Dow Jones Industrial Average</span>
+                        </td>
+                        <td data-label="Symbol">US30</td>
+                        <td data-label="Spread"><span class="spread-badge">from 2 pts</span></td>
+                        <td data-label="Contract Size">1</td>
+                        <td data-label="Margin">1%</td>
+                        <td data-label="Leverage"><span class="leverage-info">1:100</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Index Name">
+                            <span class="index-name">UK100</span>
+                            <span class="index-full-name">FTSE 100 Index</span>
+                        </td>
+                        <td data-label="Symbol">UK100</td>
+                        <td data-label="Spread"><span class="spread-badge">from 1 pt</span></td>
+                        <td data-label="Contract Size">1</td>
+                        <td data-label="Margin">1%</td>
+                        <td data-label="Leverage"><span class="leverage-info">1:100</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Index Name">
+                            <span class="index-name">GER40</span>
+                            <span class="index-full-name">DAX 40 Index</span>
+                        </td>
+                        <td data-label="Symbol">GER40</td>
+                        <td data-label="Spread"><span class="spread-badge">from 1.5 pts</span></td>
+                        <td data-label="Contract Size">1</td>
+                        <td data-label="Margin">1%</td>
+                        <td data-label="Leverage"><span class="leverage-info">1:100</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Index Name">
+                            <span class="index-name">SPX500</span>
+                            <span class="index-full-name">S&P 500 Index</span>
+                        </td>
+                        <td data-label="Symbol">SPX500</td>
+                        <td data-label="Spread"><span class="spread-badge">from 0.5 pts</span></td>
+                        <td data-label="Contract Size">1</td>
+                        <td data-label="Margin">1%</td>
+                        <td data-label="Leverage"><span class="leverage-info">1:100</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Index Name">
+                            <span class="index-name">NAS100</span>
+                            <span class="index-full-name">NASDAQ 100 Index</span>
+                        </td>
+                        <td data-label="Symbol">NAS100</td>
+                        <td data-label="Spread"><span class="spread-badge">from 1 pt</span></td>
+                        <td data-label="Contract Size">1</td>
+                        <td data-label="Margin">1%</td>
+                        <td data-label="Leverage"><span class="leverage-info">1:100</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Index Name">
+                            <span class="index-name">FRA40</span>
+                            <span class="index-full-name">CAC 40 Index</span>
+                        </td>
+                        <td data-label="Symbol">FRA40</td>
+                        <td data-label="Spread"><span class="spread-badge">from 1 pt</span></td>
+                        <td data-label="Contract Size">1</td>
+                        <td data-label="Margin">1%</td>
+                        <td data-label="Leverage"><span class="leverage-info">1:100</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Index Name">
+                            <span class="index-name">ESP35</span>
+                            <span class="index-full-name">IBEX 35 Index</span>
+                        </td>
+                        <td data-label="Symbol">ESP35</td>
+                        <td data-label="Spread"><span class="spread-badge">from 4 pts</span></td>
+                        <td data-label="Contract Size">1</td>
+                        <td data-label="Margin">1%</td>
+                        <td data-label="Leverage"><span class="leverage-info">1:100</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Index Name">
+                            <span class="index-name">AUS200</span>
+                            <span class="index-full-name">ASX 200 Index</span>
+                        </td>
+                        <td data-label="Symbol">AUS200</td>
+                        <td data-label="Spread"><span class="spread-badge">from 1 pt</span></td>
+                        <td data-label="Contract Size">1</td>
+                        <td data-label="Margin">1%</td>
+                        <td data-label="Leverage"><span class="leverage-info">1:100</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Index Name">
+                            <span class="index-name">JPN225</span>
+                            <span class="index-full-name">Nikkei 225 Index</span>
+                        </td>
+                        <td data-label="Symbol">JPN225</td>
+                        <td data-label="Spread"><span class="spread-badge">from 6 pts</span></td>
+                        <td data-label="Contract Size">1</td>
+                        <td data-label="Margin">1%</td>
+                        <td data-label="Leverage"><span class="leverage-info">1:100</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Index Name">
+                            <span class="index-name">HK50</span>
+                            <span class="index-full-name">Hang Seng Index</span>
+                        </td>
+                        <td data-label="Symbol">HK50</td>
+                        <td data-label="Spread"><span class="spread-badge">from 8 pts</span></td>
+                        <td data-label="Contract Size">1</td>
+                        <td data-label="Margin">2%</td>
+                        <td data-label="Leverage"><span class="leverage-info">1:50</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="info-box warning" style="margin-top: 30px;">
+                <h4>⚠️ Important Notes on Indices Trading</h4>
+                <ul>
+                    <li><strong>Contract Size Explanation:</strong> For Indices, 1 lot = Contract Size × Index Value. Example: 1 lot US30 @ 35,000 points = $35,000 exposure per point move.</li>
+                    <li><strong>Margin Calculation:</strong> Margin 1% = Maximum Leverage 1:100. At 1% margin, 1 lot US30 requires approximately $350 margin (varies with market price).</li>
+                    <li><strong>Spreads May Widen:</strong> During major news releases (Fed announcements, NFP data, market open), spreads may temporarily increase by 2-5x.</li>
+                    <li><strong>Leverage Risk:</strong> High leverage magnifies both profits AND losses. 1% price move with 1:100 leverage = 100% account impact.</li>
+                    <li><strong>Weekend Margins:</strong> Margin requirements may increase 2x from Friday close to Sunday open to protect against weekend gap risk.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Position Size Calculator -->
+    <section class="section-container" id="calculator">
+        <h2 class="section-title">📊 Indices Position Size Calculator</h2>
+        <p class="section-subtitle">
+            Calculate your exact trading costs and margin requirements before you trade
+        </p>
+        
+        <div class="calculator">
+            <h3>💰 Calculate Your Index Trade</h3>
+            <div class="calc-inputs">
+                <div class="calc-group">
+                    <label>Select Index</label>
+                    <select id="indexSelect" onchange="calculateIndex()">
+                        <option value="us30">US30 (Dow Jones 30)</option>
+                        <option value="uk100">UK100 (FTSE 100)</option>
+                        <option value="ger40">GER40 (DAX 40)</option>
+                        <option value="spx500">SPX500 (S&P 500)</option>
+                        <option value="nas100">NAS100 (NASDAQ 100)</option>
+                    </select>
+                </div>
+                <div class="calc-group">
+                    <label>Volume (Lots)</label>
+                    <input type="number" id="indexVolume" value="1" step="0.01" min="0.01" max="100" onchange="calculateIndex()">
+                </div>
+                <div class="calc-group">
+                    <label>Leverage</label>
+                    <select id="indexLeverage" onchange="calculateIndex()">
+                        <option value="50">1:50 (Conservative)</option>
+                        <option value="100" selected>1:100 (Standard)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="calc-result">
+                <h4>Estimated Trading Costs</h4>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 20px 0;">
+                    <div>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 5px;">Spread Cost</p>
+                        <div class="big-number" id="indexSpreadCost" style="font-size: 2rem;">$2.00</div>
+                    </div>
+                    <div>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 5px;">Margin Required</p>
+                        <div class="big-number" id="indexMargin" style="font-size: 2rem;">$350</div>
+                    </div>
+                    <div>
+                        <p style="color: #666; font-size: 14px; margin-bottom: 5px;">1 Point Move = P/L</p>
+                        <div class="big-number" id="indexPL" style="font-size: 2rem;">$1.00</div>
+                    </div>
+                </div>
+                <p style="margin-top: 15px; color: #155724; font-weight: 600;">
+                    <i class="fas fa-info-circle"></i> Example: If US30 moves from 35,000 to 35,100 (+100 pts), your P/L = <strong id="examplePL">$100</strong>
+                </p>
+                <p style="margin-top: 10px; color: #d32f2f; font-weight: 600; font-size: 14px;">
+                    <i class="fas fa-exclamation-triangle"></i> Warning: A 1% adverse move (350 pts on US30) would result in a <strong id="warningLoss">$350</strong> loss, consuming your entire margin.
+                </p>
+            </div>
+        </div>
+        
+        <div class="info-box" style="margin-top: 30px;">
+            <h4>📖 How to Use This Calculator</h4>
+            <p><strong>Step 1:</strong> Select the index you want to trade (e.g., US30 for Dow Jones)</p>
+            <p><strong>Step 2:</strong> Enter your position size in lots (minimum 0.01 lot)</p>
+            <p><strong>Step 3:</strong> Choose your leverage (higher leverage = lower margin but higher risk)</p>
+            <p style="margin-top: 15px; color: #1565c0; font-weight: 600;">
+                💡 <strong>Beginner Tip:</strong> Start with 0.01 lots to minimize risk while learning. 1 point move = $0.01 P/L.
+            </p>
+        </div>
+    </section>
+
+    <!-- Trading Hours & Rollover -->
+    <section class="section-container">
+        <h2 class="section-title">🕐 Trading Hours & Peak Volatility Times</h2>
+        <p class="section-subtitle">
+            Know when markets are most active for optimal trading opportunities
+        </p>
+        
+        <div class="trading-hours">
+            <div class="hours-grid">
+                <div class="hours-item">
+                    <h4>🇺🇸 US Indices (US30, SPX500, NAS100)</h4>
+                    <div class="hours-detail">
+                        <span>Trading Hours:</span>
+                        <strong>Sunday 23:00 - Friday 22:00 GMT</strong>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Peak Volatility:</span>
+                        <span><span class="peak-badge">🔥 HOT</span> 14:30-21:00 GMT (US Session)</span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Daily Break:</span>
+                        <span>22:00-23:00 GMT</span>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 13px; color: #666;">
+                        <strong>Best Time to Trade:</strong> 14:30-16:00 GMT (US Market Open) - highest liquidity and tightest spreads.
+                    </p>
+                </div>
+                
+                <div class="hours-item">
+                    <h4>🇪🇺 European Indices (UK100, GER40, FRA40)</h4>
+                    <div class="hours-detail">
+                        <span>Trading Hours:</span>
+                        <strong>Monday 01:00 - Friday 22:00 GMT</strong>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Peak Volatility:</span>
+                        <span><span class="peak-badge">🔥 HOT</span> 08:00-16:30 GMT (London Session)</span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Daily Break:</span>
+                        <span>22:00-01:00 GMT</span>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 13px; color: #666;">
+                        <strong>Best Time to Trade:</strong> 08:00-09:00 GMT (European Market Open) - maximum volatility.
+                    </p>
+                </div>
+                
+                <div class="hours-item">
+                    <h4>🇯🇵 Asian Indices (JPN225, HK50, AUS200)</h4>
+                    <div class="hours-detail">
+                        <span>Trading Hours:</span>
+                        <strong>Sunday 23:00 - Friday 22:00 GMT</strong>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Peak Volatility:</span>
+                        <span><span class="peak-badge">🔥 HOT</span> 01:00-08:00 GMT (Asian Session)</span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Daily Break:</span>
+                        <span>Varies by exchange</span>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 13px; color: #666;">
+                        <strong>Best Time to Trade:</strong> 01:00-03:00 GMT (Tokyo Market Open).
+                    </p>
+                </div>
+                
+                <div class="hours-item">
+                    <h4>⏰ Current Market Status</h4>
+                    <div class="hours-detail">
+                        <span>Your Local Time:</span>
+                        <strong id="localTime">--:--</strong>
+                    </div>
+                    <div class="hours-detail">
+                        <span>GMT Time:</span>
+                        <strong id="gmtTime">--:--</strong>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Markets Open:</span>
+                        <span id="openMarkets">Calculating...</span>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 13px; color: #2196f3; font-weight: 600;">
+                        <i class="fas fa-clock"></i> Live market status updates every minute
+                    </p>
+                </div>
+            </div>
+            
+            <div class="rollover-warning">
+                <h4>📅 Quarterly Rollover Dates - IMPORTANT</h4>
+                <p style="margin-bottom: 10px;">
+                    <strong>What is Rollover?</strong> Index futures contracts expire every quarter (March, June, September, December). 
+                    We automatically roll your position to the next contract, but spreads may widen 2-5x during the rollover period (48 hours before expiry).
+                </p>
+                <p style="margin-top: 15px; font-weight: 600; color: #e65100;">
+                    <strong>Next Rollover Dates:</strong> March 15, 2026 | June 19, 2026 | September 18, 2026 | December 18, 2026
+                </p>
+                <p style="margin-top: 10px; font-size: 14px;">
+                    💡 <strong>Tip:</strong> Consider closing positions 2 days before rollover to avoid wider spreads. We'll send email reminders 1 week in advance.
+                </p>
+            </div>
+        </div>
+        
+        <div class="info-box" style="margin-top: 30px;">
+            <h4>📰 Major Events Affecting Indices (Next 30 Days)</h4>
+            <p><strong>February 5, 2026:</strong> FOMC Meeting (impacts all US indices - expect 2-3% volatility)</p>
+            <p><strong>February 7, 2026:</strong> US Non-Farm Payrolls (NFP) - Major volatility expected</p>
+            <p><strong>February 12, 2026:</strong> ECB Interest Rate Decision (impacts EUR indices)</p>
+            <p><strong>February 20, 2026:</strong> OPEC+ Meeting (indirectly affects energy-heavy indices)</p>
+            <p style="margin-top: 15px; color: #d32f2f; font-weight: 600;">
+                <i class="fas fa-exclamation-triangle"></i> During major news events, spreads can widen to 5-10x normal. Consider reducing position sizes.
+            </p>
+        </div>
+    </section>
+
+    <!-- Educational Content -->
+    <section class="section-container" id="education">
+        <h2 class="section-title">📚 Learn Indices Trading</h2>
+        <p class="section-subtitle">
+            Master the fundamentals of trading stock indices with our free educational resources
+        </p>
+        
+        <div class="education-grid">
+            <div class="edu-card">
+                <div class="edu-icon">📖</div>
+                <h3>What is an Index?</h3>
+                <p>
+                    Learn index basics: how indices are calculated (price-weighted vs market-cap weighted), 
+                    what drives index movements, and why traders prefer indices over individual stocks.
+                </p>
+                <a href="#" style="color: #1a3a8f; font-weight: 600; margin-top: 10px; display: inline-block;">
+                    Read Guide →
+                </a>
+            </div>
+            
+            <div class="edu-card">
+                <div class="edu-icon">📊</div>
+                <h3>US30 vs S&P500: Which to Trade?</h3>
+                <p>
+                    Understand the key differences: US30 (30 stocks, price-weighted) vs SPX500 (500 stocks, cap-weighted). 
+                    Learn which index fits your trading style and market outlook.
+                </p>
+                <a href="#" style="color: #1a3a8f; font-weight: 600; margin-top: 10px; display: inline-block;">
+                    Compare Indices →
+                </a>
+            </div>
+            
+            <div class="edu-card">
+                <div class="edu-icon">⏰</div>
+                <h3>Best Times to Trade Indices</h3>
+                <p>
+                    Discover optimal trading hours for maximum volatility and tight spreads. 
+                    Learn about session overlaps, news trading, and how to avoid low-liquidity periods.
+                </p>
+                <a href="#" style="color: #1a3a8f; font-weight: 600; margin-top: 10px; display: inline-block;">
+                    View Trading Schedule →
+                </a>
+            </div>
+            
+            <div class="edu-card">
+                <div class="edu-icon">🔄</div>
+                <h3>Index Futures Rollover Explained</h3>
+                <p>
+                    What happens during quarterly rollovers? Learn how to manage positions during expiry, 
+                    why spreads widen, and strategies to minimize rollover impact on your trades.
+                </p>
+                <a href="#" style="color: #1a3a8f; font-weight: 600; margin-top: 10px; display: inline-block;">
+                    Learn About Rollover →
+                </a>
+            </div>
+            
+            <div class="edu-card">
+                <div class="edu-icon">📈</div>
+                <h3>Case Study: $500 Profit on US30</h3>
+                <p>
+                    Real-world example: How a trader made $500 in 1 day trading US30 during Fed announcement. 
+                    Includes entry/exit strategy, risk management, and key lessons learned.
+                </p>
+                <a href="#" style="color: #1a3a8f; font-weight: 600; margin-top: 10px; display: inline-block;">
+                    Read Case Study →
+                </a>
+            </div>
+            
+            <div class="edu-card">
+                <div class="edu-icon">🎓</div>
+                <h3>Technical Analysis for Indices</h3>
+                <p>
+                    Master index-specific indicators: support/resistance levels, moving averages, 
+                    RSI divergence, and correlation analysis with VIX (volatility index).
+                </p>
+                <a href="#" style="color: #1a3a8f; font-weight: 600; margin-top: 10px; display: inline-block;">
+                    Start Learning →
+                </a>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <button class="btn-primary" style="padding: 18px 40px;" onclick="alert('Access Full Academy')">
+                <i class="fas fa-graduation-cap"></i> Access Full Indices Trading Academy
+            </button>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <h2 class="section-title">Why Traders Choose Vestrado for Indices Trading</h2>
+        <div class="proof-grid">
+            <div class="proof-item">
+                <div class="proof-number">600,000+</div>
+                <div class="proof-label">Active Traders</div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-number">&lt;20ms</div>
+                <div class="proof-label">Avg Execution Speed</div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-number">99.9%</div>
+                <div class="proof-label">Orders Filled</div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-number">4.7/5</div>
+                <div class="proof-label">TrustScore Rating</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="section-container" id="support">
+        <h2 class="section-title">24/5 Support for Indices Traders</h2>
+        <p class="section-subtitle">
+            Get expert help whenever you need it - before, during, and after your trades
+        </p>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px;">
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">💬</div>
+                <h3 style="color: #1a3a8f; margin-bottom: 15px;">Live Chat</h3>
+                <p style="color: #666; margin-bottom: 20px;">
+                    Instant support from trading specialists. Average response time: under 30 seconds.
+                </p>
+                <button class="btn-primary" onclick="alert('Open Live Chat')">
+                    Start Chat Now
+                </button>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">📞</div>
+                <h3 style="color: #1a3a8f; margin-bottom: 15px;">Phone Support</h3>
+                <p style="color: #666; margin-bottom: 20px;">
+                    Speak directly with a trading expert. Available 24/5 during market hours.
+                </p>
+                <p style="font-size: 1.5rem; font-weight: 700; color: #1a3a8f;">
+                    +44 20 XXXX XXXX
+                </p>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 15px;">📧</div>
+                <h3 style="color: #1a3a8f; margin-bottom: 15px;">Email Support</h3>
+                <p style="color: #666; margin-bottom: 20px;">
+                    Detailed technical questions answered within 2 hours during business days.
+                </p>
+                <p style="font-size: 1.2rem; font-weight: 600; color: #1a3a8f;">
+                    support@vestrado.com
+                </p>
+            </div>
+        </div>
+        
+        <div class="info-box" style="margin-top: 40px;">
+            <h4>❓ Common Questions About Indices Trading</h4>
+            <p><strong>Q: What's the minimum position size?</strong><br>
+            A: 0.01 lots (micro lots). On US30, this equals $0.01 per point move - perfect for beginners.</p>
+            
+            <p style="margin-top: 15px;"><strong>Q: Do I pay overnight fees on index trades?</strong><br>
+            A: No overnight fees if you open and close positions on the same day. For positions held overnight, a small swap fee applies (varies by index).</p>
+            
+            <p style="margin-top: 15px;"><strong>Q: Can I trade indices on weekends?</strong><br>
+            A: No. Indices trade Sunday 23:00 GMT to Friday 22:00 GMT with a 1-hour daily break at 22:00-23:00 GMT.</p>
+            
+            <p style="margin-top: 15px;"><strong>Q: What happens during rollover?</strong><br>
+            A: We automatically roll your position to the next futures contract. Spreads may widen 48 hours before expiry. You'll receive email notification 1 week in advance.</p>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section style="background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%); padding: 80px 20px; text-align: center; color: white;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px; font-weight: 800;">
+            Ready to Start Trading Global Indices?
+        </h2>
+        <p style="font-size: 1.2rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Join 600,000+ traders on Vestrado. Practice with $10,000 demo or start live with as little as $50.
+        </p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <button class="btn-primary" style="font-size: 20px; padding: 20px 45px;" onclick="alert('Open Demo Account')">
+                <i class="fas fa-rocket"></i> START FREE DEMO NOW
+            </button>
+            <button class="btn-secondary" style="font-size: 18px; padding: 18px 40px;" onclick="alert('Open Live Account')">
+                Open Live Account
+            </button>
+        </div>
+        <p style="margin-top: 30px; font-size: 14px; opacity: 0.8;">
+            ⚡ Account setup takes less than 60 seconds • No credit card required for Demo
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Forex Trading</a></li>
+                    <li><a href="#">Crypto CFDs</a></li>
+                    <li><a href="#">Commodities</a></li>
+                    <li><a href="#">Stock Indices</a></li>
+                    <li><a href="#">Shares CFDs</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Trading</h3>
+                <ul>
+                    <li><a href="#">Account Types</a></li>
+                    <li><a href="#">MetaTrader 5</a></li>
+                    <li><a href="#">Deposit & Withdrawal</a></li>
+                    <li><a href="#">Leverage & Margin</a></li>
+                    <li><a href="#">Copy Trading</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Education</h3>
+                <ul>
+                    <li><a href="#">Trading Academy</a></li>
+                    <li><a href="#">Webinars</a></li>
+                    <li><a href="#">Economic Calendar</a></li>
+                    <li><a href="#">Market Analysis</a></li>
+                    <li><a href="#">Trading Guides</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Why Vestrado</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                    <li><a href="#">Legal Documents</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-disclaimer">
+            <h4>⚠️ Risk Disclosure - Index CFD Trading</h4>
+            <p>
+                <strong>CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage.</strong> 
+                76.4% of retail investor accounts lose money when trading CFDs with Vestrado. You should consider whether you understand 
+                how CFDs work and whether you can afford to take the high risk of losing your money.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Indices CFDs Specific Risks:</strong> Stock index CFDs are leveraged products tracking baskets of stocks. 
+                They are subject to high volatility, especially during economic data releases and geopolitical events. 
+                Leverage ratios up to 1:100 amplify both profits and losses. A 1% adverse market move can result in a 100% loss of your margin. 
+                Quarterly futures rollover may result in wider spreads and unexpected costs.
+            </p>
+            <p style="margin-top: 15px;">
+                Vestrado Ltd is authorized and regulated by CySEC (License No. XXX/XX). 
+                This website is operated by Vestrado Ltd, registered address: [Address], Cyprus. 
+                We do not offer services to residents of certain jurisdictions including the USA, Canada, and Japan.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Negative Balance Protection:</strong> Your loss cannot exceed your account balance. 
+                <strong>Segregated Accounts:</strong> Your funds are held separately from company operational funds.
+            </p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Vestrado Ltd. All rights reserved. | 
+                <a href="#" style="color: #9aea00;">Privacy Policy</a> | 
+                <a href="#" style="color: #9aea00;">Terms of Service</a> | 
+                <a href="#" style="color: #9aea00;">Risk Disclosure</a> | 
+                <a href="#" style="color: #9aea00;">Cookie Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Index Position Calculator
+        const indexData = {
+            us30: { name: 'US30 (Dow Jones)', price: 35000, spread: 2, margin: 1, contractSize: 1 },
+            uk100: { name: 'UK100 (FTSE 100)', price: 7500, spread: 1, margin: 1, contractSize: 1 },
+            ger40: { name: 'GER40 (DAX 40)', price: 17000, spread: 1.5, margin: 1, contractSize: 1 },
+            spx500: { name: 'SPX500 (S&P 500)', price: 4800, spread: 0.5, margin: 1, contractSize: 1 },
+            nas100: { name: 'NAS100 (NASDAQ)', price: 16500, spread: 1, margin: 1, contractSize: 1 }
+        };
+        
+        function calculateIndex() {
+            const indexSelect = document.getElementById('indexSelect').value;
+            const volume = parseFloat(document.getElementById('indexVolume').value) || 1;
+            const leverage = parseInt(document.getElementById('indexLeverage').value) || 100;
+            
+            const index = indexData[indexSelect];
+            const pointValue = volume * index.contractSize;
+            const exposure = index.price * pointValue;
+            const margin = (exposure / leverage).toFixed(2);
+            const spreadCost = (index.spread * pointValue).toFixed(2);
+            const plPerPoint = pointValue.toFixed(2);
+            
+            document.getElementById('indexSpreadCost').textContent = `$${spreadCost}`;
+            document.getElementById('indexMargin').textContent = `$${margin}`;
+            document.getElementById('indexPL').textContent = `$${plPerPoint}`;
+            document.getElementById('examplePL').textContent = `$${(100 * pointValue).toFixed(2)}`;
+            document.getElementById('warningLoss').textContent = `$${margin}`;
+        }
+        
+        // Initialize calculator on page load
+        calculateIndex();
+        
+        // Live Clock
+        function updateClock() {
+            const now = new Date();
+            const localTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+            const gmtTime = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: 'UTC' });
+            
+            document.getElementById('localTime').textContent = localTime;
+            document.getElementById('gmtTime').textContent = gmtTime + ' GMT';
+            
+            // Simple market open check (simplified)
+            const hour = now.getUTCHours();
+            let openMarkets = '';
+            if (hour >= 1 && hour < 8) openMarkets = '🇯🇵 Asian Markets';
+            else if (hour >= 8 && hour < 16) openMarkets = '🇪🇺 European Markets';
+            else if (hour >= 14 && hour < 22) openMarkets = '🇺🇸 US Markets';
+            else openMarkets = '🌙 Markets Closed';
+            
+            document.getElementById('openMarkets').textContent = openMarkets;
+        }
+        
+        updateClock();
+        setInterval(updateClock, 60000); // Update every minute
+    </script>
+</body>
+</html>

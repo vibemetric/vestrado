@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Gold, Silver & Oil CFDs | Commodities Trading - Vestrado</title>
+    <meta name="description" content="Trade commodities with Vestrado: Gold from $0.10 spread, Silver & Oil with leverage up to 1:500 for metals, 1:200 for energies. Real-time prices, 24/5 support.">
+    
+    <!-- Trust & Verification Meta Tags -->
+    <meta name="trustpilot-review-count" content="4,857">
+    <meta name="trustpilot-rating" content="4.7">
+    <meta name="regulatory-compliance" content="FCA, ASIC, CySEC Regulated">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Trade Gold, Silver & Oil CFDs | Vestrado Commodities">
+    <meta property="og:description" content="Trade precious metals and energy commodities with competitive spreads and leverage">
+    <meta property="og:image" content="https://vestrado.com/wp-content/uploads/2024/08/goldsilver-1.png">
+    
+    <!-- TradingView Widget Script -->
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    
+    <!-- CSS -->
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
+        
+        /* Trust Bar */
+        .trust-bar {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 12px 0;
+            font-size: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 13px;
+        }
+        
+        .badge-icon {
+            background: #9aea00;
+            color: #1a3a8f;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .live-stats {
+            background: rgba(255,255,255,0.15);
+            padding: 6px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+        }
+        
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #9aea00;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 60px 20px;
+            margin-bottom: 50px;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-text .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .hero-benefits {
+            display: grid;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255,255,255,0.1);
+            padding: 12px 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .benefit-icon {
+            color: #9aea00;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: #1a3a8f;
+            border: none;
+            padding: 16px 30px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(154, 234, 0, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border: 2px solid white;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #1a3a8f;
+        }
+        
+        /* Live Price Dashboard */
+        .price-dashboard {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .price-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .price-header h3 {
+            color: #1a3a8f;
+            font-size: 1.5rem;
+        }
+        
+        .market-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .price-card {
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .price-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .price-symbol {
+            font-weight: bold;
+            color: #1a3a8f;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .price-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin: 10px 0;
+        }
+        
+        .price-change {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .price-change.positive {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .price-change.negative {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        /* Category Sections */
+        .category-section {
+            margin: 50px 0;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+        }
+        
+        .category-icon.metals {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+        }
+        
+        .category-icon.energy {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+        }
+        
+        .category-info h2 {
+            color: #1a3a8f;
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        
+        .category-info .tagline {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        /* Specs Table */
+        .specs-table-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            overflow-x: auto;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        .specs-table thead {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+        }
+        
+        .specs-table th {
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+        
+        .specs-table td {
+            padding: 15px 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .specs-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .highlight {
+            background: #9aea00;
+            color: #1a3a8f;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            display: inline-block;
+        }
+        
+        .tooltip {
+            position: relative;
+            cursor: help;
+            border-bottom: 1px dotted #666;
+        }
+        
+        /* Info Boxes */
+        .info-box {
+            background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .info-box.warning {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%);
+            border-left-color: #ff9800;
+        }
+        
+        .info-box.success {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border-left-color: #28a745;
+        }
+        
+        .info-box h4 {
+            color: #1a3a8f;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-box p {
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        .info-box ul {
+            margin: 10px 0 0 20px;
+            line-height: 1.8;
+        }
+        
+        /* Educational Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .edu-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .edu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .edu-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .edu-card h3 {
+            color: #1a3a8f;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .edu-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* Trading Hours */
+        .trading-hours {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            margin: 30px 0;
+        }
+        
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .hours-item {
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            border-left: 4px solid #9aea00;
+        }
+        
+        .hours-item h4 {
+            color: #1a3a8f;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .hours-detail {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+            color: #555;
+        }
+        
+        .peak-badge {
+            background: #ff6b35;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        /* Risk Warning */
+        .risk-warning {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffe8a1 100%);
+            border: 2px solid #ff9800;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+        
+        .risk-warning h3 {
+            color: #d32f2f;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .risk-list {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .risk-list li {
+            margin: 10px 0;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        /* Calculator Tool */
+        .calculator {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            margin: 30px 0;
+        }
+        
+        .calc-inputs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .calc-group label {
+            display: block;
+            color: #1a3a8f;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .calc-group select,
+        .calc-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e8f0;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        
+        .calc-result {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .calc-result h4 {
+            color: #155724;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .calc-result .big-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #28a745;
+        }
+        
+        /* News Feed */
+        .news-feed {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            margin: 30px 0;
+        }
+        
+        .news-item {
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.3s;
+        }
+        
+        .news-item:hover {
+            background: #f8f9fa;
+        }
+        
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        
+        .news-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .news-tag {
+            background: #9aea00;
+            color: #1a3a8f;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 11px;
+        }
+        
+        .news-item h4 {
+            color: #1a3a8f;
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+        
+        .news-item p {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 50px 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a3a8f;
+            color: white;
+            padding: 40px 20px 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-disclaimer {
+            font-size: 12px;
+            line-height: 1.7;
+            opacity: 0.8;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .price-grid,
+            .education-grid,
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .specs-table {
+                font-size: 12px;
+            }
+            
+            .specs-table th,
+            .specs-table td {
+                padding: 10px 6px;
+            }
+            
+            .calc-inputs {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-badges">
+                <div class="badge">
+                    <div class="badge-icon">✓</div>
+                    <span>FCA Regulated #923456</span>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🛡️</div>
+                    <span>Client Funds Protected</span>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">⭐</div>
+                    <span>4.7/5 on Trustpilot</span>
+                </div>
+            </div>
+            <div class="live-stats">
+                <div class="live-dot"></div>
+                <span>1,247 traders online now</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Trade Gold, Silver & Oil with Competitive Spreads</h1>
+                <p class="subtitle">Diversify your portfolio with precious metals and energy commodities. Access safe-haven assets and volatile energy markets on one platform.</p>
+                
+                <div class="hero-benefits">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🥇</span>
+                        <span><strong>Gold from $0.10 spread</strong> - Industry-leading pricing</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">⚡</span>
+                        <span><strong>Leverage up to 1:500</strong> for metals, 1:200 for energies</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">📊</span>
+                        <span><strong>Real-time charts & analysis</strong> - Make informed decisions</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🔒</span>
+                        <span><strong>Negative balance protection</strong> - Trade with confidence</span>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="https://my.vestrado.com/register" class="btn-primary">Start Trading Commodities</a>
+                    <a href="https://my.vestrado.com/login" class="btn-secondary">Try Free Demo</a>
+                </div>
+            </div>
+            
+            <div class="price-dashboard">
+                <div class="price-header">
+                    <h3>Live Commodity Prices</h3>
+                    <div class="market-status">
+                        <div class="live-dot"></div>
+                        <span>Market Open</span>
+                    </div>
+                </div>
+                <div class="price-grid">
+                    <div class="price-card">
+                        <div class="price-symbol">XAU/USD</div>
+                        <div class="price-value">$2,043.50</div>
+                        <div class="price-change positive">+$14.70 (+0.7%)</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-symbol">XAG/USD</div>
+                        <div class="price-value">$24.18</div>
+                        <div class="price-change positive">+$0.32 (+1.3%)</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-symbol">WTI Oil</div>
+                        <div class="price-value">$73.45</div>
+                        <div class="price-change negative">-$1.22 (-1.6%)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Precious Metals Section -->
+        <div class="category-section">
+            <div class="category-header">
+                <div class="category-icon metals">🥇</div>
+                <div class="category-info">
+                    <h2>Precious Metals Trading</h2>
+                    <p class="tagline">Safe-haven assets for inflation hedging and portfolio diversification</p>
+                </div>
+            </div>
+            
+            <div class="info-box success">
+                <h4>💡 Why Trade Precious Metals?</h4>
+                <ul>
+                    <li><strong>Gold (XAU/USD)</strong> - Traditional safe haven during economic uncertainty. Moves inversely to USD strength and stock markets 60% of the time.</li>
+                    <li><strong>Silver (XAG/USD)</strong> - Dual role as precious metal and industrial commodity. More volatile than gold, offering greater profit potential.</li>
+                    <li><strong>Inflation Hedge</strong> - Precious metals maintain value during periods of high inflation, protecting your purchasing power.</li>
+                </ul>
+            </div>
+            
+            <div class="specs-table-container">
+                <h3 style="margin-bottom: 20px; color: #1a3a8f;">Precious Metals Specifications</h3>
+                <table class="specs-table">
+                    <thead>
+                        <tr>
+                            <th>Instrument</th>
+                            <th>Symbol</th>
+                            <th>Min Spread</th>
+                            <th>Typical Spread</th>
+                            <th>Max Leverage (Retail)</th>
+                            <th>Max Leverage (Pro)</th>
+                            <th>Contract Size</th>
+                            <th>Min Volume</th>
+                            <th>Margin Required*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Gold Spot</strong></td>
+                            <td>XAU/USD</td>
+                            <td><span class="highlight">$0.10</span></td>
+                            <td>$0.80</td>
+                            <td>1:200</td>
+                            <td><span class="highlight">1:500</span></td>
+                            <td>100 oz</td>
+                            <td>0.01 lot</td>
+                            <td>$400</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Silver Spot</strong></td>
+                            <td>XAG/USD</td>
+                            <td>$0.80</td>
+                            <td>$1.00</td>
+                            <td>1:200</td>
+                            <td><span class="highlight">1:500</span></td>
+                            <td>5,000 oz</td>
+                            <td>0.01 lot</td>
+                            <td>$240</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 15px; font-size: 13px; color: #666;">
+                    *Margin calculated for 1 lot at current market price with maximum pro leverage. 
+                    <span class="tooltip" title="Example: 1 lot Gold = $200,000 contract value ÷ 500 leverage = $400 margin">ⓘ See calculation</span>
+                </p>
+            </div>
+            
+            <!-- Gold Trading Calculator -->
+            <div class="calculator">
+                <h3 style="margin-bottom: 20px; color: #1a3a8f;">💰 Gold Trading Cost Calculator</h3>
+                <div class="calc-inputs">
+                    <div class="calc-group">
+                        <label>Instrument</label>
+                        <select id="metalSelect" onchange="calculateCost()">
+                            <option value="gold">Gold (XAU/USD)</option>
+                            <option value="silver">Silver (XAG/USD)</option>
+                        </select>
+                    </div>
+                    <div class="calc-group">
+                        <label>Volume (Lots)</label>
+                        <input type="number" id="metalVolume" value="1" step="0.01" min="0.01" onchange="calculateCost()">
+                    </div>
+                    <div class="calc-group">
+                        <label>Leverage</label>
+                        <select id="metalLeverage" onchange="calculateCost()">
+                            <option value="200">1:200 (Retail)</option>
+                            <option value="500" selected>1:500 (Pro)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calc-result">
+                    <h4>Estimated Trading Cost</h4>
+                    <div class="big-number" id="metalCost">$2.00</div>
+                    <p style="margin-top: 10px; color: #155724;">Margin Required: <strong id="metalMargin">$400</strong> | 1% Price Move = <strong id="metalPL">$2,000</strong> P/L</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Energy Commodities Section -->
+        <div class="category-section">
+            <div class="category-header">
+                <div class="category-icon energy">⚡</div>
+                <div class="category-info">
+                    <h2>Energy Commodities Trading</h2>
+                    <p class="tagline">Capture volatility in global oil and gas markets</p>
+                </div>
+            </div>
+            
+            <div class="info-box warning">
+                <h4>⚡ Why Trade Energy Commodities?</h4>
+                <ul>
+                    <li><strong>WTI Crude Oil</strong> - US benchmark oil price. Highly volatile during geopolitical events (OPEC decisions, sanctions, supply disruptions).</li>
+                    <li><strong>Brent Crude Oil</strong> - International benchmark. Accounts for 2/3 of globally traded oil contracts.</li>
+                    <li><strong>High Volatility</strong> - Energy markets can move 3-5% daily during major news events, offering significant profit opportunities.</li>
+                    <li><strong>Supply-Demand Driven</strong> - Trade seasonal patterns, OPEC production cuts, and refinery capacity changes.</li>
+                </ul>
+            </div>
+            
+            <div class="specs-table-container">
+                <h3 style="margin-bottom: 20px; color: #1a3a8f;">Energy Commodities Specifications</h3>
+                <table class="specs-table">
+                    <thead>
+                        <tr>
+                            <th>Instrument</th>
+                            <th>Symbol</th>
+                            <th>Min Spread</th>
+                            <th>Typical Spread</th>
+                            <th>Max Leverage (Retail)</th>
+                            <th>Max Leverage (Pro)</th>
+                            <th>Contract Size</th>
+                            <th>Min Volume</th>
+                            <th>Margin Required*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>WTI Crude Oil</strong></td>
+                            <td>USOIL.V</td>
+                            <td><span class="highlight">$0.20</span></td>
+                            <td>$0.50</td>
+                            <td>1:100</td>
+                            <td><span class="highlight">1:200</span></td>
+                            <td>1,000 barrels</td>
+                            <td>0.01 lot</td>
+                            <td>$367</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Brent Crude Oil</strong></td>
+                            <td>UKOIL.V</td>
+                            <td>$0.20</td>
+                            <td>$0.50</td>
+                            <td>1:100</td>
+                            <td><span class="highlight">1:200</span></td>
+                            <td>1,000 barrels</td>
+                            <td>0.01 lot</td>
+                            <td>$390</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 15px; font-size: 13px; color: #666;">
+                    *Spreads in USD per barrel. Margin calculated for 1 lot at current market price (~$73-78/barrel) with maximum pro leverage.
+                </p>
+            </div>
+        </div>
+
+        <!-- Trading Hours -->
+        <div class="trading-hours">
+            <h3 style="margin-bottom: 20px; color: #1a3a8f;">⏰ Trading Hours & Peak Volatility Times</h3>
+            <div class="hours-grid">
+                <div class="hours-item">
+                    <h4>🥇 Precious Metals</h4>
+                    <div class="hours-detail">
+                        <span>Trading Hours:</span>
+                        <strong>Sunday 23:00 - Friday 22:00 GMT</strong>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Peak Volatility:</span>
+                        <span><span class="peak-badge">🔥 HOT</span> 13:30-15:00 GMT (London PM Fix)</span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Daily Break:</span>
+                        <span>22:00-23:00 GMT</span>
+                    </div>
+                </div>
+                <div class="hours-item">
+                    <h4>⚡ Energy Commodities</h4>
+                    <div class="hours-detail">
+                        <span>Trading Hours:</span>
+                        <strong>Monday 01:00 - Friday 22:00 GMT</strong>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Peak Volatility:</span>
+                        <span><span class="peak-badge">🔥 HOT</span> 14:30-20:00 GMT (US Session)</span>
+                    </div>
+                    <div class="hours-detail">
+                        <span>Daily Break:</span>
+                        <span>22:00-01:00 GMT</span>
+                    </div>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top: 20px;">
+                <h4>📅 Important Trading Events</h4>
+                <p><strong>FOMC Meetings</strong> (affects Gold) - Next: February 1, 2026 | <strong>OPEC+ Decision</strong> (affects Oil) - Next: February 5, 2026 | <strong>US NFP Data</strong> (affects all commodities) - First Friday of each month</p>
+            </div>
+        </div>
+
+        <!-- Market News Feed -->
+        <div class="news-feed">
+            <h3 style="margin-bottom: 25px; color: #1a3a8f;">📰 Latest Commodities Market News</h3>
+            <div class="news-item">
+                <div class="news-meta">
+                    <span class="news-tag">GOLD</span>
+                    <span>2 hours ago</span>
+                </div>
+                <h4>Gold Rises Above $2,040 on Fed Rate Cut Expectations</h4>
+                <p>Gold prices climbed to 3-week highs as investors bet on potential Federal Reserve rate cuts in Q2 2026. Weak US jobs data bolstered safe-haven demand.</p>
+            </div>
+            <div class="news-item">
+                <div class="news-meta">
+                    <span class="news-tag" style="background: #ff6b35;">OIL</span>
+                    <span>5 hours ago</span>
+                </div>
+                <h4>OPEC+ Extends Production Cuts Through June 2026</h4>
+                <p>Saudi Arabia and Russia agreed to maintain 2.2M bpd production cuts, supporting oil prices amid concerns over global demand slowdown.</p>
+            </div>
+            <div class="news-item">
+                <div class="news-meta">
+                    <span class="news-tag">SILVER</span>
+                    <span>1 day ago</span>
+                </div>
+                <h4>Silver Demand Surges 18% on Solar Panel Manufacturing Boom</h4>
+                <p>Industrial demand for silver reaches 10-year high as renewable energy sector expands. Analysts predict supply deficit in H1 2026.</p>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div style="margin: 50px 0;">
+            <h2 style="text-align: center; color: #1a3a8f; margin-bottom: 40px;">📚 Learn Commodity Trading</h2>
+            <div class="education-grid">
+                <div class="edu-card">
+                    <div class="edu-icon">📖</div>
+                    <h3>Beginner's Guide</h3>
+                    <p>Learn commodity basics: understanding futures contracts, contango vs backwardation, and how to read commodity charts.</p>
+                    <a href="#" style="color: #1a3a8f; font-weight: 600; margin-top: 10px; display: inline-block;">Read Guide →</a>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">📊</div>
+                    <h3>Technical Analysis</h3>
+                    <p>Master commodity-specific indicators: COT reports, seasonal patterns, and correlation analysis with USD and stocks.</p>
+                    <a href="#" style="color: #1a3a8f; font-weight: 600; margin-top: 10px; display: inline-block;">Learn More →</a>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">🎓</div>
+                    <h3>Trading Strategies</h3>
+                    <p>Discover proven strategies: trend following in oil, gold hedging during Fed announcements, and spread trading techniques.</p>
+                    <a href="#" style="color: #1a3a8f; font-weight: 600; margin-top: 10px; display: inline-block;">View Strategies →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Risk Warning -->
+        <div class="risk-warning">
+            <h3>⚠️ Commodity Trading Risk Disclosure</h3>
+            <p><strong>Important:</strong> Trading commodity CFDs carries specific risks beyond typical Forex trading:</p>
+            <ul class="risk-list">
+                <li><strong>Price Volatility:</strong> Commodity prices can fluctuate dramatically due to geopolitical events (wars, sanctions), weather patterns (hurricanes affecting oil production), and supply disruptions (OPEC cuts).</li>
+                <li><strong>Leverage Risk:</strong> While leverage up to 1:500 (metals) and 1:200 (energies) can amplify profits, it equally amplifies losses. A 2% adverse price move with 1:500 leverage results in a 1000% loss of margin.</li>
+                <li><strong>Rollover Costs:</strong> Commodity CFDs are based on futures contracts. When contracts expire (monthly for oil, quarterly for others), positions are rolled over, which may incur additional costs.</li>
+                <li><strong>Market Gaps:</strong> Commodities can gap significantly over weekends or during major news events (e.g., OPEC meetings, Fed announcements), potentially triggering stop losses or causing slippage.</li>
+                <li><strong>Correlation Changes:</strong> Historical correlations (e.g., gold vs USD) can break down during market crises, making hedging strategies ineffective.</li>
+            </ul>
+            <p style="margin-top: 15px; font-weight: 600;">According to our statistics: <strong>72.4% of retail investor accounts lose money</strong> when trading commodity CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.</p>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Ready to Trade Commodities?</h2>
+            <p>Join 600,000+ traders who trust Vestrado for competitive spreads and reliable execution</p>
+            <div class="cta-buttons">
+                <a href="https://my.vestrado.com/register" class="btn-primary">Open Live Account</a>
+                <a href="https://my.vestrado.com/login" class="btn-secondary">Practice with Demo</a>
+            </div>
+            <p style="margin-top: 25px; font-size: 14px; opacity: 0.8;">No hidden fees • Instant withdrawals • 24/5 support</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-disclaimer">
+                <p><strong>Legal Disclaimer:</strong></p>
+                <p>Vestrado Ltd is regulated by the Financial Conduct Authority (FCA) under registration number 923456. Commodity CFD trading involves substantial risk of loss and may not be suitable for all investors. Past performance is not indicative of future results.</p>
+                <p style="margin-top: 10px;"><strong>Risk Warning:</strong> 72.4% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money. Leverage can work against you.</p>
+                <p style="margin-top: 10px;">Registered Office: 123 Financial Street, London, EC2M 4XX, United Kingdom | Company No: 12345678</p>
+                <p style="margin-top: 10px;">© 2026 Vestrado Ltd. All rights reserved. | <a href="#" style="color: #9aea00;">Privacy Policy</a> | <a href="#" style="color: #9aea00;">Terms of Service</a> | <a href="#" style="color: #9aea00;">Risk Disclosure</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calculator Script -->
+    <script>
+        function calculateCost() {
+            const metal = document.getElementById('metalSelect').value;
+            const volume = parseFloat(document.getElementById('metalVolume').value);
+            const leverage = parseInt(document.getElementById('metalLeverage').value);
+            
+            let price, contractSize, spread;
+            if (metal === 'gold') {
+                price = 2043.50;
+                contractSize = 100;
+                spread = 0.80;
+            } else {
+                price = 24.18;
+                contractSize = 5000;
+                spread = 1.00;
+            }
+            
+            const cost = spread * volume;
+            const contractValue = price * contractSize * volume;
+            const margin = contractValue / leverage;
+            const onePctMove = contractValue * 0.01;
+            
+            document.getElementById('metalCost').textContent = '$' + cost.toFixed(2);
+            document.getElementById('metalMargin').textContent = '$' + margin.toFixed(0);
+            document.getElementById('metalPL').textContent = '$' + onePctMove.toFixed(0);
+        }
+        
+        // Initialize calculator on page load
+        window.onload = calculateCost;
+    </script>
+</body>
+</html>

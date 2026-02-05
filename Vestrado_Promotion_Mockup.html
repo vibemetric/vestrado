@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Bonuses & Promotions | Boost Your Capital Up To 100% | Vestrado</title>
+    <meta name="description" content="Unlock trading bonuses and promotions. Increase your capital with deposit bonuses, cashback, and trading contests. Terms apply. Trade with confidence.">
+    
+    <!-- Google Ads Compliant Meta -->
+    <meta name="disclosure" content="CFDs are complex instruments. 73% of retail investor accounts lose money. Risk warning applies.">
+    
+    <style>
+        /* CSS Variables - Vestrado Brand System */
+        :root {
+            --primary-blue: #1a3a8f;
+            --primary-blue-light: #2d5cc2;
+            --accent-green: #9aea00;
+            --accent-green-dark: #7bc800;
+            --danger-red: #ef4444;
+            --warning-orange: #f59e0b;
+            --success-green: #10b981;
+            --text-dark: #1f2937;
+            --text-medium: #6b7280;
+            --text-light: #9ca3af;
+            --bg-white: #ffffff;
+            --bg-gray-50: #f9fafb;
+            --bg-gray-100: #f3f4f6;
+            --bg-blue-50: #eff6ff;
+            --border-gray: #e5e7eb;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            overflow-x: hidden;
+        }
+        
+        /* Trust Bar */
+        .trust-bar {
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+            color: white;
+            padding: 12px 0;
+            font-size: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .badge svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--accent-green);
+        }
+        
+        /* Header */
+        .header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 48px;
+            z-index: 999;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .main-nav a:hover,
+        .main-nav a.active {
+            background: var(--bg-blue-50);
+            color: var(--primary-blue-light);
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: var(--primary-blue-light);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+        
+        .btn-success {
+            background: var(--accent-green);
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+        
+        .btn-success:hover {
+            background: var(--accent-green-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="rgba(255,255,255,0.05)"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+        
+        .hero-disclaimer {
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+        
+        /* Value Calculator */
+        .value-calculator {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px auto 0;
+            max-width: 600px;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .value-calculator h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        
+        .calculator-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 2px dashed var(--border-gray);
+        }
+        
+        .calculator-row:last-child {
+            border-bottom: none;
+            background: var(--bg-blue-50);
+            margin: 15px -30px -30px;
+            padding: 20px 30px;
+            border-radius: 0 0 12px 12px;
+        }
+        
+        .calc-label {
+            font-weight: 600;
+            color: var(--text-medium);
+        }
+        
+        .calc-arrow {
+            color: var(--accent-green);
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .calc-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+        
+        .calc-total {
+            font-size: 32px;
+            color: var(--accent-green);
+        }
+        
+        /* Filter Tabs */
+        .filter-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 15px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            overflow-x: auto;
+        }
+        
+        .filter-tab {
+            padding: 12px 24px;
+            border-radius: 8px;
+            background: var(--bg-gray-100);
+            color: var(--text-dark);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .filter-tab:hover {
+            background: var(--bg-blue-50);
+            border-color: var(--primary-blue-light);
+        }
+        
+        .filter-tab.active {
+            background: var(--primary-blue-light);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+        
+        .filter-tab .count {
+            background: rgba(255,255,255,0.3);
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 8px;
+            font-size: 12px;
+        }
+        
+        /* Promo Cards Grid */
+        .promos-grid {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 30px;
+        }
+        
+        /* Promo Card */
+        .promo-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .promo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .promo-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+            color: white;
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .promo-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .promo-badge {
+            display: inline-block;
+            background: var(--accent-green);
+            color: var(--text-dark);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+        
+        .promo-badge.locked {
+            background: var(--warning-orange);
+        }
+        
+        .promo-badge.new-traders {
+            background: var(--success-green);
+            color: white;
+        }
+        
+        .promo-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        
+        .promo-value {
+            font-size: 48px;
+            font-weight: 800;
+            margin: 15px 0;
+        }
+        
+        .promo-value span {
+            font-size: 24px;
+            opacity: 0.9;
+        }
+        
+        .promo-body {
+            padding: 25px;
+        }
+        
+        .promo-description {
+            color: var(--text-medium);
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+        
+        /* Key Terms Section */
+        .key-terms {
+            background: var(--bg-gray-50);
+            border: 2px solid var(--border-gray);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .key-terms h4 {
+            color: var(--primary-blue);
+            font-size: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .terms-list {
+            list-style: none;
+        }
+        
+        .terms-list li {
+            padding: 8px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+        
+        .terms-list li::before {
+            content: '✓';
+            color: var(--success-green);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .terms-list li.negative::before {
+            content: '✗';
+            color: var(--danger-red);
+        }
+        
+        /* Urgency Timer */
+        .urgency-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid var(--warning-orange);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .urgency-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #92400e;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        
+        .countdown {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .countdown-item {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-align: center;
+            min-width: 50px;
+        }
+        
+        .countdown-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--warning-orange);
+            line-height: 1;
+        }
+        
+        .countdown-label {
+            font-size: 10px;
+            color: var(--text-medium);
+            text-transform: uppercase;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            background: var(--bg-blue-50);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .how-it-works h4 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        
+        .step-number {
+            background: var(--primary-blue-light);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        
+        .step-text {
+            color: var(--text-dark);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* Progress Bar */
+        .unlock-progress {
+            margin-bottom: 20px;
+        }
+        
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .progress-bar {
+            background: var(--bg-gray-100);
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(90deg, var(--accent-green) 0%, var(--accent-green-dark) 100%);
+            height: 100%;
+            border-radius: 6px;
+            transition: width 0.5s ease;
+        }
+        
+        .progress-label {
+            font-size: 12px;
+            color: var(--text-medium);
+            margin-top: 5px;
+        }
+        
+        /* CTA Buttons */
+        .promo-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .btn-full {
+            width: 100%;
+            justify-content: center;
+            font-size: 16px;
+            padding: 14px;
+        }
+        
+        .terms-link {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-medium);
+        }
+        
+        .terms-link a {
+            color: var(--primary-blue-light);
+            text-decoration: underline;
+        }
+        
+        /* Social Proof Section */
+        .social-proof {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .social-proof h3 {
+            text-align: center;
+            color: var(--primary-blue);
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-value {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: var(--text-medium);
+            font-size: 16px;
+        }
+        
+        .testimonials-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .testimonial {
+            background: var(--bg-gray-50);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-green);
+        }
+        
+        .testimonial-stars {
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-medium);
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .testimonial-meta {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .faq-section h2 {
+            text-align: center;
+            color: var(--primary-blue);
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .faq-question {
+            padding: 20px 25px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: var(--bg-blue-50);
+        }
+        
+        .faq-toggle {
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 25px;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 25px 20px;
+        }
+        
+        .faq-answer p {
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+        
+        /* Risk Warning Banner */
+        .risk-warning {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 2px solid #ef4444;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 1200px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        .risk-warning h4 {
+            color: #991b1b;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .risk-warning p {
+            color: #7f1d1d;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* Sticky Bottom CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+            color: white;
+            padding: 15px 20px;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+            z-index: 998;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+        
+        .sticky-cta-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .sticky-cta-text h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .sticky-cta-text p {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        .sticky-cta-close {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 5px 10px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .sticky-cta-close:hover {
+            opacity: 1;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 40px 20px;
+            margin-top: 80px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-disclaimer {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-green);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .trust-badges {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .main-nav {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .value-calculator {
+                padding: 20px;
+            }
+            
+            .calc-value {
+                font-size: 18px;
+            }
+            
+            .calc-total {
+                font-size: 24px;
+            }
+            
+            .promos-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-tabs {
+                overflow-x: scroll;
+            }
+            
+            .sticky-cta-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-badges">
+                <div class="badge">
+                    <svg viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
+                    Regulated by CySEC
+                </div>
+                <div class="badge">
+                    <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    SSL Secured
+                </div>
+                <div class="badge">
+                    <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    4.7/5 on Trustpilot
+                </div>
+            </div>
+            <div class="badge">600,000+ Active Traders</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">VESTRADO</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Trading</a></li>
+                    <li><a href="#">Academy</a></li>
+                    <li><a href="#" class="active">Promotions</a></li>
+                    <li><a href="#">Company</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-secondary">Log In</a>
+                <a href="#" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Trading Bonuses: Boost Your Capital Up To 100%</h1>
+            <p class="hero-subtitle">Increase your trading power with deposit bonuses, cashback programs, and exclusive contests.</p>
+            <p class="hero-disclaimer">*Terms & Conditions apply. Trading volume requirements must be met to unlock bonuses.</p>
+            
+            <!-- Value Calculator -->
+            <div class="value-calculator">
+                <h3>💰 See How Your Capital Grows</h3>
+                <div class="calculator-row">
+                    <div>
+                        <div class="calc-label">Your Deposit</div>
+                        <div class="calc-value">$500</div>
+                    </div>
+                    <div class="calc-arrow">→</div>
+                    <div>
+                        <div class="calc-label">100% Bonus</div>
+                        <div class="calc-value">$500</div>
+                    </div>
+                    <div class="calc-arrow">→</div>
+                    <div>
+                        <div class="calc-label">Trading Capital</div>
+                        <div class="calc-value">$1,000</div>
+                    </div>
+                </div>
+                <div class="calculator-row">
+                    <div>
+                        <div class="calc-label">Your Deposit</div>
+                        <div class="calc-value">$1,000</div>
+                    </div>
+                    <div class="calc-arrow">→</div>
+                    <div>
+                        <div class="calc-label">100% Bonus</div>
+                        <div class="calc-value">$1,000</div>
+                    </div>
+                    <div class="calc-arrow">→</div>
+                    <div>
+                        <div class="calc-label">Trading Capital</div>
+                        <div class="calc-value">$2,000</div>
+                    </div>
+                </div>
+                <div class="calculator-row">
+                    <div class="calc-label">💡 Trade with house money, keep 100% of profits</div>
+                    <div class="calc-total">Lower Your Risk</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-tabs">
+            <button class="filter-tab active" onclick="filterPromos('all')">
+                All Promotions <span class="count">6</span>
+            </button>
+            <button class="filter-tab" onclick="filterPromos('deposit')">
+                Deposit Bonuses <span class="count">3</span>
+            </button>
+            <button class="filter-tab" onclick="filterPromos('cashback')">
+                Cashback <span class="count">1</span>
+            </button>
+            <button class="filter-tab" onclick="filterPromos('contest')">
+                Trading Contests <span class="count">1</span>
+            </button>
+            <button class="filter-tab" onclick="filterPromos('vip')">
+                👑 VIP Exclusive <span class="count">1</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Promos Grid -->
+    <section class="promos-grid">
+        <!-- Promo Card 1: 100% Deposit Bonus -->
+        <div class="promo-card" data-category="deposit">
+            <div class="promo-header">
+                <span class="promo-badge new-traders">🆕 New Traders</span>
+                <span class="promo-badge locked">🔒 Bonus Locked Until Volume</span>
+                <h3 class="promo-title">Welcome Deposit Bonus</h3>
+                <div class="promo-value">100% <span>Up To $10,000</span></div>
+            </div>
+            <div class="promo-body">
+                <p class="promo-description">Trade with up to 2x your capital. Perfect for new traders looking to test strategies with additional buying power.</p>
+                
+                <!-- Urgency Timer -->
+                <div class="urgency-section">
+                    <div class="urgency-label">🔥 Limited Time Offer</div>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="days">15</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="hours">08</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="mins">42</div>
+                            <div class="countdown-label">Mins</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Key Terms -->
+                <div class="key-terms">
+                    <h4>📋 Key Terms (Must Read)</h4>
+                    <ul class="terms-list">
+                        <li>Minimum deposit: <strong>$100</strong></li>
+                        <li>Maximum bonus: <strong>$10,000</strong></li>
+                        <li>Unlock requirement: Trade <strong>30x deposit volume</strong></li>
+                        <li>Valid for: <strong>90 days from activation</strong></li>
+                        <li class="negative">Bonus itself cannot be withdrawn (only profits from trading)</li>
+                    </ul>
+                </div>
+                
+                <!-- How It Works -->
+                <div class="how-it-works">
+                    <h4>🎯 How It Works</h4>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Deposit $500 → Receive $500 bonus (locked)</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Trade 30 × $500 = $15,000 total volume</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Unlock $500 bonus + withdraw all profits</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Progress Example -->
+                <div class="unlock-progress">
+                    <div class="progress-header">
+                        <span><strong>Example Progress:</strong></span>
+                        <span>$2,450 / $15,000</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 16%"></div>
+                    </div>
+                    <div class="progress-label">Trade $12,550 more to unlock your bonus</div>
+                </div>
+                
+                <!-- Actions -->
+                <div class="promo-actions">
+                    <a href="#" class="btn btn-success btn-full">Unlock Up To 100% Bonus*</a>
+                    <div class="terms-link">
+                        <a href="#">Full Terms & Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promo Card 2: 50% Reload Bonus -->
+        <div class="promo-card" data-category="deposit">
+            <div class="promo-header">
+                <span class="promo-badge">🔄 Active Traders</span>
+                <span class="promo-badge locked">🔒 Volume Required</span>
+                <h3 class="promo-title">Reload Deposit Bonus</h3>
+                <div class="promo-value">50% <span>Up To $5,000</span></div>
+            </div>
+            <div class="promo-body">
+                <p class="promo-description">Existing traders can boost their accounts with our reload bonus on subsequent deposits.</p>
+                
+                <div class="key-terms">
+                    <h4>📋 Key Terms</h4>
+                    <ul class="terms-list">
+                        <li>Minimum deposit: <strong>$200</strong></li>
+                        <li>Maximum bonus: <strong>$5,000</strong></li>
+                        <li>Unlock requirement: Trade <strong>20x deposit volume</strong></li>
+                        <li>Valid for: <strong>60 days</strong></li>
+                        <li class="negative">Available once per month</li>
+                    </ul>
+                </div>
+                
+                <div class="how-it-works">
+                    <h4>🎯 How It Works</h4>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Deposit $1,000 → Get $500 bonus</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Trade 20 × $1,000 = $20,000 volume</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Unlock bonus + withdraw profits</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="promo-actions">
+                    <a href="#" class="btn btn-success btn-full">Claim Reload Bonus*</a>
+                    <div class="terms-link">
+                        <a href="#">View Full Terms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promo Card 3: Cashback Program -->
+        <div class="promo-card" data-category="cashback">
+            <div class="promo-header">
+                <span class="promo-badge">💰 No Volume Required</span>
+                <h3 class="promo-title">Monthly Cashback</h3>
+                <div class="promo-value">Up to 20% <span>On Spreads</span></div>
+            </div>
+            <div class="promo-body">
+                <p class="promo-description">Get automatic cashback on your trading spreads. The more you trade, the more you earn back.</p>
+                
+                <div class="key-terms">
+                    <h4>📋 Key Terms</h4>
+                    <ul class="terms-list">
+                        <li>Cashback tier 1: <strong>5%</strong> ($0-$50k volume/month)</li>
+                        <li>Cashback tier 2: <strong>10%</strong> ($50k-$200k volume)</li>
+                        <li>Cashback tier 3: <strong>20%</strong> ($200k+ volume)</li>
+                        <li>Paid monthly to your account</li>
+                        <li>Stackable with all bonuses ✅</li>
+                    </ul>
+                </div>
+                
+                <div class="how-it-works">
+                    <h4>🎯 Example Earnings</h4>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">💵</div>
+                            <div class="step-text">You trade $100,000 volume, pay $200 in spreads</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">🎁</div>
+                            <div class="step-text">You receive 10% = $20 cashback automatically</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">✅</div>
+                            <div class="step-text">Withdraw immediately - no restrictions</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="promo-actions">
+                    <a href="#" class="btn btn-success btn-full">Activate Cashback</a>
+                    <div class="terms-link">
+                        <a href="#">How Cashback is Calculated</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promo Card 4: Trading Contest -->
+        <div class="promo-card" data-category="contest">
+            <div class="promo-header">
+                <span class="promo-badge">🏆 Monthly Contest</span>
+                <h3 class="promo-title">Top Trader Competition</h3>
+                <div class="promo-value">$50,000 <span>Prize Pool</span></div>
+            </div>
+            <div class="promo-body">
+                <p class="promo-description">Compete against other traders for your share of the monthly prize pool. Top 100 traders win.</p>
+                
+                <div class="urgency-section">
+                    <div class="urgency-label">⏰ Contest Ends</div>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <div class="countdown-value">8</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value">14</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="key-terms">
+                    <h4>🏅 Prize Distribution</h4>
+                    <ul class="terms-list">
+                        <li>1st Place: <strong>$15,000</strong></li>
+                        <li>2nd Place: <strong>$10,000</strong></li>
+                        <li>3rd Place: <strong>$7,000</strong></li>
+                        <li>Top 10: <strong>$2,000 each</strong></li>
+                        <li>Top 100: <strong>Share remaining pool</strong></li>
+                    </ul>
+                </div>
+                
+                <div class="how-it-works">
+                    <h4>🎯 How To Enter</h4>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Minimum deposit: $500 to enter</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Trade during contest period (Feb 1-28)</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Ranked by % profit (not volume)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="promo-actions">
+                    <a href="#" class="btn btn-success btn-full">Join Contest</a>
+                    <div class="terms-link">
+                        <a href="#">Contest Rules & Leaderboard</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promo Card 5: No Deposit Bonus -->
+        <div class="promo-card" data-category="deposit">
+            <div class="promo-header">
+                <span class="promo-badge new-traders">🎁 Risk-Free Start</span>
+                <h3 class="promo-title">No Deposit Bonus</h3>
+                <div class="promo-value">$30 <span>Free Credit</span></div>
+            </div>
+            <div class="promo-body">
+                <p class="promo-description">Test our platform with zero risk. Get $30 free trading credit just for verifying your account.</p>
+                
+                <div class="key-terms">
+                    <h4>📋 Key Terms</h4>
+                    <ul class="terms-list">
+                        <li>No deposit required ✅</li>
+                        <li>Account verification needed</li>
+                        <li>Profit withdrawal: Trade <strong>50 lots</strong></li>
+                        <li>Maximum withdrawal: <strong>$100</strong></li>
+                        <li>Valid for: <strong>30 days</strong></li>
+                    </ul>
+                </div>
+                
+                <div class="how-it-works">
+                    <h4>🎯 How It Works</h4>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Register & verify your identity</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Receive $30 in your demo account</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Trade 50 lots to withdraw profits (up to $100)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="promo-actions">
+                    <a href="#" class="btn btn-success btn-full">Claim $30 Free</a>
+                    <div class="terms-link">
+                        <a href="#">Eligibility Requirements</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promo Card 6: VIP Exclusive -->
+        <div class="promo-card" data-category="vip">
+            <div class="promo-header">
+                <span class="promo-badge">👑 VIP Exclusive</span>
+                <h3 class="promo-title">High Roller Bonus</h3>
+                <div class="promo-value">200% <span>Up To $50,000</span></div>
+            </div>
+            <div class="promo-body">
+                <p class="promo-description">Exclusive offer for our VIP traders. Double your deposit with our most generous bonus.</p>
+                
+                <div class="key-terms">
+                    <h4>📋 VIP Requirements</h4>
+                    <ul class="terms-list">
+                        <li>Minimum deposit: <strong>$10,000</strong></li>
+                        <li>Maximum bonus: <strong>$50,000</strong></li>
+                        <li>Unlock requirement: <strong>25x volume</strong></li>
+                        <li>Valid for: <strong>180 days</strong></li>
+                        <li>Dedicated account manager included ✅</li>
+                    </ul>
+                </div>
+                
+                <div class="how-it-works">
+                    <h4>🎯 VIP Benefits</h4>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">💎</div>
+                            <div class="step-text">200% bonus on deposits $10k+</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">📞</div>
+                            <div class="step-text">Dedicated account manager 24/7</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">⚡</div>
+                            <div class="step-text">Priority withdrawals (same day)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="promo-actions">
+                    <a href="#" class="btn btn-success btn-full">Apply for VIP Status</a>
+                    <div class="terms-link">
+                        <a href="#">VIP Program Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <h3>Join 12,847 Traders Who've Claimed Bonuses This Quarter</h3>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">$8.4M</div>
+                <div class="stat-label">Total Bonuses Distributed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">45 days</div>
+                <div class="stat-label">Average Unlock Time</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">89%</div>
+                <div class="stat-label">Successfully Unlock Rate</div>
+            </div>
+        </div>
+        
+        <div class="testimonials-slider">
+            <div class="testimonial">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"The bonus terms were clear and I unlocked mine in 2 months. Great way to test strategies with extra capital."</p>
+                <div class="testimonial-author">John D.</div>
+                <div class="testimonial-meta">Claimed 100% Bonus, November 2025</div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Cashback is automatic and requires no volume targets. I get paid just for trading normally. Love it!"</p>
+                <div class="testimonial-author">Sarah M.</div>
+                <div class="testimonial-meta">Active Cashback Member Since Aug 2025</div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Won $2,000 in last month's contest. The competition is fair and based on skill, not just volume."</p>
+                <div class="testimonial-author">Michael R.</div>
+                <div class="testimonial-meta">Top 10 Finisher, January 2026</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Warning -->
+    <div class="risk-warning">
+        <h4>
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+            </svg>
+            Risk Warning
+        </h4>
+        <p><strong>CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage.</strong> 73% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money. Trading bonuses require volume completion and are subject to terms & conditions. Past performance is not indicative of future results.</p>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Can I withdraw my bonus immediately?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>No, bonuses are locked until you complete the required trading volume (typically 20-30x your deposit). However, you can withdraw your original deposit and any profits from trading at any time. The bonus unlocks once volume requirements are met.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What's the difference between my deposit and the bonus?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p><strong>Your Deposit:</strong> 100% yours, withdrawable anytime.<br>
+                <strong>Bonus Credit:</strong> Locked until volume met, used for trading power but cannot be withdrawn (only profits from it).<br>
+                <strong>Trading Profits:</strong> 100% yours, withdrawable anytime.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Can I claim multiple bonuses at once?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>You can only have ONE active deposit bonus at a time (e.g., can't combine 100% Welcome + 50% Reload). However, cashback and trading contests are stackable with deposit bonuses.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What happens if I don't meet the volume requirement?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>If you don't complete the required volume within the validity period (typically 60-90 days), the bonus will expire and be removed from your account. Your deposit and profits remain yours and can still be withdrawn.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Is the $30 no deposit bonus real money?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>The $30 credit is real and can be used for live trading. If you make profits and complete the 50 lot requirement, you can withdraw up to $100 in profits. The $30 credit itself cannot be withdrawn.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Bottom CTA -->
+    <div class="sticky-cta" id="stickyCTA">
+        <div class="sticky-cta-content">
+            <div class="sticky-cta-text">
+                <h3>Ready to Boost Your Trading?</h3>
+                <p>Unlock up to 100% deposit bonus - Limited time offer expires in 15 days</p>
+            </div>
+            <a href="#" class="btn btn-success">Start Trading Now</a>
+            <button class="sticky-cta-close" onclick="closeStickyBanner()">×</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-disclaimer">
+                <strong>Risk Disclosure:</strong> Trading foreign exchange and contracts for differences on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade foreign exchange or contracts for differences you should carefully consider your investment objectives, level of experience, and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with foreign exchange and contracts for differences trading, and seek advice from an independent financial advisor if you have any doubts.
+            </div>
+            
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="font-size: 12px; color: var(--text-light);">
+                    Vestrado Ltd is regulated by the Cyprus Securities and Exchange Commission (CySEC) under license number XXX/XX.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Risk Warning</a>
+                <a href="#">Bonus T&C</a>
+                <a href="#">Contact Support</a>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 13px;">&copy; 2026 Vestrado Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const endDate = new Date('2026-02-28T23:59:59').getTime();
+            const now = new Date().getTime();
+            const distance = endDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            
+            const dayElements = document.querySelectorAll('#days');
+            const hourElements = document.querySelectorAll('#hours');
+            const minElements = document.querySelectorAll('#mins');
+            
+            dayElements.forEach(el => el.textContent = String(days).padStart(2, '0'));
+            hourElements.forEach(el => el.textContent = String(hours).padStart(2, '0'));
+            minElements.forEach(el => el.textContent = String(minutes).padStart(2, '0'));
+        }
+        
+        setInterval(updateCountdown, 60000);
+        updateCountdown();
+        
+        // Filter Functionality
+        function filterPromos(category) {
+            const cards = document.querySelectorAll('.promo-card');
+            const tabs = document.querySelectorAll('.filter-tab');
+            
+            // Update active tab
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => card.style.opacity = '1', 10);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+        }
+        
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked FAQ if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+        
+        // Sticky CTA
+        window.addEventListener('scroll', () => {
+            const stickyCTA = document.getElementById('stickyCTA');
+            const scrollPosition = window.scrollY;
+            const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+            
+            if (scrollPosition > 800 && scrollPosition < pageHeight - 200) {
+                stickyCTA.classList.add('visible');
+            } else {
+                stickyCTA.classList.remove('visible');
+            }
+        });
+        
+        function closeStickyBanner() {
+            document.getElementById('stickyCTA').classList.remove('visible');
+            sessionStorage.setItem('stickyCTAClosed', 'true');
+        }
+        
+        // Check if banner was closed
+        if (sessionStorage.getItem('stickyCTAClosed')) {
+            document.getElementById('stickyCTA').style.display = 'none';
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - 24/7 Support | Vestrado</title>
+    <meta name="description" content="Get in touch with Vestrado's award-winning support team. Live chat, phone, email support available 24/5. Average response time: 2 hours. Rated 4.8/5 by 50,000+ traders.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Vestrado Support - We're Here to Help">
+    <meta property="og:description" content="24/5 Live Support | 2hr Average Response | 4.8/5 Rating">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Trust Bar */
+        .trust-bar {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .badge i {
+            color: #9aea00;
+        }
+        
+        /* Header */
+        .header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 40px;
+            z-index: 999;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1a3a8f;
+        }
+        
+        .logo span {
+            color: #9aea00;
+        }
+        
+        .header-nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .header-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .header-nav a:hover {
+            background: #f0f7ff;
+            color: #2d5cc2;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Support Status Banner */
+        .support-status {
+            background: white;
+            padding: 20px;
+            margin: -30px auto 40px;
+            max-width: 900px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .status-item {
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .status-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .status-icon.online {
+            color: #9aea00;
+        }
+        
+        .status-icon.rating {
+            color: #ffa500;
+        }
+        
+        .status-icon.time {
+            color: #2d5cc2;
+        }
+        
+        .status-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .status-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a3a8f;
+        }
+        
+        /* Quick Contact Cards */
+        .quick-contact {
+            padding: 40px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            border-color: #9aea00;
+        }
+        
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #1a3a8f;
+        }
+        
+        .contact-card p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .contact-details {
+            background: #f8fbff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #2d5cc2;
+        }
+        
+        .contact-hours {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 10px;
+        }
+        
+        .btn-contact {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        
+        .btn-contact:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(154, 234, 0, 0.3);
+        }
+        
+        /* Main Content Grid */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .faq-section h2 {
+            font-size: 1.8rem;
+            color: #1a3a8f;
+            margin-bottom: 10px;
+        }
+        
+        .faq-subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid #e1e8f0;
+            padding: 20px 0;
+        }
+        
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.05rem;
+            transition: color 0.3s;
+        }
+        
+        .faq-question:hover {
+            color: #2d5cc2;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s;
+            color: #9aea00;
+        }
+        
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .faq-answer.active {
+            max-height: 300px;
+            padding-top: 15px;
+        }
+        
+        .still-need-help {
+            background: #f8fbff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .still-need-help p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        /* Contact Form */
+        .contact-form-section {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .contact-form-section h2 {
+            font-size: 1.8rem;
+            color: #1a3a8f;
+            margin-bottom: 10px;
+        }
+        
+        .form-intro {
+            color: #666;
+            margin-bottom: 25px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95rem;
+        }
+        
+        .optional-label {
+            color: #999;
+            font-weight: 400;
+            font-size: 0.85rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #9aea00;
+            box-shadow: 0 0 0 3px rgba(154, 234, 0, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .input-hint {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 5px;
+        }
+        
+        .input-valid {
+            border-color: #9aea00 !important;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%239aea00'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 20px;
+            padding-right: 45px;
+        }
+        
+        .input-error {
+            border-color: #ff4444 !important;
+        }
+        
+        .error-message {
+            color: #ff4444;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        .topic-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .topic-btn {
+            padding: 10px 20px;
+            border: 2px solid #e1e8f0;
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .topic-btn:hover {
+            border-color: #9aea00;
+            background: #f8fbff;
+        }
+        
+        .topic-btn.active {
+            border-color: #9aea00;
+            background: #9aea00;
+            color: white;
+        }
+        
+        .recaptcha-info {
+            font-size: 0.8rem;
+            color: #999;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .btn-submit {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 16px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-submit:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(154, 234, 0, 0.3);
+        }
+        
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        .success-message h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .ticket-number {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        /* Office Info */
+        .office-info {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .office-info h3 {
+            font-size: 1.4rem;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+        }
+        
+        .office-card {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e1e8f0;
+        }
+        
+        .office-card:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .office-label {
+            font-size: 0.85rem;
+            color: #9aea00;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        
+        .office-name {
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .office-address {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .office-map {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border: 2px solid #e1e8f0;
+        }
+        
+        .btn-directions {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #f8fbff;
+            color: #2d5cc2;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .btn-directions:hover {
+            background: #2d5cc2;
+            color: white;
+        }
+        
+        /* Support Team */
+        .support-team {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .support-team h3 {
+            font-size: 1.4rem;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+        }
+        
+        .team-stats {
+            background: #f8fbff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .stat-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .stat-value {
+            font-weight: 700;
+            color: #1a3a8f;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-box {
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+            margin-top: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-role {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        .stars {
+            color: #ffa500;
+            margin-bottom: 10px;
+        }
+        
+        /* Live Chat Widget */
+        .live-chat-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        
+        .chat-button {
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 18px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(154, 234, 0, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .chat-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(154, 234, 0, 0.5);
+        }
+        
+        .chat-indicator {
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .support-status {
+                flex-direction: column;
+            }
+            
+            .header-nav {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .trust-container {
+                justify-content: center;
+            }
+            
+            .trust-badges {
+                justify-content: center;
+            }
+            
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .page-header p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .live-chat-widget {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .chat-button {
+                padding: 15px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-badges">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>FCA Regulated</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-lock"></i>
+                    <span>SSL Secured</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-users"></i>
+                    <span>600,000+ Traders</span>
+                </div>
+            </div>
+            <div class="badge">
+                <i class="fas fa-headset"></i>
+                <span>24/5 Support Available</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                VEST<span>RADO</span>
+            </div>
+            <nav class="header-nav">
+                <a href="/">Home</a>
+                <a href="/products">Products</a>
+                <a href="/trading">Trading</a>
+                <a href="/academy">Academy</a>
+                <a href="/company/contact-us" style="color: #9aea00;">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Have Any Questions? We're Here to Help!</h1>
+            <p>Our award-winning support team is ready to assist you 24/5. Get answers in minutes, not hours.</p>
+        </div>
+    </section>
+
+    <!-- Support Status Banner -->
+    <div class="container">
+        <div class="support-status">
+            <div class="status-item">
+                <div class="status-icon online">
+                    <i class="fas fa-circle"></i>
+                </div>
+                <div class="status-label">Support Status</div>
+                <div class="status-value">🟢 Online Now</div>
+            </div>
+            <div class="status-item">
+                <div class="status-icon rating">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="status-label">Customer Rating</div>
+                <div class="status-value">4.8/5</div>
+            </div>
+            <div class="status-item">
+                <div class="status-icon time">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="status-label">Avg Response</div>
+                <div class="status-value">2 Hours</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Contact Options -->
+    <section class="quick-contact">
+        <div class="container">
+            <h2 class="section-title">Choose Your Preferred Contact Method</h2>
+            <p class="section-subtitle">Select the option that works best for you - we're available through multiple channels</p>
+            
+            <div class="contact-grid">
+                <!-- Live Chat -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Instant responses from our support team. Perfect for quick questions.</p>
+                    <div class="contact-details">
+                        Response time: &lt;2 minutes
+                    </div>
+                    <div class="contact-hours">
+                        Available 24/5 (Mon-Fri, All Day)
+                    </div>
+                    <button class="btn-contact" onclick="openLiveChat()">
+                        <i class="fas fa-comment-dots"></i>
+                        Start Live Chat
+                    </button>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Support</h3>
+                    <p>Detailed inquiries? Send us an email and get a comprehensive response.</p>
+                    <div class="contact-details">
+                        support@vestrado.com
+                    </div>
+                    <div class="contact-hours">
+                        Response within 24 hours
+                    </div>
+                    <a href="#contact-form" class="btn-contact">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Email
+                    </a>
+                </div>
+
+                <!-- Phone -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone Support</h3>
+                    <p>Speak directly with our support specialists for urgent matters.</p>
+                    <div class="contact-details">
+                        +971 4 570 6699
+                    </div>
+                    <div class="contact-hours">
+                        Mon-Fri: 9AM-6PM GST (Dubai Time)
+                    </div>
+                    <a href="tel:+97145706699" class="btn-contact">
+                        <i class="fas fa-phone"></i>
+                        Call Now
+                    </a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Message us on WhatsApp for convenient communication on-the-go.</p>
+                    <div class="contact-details">
+                        +971 4 570 6699
+                    </div>
+                    <div class="contact-hours">
+                        Available 24/5
+                    </div>
+                    <a href="https://wa.me/97145706699" class="btn-contact" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Left Column: FAQ + Contact Form -->
+        <div>
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>Quick Answers to Common Questions</h2>
+                <p class="faq-subtitle">Find instant answers to the most frequently asked questions</p>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I reset my password?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Click on "Forgot Password" on the login page, enter your registered email, and you'll receive a reset link within minutes. Make sure to check your spam folder if you don't see it.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What are your withdrawal fees and processing times?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We don't charge withdrawal fees for most methods. Bank transfers take 1-3 business days, e-wallets are processed within 24 hours, and crypto withdrawals are completed within 1 hour.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How long does account verification take?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Most accounts are verified within 24 hours on business days. Make sure all documents are clear and valid. You can start trading with a Demo account while waiting for verification.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I change my leverage after opening an account?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! You can adjust your leverage anytime through your account dashboard. Please note that higher leverage increases both potential profits and risks.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What's the minimum deposit to start trading?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Our minimum deposit is just $50 for a Standard account. However, we recommend starting with at least $200 to have better risk management and trading flexibility.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you offer a demo account?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! We offer free demo accounts with $10,000 virtual money. It's perfect for testing strategies and learning the platform. No credit card required!
+                    </div>
+                </div>
+
+                <div class="still-need-help">
+                    <p><strong>Didn't find what you're looking for?</strong></p>
+                    <a href="#contact-form" class="btn-contact" style="max-width: 300px; margin: 0 auto;">
+                        <i class="fas fa-headset"></i>
+                        Contact Our Support Team
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-section" id="contact-form">
+                <h2>Send Us a Message</h2>
+                <p class="form-intro">Fill out the form below and we'll get back to you within 24 hours</p>
+                
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <!-- Email (Required) -->
+                    <div class="form-group">
+                        <label for="email">
+                            Email Address <span style="color: #ff4444;">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="your.email@example.com"
+                            required
+                            onblur="validateEmail(this)"
+                        >
+                        <div class="error-message" id="email-error">Please enter a valid email address</div>
+                        <div class="input-hint">We'll send the confirmation to this email</div>
+                    </div>
+
+                    <!-- Message Topic (Tag Buttons) -->
+                    <div class="form-group">
+                        <label>What's your question about?</label>
+                        <div class="topic-buttons">
+                            <button type="button" class="topic-btn" onclick="selectTopic(this, 'general')">
+                                General Inquiry
+                            </button>
+                            <button type="button" class="topic-btn" onclick="selectTopic(this, 'account')">
+                                Account Issues
+                            </button>
+                            <button type="button" class="topic-btn" onclick="selectTopic(this, 'technical')">
+                                Technical Support
+                            </button>
+                            <button type="button" class="topic-btn" onclick="selectTopic(this, 'trading')">
+                                Trading Questions
+                            </button>
+                            <button type="button" class="topic-btn" onclick="selectTopic(this, 'deposit')">
+                                Deposits/Withdrawals
+                            </button>
+                            <button type="button" class="topic-btn" onclick="selectTopic(this, 'partnership')">
+                                Partnership
+                            </button>
+                        </div>
+                        <input type="hidden" id="topic" name="topic" value="">
+                    </div>
+
+                    <!-- Message (Required) -->
+                    <div class="form-group">
+                        <label for="message">
+                            Your Message <span style="color: #ff4444;">*</span>
+                        </label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            placeholder="Please describe your question or issue in detail..."
+                            required
+                            minlength="20"
+                        ></textarea>
+                        <div class="input-hint">Minimum 20 characters for better assistance</div>
+                    </div>
+
+                    <!-- Full Name (Optional) -->
+                    <div class="form-group">
+                        <label for="fullname">
+                            Full Name <span class="optional-label">(Optional - helps us personalize our response)</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="fullname" 
+                            name="fullname" 
+                            placeholder="John Doe"
+                        >
+                    </div>
+
+                    <!-- Phone (Optional) -->
+                    <div class="form-group">
+                        <label for="phone">
+                            Phone Number <span class="optional-label">(Optional - for urgent callbacks)</span>
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="+971 XX XXX XXXX"
+                            onblur="validatePhone(this)"
+                        >
+                        <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+                    </div>
+
+                    <!-- reCAPTCHA Info -->
+                    <div class="recaptcha-info">
+                        <i class="fas fa-shield-alt"></i>
+                        This form is protected by reCAPTCHA to prevent spam
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+
+                <!-- Success Message (Hidden by default) -->
+                <div class="success-message" id="successMessage">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for contacting Vestrado. We've received your message.</p>
+                    <div class="ticket-number">
+                        <i class="fas fa-ticket-alt"></i> Ticket #<span id="ticketNumber">VEST-12345</span>
+                    </div>
+                    <p>We'll respond to <strong id="confirmEmail"></strong> within 24 hours.</p>
+                    <p style="margin-top: 20px; font-size: 0.9rem;">
+                        While you wait, check out our 
+                        <a href="/academy" style="color: white; text-decoration: underline;">Trading Academy</a> 
+                        or 
+                        <a href="/help-center" style="color: white; text-decoration: underline;">Help Center</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="sidebar">
+            <!-- Office Information -->
+            <div class="office-info">
+                <h3>Our Offices</h3>
+                
+                <div class="office-card">
+                    <div class="office-label">🏢 Operating Office</div>
+                    <div class="office-name">Vestrado Dubai</div>
+                    <div class="office-address">
+                        Office 346, Empire Heights<br>
+                        Business Bay, Dubai<br>
+                        United Arab Emirates
+                    </div>
+                    <iframe 
+                        class="office-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.3892573!2d55.2637!3d25.1871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDExJzEzLjYiTiA1NcKwMTUnNDkuMyJF!5e0!3m2!1sen!2s!4v1234567890"
+                        frameborder="0"
+                        allowfullscreen=""
+                        loading="lazy"
+                    ></iframe>
+                    <a href="https://maps.google.com/?q=Business+Bay+Dubai" target="_blank" class="btn-directions">
+                        <i class="fas fa-directions"></i>
+                        Get Directions
+                    </a>
+                </div>
+
+                <div class="office-card">
+                    <div class="office-label">📋 Registered Office</div>
+                    <div class="office-name">Legal & Regulatory Address</div>
+                    <div class="office-address">
+                        First Floor, SVG Teachers Credit Union<br>
+                        Uptown Building, Corner James & Middle St<br>
+                        Kingstown, St. Vincent & Grenadines<br>
+                        <br>
+                        <small style="color: #999;">Registration: 25911 BC 2020</small>
+                    </div>
+                    <div style="background: #f8fbff; padding: 15px; border-radius: 8px; margin-top: 10px; font-size: 0.85rem; color: #666;">
+                        <i class="fas fa-info-circle" style="color: #2d5cc2;"></i>
+                        Our operations are based in Dubai for your convenience. We're registered in St Vincent & Grenadines under international financial regulations.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Team Stats -->
+            <div class="support-team">
+                <h3>Our Support Team</h3>
+                <div class="team-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Queries Resolved</span>
+                        <span class="stat-value">50,000+</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Average Rating</span>
+                        <span class="stat-value">⭐ 4.8/5</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">First Response Time</span>
+                        <span class="stat-value">&lt;2 hrs</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Resolution Rate</span>
+                        <span class="stat-value">96%</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        "The support team helped me resolve my withdrawal issue in less than an hour. Professional, friendly, and very knowledgeable!"
+                    </div>
+                    <div class="testimonial-author">— Sarah M.</div>
+                    <div class="testimonial-role">Verified Trader</div>
+                </div>
+
+                <div class="testimonial-box" style="margin-top: 15px;">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        "Best customer service I've experienced with any broker. They actually care about helping, not just selling."
+                    </div>
+                    <div class="testimonial-author">— Ahmed K.</div>
+                    <div class="testimonial-role">Pro Trader</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Chat Widget -->
+    <div class="live-chat-widget">
+        <button class="chat-button" onclick="openLiveChat()">
+            <i class="fas fa-comment-dots"></i>
+            <span>Live Chat</span>
+            <span class="chat-indicator"></span>
+        </button>
+    </div>
+
+    <script>
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isActive = answer.classList.contains('active');
+            
+            // Close all FAQs
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelectorAll('.faq-question').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked FAQ if it wasn't active
+            if (!isActive) {
+                answer.classList.add('active');
+                element.classList.add('active');
+            }
+        }
+
+        // Topic Selection
+        let selectedTopic = '';
+        function selectTopic(button, topic) {
+            document.querySelectorAll('.topic-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+            selectedTopic = topic;
+            document.getElementById('topic').value = topic;
+        }
+
+        // Email Validation
+        function validateEmail(input) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const errorDiv = document.getElementById('email-error');
+            
+            if (input.value && !emailRegex.test(input.value)) {
+                input.classList.add('input-error');
+                input.classList.remove('input-valid');
+                errorDiv.classList.add('show');
+                return false;
+            } else if (input.value) {
+                input.classList.remove('input-error');
+                input.classList.add('input-valid');
+                errorDiv.classList.remove('show');
+                return true;
+            }
+            return true;
+        }
+
+        // Phone Validation
+        function validatePhone(input) {
+            if (!input.value) return true; // Optional field
+            
+            const phoneRegex = /^[\d\s\+\-\(\)]+$/;
+            const errorDiv = document.getElementById('phone-error');
+            
+            if (!phoneRegex.test(input.value) || input.value.length < 8) {
+                input.classList.add('input-error');
+                errorDiv.classList.add('show');
+                return false;
+            } else {
+                input.classList.remove('input-error');
+                input.classList.add('input-valid');
+                errorDiv.classList.remove('show');
+                return true;
+            }
+        }
+
+        // Form Submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Validate required fields
+            if (!validateEmail(document.getElementById('email'))) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+            
+            if (message.length < 20) {
+                alert('Please enter a more detailed message (minimum 20 characters)');
+                return false;
+            }
+            
+            // Disable submit button
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Generate ticket number
+                const ticketNumber = 'VEST-' + Math.floor(10000 + Math.random() * 90000);
+                document.getElementById('ticketNumber').textContent = ticketNumber;
+                document.getElementById('confirmEmail').textContent = email;
+                
+                // Hide form, show success message
+                document.getElementById('contactForm').style.display = 'none';
+                document.getElementById('successMessage').classList.add('show');
+                
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                
+                // Scroll to success message
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+            }, 1500);
+            
+            return false;
+        }
+
+        // Live Chat
+        function openLiveChat() {
+            alert('Live Chat Widget would open here!\n\nIn production, this would integrate with:\n- Intercom\n- Tawk.to\n- LiveChat\n- Zendesk Chat\n- or custom solution');
+        }
+
+        // Real-time Input Validation
+        document.getElementById('email').addEventListener('input', function() {
+            if (this.value.length > 0) {
+                validateEmail(this);
+            }
+        });
+
+        // Message character counter
+        const messageField = document.getElementById('message');
+        messageField.addEventListener('input', function() {
+            const currentLength = this.value.length;
+            const minLength = 20;
+            
+            if (currentLength >= minLength) {
+                this.classList.add('input-valid');
+            } else {
+                this.classList.remove('input-valid');
+            }
+        });
+    </script>
+</body>
+</html>

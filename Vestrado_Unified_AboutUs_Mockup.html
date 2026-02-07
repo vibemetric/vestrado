@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Vestrado | FCA-Regulated Forex & CFD Broker Since 20XX</title>
+    <meta name="description" content="Vestrado is a trusted FCA-regulated forex broker serving 600,000+ traders worldwide. Discover our mission, values, and commitment to secure, transparent trading with cutting-edge technology.">
+    
+    <!-- Compliance Meta Tags -->
+    <meta name="regulatory-status" content="FCA Regulated - License #XXXXXX">
+    <meta name="financial-product-type" content="CFD and Forex Trading">
+    <meta name="risk-warning" content="76.4% of retail investor accounts lose money when trading CFDs">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Vestrado | Trusted Global Forex Broker">
+    <meta property="og:description" content="Learn about Vestrado's mission to empower traders with transparent, regulated access to global markets. FCA-regulated since 20XX.">
+    <meta property="og:image" content="https://vestrado.com/wp-content/uploads/2024/08/aboutTop-1.jpg">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ========================================
+           RESET & BASE STYLES
+        ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========================================
+           TRUST & COMPLIANCE BAR
+        ======================================== */
+        .trust-bar {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 12px 0;
+            font-size: 13px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+        
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 12px;
+        }
+        
+        .badge i {
+            font-size: 14px;
+            color: #9aea00;
+        }
+        
+        .regulatory-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 12px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .live-stats {
+            background: rgba(255,255,255,0.15);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+        }
+        
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #9aea00;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+        }
+        
+        /* ========================================
+           HEADER
+        ======================================== */
+        .header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 40px;
+            z-index: 999;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: #1a3a8f;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 800;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .main-nav a:hover,
+        .main-nav a.active {
+            background: #f0f7ff;
+            color: #2d5cc2;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn-login {
+            color: #2d5cc2;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        
+        .btn-login:hover {
+            background: #f0f7ff;
+        }
+        
+        .btn-register {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(154, 234, 0, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .btn-register:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(154, 234, 0, 0.4);
+        }
+        
+        /* ========================================
+           HERO SECTION - WHO WE ARE
+        ======================================== */
+        .hero {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(154, 234, 0, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(154, 234, 0, 0.15);
+            color: #1a3a8f;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 20px;
+            border: 2px solid rgba(154, 234, 0, 0.3);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: #1a3a8f;
+            font-weight: 800;
+        }
+        
+        .hero-highlight {
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-tagline {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero-intro {
+            font-size: 1.15rem;
+            color: #555;
+            max-width: 850px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+        
+        /* Trust Logos Row */
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .trust-logo-item {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .trust-logo-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .trust-logo-icon {
+            font-size: 32px;
+            color: #2d5cc2;
+        }
+        
+        .trust-logo-text {
+            text-align: left;
+        }
+        
+        .trust-logo-label {
+            font-size: 11px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .trust-logo-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a3a8f;
+        }
+        
+        /* Stats Row */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+            transition: all 0.3s;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+        }
+        
+        .stat-icon {
+            font-size: 36px;
+            color: #9aea00;
+            margin-bottom: 15px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1a3a8f;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        /* ========================================
+           SECTION 2 - WHY CHOOSE VESTRADO
+        ======================================== */
+        .why-choose {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: rgba(45, 92, 194, 0.1);
+            color: #2d5cc2;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .usp-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .usp-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+        
+        .usp-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: #9aea00;
+        }
+        
+        .usp-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .usp-icon {
+            font-size: 48px;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .usp-card h3 {
+            font-size: 1.5rem;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .usp-features {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .usp-features li {
+            padding: 10px 0;
+            color: #555;
+            font-size: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .usp-features li::before {
+            content: '✓';
+            color: #9aea00;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        /* ========================================
+           SECTION 3 - VALUES & VISION
+        ======================================== */
+        .values-vision {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8f0f7 100%);
+            position: relative;
+        }
+        
+        .values-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .values-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            margin-top: 50px;
+        }
+        
+        .mission-box {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-left: 5px solid #9aea00;
+        }
+        
+        .mission-label {
+            font-size: 13px;
+            color: #9aea00;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        
+        .mission-statement {
+            font-size: 1.4rem;
+            line-height: 1.7;
+            color: #333;
+            font-weight: 500;
+            font-style: italic;
+        }
+        
+        .values-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .value-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            display: flex;
+            gap: 20px;
+            align-items: start;
+            transition: all 0.3s;
+        }
+        
+        .value-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .value-icon {
+            font-size: 32px;
+            color: #2d5cc2;
+            min-width: 50px;
+        }
+        
+        .value-content h4 {
+            font-size: 1.2rem;
+            color: #1a3a8f;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .value-content p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        /* Timeline (Optional) */
+        .timeline {
+            margin-top: 60px;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+        
+        .timeline h3 {
+            text-align: center;
+            font-size: 2rem;
+            color: #1a3a8f;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+        
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .timeline-item {
+            text-align: center;
+            padding: 25px 15px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+            position: relative;
+        }
+        
+        .timeline-item::after {
+            content: '→';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #9aea00;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .timeline-year {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #9aea00;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-event {
+            font-size: 14px;
+            color: #555;
+            font-weight: 600;
+        }
+        
+        /* ========================================
+           SECTION 4 - REGULATION & SECURITY
+        ======================================== */
+        .regulation-security {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .regulation-security::before {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -20%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(154, 234, 0, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .regulation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .regulation-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .regulation-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .regulation-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .security-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+        
+        .security-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+            border-color: #9aea00;
+        }
+        
+        .security-icon {
+            font-size: 48px;
+            color: #9aea00;
+            margin-bottom: 20px;
+        }
+        
+        .security-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .security-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .license-info {
+            background: rgba(154, 234, 0, 0.2);
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-block;
+        }
+        
+        .verify-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: white;
+            color: #1a3a8f;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .verify-btn:hover {
+            background: #9aea00;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* ========================================
+           SECTION 5 - EDUCATION BRIDGE
+        ======================================== */
+        .education-bridge {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .education-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .education-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .education-card {
+            background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+            padding: 50px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            border-color: #9aea00;
+        }
+        
+        .education-icon {
+            font-size: 64px;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .education-card h3 {
+            font-size: 1.8rem;
+            color: #1a3a8f;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .education-description {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+        
+        .education-features {
+            list-style: none;
+            text-align: left;
+            margin: 25px 0;
+        }
+        
+        .education-features li {
+            padding: 10px 0;
+            color: #555;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .education-features li i {
+            color: #9aea00;
+            font-size: 16px;
+        }
+        
+        .education-cta {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 35px;
+            background: linear-gradient(90deg, #2d5cc2 0%, #1a3a8f 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .education-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(45, 92, 194, 0.3);
+        }
+        
+        /* ========================================
+           FINAL CTA SECTION
+        ======================================== */
+        .final-cta {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            text-align: center;
+        }
+        
+        .final-cta-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.8rem;
+            color: #1a3a8f;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+        
+        .final-cta-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .btn-primary-cta {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 8px 25px rgba(154, 234, 0, 0.3);
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-primary-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(154, 234, 0, 0.4);
+        }
+        
+        .btn-secondary-cta {
+            background: white;
+            color: #2d5cc2;
+            padding: 18px 45px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            border: 2px solid #2d5cc2;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-secondary-cta:hover {
+            background: #2d5cc2;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .risk-warning-box {
+            background: rgba(255, 200, 0, 0.1);
+            border: 2px solid rgba(255, 200, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .risk-warning-box i {
+            color: #ff9800;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        
+        .risk-warning-text {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .risk-warning-highlight {
+            font-weight: 700;
+            color: #d84315;
+        }
+        
+        /* ========================================
+           FOOTER
+        ======================================== */
+        .footer {
+            background: #1a2332;
+            color: #ccc;
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-about h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .footer-about p {
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        .footer-column h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #9aea00;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+        }
+        
+        .footer-legal {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        
+        .footer-copyright {
+            font-size: 14px;
+            color: #999;
+        }
+        
+        /* ========================================
+           RESPONSIVE DESIGN
+        ======================================== */
+        @media (max-width: 968px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .usp-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .values-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .security-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .education-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .trust-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.1rem;
+            }
+            
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .timeline-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-item::after {
+                content: '↓';
+                right: 50%;
+                top: auto;
+                bottom: -25px;
+                transform: translateX(50%);
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ========================================
+         TRUST & COMPLIANCE BAR
+    ======================================== -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-badges">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>FCA Regulated</span>
+                </div>
+                <div class="regulatory-badge">
+                    License #XXXXXX
+                </div>
+                <div class="badge">
+                    <i class="fas fa-lock"></i>
+                    <span>Segregated Accounts</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-university"></i>
+                    <span>FSCS Protected</span>
+                </div>
+            </div>
+            <div class="live-stats">
+                <span class="live-dot"></span>
+                <span><strong>1,247</strong> traders online now</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ========================================
+         HEADER
+    ======================================== -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">V</div>
+                <span>VESTRADO</span>
+            </a>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="trading.html">Trading</a></li>
+                    <li><a href="academy.html">Academy</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="https://my.vestrado.com/login" class="btn-login">Log In</a>
+                <a href="https://my.vestrado.com/register" class="btn-register">Start Trading</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- ========================================
+         SECTION 1: HERO - WHO WE ARE
+    ======================================== -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-badge">
+                <i class="fas fa-check-circle"></i> Trusted by 600,000+ Global Traders
+            </div>
+            
+            <h1>
+                <span class="hero-highlight">Vestrado:</span><br>
+                Your Trusted Partner in Global Trading
+            </h1>
+            
+            <p class="hero-tagline">
+                FCA-Regulated • 150+ Instruments • 24/7 Support
+            </p>
+            
+            <p class="hero-intro">
+                <strong>Since 20XX</strong>, Vestrado has been empowering traders worldwide with transparent, technology-driven access to global financial markets. As an FCA-regulated broker, we combine cutting-edge trading platforms with institutional-grade security to help you trade forex, indices, shares, commodities, and cryptocurrencies with confidence.
+            </p>
+            
+            <!-- Trust Logos -->
+            <div class="trust-logos">
+                <div class="trust-logo-item">
+                    <i class="fas fa-shield-halved trust-logo-icon"></i>
+                    <div class="trust-logo-text">
+                        <div class="trust-logo-label">Regulated By</div>
+                        <div class="trust-logo-value">FCA (UK)</div>
+                    </div>
+                </div>
+                
+                <div class="trust-logo-item">
+                    <i class="fas fa-building-columns trust-logo-icon"></i>
+                    <div class="trust-logo-text">
+                        <div class="trust-logo-label">Also Regulated By</div>
+                        <div class="trust-logo-value">ASIC (AU)</div>
+                    </div>
+                </div>
+                
+                <div class="trust-logo-item">
+                    <i class="fas fa-certificate trust-logo-icon"></i>
+                    <div class="trust-logo-text">
+                        <div class="trust-logo-label">Established</div>
+                        <div class="trust-logo-value">20XX</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Row -->
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-number">600K+</div>
+                    <div class="stat-label">Active Traders</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-globe"></i></div>
+                    <div class="stat-number">120+</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Trading Instruments</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-headset"></i></div>
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Customer Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         SECTION 2: WHY CHOOSE VESTRADO
+    ======================================== -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Our Advantages</div>
+                <h2>Why 600,000+ Traders Trust Vestrado</h2>
+                <p class="section-subtitle">
+                    We combine institutional-grade technology, regulatory compliance, and personalized support to deliver an exceptional trading experience across all asset classes.
+                </p>
+            </div>
+            
+            <div class="usp-grid">
+                <!-- USP 1: Technology -->
+                <div class="usp-card">
+                    <div class="usp-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Cutting-Edge Technology</h3>
+                    <p>Trade on the industry's most powerful platforms with lightning-fast execution and advanced charting tools.</p>
+                    <ul class="usp-features">
+                        <li><strong>MetaTrader 5</strong> – Industry-standard platform</li>
+                        <li><strong>0.0 pip spreads</strong> on EUR/USD and major pairs</li>
+                        <li><strong>Sub-50ms execution</strong> speed on average</li>
+                        <li><strong>Advanced charting</strong> with 80+ indicators</li>
+                        <li><strong>Mobile & Desktop</strong> apps available</li>
+                    </ul>
+                </div>
+                
+                <!-- USP 2: Security -->
+                <div class="usp-card">
+                    <div class="usp-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security & Regulation</h3>
+                    <p>Your safety is our top priority. Trade with peace of mind under strict regulatory oversight.</p>
+                    <ul class="usp-features">
+                        <li><strong>FCA Regulated</strong> – License #XXXXXX</li>
+                        <li><strong>ASIC Regulated</strong> – Australian oversight</li>
+                        <li><strong>Segregated Accounts</strong> in Tier-1 banks</li>
+                        <li><strong>Negative Balance Protection</strong> guaranteed</li>
+                        <li><strong>FSCS Protected</strong> up to £85,000</li>
+                    </ul>
+                </div>
+                
+                <!-- USP 3: Support & Education -->
+                <div class="usp-card">
+                    <div class="usp-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education & Support</h3>
+                    <p>From beginners to professionals, we provide the resources and guidance you need to succeed.</p>
+                    <ul class="usp-features">
+                        <li><strong>Free Trading Academy</strong> – 100+ lessons</li>
+                        <li><strong>24/7 Multilingual Support</strong> via chat, phone & email</li>
+                        <li><strong>Weekly Live Webinars</strong> with expert analysts</li>
+                        <li><strong>Dedicated Account Managers</strong> for VIP clients</li>
+                        <li><strong>Economic Calendar</strong> & daily market insights</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         SECTION 3: VALUES & VISION
+    ======================================== -->
+    <section class="values-vision">
+        <div class="values-container">
+            <div class="section-header">
+                <div class="section-badge">What Drives Us</div>
+                <h2>Built on Trust, Driven by Innovation</h2>
+                <p class="section-subtitle">
+                    Our mission and core values guide every decision we make as we strive to become the world's most trusted trading platform.
+                </p>
+            </div>
+            
+            <div class="values-content">
+                <!-- Left: Mission Statement -->
+                <div class="mission-box">
+                    <div class="mission-label">OUR MISSION</div>
+                    <p class="mission-statement">
+                        "To empower traders worldwide with transparent, technology-driven access to global financial markets while upholding the highest standards of security and client protection."
+                    </p>
+                </div>
+                
+                <!-- Right: Core Values -->
+                <div class="values-list">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="value-content">
+                            <h4>Client-First Approach</h4>
+                            <p>Your success is our success. We prioritize your needs with personalized support and competitive trading conditions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="value-content">
+                            <h4>Transparency & Ethics</h4>
+                            <p>Clear pricing, no hidden fees, and honest communication. We believe trust is earned through transparency.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="value-content">
+                            <h4>Continuous Innovation</h4>
+                            <p>We invest in cutting-edge technology and platform improvements to keep you ahead of the market.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="value-content">
+                            <h4>Global Accessibility</h4>
+                            <p>From Singapore to London, we make global markets accessible to traders everywhere, 24/5.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Timeline/Milestones (Optional) -->
+            <div class="timeline">
+                <h3>Our Journey</h3>
+                <div class="timeline-grid">
+                    <div class="timeline-item">
+                        <div class="timeline-year">20XX</div>
+                        <div class="timeline-event">Company Founded</div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">20XX</div>
+                        <div class="timeline-event">FCA License Obtained</div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">20XX</div>
+                        <div class="timeline-event">100,000+ Active Users</div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-event">600,000+ Traders Worldwide</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         SECTION 4: REGULATION & SECURITY
+    ======================================== -->
+    <section class="regulation-security">
+        <div class="regulation-container">
+            <div class="regulation-header">
+                <h2>Your Safety is Our Priority</h2>
+                <p>
+                    As a fully regulated broker, we adhere to the strictest financial standards to protect your funds and ensure fair, transparent trading conditions.
+                </p>
+            </div>
+            
+            <div class="security-grid">
+                <!-- Pillar 1: FCA Regulated -->
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>FCA Regulated</h3>
+                    <p>
+                        Vestrado Ltd is authorized and regulated by the UK Financial Conduct Authority (FCA), one of the world's most respected financial regulators.
+                    </p>
+                    <div class="license-info">
+                        License Number: #XXXXXX
+                    </div>
+                    <a href="https://register.fca.org.uk/" target="_blank" class="verify-btn">
+                        <i class="fas fa-external-link-alt"></i> Verify Our License
+                    </a>
+                </div>
+                
+                <!-- Pillar 2: Segregated Accounts -->
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-vault"></i>
+                    </div>
+                    <h3>Segregated Client Accounts</h3>
+                    <p>
+                        Your funds are kept separate from company operating funds in segregated accounts at Tier-1 global banks, ensuring maximum protection.
+                    </p>
+                    <div class="license-info">
+                        Partner Banks: Barclays, HSBC
+                    </div>
+                </div>
+                
+                <!-- Pillar 3: Negative Balance Protection -->
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Negative Balance Protection</h3>
+                    <p>
+                        You'll never lose more than your account balance. Our negative balance protection ensures you can't go into debt while trading.
+                    </p>
+                    <div class="license-info">
+                        Guaranteed for All Clients
+                    </div>
+                </div>
+                
+                <!-- Pillar 4: FSCS Protected -->
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-umbrella"></i>
+                    </div>
+                    <h3>FSCS Compensation Scheme</h3>
+                    <p>
+                        Eligible UK clients are protected under the Financial Services Compensation Scheme (FSCS) for up to £85,000.
+                    </p>
+                    <div class="license-info">
+                        Up to £85,000 Coverage
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         SECTION 5: EDUCATION BRIDGE
+    ======================================== -->
+    <section class="education-bridge">
+        <div class="education-container">
+            <div class="section-header">
+                <div class="section-badge">Learn & Grow</div>
+                <h2>New to Trading? We've Got You Covered</h2>
+                <p class="section-subtitle">
+                    Whether you're taking your first steps in trading or refining your strategy, our comprehensive educational resources will guide you at every stage of your journey.
+                </p>
+            </div>
+            
+            <div class="education-content">
+                <!-- Left: Academy -->
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Free Trading Academy</h3>
+                    <p class="education-description">
+                        Master the markets with our structured learning path, from forex fundamentals to advanced technical analysis.
+                    </p>
+                    <ul class="education-features">
+                        <li><i class="fas fa-check"></i> <strong>Beginner:</strong> Forex 101 & Risk Management</li>
+                        <li><i class="fas fa-check"></i> <strong>Intermediate:</strong> Technical Analysis & Chart Patterns</li>
+                        <li><i class="fas fa-check"></i> <strong>Advanced:</strong> Trading Psychology & Strategy Development</li>
+                        <li><i class="fas fa-check"></i> <strong>100+ Video Lessons</strong> with downloadable resources</li>
+                    </ul>
+                    <a href="academy.html" class="education-cta">Browse Courses <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Right: Webinars -->
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Weekly Live Webinars</h3>
+                    <p class="education-description">
+                        Join 1,000+ traders every week for live market analysis, trading strategies, and Q&A sessions with our expert analysts.
+                    </p>
+                    <ul class="education-features">
+                        <li><i class="fas fa-check"></i> <strong>Market Reviews:</strong> Weekly analysis of major forex pairs</li>
+                        <li><i class="fas fa-check"></i> <strong>Strategy Sessions:</strong> Live trading demonstrations</li>
+                        <li><i class="fas fa-check"></i> <strong>Expert Insights:</strong> Macro trends & fundamental analysis</li>
+                        <li><i class="fas fa-check"></i> <strong>Replay Access:</strong> Watch recordings anytime</li>
+                    </ul>
+                    <a href="webinars.html" class="education-cta">Register for Next Webinar <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         FINAL CTA SECTION
+    ======================================== -->
+    <section class="final-cta">
+        <div class="final-cta-container">
+            <h2>Ready to Start Your Trading Journey?</h2>
+            <p class="final-cta-subtitle">
+                Join 600,000+ traders worldwide who trust Vestrado for secure, transparent access to global financial markets. Open your account in under 2 minutes.
+            </p>
+            
+            <div class="cta-buttons">
+                <a href="https://my.vestrado.com/register" class="btn-primary-cta">
+                    <i class="fas fa-rocket"></i> Try FREE $10,000 Demo
+                </a>
+                <a href="https://my.vestrado.com/register?account=live" class="btn-secondary-cta">
+                    <i class="fas fa-chart-line"></i> Open Live Account
+                </a>
+            </div>
+            
+            <div class="risk-warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span class="risk-warning-text">
+                    <strong class="risk-warning-highlight">Risk Warning:</strong> CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. <strong class="risk-warning-highlight">76.4% of retail investor accounts lose money</strong> when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.
+                </span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- About Column -->
+                <div class="footer-about">
+                    <h3>VESTRADO</h3>
+                    <p>
+                        Vestrado Ltd is a UK-based FCA-regulated forex and CFD broker committed to providing transparent, secure access to global financial markets. Trade with confidence on MetaTrader 5 with competitive spreads and institutional-grade execution.
+                    </p>
+                    <p><strong>Regulatory Information:</strong><br>
+                    FCA License: #XXXXXX<br>
+                    ASIC License: #YYYYYY</p>
+                </div>
+                
+                <!-- Products Column -->
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="forex.html">Forex</a></li>
+                        <li><a href="indices.html">Indices</a></li>
+                        <li><a href="shares.html">Shares</a></li>
+                        <li><a href="commodities.html">Commodities</a></li>
+                        <li><a href="cryptocurrencies.html">Cryptocurrencies</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Trading Column -->
+                <div class="footer-column">
+                    <h4>Trading</h4>
+                    <ul class="footer-links">
+                        <li><a href="metatrader5.html">MetaTrader 5</a></li>
+                        <li><a href="accounts.html">Account Types</a></li>
+                        <li><a href="deposit.html">Deposit & Withdrawal</a></li>
+                        <li><a href="leverage.html">Leverage & Margin</a></li>
+                        <li><a href="copytrading.html">Copy Trading</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Column -->
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="legal.html">Legal Documents</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <strong>Risk Warning:</strong> Trading Forex and CFDs involves significant risk and can result in the loss of your invested capital. You should not invest more than you can afford to lose and should ensure that you fully understand the risks involved. Trading leveraged products may not be suitable for all investors. Before trading, please take into consideration your level of experience, investment objectives and seek independent financial advice if necessary.<br><br>
+                    
+                    <strong>Restricted Regions:</strong> Vestrado Ltd is unable to provide services to residents of certain jurisdictions including: Afghanistan, Australia, Albania, Belarus, Canada, China, Iran, Iraq, North Korea, Russia, Syria, USA, and other restricted territories as per regulatory requirements.<br><br>
+                    
+                    The website (https://vestrado.com) is operated by Vestrado Ltd, a company registered in England and Wales (Company No. XXXXXXX). Registered Office: [Full Legal Address, London, UK]. Vestrado Ltd is authorized and regulated by the Financial Conduct Authority (FCA Reference Number: XXXXXX).
+                </div>
+                
+                <div class="footer-copyright">
+                    Copyright © 2025 Vestrado Ltd. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Simple JavaScript for smooth scroll behavior -->
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

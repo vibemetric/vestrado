@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Tutorials - Step-by-Step Guides for MT5, Deposits & Trading | Vestrado Academy</title>
+    <meta name="description" content="Browse 50+ video tutorials covering account setup, MT5 platform, deposits, withdrawals, and trading strategies. Find answers in under 30 seconds.">
+    
+    <!-- Educational Schema -->
+    <meta name="educational-organization" content="Vestrado Academy">
+    <meta name="tutorial-count" content="50+">
+    <meta name="average-completion" content="87%">
+    <meta name="help-success-rate" content="92%">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vestrado Academy Tutorials - Self-Service Help Center">
+    <meta property="og:description" content="Quick video guides for everything: Account setup, MT5, deposits, and more. 92% find solutions without contacting support.">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ==================== RESET & BASE ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
+        
+        /* ==================== TRUST BAR ==================== */
+        .academy-trust-bar {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 10px 0;
+            font-size: 13px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .badge i {
+            font-size: 16px;
+            color: #9aea00;
+        }
+        
+        /* ==================== HEADER ==================== */
+        .header {
+            background: white;
+            padding: 18px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 41px;
+            z-index: 999;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-text {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1a3a8f;
+        }
+        
+        .academy-badge {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .main-nav a:hover,
+        .main-nav a.active {
+            background: #f0f7ff;
+            color: #2d5cc2;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .btn-login {
+            background: transparent;
+            color: #2d5cc2;
+            border: 2px solid #2d5cc2;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .btn-login:hover {
+            background: #2d5cc2;
+            color: white;
+        }
+        
+        .btn-join {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .btn-join:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(154, 234, 0, 0.3);
+        }
+        
+        /* ==================== HERO SECTION ==================== */
+        .hero {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+            opacity: 0.5;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .hero-header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .hero-header p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* ==================== SEARCH & FILTER SECTION ==================== */
+        .search-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .search-container {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 15px 50px 15px 45px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: #2d5cc2;
+            box-shadow: 0 0 0 3px rgba(45, 92, 194, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 18px;
+        }
+        
+        .clear-search {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            cursor: pointer;
+            font-size: 18px;
+            display: none;
+        }
+        
+        .clear-search:hover {
+            color: #333;
+        }
+        
+        .filter-button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 15px 24px;
+            background: #f5f5f5;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .filter-button:hover {
+            background: #e8e8e8;
+            border-color: #ccc;
+        }
+        
+        .filter-button.active {
+            background: #2d5cc2;
+            color: white;
+            border-color: #2d5cc2;
+        }
+        
+        /* ==================== MAIN CONTENT LAYOUT ==================== */
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 30px;
+        }
+        
+        /* ==================== SIDEBAR FILTERS ==================== */
+        .sidebar-filters {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            height: fit-content;
+            position: sticky;
+            top: 140px;
+        }
+        
+        .filter-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .filter-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .filter-title {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        
+        .filter-option:hover {
+            background: #f5f5f5;
+        }
+        
+        .filter-option input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #2d5cc2;
+        }
+        
+        .filter-option label {
+            flex: 1;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+        }
+        
+        .filter-count {
+            font-size: 12px;
+            color: #999;
+            background: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+        
+        .clear-filters {
+            background: transparent;
+            border: 2px solid #e0e0e0;
+            color: #666;
+            padding: 10px;
+            border-radius: 6px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+        
+        .clear-filters:hover {
+            background: #f5f5f5;
+            border-color: #ccc;
+        }
+        
+        /* ==================== CONTENT AREA ==================== */
+        .content-area {
+            min-height: 500px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        
+        .breadcrumb a {
+            color: #2d5cc2;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb span {
+            color: #999;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a3a8f;
+        }
+        
+        .results-info {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .sort-dropdown {
+            padding: 10px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+        }
+        
+        /* ==================== CATEGORY CARDS ==================== */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-color: #9aea00;
+        }
+        
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e4edf5 100%);
+            color: #2d5cc2;
+        }
+        
+        .category-card:nth-child(1) .category-icon {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            color: #2e7d32;
+        }
+        
+        .category-card:nth-child(2) .category-icon {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            color: #1565c0;
+        }
+        
+        .category-card:nth-child(3) .category-icon {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            color: #ef6c00;
+        }
+        
+        .category-card:nth-child(4) .category-icon {
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+            color: #c2185b;
+        }
+        
+        .category-card:nth-child(5) .category-icon {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            color: #7b1fa2;
+        }
+        
+        .category-card:nth-child(6) .category-icon {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+            color: #f57f17;
+        }
+        
+        .category-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 8px;
+        }
+        
+        .category-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .category-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 13px;
+            color: #999;
+        }
+        
+        .category-meta i {
+            color: #2d5cc2;
+        }
+        
+        /* ==================== TUTORIAL CARDS ==================== */
+        .tutorials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .tutorial-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .tutorial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-color: #9aea00;
+        }
+        
+        .tutorial-thumbnail {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e1e8f0 0%, #d0dbe5 100%);
+            overflow: hidden;
+        }
+        
+        .tutorial-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #2d5cc2;
+            transition: all 0.3s;
+        }
+        
+        .tutorial-card:hover .play-overlay {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        
+        .tutorial-duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .update-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .tutorial-content {
+            padding: 20px;
+        }
+        
+        .tutorial-meta-top {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .level-badge {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .level-badge.beginner {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .level-badge.intermediate {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        
+        .level-badge.advanced {
+            background: #fce4ec;
+            color: #c2185b;
+        }
+        
+        .category-tag {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            background: #f0f0f0;
+            color: #666;
+        }
+        
+        .tutorial-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .tutorial-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .tutorial-meta-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .tutorial-stats {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            font-size: 13px;
+            color: #999;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .stat-item i {
+            color: #2d5cc2;
+        }
+        
+        .tutorial-rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #f57c00;
+        }
+        
+        .updated-date {
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
+        }
+        
+        /* ==================== HELP SECTION ==================== */
+        .help-section {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e4edf5 100%);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .help-section h3 {
+            font-size: 24px;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+        }
+        
+        .help-section p {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .help-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .help-btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        
+        .help-btn.primary {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+        }
+        
+        .help-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(154, 234, 0, 0.3);
+        }
+        
+        .help-btn.secondary {
+            background: white;
+            color: #2d5cc2;
+            border: 2px solid #2d5cc2;
+        }
+        
+        .help-btn.secondary:hover {
+            background: #2d5cc2;
+            color: white;
+        }
+        
+        .response-time {
+            font-size: 13px;
+            color: #999;
+            margin-top: 15px;
+        }
+        
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: linear-gradient(135deg, #1a3a8f 0%, #0d1f4a 100%);
+            color: white;
+            padding: 50px 20px 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-brand h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h4 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #9aea00;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+        
+        /* ==================== MOBILE RESPONSIVE ==================== */
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar-filters {
+                position: relative;
+                top: 0;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-header h1 {
+                font-size: 32px;
+            }
+            
+            .main-nav {
+                display: none;
+            }
+            
+            .search-container {
+                flex-direction: column;
+            }
+            
+            .search-box {
+                width: 100%;
+                min-width: 100%;
+            }
+            
+            .tutorials-grid,
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+        
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .tutorial-card,
+        .category-card {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        /* ==================== UTILITY CLASSES ==================== */
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-40 {
+            margin-top: 40px;
+        }
+        
+        .mb-40 {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Trust Bar -->
+    <div class="academy-trust-bar">
+        <div class="trust-container">
+            <div class="trust-badges">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>FCA Regulated</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-users"></i>
+                    <span>15,000+ Active Learners</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-video"></i>
+                    <span>50+ Video Tutorials</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-clock"></i>
+                    <span>Updated Weekly</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-text">VESTRADO</div>
+                <span class="academy-badge">ACADEMY</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#webinars">Webinars</a></li>
+                    <li><a href="#tutorials" class="active">Tutorials</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#login" class="btn-login">Login</a>
+                <a href="#join" class="btn-join">Join Free</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-header">
+                <h1>Video Tutorials & Step-by-Step Guides</h1>
+                <p>Find quick answers to your questions. 92% of users solve their issues without contacting support. Browse by category or search below.</p>
+            </div>
+            
+            <!-- Search & Filter -->
+            <div class="search-section">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Search tutorials... (e.g., 'deposit', 'MT5 login', 'verification')" id="searchInput">
+                        <i class="fas fa-times clear-search" id="clearSearch"></i>
+                    </div>
+                    <button class="filter-button" id="filterToggle">
+                        <i class="fas fa-filter"></i>
+                        <span>Filters</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar-filters">
+            <div class="filter-section">
+                <h3 class="filter-title">Category</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="getting-started">
+                        <span>Getting Started</span>
+                        <span class="filter-count">12</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="mt5">
+                        <span>MT5 Platform</span>
+                        <span class="filter-count">15</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="deposits">
+                        <span>Deposits & Withdrawals</span>
+                        <span class="filter-count">8</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="risk">
+                        <span>Risk Management</span>
+                        <span class="filter-count">6</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="account">
+                        <span>Account Management</span>
+                        <span class="filter-count">5</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="troubleshooting">
+                        <span>Troubleshooting</span>
+                        <span class="filter-count">4</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <h3 class="filter-title">Difficulty Level</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="level" value="beginner">
+                        <span>Beginner</span>
+                        <span class="filter-count">25</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="level" value="intermediate">
+                        <span>Intermediate</span>
+                        <span class="filter-count">18</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="level" value="advanced">
+                        <span>Advanced</span>
+                        <span class="filter-count">7</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="filter-section">
+                <h3 class="filter-title">Duration</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="duration" value="short">
+                        <span>Under 3 minutes</span>
+                        <span class="filter-count">22</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="duration" value="medium">
+                        <span>3-10 minutes</span>
+                        <span class="filter-count">20</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="duration" value="long">
+                        <span>10+ minutes</span>
+                        <span class="filter-count">8</span>
+                    </label>
+                </div>
+            </div>
+            
+            <button class="clear-filters">Clear All Filters</button>
+        </aside>
+        
+        <!-- Content Area -->
+        <main class="content-area">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="#home">Home</a>
+                <span>›</span>
+                <a href="#academy">Academy</a>
+                <span>›</span>
+                <span>Tutorials</span>
+            </nav>
+            
+            <!-- Section Header -->
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Browse by Category</h2>
+                    <p class="results-info">Find what you need in seconds</p>
+                </div>
+            </div>
+            
+            <!-- Category Cards -->
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="category-title">Getting Started</h3>
+                    <p class="category-description">Account opening, verification, and your first steps with Vestrado</p>
+                    <div class="category-meta">
+                        <span><i class="fas fa-play-circle"></i> 12 tutorials</span>
+                        <span><i class="fas fa-clock"></i> ~45 min total</span>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="category-title">MT5 Platform</h3>
+                    <p class="category-description">Download, login, place orders, use indicators, and master the platform</p>
+                    <div class="category-meta">
+                        <span><i class="fas fa-play-circle"></i> 15 tutorials</span>
+                        <span><i class="fas fa-clock"></i> ~1h 20min total</span>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3 class="category-title">Deposits & Withdrawals</h3>
+                    <p class="category-description">Payment methods, processing times, and troubleshooting guides</p>
+                    <div class="category-meta">
+                        <span><i class="fas fa-play-circle"></i> 8 tutorials</span>
+                        <span><i class="fas fa-clock"></i> ~30 min total</span>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="category-title">Risk Management</h3>
+                    <p class="category-description">Stop loss, take profit, position sizing, and leverage management</p>
+                    <div class="category-meta">
+                        <span><i class="fas fa-play-circle"></i> 6 tutorials</span>
+                        <span><i class="fas fa-clock"></i> ~25 min total</span>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3 class="category-title">Account Management</h3>
+                    <p class="category-description">Update info, change password, switch account type, and more</p>
+                    <div class="category-meta">
+                        <span><i class="fas fa-play-circle"></i> 5 tutorials</span>
+                        <span><i class="fas fa-clock"></i> ~20 min total</span>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="category-title">Troubleshooting</h3>
+                    <p class="category-description">Login issues, technical errors, and common problems solved</p>
+                    <div class="category-meta">
+                        <span><i class="fas fa-play-circle"></i> 4 tutorials</span>
+                        <span><i class="fas fa-clock"></i> ~15 min total</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- All Tutorials Section -->
+            <div class="section-header mt-40">
+                <div>
+                    <h2 class="section-title">All Tutorials</h2>
+                    <p class="results-info">Showing 50 tutorials</p>
+                </div>
+                <select class="sort-dropdown">
+                    <option value="most-viewed">Most Viewed</option>
+                    <option value="newest">Newest First</option>
+                    <option value="highest-rated">Highest Rated</option>
+                    <option value="shortest">Shortest Duration</option>
+                </select>
+            </div>
+            
+            <!-- Tutorials Grid -->
+            <div class="tutorials-grid">
+                <!-- Tutorial Card 1 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect fill='%23e1e8f0' width='400' height='225'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%232d5cc2'%3EWithdrawal Tutorial%3C/text%3E%3C/svg%3E" alt="How to Request Withdrawals">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="tutorial-duration">2:45</div>
+                        <div class="update-badge">Updated</div>
+                    </div>
+                    <div class="tutorial-content">
+                        <div class="tutorial-meta-top">
+                            <span class="level-badge beginner">Beginner</span>
+                            <span class="category-tag">Deposits & Withdrawals</span>
+                        </div>
+                        <h3 class="tutorial-title">How To Request Withdrawals</h3>
+                        <p class="tutorial-description">Step-by-step guide to withdraw funds from your Vestrado account quickly and securely. Learn about processing times.</p>
+                        <div class="tutorial-meta-bottom">
+                            <div class="tutorial-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>15,234</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>98%</span>
+                                </div>
+                            </div>
+                            <div class="tutorial-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <p class="updated-date">Last updated: Feb 5, 2026</p>
+                    </div>
+                </div>
+                
+                <!-- Tutorial Card 2 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect fill='%23e3f2fd' width='400' height='225'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%232d5cc2'%3EMT5 Setup%3C/text%3E%3C/svg%3E" alt="MT5 Platform Setup">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="tutorial-duration">5:20</div>
+                    </div>
+                    <div class="tutorial-content">
+                        <div class="tutorial-meta-top">
+                            <span class="level-badge beginner">Beginner</span>
+                            <span class="category-tag">MT5 Platform</span>
+                        </div>
+                        <h3 class="tutorial-title">How To Download & Install MT5</h3>
+                        <p class="tutorial-description">Complete guide to downloading MetaTrader 5 on desktop, logging in with your credentials, and basic platform navigation.</p>
+                        <div class="tutorial-meta-bottom">
+                            <div class="tutorial-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>23,891</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>96%</span>
+                                </div>
+                            </div>
+                            <div class="tutorial-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="updated-date">Last updated: Jan 28, 2026</p>
+                    </div>
+                </div>
+                
+                <!-- Tutorial Card 3 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect fill='%23e8f5e9' width='400' height='225'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%232e7d32'%3EAccount Opening%3C/text%3E%3C/svg%3E" alt="Account Opening">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="tutorial-duration">3:15</div>
+                    </div>
+                    <div class="tutorial-content">
+                        <div class="tutorial-meta-top">
+                            <span class="level-badge beginner">Beginner</span>
+                            <span class="category-tag">Getting Started</span>
+                        </div>
+                        <h3 class="tutorial-title">How To Open A Trading Account</h3>
+                        <p class="tutorial-description">Quick walkthrough of the account registration process, required documents, and verification steps to start trading.</p>
+                        <div class="tutorial-meta-bottom">
+                            <div class="tutorial-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>18,567</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>94%</span>
+                                </div>
+                            </div>
+                            <div class="tutorial-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <p class="updated-date">Last updated: Feb 1, 2026</p>
+                    </div>
+                </div>
+                
+                <!-- Tutorial Card 4 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect fill='%23fce4ec' width='400' height='225'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%23c2185b'%3EStop Loss%3C/text%3E%3C/svg%3E" alt="Stop Loss Tutorial">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="tutorial-duration">4:30</div>
+                    </div>
+                    <div class="tutorial-content">
+                        <div class="tutorial-meta-top">
+                            <span class="level-badge intermediate">Intermediate</span>
+                            <span class="category-tag">Risk Management</span>
+                        </div>
+                        <h3 class="tutorial-title">How To Set Stop Loss & Take Profit</h3>
+                        <p class="tutorial-description">Learn to protect your capital by setting stop loss orders and automating your profit targets for better risk management.</p>
+                        <div class="tutorial-meta-bottom">
+                            <div class="tutorial-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>12,443</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>97%</span>
+                                </div>
+                            </div>
+                            <div class="tutorial-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <p class="updated-date">Last updated: Jan 20, 2026</p>
+                    </div>
+                </div>
+                
+                <!-- Tutorial Card 5 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect fill='%23fff3e0' width='400' height='225'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%23ef6c00'%3EDeposit Methods%3C/text%3E%3C/svg%3E" alt="Deposit Tutorial">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="tutorial-duration">3:50</div>
+                        <div class="update-badge">Updated</div>
+                    </div>
+                    <div class="tutorial-content">
+                        <div class="tutorial-meta-top">
+                            <span class="level-badge beginner">Beginner</span>
+                            <span class="category-tag">Deposits & Withdrawals</span>
+                        </div>
+                        <h3 class="tutorial-title">All Deposit Methods Explained</h3>
+                        <p class="tutorial-description">Compare all available deposit options including bank transfer, credit cards, and e-wallets with fees and processing times.</p>
+                        <div class="tutorial-meta-bottom">
+                            <div class="tutorial-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>14,221</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>95%</span>
+                                </div>
+                            </div>
+                            <div class="tutorial-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="updated-date">Last updated: Feb 8, 2026</p>
+                    </div>
+                </div>
+                
+                <!-- Tutorial Card 6 -->
+                <div class="tutorial-card">
+                    <div class="tutorial-thumbnail">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect fill='%23f3e5f5' width='400' height='225'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%237b1fa2'%3EChange IB%3C/text%3E%3C/svg%3E" alt="Change IB Tutorial">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="tutorial-duration">2:10</div>
+                    </div>
+                    <div class="tutorial-content">
+                        <div class="tutorial-meta-top">
+                            <span class="level-badge beginner">Beginner</span>
+                            <span class="category-tag">Account Management</span>
+                        </div>
+                        <h3 class="tutorial-title">How To Change Your IB (Introducing Broker)</h3>
+                        <p class="tutorial-description">Simple steps to update your Introducing Broker information if you want to work with a different partner or advisor.</p>
+                        <div class="tutorial-meta-bottom">
+                            <div class="tutorial-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>8,923</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>93%</span>
+                                </div>
+                            </div>
+                            <div class="tutorial-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <p class="updated-date">Last updated: Jan 15, 2026</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Help Section -->
+            <div class="help-section mt-40">
+                <h3>Still Need Help?</h3>
+                <p>Couldn't find what you were looking for? Our support team is available 24/5 to assist you with any questions.</p>
+                <div class="help-buttons">
+                    <a href="#chat" class="help-btn primary">
+                        <i class="fas fa-comments"></i>
+                        <span>Live Chat</span>
+                    </a>
+                    <a href="#support" class="help-btn secondary">
+                        <i class="fas fa-envelope"></i>
+                        <span>Submit Request</span>
+                    </a>
+                    <a href="#whatsapp" class="help-btn secondary">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+                <p class="response-time"><i class="fas fa-clock"></i> Average response time: 2 hours</p>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>VESTRADO ACADEMY</h3>
+                    <p>Empowering traders with free education, live webinars, and comprehensive trading courses. Join 15,000+ learners mastering the financial markets.</p>
+                    <p style="font-size: 12px; margin-top: 20px;">
+                        <strong>Risk Warning:</strong> CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. 76.4% of retail investor accounts lose money when trading CFDs with this provider.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#webinars">Webinars</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#blog">Trading Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#glossary">Trading Glossary</a></li>
+                        <li><a href="#ebooks">Free E-books</a></li>
+                        <li><a href="#tools">Trading Tools</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#feedback">Feedback</a></li>
+                        <li><a href="#community">Community Forum</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vestrado Ltd. All rights reserved. | <a href="#privacy" style="color: inherit;">Privacy Policy</a> | <a href="#terms" style="color: inherit;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const clearSearch = document.getElementById('clearSearch');
+        
+        searchInput.addEventListener('input', function() {
+            if (this.value.length > 0) {
+                clearSearch.style.display = 'block';
+            } else {
+                clearSearch.style.display = 'none';
+            }
+        });
+        
+        clearSearch.addEventListener('click', function() {
+            searchInput.value = '';
+            this.style.display = 'none';
+            searchInput.focus();
+        });
+        
+        // Filter toggle for mobile
+        const filterToggle = document.getElementById('filterToggle');
+        filterToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            // Add mobile filter drawer logic here
+        });
+        
+        // Tutorial card click handlers
+        document.querySelectorAll('.tutorial-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Handle tutorial click - open video modal or navigate to tutorial page
+                console.log('Tutorial clicked');
+            });
+        });
+        
+        // Category card click handlers
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Handle category click - filter tutorials by category
+                console.log('Category clicked');
+            });
+        });
+        
+        // Clear filters button
+        document.querySelector('.clear-filters').addEventListener('click', function() {
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Courses - Master Forex Trading Step by Step | Vestrado Academy</title>
+    <meta name="description" content="Browse 50+ structured Forex courses from beginner to expert. Track progress, earn certificates, and master trading with our professional learning platform.">
+    
+    <!-- Educational Schema -->
+    <meta name="educational-organization" content="Vestrado Academy">
+    <meta name="course-count" content="54">
+    <meta name="instructor-count" content="12">
+    <meta name="learner-count" content="15,234">
+    <meta name="completion-rate" content="62%">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Educational Courses - Vestrado Academy">
+    <meta property="og:description" content="Master Forex trading with 54 structured courses. From beginner basics to expert strategies.">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ==================== RESET & BASE ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
+        
+        /* ==================== TRUST BAR ==================== */
+        .academy-trust-bar {
+            background: linear-gradient(90deg, #1a3a8f 0%, #2d5cc2 100%);
+            color: white;
+            padding: 10px 0;
+            font-size: 13px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .badge i {
+            font-size: 16px;
+            color: #9aea00;
+        }
+        
+        /* ==================== HEADER ==================== */
+        .header {
+            background: white;
+            padding: 18px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 41px;
+            z-index: 999;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-text {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1a3a8f;
+        }
+        
+        .academy-badge {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .main-nav a:hover,
+        .main-nav a.active {
+            background: #f0f7ff;
+            color: #2d5cc2;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .btn-login {
+            background: transparent;
+            color: #2d5cc2;
+            border: 2px solid #2d5cc2;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-login:hover {
+            background: #2d5cc2;
+            color: white;
+        }
+        
+        .btn-join {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-join:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(154, 234, 0, 0.3);
+        }
+        
+        /* ==================== HERO SECTION ==================== */
+        .hero {
+            padding: 50px 20px 40px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb a {
+            color: #2d5cc2;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .hero-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .hero-header h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: #1a3a8f;
+            font-weight: 800;
+        }
+        
+        .hero-highlight {
+            color: #9aea00;
+            background: rgba(154, 234, 0, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* ==================== PROGRESS DASHBOARD ==================== */
+        .progress-dashboard {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+        
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .dashboard-greeting {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2d5cc2 0%, #1a3a8f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .greeting-text h2 {
+            font-size: 1.5rem;
+            color: #1a3a8f;
+            margin-bottom: 5px;
+        }
+        
+        .greeting-text p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .level-badge {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .level-progress {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        .dashboard-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4f8 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #2d5cc2;
+        }
+        
+        .stat-card.streak {
+            border-left-color: #ff6b35;
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe8e0 100%);
+        }
+        
+        .stat-card.achievements {
+            border-left-color: #9aea00;
+            background: linear-gradient(135deg, #f8ffe0 0%, #f0ffc8 100%);
+        }
+        
+        .stat-card.time {
+            border-left-color: #7b2cbf;
+            background: linear-gradient(135deg, #f5f0ff 0%, #ede8ff 100%);
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 5px;
+        }
+        
+        .stat-detail {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .stat-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        .continue-learning {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 2px dashed #e1e8f0;
+        }
+        
+        .continue-header {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a3a8f;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .continue-course {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            background: linear-gradient(135deg, #f8fbff 0%, #f0f7ff 100%);
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .continue-course:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .continue-thumbnail {
+            width: 120px;
+            height: 80px;
+            border-radius: 8px;
+            background: #e1e8f0;
+            overflow: hidden;
+        }
+        
+        .continue-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .continue-info {
+            flex: 1;
+        }
+        
+        .continue-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a3a8f;
+            margin-bottom: 8px;
+        }
+        
+        .continue-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .progress-bar-container {
+            background: #e1e8f0;
+            height: 8px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+        
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            border-radius: 10px;
+            transition: width 0.3s;
+        }
+        
+        .progress-text {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .continue-action {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+        
+        .continue-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(154, 234, 0, 0.3);
+        }
+        
+        /* ==================== FILTER SYSTEM ==================== */
+        .filter-section {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+        
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .filter-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a3a8f;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .results-count {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .search-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 15px 20px 15px 50px;
+            border: 2px solid #e1e8f0;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #9aea00;
+        }
+        
+        .search-icon-box {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 16px;
+        }
+        
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .filter-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .filter-select {
+            padding: 12px 15px;
+            border: 2px solid #e1e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            background: white;
+            transition: border-color 0.3s;
+        }
+        
+        .filter-select:focus {
+            outline: none;
+            border-color: #2d5cc2;
+        }
+        
+        .quick-filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding-top: 15px;
+            border-top: 2px dashed #e1e8f0;
+        }
+        
+        .quick-filter-label {
+            font-size: 13px;
+            color: #999;
+            font-weight: 600;
+        }
+        
+        .quick-filter-tag {
+            background: #f0f7ff;
+            color: #2d5cc2;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .quick-filter-tag:hover,
+        .quick-filter-tag.active {
+            background: #2d5cc2;
+            color: white;
+            border-color: #2d5cc2;
+        }
+        
+        .clear-filters {
+            background: transparent;
+            color: #666;
+            border: 2px solid #e1e8f0;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .clear-filters:hover {
+            background: #f5f5f5;
+            border-color: #ccc;
+        }
+        
+        /* ==================== COURSE GRID ==================== */
+        .courses-section {
+            padding: 20px 0 60px;
+        }
+        
+        .courses-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        /* ==================== COURSE CARD - REDESIGNED ==================== */
+        .course-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            position: relative;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-color: #9aea00;
+        }
+        
+        .course-badges {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            z-index: 10;
+        }
+        
+        .course-badge {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .badge-trending {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8e53 100%);
+            color: white;
+        }
+        
+        .badge-new {
+            background: linear-gradient(135deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+        }
+        
+        .badge-popular {
+            background: linear-gradient(135deg, #2d5cc2 0%, #1a3a8f 100%);
+            color: white;
+        }
+        
+        .course-thumbnail {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e1e8f0 0%, #d0dbe5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .course-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #2d5cc2;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .course-card:hover .play-overlay {
+            opacity: 1;
+        }
+        
+        .course-content {
+            padding: 25px;
+        }
+        
+        .course-meta {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .level-badge-card {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e4edf5 100%);
+            color: #2d5cc2;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .level-badge-card.beginner {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            color: #2e7d32;
+        }
+        
+        .level-badge-card.intermediate {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            color: #f57c00;
+        }
+        
+        .level-badge-card.expert {
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+            color: #c2185b;
+        }
+        
+        .topic-badge {
+            background: #f0f0f0;
+            color: #666;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .topic-badge.technical {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .topic-badge.fundamental {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .topic-badge.psychology {
+            background: #fff9c4;
+            color: #f57f17;
+        }
+        
+        .topic-badge.risk {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .course-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .course-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .course-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .course-stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .course-stat i {
+            color: #9aea00;
+        }
+        
+        .rating-stars {
+            display: flex;
+            gap: 2px;
+            color: #ffa726;
+        }
+        
+        .learning-outcomes {
+            background: #f8fbff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .outcomes-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1a3a8f;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .outcomes-list {
+            list-style: none;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .outcomes-list li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 5px;
+        }
+        
+        .outcomes-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #9aea00;
+            font-weight: 700;
+        }
+        
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 2px dashed #e1e8f0;
+            gap: 10px;
+        }
+        
+        .completion-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .completion-number {
+            font-weight: 700;
+            color: #9aea00;
+        }
+        
+        .course-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn-start {
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-start:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(154, 234, 0, 0.3);
+        }
+        
+        .btn-save {
+            background: white;
+            color: #2d5cc2;
+            border: 2px solid #2d5cc2;
+            padding: 10px 15px;
+            font-size: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-save:hover {
+            background: #2d5cc2;
+            color: white;
+        }
+        
+        /* Completed State */
+        .course-card.completed {
+            opacity: 0.8;
+        }
+        
+        .course-card.completed .course-thumbnail:after {
+            content: "✓ COMPLETED";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(154, 234, 0, 0.95);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        
+        /* In Progress State */
+        .course-card.in-progress .course-thumbnail:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #e1e8f0;
+        }
+        
+        .course-card.in-progress .course-thumbnail:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #9aea00 0%, #7bcb00 100%);
+            width: var(--progress, 0%);
+        }
+        
+        /* ==================== LOAD MORE ==================== */
+        .load-more-section {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .btn-load-more {
+            background: white;
+            color: #2d5cc2;
+            border: 2px solid #2d5cc2;
+            padding: 15px 40px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-load-more:hover {
+            background: #2d5cc2;
+            color: white;
+        }
+        
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: #1a3a8f;
+            color: white;
+            padding: 50px 20px 30px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-brand h3 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            background: #9aea00;
+            transform: translateY(-3px);
+        }
+        
+        .footer-section h4 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #9aea00;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+        
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .courses-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+            
+            .hero-header h1 {
+                font-size: 2rem;
+            }
+            
+            .dashboard-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .continue-course {
+                flex-direction: column;
+            }
+            
+            .continue-thumbnail {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Trust Bar -->
+    <div class="academy-trust-bar">
+        <div class="trust-container">
+            <div class="trust-badges">
+                <div class="badge">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>15,234+ Active Learners</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>8,500+ Certificates Earned</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-star"></i>
+                    <span>4.8/5.0 Average Rating</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-text">VESTRADO</div>
+                <div class="academy-badge">ACADEMY</div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" class="active">Courses</a></li>
+                    <li><a href="#">Webinars</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="btn-login">Log In</button>
+                <button class="btn-join">Start Learning</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="breadcrumb">
+                <a href="#">Home</a>
+                <span>›</span>
+                <a href="#">Academy</a>
+                <span>›</span>
+                <span>Educational Courses</span>
+            </div>
+            
+            <div class="hero-header">
+                <h1>Master Forex Trading <span class="hero-highlight">Step by Step</span></h1>
+                <p class="hero-subtitle">Choose from 54 structured courses designed to take you from beginner to expert. Track your progress, earn certificates, and trade with confidence.</p>
+            </div>
+            
+            <!-- Progress Dashboard -->
+            <div class="progress-dashboard">
+                <div class="dashboard-header">
+                    <div class="dashboard-greeting">
+                        <div class="user-avatar">JD</div>
+                        <div class="greeting-text">
+                            <h2>Welcome back, John!</h2>
+                            <p>Ready to continue your learning journey?</p>
+                        </div>
+                    </div>
+                    <div class="level-badge">
+                        <i class="fas fa-trophy"></i>
+                        <div>
+                            <div>Level 5 Trader</div>
+                            <div class="level-progress">1,247 XP • 67% to Level 6</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-label">Courses Completed</div>
+                        <div class="stat-value">12 / 54</div>
+                        <div class="stat-detail">+3 this month</div>
+                    </div>
+                    
+                    <div class="stat-card streak">
+                        <div class="stat-label">Learning Streak</div>
+                        <div class="stat-value">🔥 7 Days</div>
+                        <div class="stat-detail">Your best: 14 days</div>
+                    </div>
+                    
+                    <div class="stat-card achievements">
+                        <div class="stat-label">Achievements</div>
+                        <div class="stat-value">8 Badges</div>
+                        <div class="stat-detail">2 away from "Expert Trader"</div>
+                    </div>
+                    
+                    <div class="stat-card time">
+                        <div class="stat-label">Total Learning Time</div>
+                        <div class="stat-value">24h 30m</div>
+                        <div class="stat-detail">+4h 20m this week</div>
+                    </div>
+                </div>
+                
+                <div class="continue-learning">
+                    <div class="continue-header">
+                        <i class="fas fa-play-circle"></i>
+                        Continue Learning
+                    </div>
+                    <div class="continue-course">
+                        <div class="continue-thumbnail">
+                            <img src="https://via.placeholder.com/120x80/2d5cc2/ffffff?text=Technical+Analysis" alt="Course thumbnail">
+                        </div>
+                        <div class="continue-info">
+                            <div class="continue-title">Advanced Candlestick Patterns</div>
+                            <div class="continue-meta">
+                                <span><i class="fas fa-clock"></i> 8 min left</span>
+                                <span><i class="fas fa-book"></i> Lesson 3 of 5</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill" style="width: 75%"></div>
+                            </div>
+                            <div class="progress-text">75% complete</div>
+                        </div>
+                        <button class="continue-action">
+                            <i class="fas fa-play"></i>
+                            Resume
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="courses-section">
+        <div class="courses-container">
+            
+            <!-- Filter System -->
+            <div class="filter-section">
+                <div class="filter-header">
+                    <div class="filter-title">
+                        <i class="fas fa-filter"></i>
+                        Find Your Perfect Course
+                    </div>
+                    <div class="results-count">Showing <strong>54</strong> courses</div>
+                </div>
+                
+                <div class="search-box">
+                    <i class="fas fa-search search-icon-box"></i>
+                    <input type="text" class="search-input" placeholder="Search by topic, skill, or keyword...">
+                </div>
+                
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label class="filter-label">📂 Topic</label>
+                        <select class="filter-select">
+                            <option>All Topics</option>
+                            <option>Technical Analysis</option>
+                            <option>Fundamental Analysis</option>
+                            <option>Trading Psychology</option>
+                            <option>Risk Management</option>
+                            <option>Trading Platforms</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">🎯 Difficulty Level</label>
+                        <select class="filter-select">
+                            <option>All Levels</option>
+                            <option>🌱 Beginner</option>
+                            <option>🎯 Intermediate</option>
+                            <option>🏆 Expert</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">⏱️ Duration</label>
+                        <select class="filter-select">
+                            <option>Any Duration</option>
+                            <option>Quick (<10 min)</option>
+                            <option>Medium (10-30 min)</option>
+                            <option>In-depth (30+ min)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">📊 Sort By</label>
+                        <select class="filter-select">
+                            <option>Most Popular</option>
+                            <option>Highest Rated</option>
+                            <option>Newest First</option>
+                            <option>Shortest First</option>
+                            <option>Most Completed</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="quick-filters">
+                    <span class="quick-filter-label">Quick Filters:</span>
+                    <button class="quick-filter-tag active">🔥 Trending</button>
+                    <button class="quick-filter-tag">✨ New Releases</button>
+                    <button class="quick-filter-tag">🎓 Beginner Friendly</button>
+                    <button class="quick-filter-tag">⭐ Top Rated</button>
+                    <button class="quick-filter-tag">⚡ Under 15 min</button>
+                    <button class="clear-filters">Clear All</button>
+                </div>
+            </div>
+            
+            <!-- Course Cards Grid -->
+            <div class="courses-grid">
+                
+                <!-- Course Card 1 - Trending -->
+                <div class="course-card">
+                    <div class="course-badges">
+                        <div class="course-badge badge-trending">
+                            <i class="fas fa-fire"></i>
+                            Trending
+                        </div>
+                    </div>
+                    <div class="course-thumbnail">
+                        <img src="https://via.placeholder.com/350x200/1a3a8f/ffffff?text=What+is+Forex" alt="Course thumbnail">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="level-badge-card beginner">
+                                <i class="fas fa-seedling"></i>
+                                Beginner
+                            </span>
+                            <span class="topic-badge technical">Technical Analysis</span>
+                        </div>
+                        <h3 class="course-title">What is Forex Trading?</h3>
+                        <p class="course-description">Learn the fundamentals of Forex trading, understand how the currency markets work, and discover why millions trade currencies every day.</p>
+                        
+                        <div class="course-stats">
+                            <div class="course-stat">
+                                <i class="fas fa-clock"></i>
+                                12 minutes
+                            </div>
+                            <div class="course-stat">
+                                <i class="fas fa-book"></i>
+                                1 lesson
+                            </div>
+                            <div class="course-stat rating-stars">
+                                <i class="fas fa-star"></i>
+                                4.9 (3,421)
+                            </div>
+                        </div>
+                        
+                        <div class="learning-outcomes">
+                            <div class="outcomes-title">
+                                <i class="fas fa-lightbulb"></i>
+                                What You'll Learn
+                            </div>
+                            <ul class="outcomes-list">
+                                <li>Understand what Forex trading means</li>
+                                <li>Identify major currency pairs</li>
+                                <li>Recognize market participants</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="course-footer">
+                            <div class="completion-badge">
+                                <i class="fas fa-users"></i>
+                                <span><span class="completion-number">15,234</span> students</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn-start">
+                                    <i class="fas fa-play"></i>
+                                    Start Learning
+                                </button>
+                                <button class="btn-save">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course Card 2 - New -->
+                <div class="course-card">
+                    <div class="course-badges">
+                        <div class="course-badge badge-new">
+                            <i class="fas fa-sparkles"></i>
+                            New
+                        </div>
+                    </div>
+                    <div class="course-thumbnail">
+                        <img src="https://via.placeholder.com/350x200/2d5cc2/ffffff?text=Trading+Psychology" alt="Course thumbnail">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="level-badge-card intermediate">
+                                <i class="fas fa-chart-line"></i>
+                                Intermediate
+                            </span>
+                            <span class="topic-badge psychology">Trading Psychology</span>
+                        </div>
+                        <h3 class="course-title">Master Your Trading Emotions</h3>
+                        <p class="course-description">Discover psychological strategies to control fear and greed. Learn how professional traders maintain discipline and emotional balance.</p>
+                        
+                        <div class="course-stats">
+                            <div class="course-stat">
+                                <i class="fas fa-clock"></i>
+                                28 minutes
+                            </div>
+                            <div class="course-stat">
+                                <i class="fas fa-book"></i>
+                                4 lessons
+                            </div>
+                            <div class="course-stat rating-stars">
+                                <i class="fas fa-star"></i>
+                                4.8 (892)
+                            </div>
+                        </div>
+                        
+                        <div class="learning-outcomes">
+                            <div class="outcomes-title">
+                                <i class="fas fa-lightbulb"></i>
+                                What You'll Learn
+                            </div>
+                            <ul class="outcomes-list">
+                                <li>Control emotional trading decisions</li>
+                                <li>Build mental resilience & discipline</li>
+                                <li>Overcome fear of loss</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="course-footer">
+                            <div class="completion-badge">
+                                <i class="fas fa-users"></i>
+                                <span><span class="completion-number">2,341</span> students</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn-start">
+                                    <i class="fas fa-play"></i>
+                                    Start Learning
+                                </button>
+                                <button class="btn-save">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course Card 3 - Popular -->
+                <div class="course-card">
+                    <div class="course-badges">
+                        <div class="course-badge badge-popular">
+                            <i class="fas fa-crown"></i>
+                            Most Popular
+                        </div>
+                    </div>
+                    <div class="course-thumbnail">
+                        <img src="https://via.placeholder.com/350x200/9aea00/ffffff?text=Candlestick+Patterns" alt="Course thumbnail">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="level-badge-card intermediate">
+                                <i class="fas fa-chart-line"></i>
+                                Intermediate
+                            </span>
+                            <span class="topic-badge technical">Technical Analysis</span>
+                        </div>
+                        <h3 class="course-title">Complete Candlestick Patterns Guide</h3>
+                        <p class="course-description">Master 20+ essential candlestick patterns. Learn to read price action like a pro and predict market movements with confidence.</p>
+                        
+                        <div class="course-stats">
+                            <div class="course-stat">
+                                <i class="fas fa-clock"></i>
+                                45 minutes
+                            </div>
+                            <div class="course-stat">
+                                <i class="fas fa-book"></i>
+                                8 lessons
+                            </div>
+                            <div class="course-stat rating-stars">
+                                <i class="fas fa-star"></i>
+                                4.9 (12,567)
+                            </div>
+                        </div>
+                        
+                        <div class="learning-outcomes">
+                            <div class="outcomes-title">
+                                <i class="fas fa-lightbulb"></i>
+                                What You'll Learn
+                            </div>
+                            <ul class="outcomes-list">
+                                <li>Identify 20+ candlestick patterns</li>
+                                <li>Read market sentiment from price</li>
+                                <li>Apply patterns to real trades</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="course-footer">
+                            <div class="completion-badge">
+                                <i class="fas fa-users"></i>
+                                <span><span class="completion-number">28,941</span> students</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn-start">
+                                    <i class="fas fa-play"></i>
+                                    Start Learning
+                                </button>
+                                <button class="btn-save">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course Card 4 - In Progress -->
+                <div class="course-card in-progress" style="--progress: 75%">
+                    <div class="course-thumbnail">
+                        <img src="https://via.placeholder.com/350x200/ff6b35/ffffff?text=Risk+Management" alt="Course thumbnail">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="level-badge-card beginner">
+                                <i class="fas fa-seedling"></i>
+                                Beginner
+                            </span>
+                            <span class="topic-badge risk">Risk Management</span>
+                        </div>
+                        <h3 class="course-title">Risk Management Fundamentals</h3>
+                        <p class="course-description">Learn essential risk management strategies to protect your capital. Understand position sizing, stop-loss, and risk-reward ratios.</p>
+                        
+                        <div class="course-stats">
+                            <div class="course-stat">
+                                <i class="fas fa-clock"></i>
+                                22 minutes
+                            </div>
+                            <div class="course-stat">
+                                <i class="fas fa-book"></i>
+                                5 lessons
+                            </div>
+                            <div class="course-stat rating-stars">
+                                <i class="fas fa-star"></i>
+                                4.7 (5,234)
+                            </div>
+                        </div>
+                        
+                        <div class="learning-outcomes">
+                            <div class="outcomes-title">
+                                <i class="fas fa-lightbulb"></i>
+                                What You'll Learn
+                            </div>
+                            <ul class="outcomes-list">
+                                <li>Calculate proper position sizes</li>
+                                <li>Set effective stop-loss levels</li>
+                                <li>Manage risk-reward ratios</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="course-footer">
+                            <div class="completion-badge">
+                                <i class="fas fa-chart-line"></i>
+                                <span>75% complete • <span class="completion-number">8 min</span> left</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn-start">
+                                    <i class="fas fa-play"></i>
+                                    Continue
+                                </button>
+                                <button class="btn-save">
+                                    <i class="fas fa-redo"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course Card 5 - Completed -->
+                <div class="course-card completed">
+                    <div class="course-thumbnail">
+                        <img src="https://via.placeholder.com/350x200/7b2cbf/ffffff?text=Currency+Pairs" alt="Course thumbnail">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="level-badge-card beginner">
+                                <i class="fas fa-seedling"></i>
+                                Beginner
+                            </span>
+                            <span class="topic-badge fundamental">Fundamentals</span>
+                        </div>
+                        <h3 class="course-title">Understanding Currency Pairs</h3>
+                        <p class="course-description">Explore how currency pairs work, learn about major, minor, and exotic pairs, and understand bid-ask spreads.</p>
+                        
+                        <div class="course-stats">
+                            <div class="course-stat">
+                                <i class="fas fa-clock"></i>
+                                15 minutes
+                            </div>
+                            <div class="course-stat">
+                                <i class="fas fa-book"></i>
+                                3 lessons
+                            </div>
+                            <div class="course-stat rating-stars">
+                                <i class="fas fa-star"></i>
+                                4.8 (8,123)
+                            </div>
+                        </div>
+                        
+                        <div class="learning-outcomes">
+                            <div class="outcomes-title">
+                                <i class="fas fa-lightbulb"></i>
+                                What You Learned
+                            </div>
+                            <ul class="outcomes-list">
+                                <li>Understand major currency pairs ✓</li>
+                                <li>Read currency quotes correctly ✓</li>
+                                <li>Identify profitable pair types ✓</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="course-footer">
+                            <div class="completion-badge">
+                                <i class="fas fa-check-circle"></i>
+                                <span style="color: #9aea00; font-weight: 700;">Completed • Certificate Earned</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn-start" style="background: #e1e8f0; color: #666;">
+                                    <i class="fas fa-redo"></i>
+                                    Review Again
+                                </button>
+                                <button class="btn-save">
+                                    <i class="fas fa-certificate"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course Card 6 - Expert Level -->
+                <div class="course-card">
+                    <div class="course-badges">
+                        <div class="course-badge badge-new">
+                            <i class="fas fa-sparkles"></i>
+                            New
+                        </div>
+                    </div>
+                    <div class="course-thumbnail">
+                        <img src="https://via.placeholder.com/350x200/c2185b/ffffff?text=Advanced+Strategies" alt="Course thumbnail">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="level-badge-card expert">
+                                <i class="fas fa-trophy"></i>
+                                Expert
+                            </span>
+                            <span class="topic-badge technical">Advanced Strategy</span>
+                        </div>
+                        <h3 class="course-title">Multi-Timeframe Analysis Mastery</h3>
+                        <p class="course-description">Advanced technique for analyzing multiple timeframes simultaneously. Used by professional traders for precise entry and exit timing.</p>
+                        
+                        <div class="course-stats">
+                            <div class="course-stat">
+                                <i class="fas fa-clock"></i>
+                                55 minutes
+                            </div>
+                            <div class="course-stat">
+                                <i class="fas fa-book"></i>
+                                10 lessons
+                            </div>
+                            <div class="course-stat rating-stars">
+                                <i class="fas fa-star"></i>
+                                4.9 (1,892)
+                            </div>
+                        </div>
+                        
+                        <div class="learning-outcomes">
+                            <div class="outcomes-title">
+                                <i class="fas fa-lightbulb"></i>
+                                What You'll Learn
+                            </div>
+                            <ul class="outcomes-list">
+                                <li>Master multi-timeframe correlation</li>
+                                <li>Time entries with precision</li>
+                                <li>Reduce false signals by 40%</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="course-footer">
+                            <div class="completion-badge">
+                                <i class="fas fa-users"></i>
+                                <span><span class="completion-number">4,567</span> students</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn-start">
+                                    <i class="fas fa-play"></i>
+                                    Start Learning
+                                </button>
+                                <button class="btn-save">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Load More -->
+            <div class="load-more-section">
+                <button class="btn-load-more">
+                    <i class="fas fa-chevron-down"></i>
+                    Load More Courses (48 remaining)
+                </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>VESTRADO ACADEMY</h3>
+                    <p>Your gateway to mastering forex trading. Learn from professionals, trade with confidence.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Learn</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">All Courses</a></li>
+                        <li><a href="#">Live Webinars</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">Trading Guides</a></li>
+                        <li><a href="#">Learning Paths</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Discussion Forums</a></li>
+                        <li><a href="#">Study Groups</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Event Calendar</a></li>
+                        <li><a href="#">Telegram Channel</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vestrado Academy. All rights reserved. Trading involves risk. Educational content for informational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Interactions Script -->
+    <script>
+        // Filter interactions
+        document.querySelectorAll('.quick-filter-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                // Toggle active state
+                document.querySelectorAll('.quick-filter-tag').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // In production, this would filter the courses
+                console.log('Filtering by:', this.textContent);
+            });
+        });
+        
+        // Clear filters
+        document.querySelector('.clear-filters').addEventListener('click', function() {
+            document.querySelectorAll('.quick-filter-tag').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.filter-select').forEach(s => s.selectedIndex = 0);
+            console.log('Filters cleared');
+        });
+        
+        // Save button toggle
+        document.querySelectorAll('.btn-save').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('fa-bookmark')) {
+                    icon.classList.remove('fa-bookmark');
+                    icon.classList.add('fa-bookmark', 'fas');
+                    this.style.background = '#2d5cc2';
+                    this.style.color = 'white';
+                } else {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    this.style.background = 'white';
+                    this.style.color = '#2d5cc2';
+                }
+            });
+        });
+        
+        // Start/Continue button clicks
+        document.querySelectorAll('.btn-start').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const courseTitle = this.closest('.course-card').querySelector('.course-title').textContent;
+                console.log('Starting course:', courseTitle);
+                // In production, this would navigate to the course player
+            });
+        });
+        
+        // Load more button
+        document.querySelector('.btn-load-more').addEventListener('click', function() {
+            console.log('Loading more courses...');
+            // In production, this would load more courses via AJAX
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-chevron-down"></i> Load More Courses (36 remaining)';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,2893 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnership Programme - Performance-Based Commission | Vestrado</title>
+    <meta name="description" content="Join Vestrado's Partnership Programme. Earn performance-based commissions on referred client trades. Instant payouts, up to $22/lot rebate. Terms apply. Income not guaranteed.">
+    
+    <!-- Trust & Verification Meta Tags -->
+    <meta name="partnership-active-count" content="2,500">
+    <meta name="partnership-payout-speed" content="instant">
+    <meta name="regulatory-compliance" content="FCA-compliant partnership terms">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Partnership Programme - Earn Up to $22/Lot | Vestrado">
+    <meta property="og:description" content="Join 2,500+ active partners. Instant rebates, advanced dashboard, dedicated support. Apply in 2 minutes.">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-blue: #1a3a8f;
+            --secondary-blue: #2d5cc2;
+            --accent-green: #9aea00;
+            --dark-green: #7bc900;
+            --text-primary: #333;
+            --text-secondary: #666;
+            --bg-light: #f8fbff;
+            --bg-gradient: linear-gradient(135deg, #f8fbff 0%, #e3f2fd 100%);
+            --shadow-sm: 0 2px 10px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 15px rgba(0,0,0,0.12);
+            --shadow-lg: 0 6px 25px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            overflow-x: hidden;
+        }
+        
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .badge i {
+            color: var(--accent-green);
+        }
+        
+        .live-partners {
+            background: rgba(255,255,255,0.15);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        /* ===== HEADER ===== */
+        .header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 40px;
+            z-index: 999;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--dark-green) 100%);
+            color: var(--primary-blue);
+            box-shadow: 0 4px 15px rgba(154, 234, 0, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(154, 234, 0, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--secondary-blue);
+            border: 2px solid var(--secondary-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--secondary-blue);
+            color: white;
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, #ffffff 0%, var(--bg-light) 100%);
+            padding: 80px 20px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(154, 234, 0, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(154, 234, 0, 0.15);
+            border: 2px solid var(--accent-green);
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            animation: badgeFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes badgeFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .hero-badge i {
+            color: var(--accent-green);
+            font-size: 18px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+            font-weight: 800;
+        }
+        
+        .hero-highlight {
+            color: var(--accent-green);
+            background: rgba(154, 234, 0, 0.1);
+            padding: 0 8px;
+            border-radius: 4px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .hero-ctas {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .btn-hero-primary {
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--dark-green) 100%);
+            color: var(--primary-blue);
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 12px;
+            box-shadow: 0 6px 25px rgba(154, 234, 0, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-hero-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-hero-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-hero-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(154, 234, 0, 0.45);
+        }
+        
+        .btn-hero-secondary {
+            background: white;
+            color: var(--secondary-blue);
+            border: 2px solid var(--secondary-blue);
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 12px;
+        }
+        
+        .btn-hero-secondary:hover {
+            background: var(--secondary-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .cta-subtext {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+        
+        /* Trust Badges in Hero */
+        .hero-trust {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 30px 0;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+        
+        .hero-trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .hero-trust-icon {
+            font-size: 32px;
+            color: var(--secondary-blue);
+        }
+        
+        .hero-trust-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+        
+        .hero-trust-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        /* ===== COMMISSION STRUCTURE SECTION ===== */
+        .commission-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Commission Table */
+        .commission-table {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+        
+        .commission-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .commission-table thead {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+        }
+        
+        .commission-table thead th {
+            padding: 20px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .commission-table thead th:first-child {
+            border-radius: 16px 0 0 0;
+        }
+        
+        .commission-table thead th:last-child {
+            border-radius: 0 16px 0 0;
+        }
+        
+        .commission-table tbody td {
+            padding: 25px 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .commission-table tbody tr:hover {
+            background: #fafcff;
+        }
+        
+        .commission-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .tier-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .tier-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .badge-standard {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .badge-silver {
+            background: #f5f5f5;
+            color: #616161;
+        }
+        
+        .badge-gold {
+            background: #fff8e1;
+            color: #f57f17;
+        }
+        
+        .badge-platinum {
+            background: #e8f5e9;
+            color: #388e3c;
+            animation: badgePulse 2s infinite;
+        }
+        
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .rebate-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent-green);
+        }
+        
+        .volume-range {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+        }
+        
+        .feature-list li i {
+            color: var(--accent-green);
+            font-size: 18px;
+        }
+        
+        /* Commission Explanation Box */
+        .commission-explanation {
+            background: var(--bg-gradient);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 40px;
+            border-left: 5px solid var(--accent-green);
+        }
+        
+        .commission-explanation h3 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .commission-explanation h3 i {
+            color: var(--accent-green);
+        }
+        
+        .explanation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .explanation-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .explanation-item h4 {
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .explanation-item i {
+            color: var(--secondary-blue);
+        }
+        
+        .explanation-item p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .example-calculation {
+            background: rgba(154, 234, 0, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            border: 2px dashed var(--accent-green);
+        }
+        
+        .example-calculation h4 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .calculation-formula {
+            font-family: 'Courier New', monospace;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            color: var(--primary-blue);
+            margin: 10px 0;
+            border-left: 3px solid var(--accent-green);
+        }
+        
+        .calculation-result {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-top: 10px;
+        }
+        
+        /* ===== CALCULATOR SECTION ===== */
+        .calculator-section {
+            background: var(--bg-gradient);
+            padding: 80px 20px;
+        }
+        
+        .calculator-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            padding: 50px;
+        }
+        
+        .calculator-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .calculator-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+        
+        .calculator-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .calculator-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .input-group label {
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 16px;
+        }
+        
+        .input-group select,
+        .input-group input {
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+        
+        .input-group select:focus,
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--secondary-blue);
+            box-shadow: 0 0 0 3px rgba(45, 92, 194, 0.1);
+        }
+        
+        .range-input-container {
+            position: relative;
+        }
+        
+        .range-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .range-btn {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--secondary-blue);
+            background: white;
+            border-radius: 8px;
+            color: var(--secondary-blue);
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .range-btn:hover {
+            background: var(--secondary-blue);
+            color: white;
+        }
+        
+        .range-display {
+            flex: 1;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            background: var(--bg-light);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        
+        input[type="range"] {
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: #e0e0e0;
+            outline: none;
+            margin-top: 10px;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(154, 234, 0, 0.4);
+        }
+        
+        input[type="range"]::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(154, 234, 0, 0.4);
+        }
+        
+        .range-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .calculator-result {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .calculator-result h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .earnings-display {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--accent-green);
+            margin: 20px 0;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .earnings-breakdown {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .breakdown-item:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .calculator-cta {
+            margin-top: 30px;
+        }
+        
+        .calculator-disclaimer {
+            background: #fff9e6;
+            border: 2px solid #ffd54f;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .calculator-disclaimer i {
+            color: #f57f17;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .calculator-disclaimer-content h4 {
+            color: #f57f17;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .calculator-disclaimer-content p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        
+        .calculator-disclaimer-content ul {
+            margin-left: 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        /* ===== BENEFITS SECTION ===== */
+        .benefits-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border-top: 5px solid var(--secondary-blue);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .benefit-card:nth-child(1) {
+            border-top-color: #2196f3;
+        }
+        
+        .benefit-card:nth-child(2) {
+            border-top-color: #9c27b0;
+        }
+        
+        .benefit-card:nth-child(3) {
+            border-top-color: #ff9800;
+        }
+        
+        .benefit-card:nth-child(4) {
+            border-top-color: var(--accent-green);
+        }
+        
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: var(--secondary-blue);
+            margin-bottom: 25px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+        
+        .benefit-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefit-features li {
+            padding: 10px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 15px;
+            color: var(--text-primary);
+        }
+        
+        .benefit-features li i {
+            color: var(--accent-green);
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .benefit-cta {
+            margin-top: 20px;
+            color: var(--secondary-blue);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        
+        .benefit-cta:hover {
+            color: var(--primary-blue);
+            gap: 12px;
+        }
+        
+        /* ===== PAYMENT PROCESS SECTION ===== */
+        .payment-section {
+            background: var(--bg-gradient);
+            padding: 80px 20px;
+        }
+        
+        .payment-timeline {
+            max-width: 900px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+        
+        .payment-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--accent-green) 0%, var(--secondary-blue) 100%);
+        }
+        
+        .timeline-step {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .timeline-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-step:nth-child(even) .timeline-content {
+            text-align: right;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .timeline-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--dark-green) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: white;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 4px 15px rgba(154, 234, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .timeline-content h3 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+        }
+        
+        .timeline-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+        
+        .timeline-badge {
+            display: inline-block;
+            background: rgba(154, 234, 0, 0.15);
+            color: var(--accent-green);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        /* Payment Methods */
+        .payment-methods {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 50px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .payment-methods h3 {
+            text-align: center;
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+        
+        .payment-methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+        
+        .payment-method {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        
+        .payment-method:hover {
+            border-color: var(--accent-green);
+            transform: translateY(-3px);
+        }
+        
+        .payment-method i {
+            font-size: 48px;
+            color: var(--secondary-blue);
+            margin-bottom: 15px;
+        }
+        
+        .payment-method h4 {
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+        
+        .payment-method p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        /* ===== ONBOARDING SECTION ===== */
+        .onboarding-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .onboarding-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .onboarding-step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .onboarding-step::after {
+            content: '→';
+            position: absolute;
+            top: 50px;
+            right: -20px;
+            font-size: 36px;
+            color: var(--accent-green);
+            font-weight: 700;
+        }
+        
+        .onboarding-step:last-child::after {
+            display: none;
+        }
+        
+        .step-number {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            font-weight: 800;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .step-label {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+        
+        .onboarding-step h3 {
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+        
+        .onboarding-step p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .onboarding-step ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        
+        .onboarding-step li {
+            padding: 8px 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .onboarding-step li i {
+            color: var(--accent-green);
+        }
+        
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials-section {
+            background: var(--bg-gradient);
+            padding: 80px 20px;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+        
+        .testimonial-quote {
+            font-size: 48px;
+            color: var(--accent-green);
+            opacity: 0.3;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-rating {
+            color: #ffc107;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-text {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-top: 20px;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .author-info h4 {
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        .partner-badge {
+            display: inline-block;
+            background: rgba(154, 234, 0, 0.15);
+            color: var(--accent-green);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        
+        /* ===== TRUST SECTION ===== */
+        .trust-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .trust-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .trust-stat {
+            text-align: center;
+            padding: 40px;
+            background: var(--bg-light);
+            border-radius: 16px;
+            transition: var(--transition);
+        }
+        
+        .trust-stat:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .trust-stat-icon {
+            font-size: 64px;
+            color: var(--secondary-blue);
+            margin-bottom: 20px;
+        }
+        
+        .trust-stat-value {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+        
+        .trust-stat-label {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .trust-badges-section {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+            padding-top: 60px;
+            border-top: 2px solid #f0f0f0;
+        }
+        
+        .trust-badge-large {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            padding: 25px 35px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .trust-badge-large:hover {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .trust-badge-large i {
+            font-size: 48px;
+            color: var(--accent-green);
+        }
+        
+        .trust-badge-large div h4 {
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+        
+        .trust-badge-large div p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        /* ===== APPLICATION FORM PREVIEW ===== */
+        .application-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            padding: 80px 20px;
+            color: white;
+        }
+        
+        .application-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .application-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .application-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .application-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .form-preview {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            color: var(--text-primary);
+        }
+        
+        .form-progress {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .form-progress::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            z-index: 0;
+        }
+        
+        .form-progress::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 33%;
+            height: 4px;
+            background: var(--accent-green);
+            z-index: 1;
+            transition: width 0.3s;
+        }
+        
+        .progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .progress-circle {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 4px solid #e0e0e0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--text-secondary);
+        }
+        
+        .progress-step.active .progress-circle {
+            background: var(--accent-green);
+            border-color: var(--accent-green);
+            color: white;
+        }
+        
+        .progress-step.completed .progress-circle {
+            background: var(--secondary-blue);
+            border-color: var(--secondary-blue);
+            color: white;
+        }
+        
+        .progress-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+        
+        .form-step {
+            margin-bottom: 30px;
+        }
+        
+        .form-step h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-field label {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+        
+        .form-field input,
+        .form-field select {
+            padding: 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        
+        .form-field input:focus,
+        .form-field select:focus {
+            outline: none;
+            border-color: var(--secondary-blue);
+            box-shadow: 0 0 0 3px rgba(45, 92, 194, 0.1);
+        }
+        
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+            margin-top: 30px;
+        }
+        
+        .btn-back {
+            background: white;
+            color: var(--text-secondary);
+            border: 2px solid #e0e0e0;
+        }
+        
+        .btn-back:hover {
+            background: #f5f5f5;
+        }
+        
+        .form-note {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
+            border-left: 4px solid var(--secondary-blue);
+        }
+        
+        .form-note i {
+            color: var(--secondary-blue);
+            margin-right: 10px;
+        }
+        
+        .form-note p {
+            display: inline;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 50px auto 0;
+        }
+        
+        .faq-item {
+            background: white;
+            border: 2px solid #f0f0f0;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-item:hover {
+            border-color: var(--accent-green);
+        }
+        
+        .faq-question {
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+        }
+        
+        .faq-question i {
+            color: var(--accent-green);
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 25px 25px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        /* ===== COMPLIANCE FOOTER ===== */
+        .compliance-section {
+            background: var(--bg-light);
+            padding: 60px 20px;
+        }
+        
+        .compliance-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .compliance-warning {
+            background: #fff9e6;
+            border: 2px solid #ffd54f;
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 30px;
+        }
+        
+        .compliance-warning h3 {
+            color: #f57f17;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .compliance-warning i {
+            font-size: 28px;
+        }
+        
+        .compliance-warning p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        
+        .compliance-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .compliance-link {
+            color: var(--secondary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        
+        .compliance-link:hover {
+            color: var(--primary-blue);
+            gap: 12px;
+        }
+        
+        /* ===== FOOTER ===== */
+        .footer {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #0d1f4a 100%);
+            color: white;
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-green);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+        }
+        
+        /* ===== STICKY CTA ===== */
+        .sticky-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            animation: slideInRight 0.5s ease-out;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .sticky-cta .btn-primary {
+            padding: 18px 35px;
+            font-size: 16px;
+            box-shadow: 0 8px 25px rgba(154, 234, 0, 0.4);
+            animation: pulse-cta 2s infinite;
+        }
+        
+        @keyframes pulse-cta {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-ctas {
+                flex-direction: column;
+            }
+            
+            .btn-hero-primary,
+            .btn-hero-secondary {
+                width: 100%;
+            }
+            
+            .hero-trust {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .commission-table {
+                overflow-x: auto;
+            }
+            
+            .calculator-inputs {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-step {
+                flex-direction: column !important;
+                padding-left: 60px;
+            }
+            
+            .timeline-icon {
+                left: 20px;
+                transform: translateX(0);
+            }
+            
+            .timeline-step:nth-child(even) .timeline-content {
+                text-align: left;
+            }
+            
+            .onboarding-step::after {
+                display: none;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .sticky-cta {
+                bottom: 20px;
+                right: 20px;
+                left: 20px;
+            }
+            
+            .sticky-cta .btn-primary {
+                width: 100%;
+            }
+            
+            .trust-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .trust-badges {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-badges">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>CySEC Regulated</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-lock"></i>
+                    <span>SSL Secured</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>$2.4M Paid to Partners in 2024</span>
+                </div>
+            </div>
+            <div class="live-partners">
+                <span class="pulse-dot"></span>
+                <span>2,500+ Active Partners</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">VESTRADO</a>
+            <div class="header-actions">
+                <a href="#" class="btn btn-secondary">Log In</a>
+                <a href="#application" class="btn btn-primary">Apply Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-bolt"></i>
+                    <span>Instant Rebate Payouts</span>
+                </div>
+                <h1>
+                    Vestrado Partnership Programme<br>
+                    <span class="hero-highlight">Performance-Based Commission</span> Opportunities
+                </h1>
+                <p class="hero-subtitle">
+                    Join 2,500+ active partners earning up to $22/lot with instant payouts, 
+                    advanced dashboard tools, and dedicated support. Apply in 2 minutes.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#application" class="btn btn-hero-primary">
+                        Start Earning Today
+                        <span class="cta-subtext">2-minute application</span>
+                    </a>
+                    <a href="#calculator" class="btn btn-hero-secondary">
+                        Calculate Potential Earnings
+                    </a>
+                </div>
+                <div class="hero-trust">
+                    <div class="hero-trust-item">
+                        <i class="fas fa-users hero-trust-icon"></i>
+                        <div class="hero-trust-value">2,500+</div>
+                        <div class="hero-trust-label">Active Partners</div>
+                    </div>
+                    <div class="hero-trust-item">
+                        <i class="fas fa-money-bill-wave hero-trust-icon"></i>
+                        <div class="hero-trust-value">$2.4M</div>
+                        <div class="hero-trust-label">Paid Out in 2024</div>
+                    </div>
+                    <div class="hero-trust-item">
+                        <i class="fas fa-star hero-trust-icon"></i>
+                        <div class="hero-trust-value">4.8/5</div>
+                        <div class="hero-trust-label">Partner Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commission Structure Section -->
+    <section class="commission-section" id="commission">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Transparent Commission Structure</h2>
+                <p>Choose the tier that matches your ambition. Earn more as you grow.</p>
+            </div>
+
+            <div class="commission-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Partner Tier</th>
+                            <th>Rebate Per Lot</th>
+                            <th>Monthly Volume</th>
+                            <th>Key Features</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="tier-name">
+                                    Standard
+                                    <span class="tier-badge badge-standard">STARTER</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rebate-value">$12-15</div>
+                                <div class="volume-range">per lot</div>
+                            </td>
+                            <td>
+                                <div class="volume-range">0 - 500 lots</div>
+                            </td>
+                            <td>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check-circle"></i> Real-time dashboard</li>
+                                    <li><i class="fas fa-check-circle"></i> Marketing materials</li>
+                                    <li><i class="fas fa-check-circle"></i> Email support</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tier-name">
+                                    Silver
+                                    <span class="tier-badge badge-silver">GROWING</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rebate-value">$15-18</div>
+                                <div class="volume-range">per lot</div>
+                            </td>
+                            <td>
+                                <div class="volume-range">500 - 2,000 lots</div>
+                            </td>
+                            <td>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check-circle"></i> Everything in Standard</li>
+                                    <li><i class="fas fa-check-circle"></i> Priority email support</li>
+                                    <li><i class="fas fa-check-circle"></i> Custom tracking links</li>
+                                    <li><i class="fas fa-check-circle"></i> Weekly market webinars</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tier-name">
+                                    Gold
+                                    <span class="tier-badge badge-gold">PROFESSIONAL</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rebate-value">$18-22</div>
+                                <div class="volume-range">per lot</div>
+                            </td>
+                            <td>
+                                <div class="volume-range">2,000+ lots</div>
+                            </td>
+                            <td>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check-circle"></i> Everything in Silver</li>
+                                    <li><i class="fas fa-check-circle"></i> Dedicated account manager</li>
+                                    <li><i class="fas fa-check-circle"></i> 24/7 priority support</li>
+                                    <li><i class="fas fa-check-circle"></i> Custom landing pages</li>
+                                    <li><i class="fas fa-check-circle"></i> Sub-IB revenue share</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="tier-name">
+                                    Platinum
+                                    <span class="tier-badge badge-platinum">ELITE</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="rebate-value">Custom</div>
+                                <div class="volume-range">negotiable</div>
+                            </td>
+                            <td>
+                                <div class="volume-range">5,000+ lots</div>
+                            </td>
+                            <td>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check-circle"></i> Everything in Gold</li>
+                                    <li><i class="fas fa-check-circle"></i> Bespoke commission structure</li>
+                                    <li><i class="fas fa-check-circle"></i> White-label solutions</li>
+                                    <li><i class="fas fa-check-circle"></i> Exclusive VIP events</li>
+                                    <li><i class="fas fa-check-circle"></i> Volume-based bonuses up to $5k/month</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="commission-explanation">
+                <h3>
+                    <i class="fas fa-lightbulb"></i>
+                    How Your Earnings Work
+                </h3>
+                <p>
+                    Our commission structure is designed to reward your success. The more clients you refer 
+                    and the higher their trading volumes, the more you earn. Here's what you need to know:
+                </p>
+                
+                <div class="explanation-grid">
+                    <div class="explanation-item">
+                        <h4><i class="fas fa-calculator"></i> Per-Lot Rebates</h4>
+                        <p>
+                            Earn a fixed rebate for every lot your clients trade. Standard partners start 
+                            at $12/lot, scaling up to $22/lot for Gold partners.
+                        </p>
+                    </div>
+                    <div class="explanation-item">
+                        <h4><i class="fas fa-chart-line"></i> Volume Bonuses</h4>
+                        <p>
+                            Reach higher monthly volume thresholds to unlock increased rebate rates and 
+                            tier upgrades automatically.
+                        </p>
+                    </div>
+                    <div class="explanation-item">
+                        <h4><i class="fas fa-network-wired"></i> Sub-IB Revenue</h4>
+                        <p>
+                            Gold and Platinum partners earn additional commission when they refer other 
+                            partners (Sub-IBs) who generate trades.
+                        </p>
+                    </div>
+                    <div class="explanation-item">
+                        <h4><i class="fas fa-bolt"></i> Instant Crediting</h4>
+                        <p>
+                            Commissions are calculated and credited to your partner wallet instantly 
+                            after each client trade closes. No delays.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="example-calculation">
+                    <h4><i class="fas fa-receipt"></i> Example Calculation:</h4>
+                    <p>If you're a <strong>Silver Partner</strong> and your clients trade <strong>1,200 lots</strong> in a month:</p>
+                    <div class="calculation-formula">
+                        Your Earnings = 1,200 lots × $15/lot = $18,000/month
+                    </div>
+                    <div class="calculation-result">
+                        💰 $18,000 Monthly Commission
+                    </div>
+                    <p style="margin-top: 15px; font-size: 14px; color: var(--text-secondary);">
+                        <i class="fas fa-info-circle"></i> 
+                        Actual earnings depend on client trading activity, market conditions, and adherence to partnership terms.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <div class="calculator-container">
+            <div class="calculator-header">
+                <h2>Estimate Your Potential Earnings</h2>
+                <p>Use our interactive calculator to see what you could earn based on your marketing efforts.</p>
+            </div>
+
+            <div class="calculator-inputs">
+                <div class="input-group">
+                    <label for="partner-tier">Select Your Target Tier</label>
+                    <select id="partner-tier">
+                        <option value="12">Standard - $12/lot</option>
+                        <option value="15" selected>Silver - $15/lot</option>
+                        <option value="18">Gold - $18/lot</option>
+                        <option value="22">Platinum - $22/lot</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Estimated Monthly Volume</label>
+                    <div class="range-controls">
+                        <button class="range-btn" onclick="decrementVolume()">-</button>
+                        <div class="range-display">
+                            <span id="volume-display">1000</span> lots
+                        </div>
+                        <button class="range-btn" onclick="incrementVolume()">+</button>
+                    </div>
+                    <input type="range" id="volume-slider" min="0" max="10000" step="100" value="1000" oninput="updateCalculator()">
+                    <div class="range-labels">
+                        <span>0 lots</span>
+                        <span>10,000 lots</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-result">
+                <h3>Your Estimated Monthly Earnings</h3>
+                <div class="earnings-display">
+                    $<span id="earnings-result">15,000</span>
+                </div>
+                <div class="earnings-breakdown">
+                    <div class="breakdown-item">
+                        <span>Commission Rate:</span>
+                        <span>$<span id="rate-display">15</span>/lot</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Monthly Volume:</span>
+                        <span><span id="volume-display-2">1000</span> lots</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span>Total Monthly Commission:</span>
+                        <span>$<span id="earnings-result-2">15,000</span></span>
+                    </div>
+                </div>
+                <div class="calculator-cta">
+                    <a href="#application" class="btn btn-primary" style="display: inline-block; margin-top: 20px;">
+                        Start Earning This Today - Apply Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="calculator-disclaimer">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="calculator-disclaimer-content">
+                    <h4>Important Notice</h4>
+                    <p>
+                        This calculator provides an estimate based on hypothetical trading volumes. 
+                        Actual earnings depend on:
+                    </p>
+                    <ul>
+                        <li>Your marketing effectiveness and client acquisition strategies</li>
+                        <li>Client trading activity, which varies based on market conditions</li>
+                        <li>Adherence to partnership terms and conditions</li>
+                    </ul>
+                    <p style="margin-top: 12px;">
+                        <strong>Partner income is performance-based and not guaranteed.</strong> Past results 
+                        of other partners are not indicative of future earnings. Please review our 
+                        <a href="#" style="color: var(--secondary-blue); text-decoration: underline;">Risk Disclosure</a> 
+                        and <a href="#" style="color: var(--secondary-blue); text-decoration: underline;">Partner Agreement</a> 
+                        for complete terms.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section" id="benefits">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Why Partner with Vestrado?</h2>
+                <p>Get the tools, support, and resources you need to build a thriving partnership business.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Marketing Arsenal</h3>
+                    <p>
+                        Access a comprehensive library of ready-to-use marketing materials designed to convert.
+                    </p>
+                    <ul class="benefit-features">
+                        <li><i class="fas fa-check"></i> 200+ ready-made banners (10 languages)</li>
+                        <li><i class="fas fa-check"></i> Landing page templates (mobile-optimized)</li>
+                        <li><i class="fas fa-check"></i> Email drip campaigns</li>
+                        <li><i class="fas fa-check"></i> Social media content calendar</li>
+                        <li><i class="fas fa-check"></i> Video marketing materials</li>
+                    </ul>
+                    <a href="#" class="benefit-cta">
+                        Preview Materials <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Advanced Dashboard</h3>
+                    <p>
+                        Track your performance with our industry-leading partner dashboard and analytics.
+                    </p>
+                    <ul class="benefit-features">
+                        <li><i class="fas fa-check"></i> Real-time commission tracking (60-sec updates)</li>
+                        <li><i class="fas fa-check"></i> Client activity heatmaps</li>
+                        <li><i class="fas fa-check"></i> Conversion funnel analytics</li>
+                        <li><i class="fas fa-check"></i> Custom report builder</li>
+                        <li><i class="fas fa-check"></i> Mobile app access</li>
+                    </ul>
+                    <a href="#" class="benefit-cta">
+                        View Live Demo <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Partner Support</h3>
+                    <p>
+                        Get the help you need, when you need it, from our dedicated partner success team.
+                    </p>
+                    <ul class="benefit-features">
+                        <li><i class="fas fa-check"></i> Dedicated account manager (Gold tier+)</li>
+                        <li><i class="fas fa-check"></i> 24/7 Telegram support channel</li>
+                        <li><i class="fas fa-check"></i> Weekly market analysis webinars</li>
+                        <li><i class="fas fa-check"></i> Priority technical assistance</li>
+                        <li><i class="fas fa-check"></i> Onboarding training program</li>
+                    </ul>
+                    <a href="#" class="benefit-cta">
+                        Meet Your Team <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Exclusive Perks</h3>
+                    <p>
+                        Unlock premium benefits as you grow your partnership business with Vestrado.
+                    </p>
+                    <ul class="benefit-features">
+                        <li><i class="fas fa-check"></i> Volume-based bonuses (up to $5,000/month)</li>
+                        <li><i class="fas fa-check"></i> VIP event invitations</li>
+                        <li><i class="fas fa-check"></i> Early access to new products</li>
+                        <li><i class="fas fa-check"></i> Revenue share on sub-IBs</li>
+                        <li><i class="fas fa-check"></i> White-label solutions (Platinum)</li>
+                    </ul>
+                    <a href="#" class="benefit-cta">
+                        View Full Benefits <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Process Section -->
+    <section class="payment-section" id="payment">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>How Fast Do You Get Paid?</h2>
+                <p>Experience the industry's fastest payout system. Your earnings, instantly available.</p>
+            </div>
+
+            <div class="payment-timeline">
+                <div class="timeline-step">
+                    <div class="timeline-content">
+                        <h3>Client Trades</h3>
+                        <p>
+                            Your referred client executes a trade on our platform. The trade is monitored 
+                            in real-time by our commission calculation engine.
+                        </p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-content">
+                        <h3>Instant Calculation</h3>
+                        <p>
+                            The moment the trade closes, your commission is automatically calculated based 
+                            on your tier rate and the trade volume.
+                        </p>
+                        <span class="timeline-badge">⚡ Instant</span>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-content">
+                        <h3>Credited to Wallet</h3>
+                        <p>
+                            Your commission is immediately credited to your segregated partner wallet. 
+                            View the update in your dashboard within 60 seconds.
+                        </p>
+                        <span class="timeline-badge">⚡ 60 seconds</span>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-content">
+                        <h3>Request Withdrawal</h3>
+                        <p>
+                            Withdraw anytime with a minimum balance of $50. Choose from multiple payment 
+                            methods. Set up auto-withdrawal for complete hands-off operation.
+                        </p>
+                        <span class="timeline-badge">Anytime</span>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-content">
+                        <h3>Funds in Your Account</h3>
+                        <p>
+                            Receive your funds within 1-24 hours depending on your chosen withdrawal method. 
+                            Most e-wallets process within 2-4 hours.
+                        </p>
+                        <span class="timeline-badge">1-24 hours</span>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-methods">
+                <h3>Available Withdrawal Methods</h3>
+                <div class="payment-methods-grid">
+                    <div class="payment-method">
+                        <i class="fab fa-cc-visa"></i>
+                        <h4>Bank Wire</h4>
+                        <p>$0 fee (>$200)<br>24-48 hours</p>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fas fa-wallet"></i>
+                        <h4>Skrill</h4>
+                        <p>$2 flat fee<br>2-4 hours</p>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fas fa-money-check-alt"></i>
+                        <h4>Neteller</h4>
+                        <p>$2 flat fee<br>2-4 hours</p>
+                    </div>
+                    <div class="payment-method">
+                        <i class="fab fa-bitcoin"></i>
+                        <h4>Crypto (USDT)</h4>
+                        <p>Network fees only<br>1-6 hours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Onboarding Section -->
+    <section class="onboarding-section" id="onboarding">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Start Earning in 3 Simple Steps</h2>
+                <p>From application to first commission in as little as 48 hours.</p>
+            </div>
+
+            <div class="onboarding-steps">
+                <div class="onboarding-step">
+                    <div class="step-number">
+                        1
+                        <div class="step-label">Apply</div>
+                    </div>
+                    <h3>Submit Your Application</h3>
+                    <p>
+                        Complete our streamlined 3-step application form in just 2 minutes. 
+                        No upfront fees or commitments required.
+                    </p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Personal & business information</li>
+                        <li><i class="fas fa-check-circle"></i> Marketing channels & experience</li>
+                        <li><i class="fas fa-check-circle"></i> Preferred payout methods</li>
+                    </ul>
+                    <a href="#application" class="btn btn-secondary" style="margin-top: 20px; display: inline-block;">Start Application</a>
+                </div>
+
+                <div class="onboarding-step">
+                    <div class="step-number">
+                        2
+                        <div class="step-label">Setup</div>
+                    </div>
+                    <h3>Access Your Tools</h3>
+                    <p>
+                        Once approved (typically within 24 hours), immediately access your partner 
+                        dashboard and marketing arsenal.
+                    </p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Generate unique tracking links</li>
+                        <li><i class="fas fa-check-circle"></i> Download marketing materials</li>
+                        <li><i class="fas fa-check-circle"></i> Configure dashboard preferences</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="margin-top: 20px; display: inline-block;">Preview Dashboard</a>
+                </div>
+
+                <div class="onboarding-step">
+                    <div class="step-number">
+                        3
+                        <div class="step-label">Earn</div>
+                    </div>
+                    <h3>Share & Get Paid</h3>
+                    <p>
+                        Promote Vestrado using your referral links. Track client registrations and 
+                        trades in real-time. Watch your commissions grow automatically.
+                    </p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Share links on your channels</li>
+                        <li><i class="fas fa-check-circle"></i> Track conversions live</li>
+                        <li><i class="fas fa-check-circle"></i> Earn instant rebates on trades</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="margin-top: 20px; display: inline-block;">Marketing Best Practices</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>What Our Partners Say</h2>
+                <p>Join thousands of successful partners earning with Vestrado.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Switched from another broker and immediately saw 40% higher conversion rates. 
+                            The dashboard and instant payouts are unmatched in the industry. Best decision 
+                            I made for my affiliate business."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MT</div>
+                            <div class="author-info">
+                                <h4>Michael T. 🇩🇪</h4>
+                                <p>Gold Partner <span class="partner-badge">$35K/month</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "First payout in 3 days. Can't believe how smooth everything is compared to my 
+                            previous partnerships. The marketing materials are professional and the support 
+                            team actually responds within hours."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SL</div>
+                            <div class="author-info">
+                                <h4>Sandra L. 🇮🇹</h4>
+                                <p>Silver Partner <span class="partner-badge">$18K/month</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Started as a Standard partner 6 months ago, now I'm Gold tier. The volume 
+                            bonuses and sub-IB program helped me scale faster than I thought possible. 
+                            Dedicated account manager is a game-changer."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AK</div>
+                            <div class="author-info">
+                                <h4>Ahmed K. 🇦🇪</h4>
+                                <p>Gold Partner <span class="partner-badge">$42K/month</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Partnership Backed by Trust</h2>
+                <p>Your earnings are protected under our regulated and transparent system.</p>
+            </div>
+
+            <div class="trust-stats">
+                <div class="trust-stat">
+                    <div class="trust-stat-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="trust-stat-value">99.8%</div>
+                    <div class="trust-stat-label">On-Time Payment Record</div>
+                </div>
+                <div class="trust-stat">
+                    <div class="trust-stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="trust-stat-value">2,500+</div>
+                    <div class="trust-stat-label">Active Partners Worldwide</div>
+                </div>
+                <div class="trust-stat">
+                    <div class="trust-stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="trust-stat-value">$2.4M</div>
+                    <div class="trust-stat-label">Paid to Partners in 2024</div>
+                </div>
+                <div class="trust-stat">
+                    <div class="trust-stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="trust-stat-value">4.8/5</div>
+                    <div class="trust-stat-label">Average Partner Rating</div>
+                </div>
+            </div>
+
+            <div class="trust-badges-section">
+                <div class="trust-badge-large">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h4>CySEC Regulated</h4>
+                        <p>License No: XXX/XX</p>
+                    </div>
+                </div>
+                <div class="trust-badge-large">
+                    <i class="fas fa-lock"></i>
+                    <div>
+                        <h4>Segregated Funds</h4>
+                        <p>Partner wallets protected</p>
+                    </div>
+                </div>
+                <div class="trust-badge-large">
+                    <i class="fas fa-certificate"></i>
+                    <div>
+                        <h4>SSL Secured</h4>
+                        <p>Bank-grade encryption</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Preview Section -->
+    <section class="application-section" id="application">
+        <div class="application-container">
+            <div class="application-header">
+                <h2>Ready to Start Earning?</h2>
+                <p>Complete your application in 2 minutes. Approval within 24 hours.</p>
+            </div>
+
+            <div class="form-preview">
+                <div class="form-progress">
+                    <div class="progress-step active">
+                        <div class="progress-circle">1</div>
+                        <div class="progress-label">Your Info</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="progress-circle">2</div>
+                        <div class="progress-label">Partnership Details</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="progress-circle">3</div>
+                        <div class="progress-label">Verification</div>
+                    </div>
+                </div>
+
+                <div class="form-step">
+                    <h3>Step 1: Your Information</h3>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>Full Name *</label>
+                            <input type="text" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-field">
+                            <label>Email Address *</label>
+                            <input type="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>Phone Number *</label>
+                            <input type="tel" placeholder="+1 234 567 8900" required>
+                        </div>
+                        <div class="form-field">
+                            <label>Country *</label>
+                            <select required>
+                                <option value="">Select Country</option>
+                                <option value="us">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="de">Germany</option>
+                                <option value="ae">United Arab Emirates</option>
+                                <option value="it">Italy</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-back">Save & Exit</button>
+                    <button class="btn btn-primary">Continue to Step 2</button>
+                </div>
+
+                <div class="form-note">
+                    <i class="fas fa-info-circle"></i>
+                    <p>
+                        By continuing, you agree to our 
+                        <a href="#" style="color: var(--secondary-blue); text-decoration: underline;">Partner Agreement</a> and 
+                        <a href="#" style="color: var(--secondary-blue); text-decoration: underline;">Risk Disclosure</a>. 
+                        Your data is encrypted and protected.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Got questions? We've got answers.</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item active">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How much can I earn as a Vestrado partner?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Earnings vary based on your marketing efforts and referred client trading volumes. 
+                        Some partners earn $500/month, others $50,000+. Your potential is unlimited, but 
+                        income is not guaranteed and past performance is not indicative of future results. 
+                        Commission rates range from $12-22/lot depending on your tier.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How fast do I get paid?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Commissions are calculated and credited to your partner wallet instantly after each 
+                        client trade closes. You can withdraw anytime with a minimum balance of $50. 
+                        Withdrawals typically process within 1-24 hours depending on your payment method.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Are there any fees to become a partner?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        No. There are zero upfront fees, monthly fees, or hidden costs to join the Vestrado 
+                        Partnership Programme. You only earn commission when your referred clients trade. 
+                        Withdrawal fees apply based on your chosen payout method (detailed in payment section).
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What marketing support do I get?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        All partners receive access to 200+ marketing materials including banners, landing 
+                        pages, email templates, and social media content in 10 languages. Gold and Platinum 
+                        partners receive additional custom marketing materials and dedicated account manager 
+                        support for campaign optimization.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can I track my referrals and earnings in real-time?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. Your partner dashboard updates every 60 seconds with live commission totals, 
+                        client registration tracking, trading activity, and detailed analytics. You can 
+                        access your dashboard 24/7 from any device including our mobile app.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What are the risks of becoming a partner?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Partnership is performance-based. Your earnings depend entirely on client acquisition 
+                        and trading activity. There is no base salary or guaranteed income. Market conditions, 
+                        your marketing effectiveness, and client behavior all impact your earnings. You are 
+                        responsible for compliance with local marketing and tax regulations. Review our 
+                        complete Risk Disclosure before applying.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Section -->
+    <section class="compliance-section">
+        <div class="compliance-container">
+            <div class="compliance-warning">
+                <h3>
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Partnership Disclosure
+                </h3>
+                <p>
+                    Vestrado Ltd's partnership program offers commission-based earnings subject to terms 
+                    and conditions. Partner income is variable and depends on referred client trading volumes, 
+                    market conditions, and individual marketing performance.
+                </p>
+                <p>
+                    Vestrado does not guarantee specific earnings levels. Partners are independent contractors 
+                    responsible for compliance with local marketing and tax regulations. All commission 
+                    structures and marketing materials comply with applicable financial services regulations.
+                </p>
+                <div class="compliance-links">
+                    <a href="#" class="compliance-link">
+                        <i class="fas fa-file-contract"></i> Full Risk Disclosure
+                    </a>
+                    <a href="#" class="compliance-link">
+                        <i class="fas fa-handshake"></i> Partner Terms & Conditions
+                    </a>
+                    <a href="#" class="compliance-link">
+                        <i class="fas fa-ban"></i> Anti-Spam Policy
+                    </a>
+                    <a href="#" class="compliance-link">
+                        <i class="fas fa-bullhorn"></i> Marketing Guidelines
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Forex</a></li>
+                        <li><a href="#">Cryptocurrencies</a></li>
+                        <li><a href="#">Indices</a></li>
+                        <li><a href="#">Commodities</a></li>
+                        <li><a href="#">Shares</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Trading</h4>
+                    <ul>
+                        <li><a href="#">MetaTrader 5</a></li>
+                        <li><a href="#">Account Types</a></li>
+                        <li><a href="#">Deposit & Withdrawal</a></li>
+                        <li><a href="#">Leverage & Margin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Why Vestrado</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Risk Disclosure</a></li>
+                        <li><a href="#">Partner Agreement</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    Vestrado Ltd Copyright Protected 2024 | Risk Warning: Trading involves risk. 
+                    Partner income is not guaranteed. | CySEC License No: XXX/XX
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <a href="#application" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> Apply Now - Start Earning
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Calculator functionality
+        function updateCalculator() {
+            const volumeSlider = document.getElementById('volume-slider');
+            const volume = parseInt(volumeSlider.value);
+            const tierSelect = document.getElementById('partner-tier');
+            const rate = parseFloat(tierSelect.value);
+            
+            const earnings = (volume * rate).toLocaleString();
+            
+            document.getElementById('volume-display').textContent = volume.toLocaleString();
+            document.getElementById('volume-display-2').textContent = volume.toLocaleString();
+            document.getElementById('rate-display').textContent = rate;
+            document.getElementById('earnings-result').textContent = earnings;
+            document.getElementById('earnings-result-2').textContent = earnings;
+        }
+        
+        function incrementVolume() {
+            const volumeSlider = document.getElementById('volume-slider');
+            let currentValue = parseInt(volumeSlider.value);
+            if (currentValue < 10000) {
+                volumeSlider.value = currentValue + 100;
+                updateCalculator();
+            }
+        }
+        
+        function decrementVolume() {
+            const volumeSlider = document.getElementById('volume-slider');
+            let currentValue = parseInt(volumeSlider.value);
+            if (currentValue > 0) {
+                volumeSlider.value = currentValue - 100;
+                updateCalculator();
+            }
+        }
+        
+        // Initialize calculator
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCalculator();
+            
+            document.getElementById('partner-tier').addEventListener('change', updateCalculator);
+            document.getElementById('volume-slider').addEventListener('input', updateCalculator);
+        });
+        
+        // FAQ toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const allFaqs = document.querySelectorAll('.faq-item');
+            
+            allFaqs.forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            faqItem.classList.toggle('active');
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Show sticky CTA after scroll
+        window.addEventListener('scroll', function() {
+            const stickyCta = document.querySelector('.sticky-cta');
+            if (window.scrollY > 800) {
+                stickyCta.style.display = 'block';
+            } else {
+                stickyCta.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

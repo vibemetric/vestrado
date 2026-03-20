@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://x5digital.io/huynchi-growth-engine-demo.html -->
+<html lang="vi"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huynchi — Growth Engine · Demo by Cazzed Digital Solution</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;800&family=DM+Sans:wght@300;400;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+/* ══════════════════════════════════════
+   VARIABLES & RESET
+══════════════════════════════════════ */
+:root {
+  /* Huynchi Brand — PRIMARY */
+  --orange:        #E8612A;
+  --orange-dark:   #C44E1A;
+  --orange-light:  #F28A5C;
+  --orange-pale:   #FDF0EA;
+  --orange-wash:   #FEF8F4;
+  --navy:          #112337;
+  --navy-deep:     #0A1520;
+  --navy-mid:      #1A3050;
+  --white:         #FFFFFF;
+  --off-white:     #FAF9F7;
+  --warm-stone:    #F2EFE9;
+  --warm-pebble:   #E8E4DC;
+  --text-body:     #585E6A;
+  --text-muted:    #9DA5B0;
+  --divider:       #E3DED6;
+  /* Cazzed Digital Solution — SECONDARY (use sparingly) */
+  --x5-blue:       #1D9BF0;
+  --x5-green:      #00D4AA;
+  --x5-surface:    #0D1426;
+  /* Fonts */
+  --fd: 'Montserrat', system-ui, sans-serif;
+  --fb: 'DM Sans', sans-serif;
+  --fm: 'DM Mono', monospace;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--fb); background: var(--navy-deep); color: var(--off-white); -webkit-font-smoothing: antialiased; line-height: 1.6; overflow-x: hidden; }
+
+/* ── UTILITIES ── */
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 56px; }
+.section { padding: 88px 0; }
+.bg-deep   { background: var(--navy-deep); }
+.bg-navy   { background: var(--navy); }
+.bg-surf   { background: var(--x5-surface); }
+.bg-light  { background: var(--off-white); }
+.bg-stone  { background: var(--warm-stone); }
+.orange    { color: var(--orange); }
+.muted     { color: rgba(255,255,255,0.38); }
+
+/* ── PROGRESS BAR ── */
+#progress-bar {
+  position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+  background: linear-gradient(90deg, var(--orange), var(--orange-light));
+  z-index: 9999; transition: width 0.08s linear;
+  box-shadow: 0 0 10px rgba(232,97,42,0.5);
+}
+
+/* ══════════════════════════════════════
+   STICKY LAYER NAV
+══════════════════════════════════════ */
+#layer-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(10,21,32,0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(232,97,42,0.1);
+  height: 54px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px;
+  transform: translateY(-100%);
+  transition: transform 0.45s cubic-bezier(0.22,1,0.36,1);
+}
+#layer-nav.show { transform: translateY(0); }
+.nav-brand {
+  font-family: var(--fd); font-size: 1rem; font-weight: 700;
+  color: rgba(255,255,255,0.85); letter-spacing: -0.01em;
+}
+.nav-brand em { font-style: italic; color: var(--orange); }
+.nav-pills { display: flex; gap: 5px; }
+.npill {
+  font-family: var(--fm); font-size: 0.6rem; font-weight: 500;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  padding: 5px 13px; border-radius: 3px; text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.35);
+  transition: all 0.2s ease;
+}
+.npill:hover { border-color: var(--orange); color: var(--orange); }
+.npill.active { background: var(--orange); border-color: var(--orange); color: #fff; }
+
+/* ══════════════════════════════════════
+   EYEBROW
+══════════════════════════════════════ */
+.eyebrow {
+  font-family: var(--fm); font-size: 1.2rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange);
+  display: flex; align-items: center; gap: 14px; margin-bottom: 22px;
+}
+.eyebrow::before { content: ''; display: block; width: 28px; height: 1.5px; background: var(--orange); flex-shrink: 0; }
+.eyebrow-dim { color: rgba(232,97,42,0.65); }
+.eyebrow-dim::before { background: rgba(232,97,42,0.5); }
+
+/* ══════════════════════════════════════
+   TYPOGRAPHY
+══════════════════════════════════════ */
+.h-hero { font-family: var(--fd); font-size: clamp(3rem,6.5vw,6.5rem); font-weight: 800; line-height: 1.0; letter-spacing: -0.03em; }
+.h-sec  { font-family: var(--fd); font-size: clamp(2rem,4vw,3.75rem); font-weight: 800; line-height: 1.04; letter-spacing: -0.025em; }
+.h-sub  { font-family: var(--fd); font-size: clamp(1.4rem,2.5vw,2rem); font-weight: 700; line-height: 1.12; letter-spacing: -0.02em; }
+.italic { font-style: normal; color: var(--orange); }
+em.orange { font-style: normal; }
+
+/* ── TAGS & CHIPS ── */
+.tag {
+  font-family: var(--fm); font-size: 0.58rem; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 3px; display: inline-block;
+}
+.to { background: rgba(232,97,42,0.14); color: var(--orange-light); border: 1px solid rgba(232,97,42,0.28); }
+.tb { background: rgba(29,155,240,0.1); color: #7ac8f8; border: 1px solid rgba(29,155,240,0.22); }
+.tg { background: rgba(0,212,170,0.09); color: #5ce8cc; border: 1px solid rgba(0,212,170,0.2); }
+.ts { background: var(--warm-stone); color: var(--text-body); border: 1px solid var(--divider); }
+.ta { background: rgba(245,158,11,0.1); color: #f8c04a; border: 1px solid rgba(245,158,11,0.22); }
+
+/* ── DIVIDERS ── */
+hr.d { border: none; border-top: 1px solid; margin: 40px 0; }
+hr.dd { border-top-color: rgba(255,255,255,0.06); }
+hr.dl { border-top-color: var(--divider); }
+
+/* ── REVEAL ── */
+.rev { opacity: 0; transform: translateY(26px); transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
+.rev.on { opacity: 1; transform: translateY(0); }
+.rl  { opacity: 0; transform: translateX(-26px); transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
+.rl.on  { opacity: 1; transform: translateX(0); }
+.rr  { opacity: 0; transform: translateX(26px); transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
+.rr.on  { opacity: 1; transform: translateX(0); }
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.40s}.d6{transition-delay:.50s}
+
+/* ══════════════════════════════════════
+   SECTION 1 — HERO
+══════════════════════════════════════ */
+#hero {
+  position: relative; min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+  overflow: hidden; padding: 100px 56px 120px;
+}
+#hero-canvas { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.hero-inner { position: relative; z-index: 1; max-width: 1160px; margin: 0 auto; width: 100%; }
+.hero-headline { margin-bottom: 56px; }
+.hero-headline .h-hero { color: var(--off-white); }
+.hero-headline .h-hero em { color: var(--orange); }
+.hero-sub { font-size: 0.9375rem; color: rgba(255,255,255,0.38); font-weight: 300; letter-spacing: 0.03em; margin-top: 14px; }
+.hero-ghost {
+  position: absolute; right: -20px; bottom: -60px; z-index: 0;
+  font-family: var(--fd); font-size: 22vw; font-weight: 300; line-height: 1;
+  color: transparent; -webkit-text-stroke: 1px rgba(232,97,42,0.04);
+  pointer-events: none; user-select: none; letter-spacing: -0.05em;
+}
+
+/* Metric row */
+.metric-row { display: flex; gap: 1px; background: rgba(255,255,255,0.06); border-radius: 14px; overflow: hidden; max-width: 720px; margin-top: 64px; }
+.mc { flex: 1; background: rgba(10,21,32,0.85); padding: 30px 32px; position: relative; transition: background 0.2s; }
+.mc::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--orange); }
+.mc:hover { background: rgba(17,35,55,0.9); }
+.mc-val { font-family: var(--fd); font-size: 3.5rem; font-weight: 800; color: var(--off-white); line-height: 1; margin-bottom: 10px; letter-spacing: -0.03em; }
+.mc-val .acc { color: var(--orange); }
+.mc-lbl { font-family: var(--fm); font-size: 0.59rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.3); line-height: 1.6; }
+
+/* Scroll hint */
+.scroll-hint { position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; z-index: 1; }
+.scroll-hint span { font-family: var(--fm); font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.18); }
+.sh-line { width: 1px; height: 36px; background: linear-gradient(to bottom, rgba(232,97,42,0.5), transparent); animation: shLine 2.2s ease-in-out infinite; }
+@keyframes shLine { 0%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform:scaleY(1);transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
+
+/* ══════════════════════════════════════
+   SECTION 2 — THE GAP
+══════════════════════════════════════ */
+#gap { padding: 88px 0; }
+.gap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 48px; }
+.gap-col { padding: 44px 40px; border-radius: 12px; }
+.gc-before { background: rgba(239,68,68,0.04); border: 1px solid rgba(239,68,68,0.14); }
+.gc-after  { background: rgba(0,212,170,0.04); border: 1px solid rgba(0,212,170,0.14); }
+.gc-label { font-family: var(--fm); font-size: 1.24rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 28px; display: flex; align-items: center; gap: 8px; }
+.gc-before .gc-label { color: #f87171; }
+.gc-after  .gc-label { color: #5ce8cc; }
+.gc-label::before { content:''; display:block; width:6px; height:6px; border-radius:50%; background: currentColor; }
+.gi { display: flex; gap: 14px; margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.gi:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.gi-icon { font-size: 1.15rem; flex-shrink: 0; margin-top: 1px; }
+.gi-title { font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.8); margin-bottom: 4px; line-height: 1.4; }
+.gi-desc  { font-size: 0.8rem; color: rgba(255,255,255,0.35); line-height: 1.65; }
+
+/* ══════════════════════════════════════
+   SECTION 3 — LAYER 1 + 2
+══════════════════════════════════════ */
+#layer12 { padding: 88px 0; }
+/* Tabs */
+.tab-bar { display: flex; border-bottom: 1.5px solid var(--divider); margin-bottom: 44px; }
+.tbtn {
+  font-family: var(--fm); font-size: 0.68rem; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 12px 22px; background: none; border: none;
+  color: var(--text-muted); cursor: pointer; position: relative;
+  transition: color 0.2s;
+}
+.tbtn::after { content:''; position:absolute; bottom:-1.5px; left:0; right:0; height:2px; background:var(--orange); transform:scaleX(0); transition:transform 0.25s ease; }
+.tbtn.active { color: var(--orange); }
+.tbtn.active::after { transform: scaleX(1); }
+.tpanel { display: none; }
+.tpanel.active { display: block; animation: fadeUp 0.35s ease; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+
+/* Foundation grid */
+.fnd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.fnd-card { background: white; border: 1px solid var(--divider); border-radius: 10px; padding: 28px 30px; }
+.fnd-lbl { font-family: var(--fm); font-size: 1.18rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+.fnd-card h4 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.fnd-card p { font-size: 0.85rem; color: var(--text-body); line-height: 1.75; }
+.code-blk { font-family: var(--fm); font-size: 0.76rem; background: var(--navy-deep); padding: 14px 18px; border-radius: 7px; line-height: 1.9; margin-top: 14px; overflow-x: auto; }
+.cc { color: rgba(168,212,248,0.3); }
+.ck { color: #f8c04a; }
+.cv { color: #90e4c1; }
+.cw { color: #a8d4f8; }
+
+/* Keyword chart */
+.kw-wrap { background: white; border: 1px solid var(--divider); border-radius: 12px; padding: 32px 36px; }
+.kw-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.kw-title { font-size: 0.875rem; font-weight: 700; color: var(--navy); }
+.kw-leg { display: flex; gap: 16px; }
+.kw-li { display: flex; align-items: center; gap: 7px; font-family: var(--fm); font-size: 0.59rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+.kw-dot { width: 8px; height: 8px; border-radius: 2px; }
+#kwChart { max-height: 300px; width: 100%; }
+
+/* AI Answer demo */
+.ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.ai-box { background: white; border: 1px solid var(--divider); border-radius: 12px; padding: 28px 30px; }
+.ai-box-lbl { font-family: var(--fm); font-size: 1.18rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+.ai-q { background: var(--warm-stone); border-radius: 7px; padding: 12px 14px; font-size: 0.85rem; font-style: italic; color: var(--navy); display: flex; gap: 9px; align-items: flex-start; margin-bottom: 14px; }
+.ai-ans { padding: 14px 16px; border-radius: 7px; font-size: 0.85rem; line-height: 1.75; }
+.ai-ans.bad  { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.14); color: var(--navy); }
+.ai-ans.good { background: rgba(0,212,170,0.05); border: 1px solid rgba(0,212,170,0.16); color: var(--navy); }
+.ai-ans-lbl { font-family: var(--fm); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 7px; }
+.ai-ans.bad  .ai-ans-lbl { color: #b02020; }
+.ai-ans.good .ai-ans-lbl { color: #00916a; }
+.ai-cite { background: rgba(29,155,240,0.12); color: #1265a8; padding: 1px 6px; border-radius: 3px; font-weight: 600; font-size: 0.8rem; }
+.caret { display: inline-block; width: 2px; height: 0.9em; background: var(--orange); animation: caret 0.8s step-end infinite; vertical-align: text-bottom; margin-left: 1px; }
+@keyframes caret { 50%{opacity:0} }
+
+/* ══════════════════════════════════════
+   SECTION 4 — LAYER 3 PIPELINE
+══════════════════════════════════════ */
+#layer3 { padding: 88px 0; }
+.pipe-intro { text-align: center; max-width: 580px; margin: 0 auto 56px; }
+.pipe-intro p { color: rgba(255,255,255,0.42); font-size: 0.9375rem; margin-top: 12px; }
+/* Flow diagram */
+.flow-row { display: flex; align-items: center; justify-content: center; gap: 0; margin-bottom: 56px; flex-wrap: wrap; }
+.fn { display: flex; flex-direction: column; align-items: center; }
+.fbox {
+  background: rgba(17,35,55,0.7); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px; padding: 18px 20px; min-width: 118px;
+  text-align: center; position: relative; overflow: hidden;
+  transition: all 0.4s ease;
+}
+.fbox.lit { background: rgba(232,97,42,0.1); border-color: rgba(232,97,42,0.4); }
+.fbox.lit::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--orange); }
+.fbox-icon { font-size: 1.5rem; display: block; margin-bottom: 7px; }
+.fbox-name { font-family: var(--fm); font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 3px; transition: color 0.4s; }
+.fbox.lit .fbox-name { color: var(--orange-light); }
+.fbox-desc { font-size: 0.75rem; color: rgba(255,255,255,0.28); transition: color 0.4s; }
+.fbox.lit .fbox-desc { color: rgba(255,255,255,0.65); }
+.farrow { width: 44px; height: 2px; background: rgba(255,255,255,0.08); flex-shrink: 0; position: relative; transition: background 0.4s ease; }
+.farrow::after { content:'▶'; position:absolute; right:-9px; top:50%; transform:translateY(-50%); font-size:0.62rem; color:rgba(255,255,255,0.1); line-height:1; transition:color 0.4s; }
+.farrow.lit { background: var(--orange); }
+.farrow.lit::after { color: var(--orange); }
+
+/* Sheet mockup */
+.sheet-wrap {
+  background: white; border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--divider); max-width: 860px; margin: 0 auto;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+}
+.sheet-bar { background: #1a73e8; padding: 10px 16px; display: flex; align-items: center; gap: 10px; }
+.sdots { display: flex; gap: 6px; }
+.sd { width: 11px; height: 11px; border-radius: 50%; }
+.sd-r{background:#ea4335}.sd-y{background:#fbbc04}.sd-g{background:#34a853}
+.sheet-title { font-family: var(--fm); font-size: 0.7rem; color: rgba(255,255,255,0.8); margin-left: 8px; }
+.sheet-sub { background: #f8f9fa; border-bottom: 1px solid #e0e0e0; padding: 6px 16px; font-family: var(--fm); font-size: 0.62rem; color: #666; }
+.st { width: 100%; border-collapse: collapse; font-family: var(--fm); font-size: 0.68rem; }
+.st th { background: #f8f9fa; border: 1px solid #e0e0e0; padding: 7px 11px; color: #333; font-weight: 600; text-align: left; white-space: nowrap; }
+.st td { border: 1px solid #e0e0e0; padding: 7px 11px; color: #444; white-space: nowrap; }
+.st .nr { animation: rowIn 0.5s ease forwards; }
+.st .nr td { background: #e8f5e9; color: #1a5c35; font-weight: 600; }
+@keyframes rowIn { from{opacity:0;transform:translateX(-16px)} to{opacity:1;transform:translateX(0)} }
+.sheet-ts { font-family: var(--fm); font-size: 0.6rem; color: var(--x5-green); text-align: center; padding: 10px; background: #f0faf5; border-top: 1px solid #c8e6c9; }
+
+/* ══════════════════════════════════════
+   SECTION 5 — LAYER 4 CHATBOT
+══════════════════════════════════════ */
+#layer4 { padding: 88px 0; }
+.chat-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.chat-info { }
+.chat-info h3 { font-family: var(--fd); font-size: 2rem; font-weight: 800; color: var(--navy); line-height: 1.08; letter-spacing: -0.025em; margin-bottom: 16px; }
+.chat-info h3 em { font-style: italic; color: var(--orange); }
+.chat-info p { font-size: 0.875rem; color: var(--text-body); line-height: 1.8; margin-bottom: 22px; }
+.feat-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+.feat-list li { display: flex; gap: 11px; font-size: 0.85rem; color: var(--text-body); line-height: 1.6; }
+.feat-list li::before { content:'→'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
+/* Phone frame */
+.phone {
+  background: var(--navy-deep); border-radius: 34px;
+  border: 8px solid #1a2c3e; max-width: 340px; margin: 0 auto;
+  overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04);
+}
+.ph-notch { height: 28px; background: #0d1f2d; display: flex; align-items: center; justify-content: center; }
+.ph-notch::after { content:''; width:62px; height:14px; background:#1a2c3e; border-radius:8px; }
+.ph-header { background: var(--off-white); padding: 11px 14px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--divider); }
+.ph-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--orange); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 700; color: white; flex-shrink: 0; }
+.ph-info { flex: 1; }
+.ph-name   { font-size: 0.8rem; font-weight: 600; color: var(--navy); line-height: 1; }
+.ph-status { font-family: var(--fm); font-size: 0.58rem; color: var(--x5-green); margin-top: 2px; }
+.ph-badge  { font-family: var(--fm); font-size: 0.52rem; color: rgba(29,155,240,0.6); letter-spacing: 0.1em; }
+.chat-area {
+  background: var(--off-white); height: 330px; overflow-y: auto;
+  padding: 12px 10px; display: flex; flex-direction: column; gap: 8px;
+  scroll-behavior: smooth;
+}
+.chat-area::-webkit-scrollbar { width: 4px; }
+.chat-area::-webkit-scrollbar-track { background: transparent; }
+.chat-area::-webkit-scrollbar-thumb { background: var(--divider); border-radius: 4px; }
+.cb { max-width: 87%; padding: 9px 12px; border-radius: 10px; font-size: 0.78rem; line-height: 1.55; }
+.cb-bot { align-self: flex-start; background: white; border: 1px solid var(--divider); color: var(--navy); border-radius: 4px 10px 10px 10px; }
+.cb-usr { align-self: flex-end; background: var(--navy); color: rgba(255,255,255,0.88); border-radius: 10px 4px 10px 10px; }
+.cb-sender { font-family: var(--fm); font-size: 0.54rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; color: var(--orange); }
+.cb-usr .cb-sender { color: rgba(255,255,255,0.35); }
+.typing-wrap { display: flex; gap: 4px; padding: 10px 12px; align-items: center; background: white; border: 1px solid var(--divider); align-self: flex-start; border-radius: 4px 10px 10px 10px; max-width: 60px; }
+.tdot { width: 6px; height: 6px; background: var(--text-muted); border-radius: 50%; animation: tdot 1.2s ease-in-out infinite; }
+.tdot:nth-child(2){animation-delay:.2s}.tdot:nth-child(3){animation-delay:.4s}
+@keyframes tdot { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+/* Suggestions */
+.sug-wrap { background: white; border-top: 1px solid var(--divider); padding: 7px 8px; display: flex; flex-wrap: wrap; gap: 5px; min-height: 36px; }
+.sug-btn {
+  font-size: 0.7rem; padding: 5px 10px; background: var(--warm-stone);
+  border: 1px solid var(--divider); border-radius: 5px; color: var(--navy);
+  cursor: pointer; transition: all 0.15s; font-family: var(--fb);
+}
+.sug-btn:hover { background: var(--orange-pale); border-color: rgba(232,97,42,0.3); color: var(--orange-dark); }
+/* Input */
+.chat-in-row { background: white; border-top: 1px solid var(--divider); padding: 8px; display: flex; gap: 6px; }
+.chat-in { flex:1; border:1px solid var(--divider); border-radius:6px; padding:6px 10px; font-size:0.78rem; font-family:var(--fb); color:var(--navy); background:var(--off-white); outline:none; }
+.chat-in:focus { border-color: var(--orange); }
+.chat-send { background:var(--orange); color:white; border:none; border-radius:6px; padding:6px 12px; font-size:0.8rem; cursor:pointer; transition:background 0.15s; }
+.chat-send:hover { background:var(--orange-dark); }
+/* Lead captured */
+.lead-cap { display:none; background:rgba(0,212,170,0.08); border:1px solid rgba(0,212,170,0.2); border-radius:7px; padding:9px 12px; margin:4px 8px; }
+.lead-cap.show { display:block; animation:fadeUp 0.4s ease; }
+.lc-lbl { font-family:var(--fm); font-size:0.58rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--x5-green); margin-bottom:3px; }
+.lc-txt { font-size:0.72rem; color:var(--navy); }
+
+/* ══════════════════════════════════════
+   SECTION 6 — LAYER 5 DASHBOARD
+══════════════════════════════════════ */
+#layer5 { padding: 88px 0; }
+.dash-mock {
+  background: rgba(17,35,55,0.55); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px; padding: 28px 32px; margin-top: 48px;
+  backdrop-filter: blur(8px);
+}
+.dash-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.dash-title { font-family: var(--fd); font-size: 1.25rem; font-weight: 400; color: var(--off-white); }
+.dash-date { font-family: var(--fm); font-size: 0.6rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.28); }
+.dash-tiles { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 16px; }
+.dt {
+  background: rgba(10,21,32,0.65); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px; padding: 20px 20px; position: relative; overflow: hidden;
+}
+.dt::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; }
+.dt1::before{background:var(--orange)} .dt2::before{background:var(--x5-blue)} .dt3::before{background:var(--x5-green)} .dt4::before{background:#8B5CF6}
+.dt-lbl { font-family: var(--fm); font-size: 0.57rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 10px; }
+.dt-val { font-family: var(--fd); font-size: 2.2rem; font-weight: 300; color: var(--off-white); line-height: 1; display: flex; align-items: baseline; gap: 5px; }
+.dt-up { font-family: var(--fm); font-size: 0.62rem; color: var(--x5-green); }
+.dash-chart-box { background: rgba(10,21,32,0.65); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 20px 22px; }
+.dash-chart-lbl { font-family: var(--fm); font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 14px; }
+#dashChart { max-height: 200px; }
+
+/* ══════════════════════════════════════
+   SECTION 7 — CTA
+══════════════════════════════════════ */
+#cta { padding: 108px 0; text-align: center; position: relative; overflow: hidden; }
+#cta::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 55% 55% at 50% 50%, rgba(232,97,42,0.06) 0%, transparent 70%); pointer-events:none; }
+.cta-in { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+.cta-in .h-sec { color: var(--off-white); }
+.cta-in .h-sec em { color: var(--orange); }
+.cta-sub { color: rgba(255,255,255,0.38); font-size: 0.9375rem; margin-top: 14px; margin-bottom: 44px; }
+.cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-p { background: var(--orange); color: white; padding: 14px 34px; border-radius: 6px; font-weight: 600; font-size: 0.875rem; text-decoration: none; transition: background 0.2s, transform 0.2s; display: inline-block; }
+.btn-p:hover { background: var(--orange-dark); transform: translateY(-2px); }
+.btn-o { border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.65); padding: 14px 34px; border-radius: 6px; font-size: 0.875rem; text-decoration: none; transition: all 0.2s; display: inline-block; }
+.btn-o:hover { border-color: rgba(255,255,255,0.4); color: white; transform: translateY(-2px); }
+.cta-layers { display: flex; justify-content: center; gap: 8px; margin-top: 52px; flex-wrap: wrap; }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--navy-deep); border-top: 1px solid rgba(232,97,42,0.1);
+  padding: 24px 56px; display: flex; justify-content: space-between; align-items: center;
+}
+.fl-left { font-family: var(--fd); font-size: 0.9rem; color: rgba(255,255,255,0.38); }
+.fl-left em { font-style:italic; color: var(--orange); }
+.fl-right { font-family: var(--fm); font-size: 0.56rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.18); text-align: right; line-height: 2.2; }
+.fl-right .x5 { color: rgba(29,155,240,0.45); }
+
+/* ── PIPELINE PANELS ── */
+.pipe-panel { display:flex; gap:0; }
+.pipe-panel-left { display:flex; flex-direction:column; align-items:center; padding-right:20px; flex-shrink:0; padding-top:4px; }
+.pipe-step-num { font-family:var(--fd); font-size:1.4rem; font-weight:800; color:var(--orange); line-height:1; width:40px; height:40px; border:2px solid rgba(232,97,42,0.4); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.pipe-step-line { width:2px; flex:1; background:rgba(232,97,42,0.12); margin-top:10px; }
+.pipe-panel-body { flex:1; padding-bottom:28px; }
+.pipe-step-head { display:flex; gap:14px; align-items:flex-start; margin-bottom:16px; }
+.pipe-step-icon { font-size:1.6rem; flex-shrink:0; margin-top:2px; }
+.pipe-step-title { font-family:var(--fd); font-size:1.25rem; font-weight:800; color:var(--off-white); letter-spacing:-0.02em; margin-bottom:4px; }
+.pipe-step-sub { font-size:0.85rem; color:rgba(255,255,255,0.42); line-height:1.65; }
+.pipe-demo-box { background:rgba(17,35,55,0.6); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:16px; overflow:hidden; }
+.pipe-demo-label { font-family:var(--fm); font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:12px; }
+/* Chat sim */
+.pipe-chat-sim { display:flex; flex-direction:column; gap:8px; max-height:280px; overflow-y:auto; padding-right:4px; }
+.pipe-chat-sim::-webkit-scrollbar { width:3px; }
+.pipe-chat-sim::-webkit-scrollbar-thumb { background:rgba(255,255,255,0.1); border-radius:3px; }
+.pcs-bubble { max-width:85%; padding:9px 12px; border-radius:8px; font-size:0.78rem; line-height:1.55; }
+.pcs-bubble.bot { align-self:flex-start; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1); color:rgba(255,255,255,0.8); border-radius:3px 8px 8px 8px; }
+.pcs-bubble.user { align-self:flex-end; background:rgba(232,97,42,0.18); border:1px solid rgba(232,97,42,0.25); color:rgba(255,255,255,0.85); border-radius:8px 3px 8px 8px; }
+.pcs-name { font-family:var(--fm); font-size:0.54rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--orange); margin-bottom:4px; }
+/* Qualify fields */
+.qfield { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:9px 12px; display:flex; gap:9px; align-items:flex-start; }
+.qfield.qf-done { border-color:rgba(0,212,170,0.2); background:rgba(0,212,170,0.05); }
+.qfield.qf-pending { border-color:rgba(255,255,255,0.06); opacity:0.5; }
+.qf-icon { font-size:0.75rem; color:var(--x5-green); flex-shrink:0; margin-top:1px; font-weight:700; }
+.qf-label { font-family:var(--fm); font-size:0.56rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:2px; }
+.qf-val { font-size:0.78rem; color:rgba(255,255,255,0.82); font-weight:500; }
+/* n8n nodes */
+.n8n-node { background:#2a2a45; border:1px solid rgba(255,255,255,0.1); border-radius:7px; padding:8px 11px; text-align:center; min-width:80px; }
+.n8n-node.n8n-trigger { background:#2c1e10; border-color:rgba(232,97,42,0.4); }
+.n8n-node.n8n-active { background:#0d2e22; border-color:rgba(0,212,170,0.4); }
+.n8n-node.n8n-done { background:#0a2218; border-color:rgba(0,212,170,0.25); }
+.n8n-node-icon { font-size:1rem; display:block; margin-bottom:3px; }
+.n8n-node-name { font-family:var(--fm); font-size:0.58rem; font-weight:600; letter-spacing:0.06em; color:rgba(255,255,255,0.8); }
+.n8n-node-sub { font-family:var(--fm); font-size:0.52rem; color:rgba(255,255,255,0.3); margin-top:1px; }
+.n8n-edge { height:2px; width:32px; background:rgba(0,212,170,0.4); flex-shrink:0; position:relative; }
+.n8n-edge::after { content:'▶'; position:absolute; right:-8px; top:50%; transform:translateY(-50%); font-size:0.5rem; color:rgba(0,212,170,0.6); }
+.n8n-edge-active { height:2px; width:22px; background:rgba(0,212,170,0.4); flex-shrink:0; position:relative; }
+.n8n-edge-active::after { content:'▶'; position:absolute; right:-7px; top:50%; transform:translateY(-50%); font-size:0.48rem; color:rgba(0,212,170,0.6); }
+.n8n-edge-short { height:2px; width:14px; background:rgba(0,212,170,0.3); flex-shrink:0; }
+
+/* ── LOOKER STUDIO TILES & CARDS ── */
+.ls-tile {
+  background: #fff; border-radius: 6px; padding: 12px 14px;
+  border: 1px solid #e8eaed; border-top-width: 3px;
+}
+.ls-tile-lbl { font-family: var(--fm); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: #80868b; margin-bottom: 6px; }
+.ls-tile-val { font-family: var(--fd); font-size: 1.6rem; font-weight: 700; color: #202124; line-height: 1; margin-bottom: 4px; }
+.ls-tile-delta { font-family: var(--fm); font-size: 0.58rem; color: #5f6368; }
+.ls-card { background: #fff; border-radius: 8px; padding: 14px 16px; border: 1px solid #e8eaed; }
+.ls-card-hd { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 9px; border-bottom: 1px solid #f1f3f4; }
+.ls-card-ttl { font-size: 0.78rem; font-weight: 600; color: #202124; }
+
+
+@media(max-width:960px){
+  .wrap{padding:0 32px}
+  .gap-grid,.chat-layout,.ai-grid,.fnd-grid{grid-template-columns:1fr}
+  .dash-tiles{grid-template-columns:repeat(2,1fr)}
+  .metric-row{max-width:100%}
+}
+@media(max-width:640px){
+  #hero{padding:80px 24px 100px}
+  .metric-row{flex-direction:column;background:none;gap:12px;border-radius:0}
+  .mc{border-radius:10px}
+  .flow-row{gap:6px}
+  .farrow{width:20px}
+  .footer{padding:20px 24px;flex-direction:column;gap:12px;text-align:center}
+  .fl-right{text-align:center}
+  .nav-pills{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="progress-bar" style="width: 30.1287%;"></div>
+
+<!-- ═══ STICKY LAYER NAV ═══ -->
+<nav id="layer-nav" class="show">
+  <div class="nav-brand"><em>Huynchi</em> Growth Engine</div>
+  <div class="nav-pills">
+    <a href="https://x5digital.io/huynchi-growth-engine-demo.html#layer1" class="npill">L1 — Foundation</a>
+    <a href="https://x5digital.io/huynchi-growth-engine-demo.html#layer2" class="npill active">L2 — SEO</a>
+    <a href="https://x5digital.io/huynchi-growth-engine-demo.html#layer3" class="npill">L3 — Pipeline</a>
+    <a href="https://x5digital.io/huynchi-growth-engine-demo.html#layer4" class="npill">L4 — AI Chatbot</a>
+    <a href="https://x5digital.io/huynchi-growth-engine-demo.html#layer5" class="npill">L5 — Dashboard</a>
+  </div>
+</nav>
+
+<!-- ═══ SECTION 1: HERO ═══ -->
+<section id="hero" class="bg-deep">
+  <canvas id="hero-canvas" width="300" height="150"></canvas>
+  <div class="hero-inner">
+    <div class="eyebrow" id="hero-ew" style="opacity: 1; transform: translateY(0px); transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);"><span style="color:rgba(255,255,255,0.9)">Demo Proposal</span> <span style="color:var(--orange)">&nbsp;·&nbsp;</span> <span style="color:rgba(255,255,255,0.9)">March 2026</span> <span style="color:var(--orange)">&nbsp;·&nbsp;</span> <span style="color:var(--x5-blue)">Cazzed Digital Solution</span> <span style="color:var(--orange)">×</span> <span style="color:var(--orange)">Huynchi</span></div>
+    <div class="hero-headline" id="hero-hl" style="opacity: 1; transform: translateY(0px); transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);">
+      <h1 class="h-hero">
+        5-Layer Growth System<br>
+        <em class="orange italic">Self-Operating</em>
+      </h1>
+      <p class="hero-sub">AI Chatbot &nbsp;·&nbsp; SEO for Google &nbsp;·&nbsp; SEO for AI &nbsp;·&nbsp; Lead Pipeline &nbsp;·&nbsp; Dashboard</p>
+    </div>
+    <div class="metric-row" id="hero-metrics" style="opacity: 1; transform: translateY(0px); transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);">
+      <div class="mc">
+        <div class="mc-val"><span class="cnt" data-to="24">24</span><span class="acc">/7</span></div>
+        <div class="mc-lbl">AI Coverage<br>Never miss a lead</div>
+      </div>
+      <div class="mc">
+        <div class="mc-val"><span class="cnt" data-to="2">2</span><span class="acc">–3</span></div>
+        <div class="mc-lbl">Qualified Leads<br>Organic / month</div>
+      </div>
+      <div class="mc">
+        <div class="mc-val"><span class="acc">Top&nbsp;</span><span class="cnt" data-to="3">3</span></div>
+        <div class="mc-lbl">Google Ranking<br>Target Keywords</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><div class="sh-line"></div></div>
+  <div class="hero-ghost">HC</div>
+</section>
+
+<!-- ═══ SECTION 2: THE GAP ═══ -->
+<section id="gap" class="bg-navy">
+  <div class="wrap">
+    <div class="eyebrow rev on">Why You Need a Growth Engine</div>
+    <h2 class="h-sec rev d1 on" style="color:var(--off-white)">Current Situation <em class="orange italic">Today</em> —<br>and after <em class="orange italic">90 Days</em></h2>
+    <div class="gap-grid">
+      <div class="gap-col gc-before rl d2 on">
+        <div class="gc-label">✕ Right Now</div>
+        <div class="gi">
+          <div class="gi-icon">🌙</div>
+          <div>
+            <div class="gi-title">Visitors on the website at 10PM — no one responds</div>
+            <div class="gi-desc">Leads leave and contact competitors who respond faster. Every missed lead = a billion-dong project.</div>
+          </div>
+        </div>
+        <div class="gi">
+          <div class="gi-icon">🔍</div>
+          <div>
+            <div class="gi-title">Google search "office design HCMC" — Huynchi doesn't appear</div>
+            <div class="gi-desc">No dedicated landing page per service. Google doesn't know what Huynchi specializes in.</div>
+          </div>
+        </div>
+        <div class="gi">
+          <div class="gi-icon">🤖</div>
+          <div>
+            <div class="gi-title">When ChatGPT is asked about office design — competitors get mentioned</div>
+            <div class="gi-desc">Huynchi has no clear entity. Invisible to AI search engines.</div>
+          </div>
+        </div>
+      </div>
+      <div class="gap-col gc-after rr d2 on">
+        <div class="gc-label">✓ After 90 Days</div>
+        <div class="gi">
+          <div class="gi-icon">⚡</div>
+          <div>
+            <div class="gi-title">AI responds instantly, qualifies leads at 2AM</div>
+            <div class="gi-desc">Chatbot captures all 9 fields, logs to Sheet, notifies sales team within 60 seconds.</div>
+          </div>
+        </div>
+        <div class="gi">
+          <div class="gi-icon">📈</div>
+          <div>
+            <div class="gi-title">Top 3 on Google with 6+ Vietnamese &amp; English keywords</div>
+            <div class="gi-desc">Dedicated landing page per service, E-E-A-T case studies, 2 blog posts/month.</div>
+          </div>
+        </div>
+        <div class="gi">
+          <div class="gi-icon">✨</div>
+          <div>
+            <div class="gi-title">Huynchi cited by ChatGPT &amp; Gemini</div>
+            <div class="gi-desc">Knowledge Graph, PR on CafeF/VnEconomy, verified entity. Appearing in AI answers.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 3: LAYER 1 — FOUNDATION ═══ -->
+<section id="layer1" class="section bg-light">
+  <div class="wrap">
+    <div class="eyebrow rev on">Layer 1 — Foundation &amp; Data</div>
+    <h2 class="h-sec rev d1 on" style="color:var(--navy)">Clean <em class="orange italic">Data</em> —<br>the foundation of every decision</h2>
+    <p class="rev d2 on" style="color:var(--text-body);max-width:560px;margin-top:10px;margin-bottom:44px;font-size:0.9375rem;">Without clean data, there are no accurate insights, no real ROI. Layer 1 is the technical infrastructure that makes everything else work correctly.</p>
+
+    <div class="fnd-grid">
+      <div class="fnd-card rev d1 on">
+        <div class="fnd-lbl">Tracking — GA4</div>
+        <h4>Google Analytics 4 Setup</h4>
+        <p>Events are mapped to Huynchi's business goals — not generic page views. Every chatbot lead, every portfolio view is accurately tracked.</p>
+        <div class="code-blk">
+          <span class="cc">// GA4 — Lead Qualified Event</span><br>
+          gtag(<span class="cv">'event'</span>, <span class="cv">'generate_lead'</span>, {<br>
+          &nbsp;&nbsp;<span class="ck">project_type</span>: <span class="cv">'workspace'</span>,<br>
+          &nbsp;&nbsp;<span class="ck">source</span>: <span class="cv">'chatbot'</span>,<br>
+          &nbsp;&nbsp;<span class="ck">area_m2</span>: <span class="cw">800</span><br>
+          });
+        </div>
+      </div>
+      <div class="fnd-card rev d2 on">
+        <div class="fnd-lbl">Tracking — Search Console</div>
+        <h4>Google Search Console + Verify</h4>
+        <p>Connect GSC to monitor keyword impressions, click-through rate, and indexing status. Real data from Google on how Huynchi appears in search.</p>
+        <div class="code-blk">
+          <span class="cc">// GSC — Verified Properties</span><br>
+          huynchi.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cv">✓ Verified</span><br>
+          www.huynchi.com &nbsp;&nbsp;&nbsp;&nbsp;<span class="cv">✓ Verified</span><br>
+          <span class="cc">// Sitemap submitted</span><br>
+          /sitemap.xml &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cw">247 URLs</span>
+        </div>
+      </div>
+      <div class="fnd-card rev d3 on">
+        <div class="fnd-lbl">Schema Markup</div>
+        <h4>Full-Site Structured Data</h4>
+        <p>Schema.org Organization + LocalBusiness + Service + BreadcrumbList for all pages. Google and AI engines understand exactly who Huynchi is, what they do, and who they serve.</p>
+        <div class="code-blk">
+          <span class="cc">// Schema — Organization</span><br>
+          {&nbsp;<span class="ck">"@type"</span>: <span class="cv">"InteriorDesignBusiness"</span>,<br>
+          &nbsp;&nbsp;<span class="ck">"name"</span>: <span class="cv">"Huynchi"</span>,<br>
+          &nbsp;&nbsp;<span class="ck">"foundingDate"</span>: <span class="cv">"2003"</span>,<br>
+          &nbsp;&nbsp;<span class="ck">"areaServed"</span>: <span class="cv">"Vietnam"</span>&nbsp;}
+        </div>
+      </div>
+      <div class="fnd-card rev d4 on">
+        <div class="fnd-lbl">Core Web Vitals</div>
+        <h4>Performance Audit &amp; Fix</h4>
+        <p>Full audit of huynchi.com — LCP, CLS, INP. Fix image bottlenecks, font loading, and render-blocking scripts. Google prioritizes ranking fast-loading websites.</p>
+        <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;">
+            <span style="color:var(--text-body)">LCP (Largest Contentful Paint)</span>
+            <span style="font-family:var(--fm);color:#34a853;font-size:0.75rem;">≤ 2.5s ✓</span>
+          </div>
+          <div style="background:var(--warm-stone);border-radius:4px;height:6px;overflow:hidden;">
+            <div style="background:var(--orange);height:100%;width:72%;border-radius:4px;"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem;">
+            <span style="color:var(--text-body)">INP (Interaction to Next Paint)</span>
+            <span style="font-family:var(--fm);color:#34a853;font-size:0.75rem;">≤ 200ms ✓</span>
+          </div>
+          <div style="background:var(--warm-stone);border-radius:4px;height:6px;overflow:hidden;">
+            <div style="background:var(--orange);height:100%;width:88%;border-radius:4px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 4: LAYER 2 — SEO ENGINE ═══ -->
+<section id="layer2" class="section bg-stone">
+  <div class="wrap">
+    <div class="eyebrow rev on">Layer 2 — MarTech Execution</div>
+    <h2 class="h-sec rev d1 on" style="color:var(--navy)">SEO Engine —<br><em class="orange italic">Google</em> &amp; <em class="orange italic">AI Search</em></h2>
+    <p class="rev d2 on" style="color:var(--text-body);max-width:560px;margin-top:10px;margin-bottom:56px;font-size:0.9375rem;">Bilingual SEO strategy (Vietnamese/English) — simultaneously optimized for traditional Google Search and AI Search engines (ChatGPT, Gemini, Perplexity).</p>
+
+    <!-- Sub-section: SEO Google -->
+    <div class="rev d2 on" style="margin-bottom:56px;">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
+        <span style="font-family:var(--fm);font-size:1.2rem;letter-spacing:0.08em;font-weight:700;text-transform:uppercase;color:var(--orange);background:var(--orange-pale);border:1px solid rgba(232,97,42,0.22);padding:4px 12px;border-radius:3px;">SEO Google</span>
+        <h3 class="h-sub" style="color:var(--navy)">Keyword Rankings — before &amp; after</h3>
+      </div>
+      <div class="kw-wrap">
+        <div class="kw-head">
+          <div class="kw-title">Target Keywords · Vi + En · 90-day rollout</div>
+          <div class="kw-leg">
+            <div class="kw-li"><div class="kw-dot" style="background:#E8E4DC"></div>Current (outside Top 50)</div>
+            <div class="kw-li"><div class="kw-dot" style="background:var(--orange)"></div>After 90 days</div>
+          </div>
+        </div>
+        <canvas id="kwChart" style="display: block; box-sizing: border-box; width: 100%; max-height: 300px;"></canvas>
+      </div>
+    </div>
+
+    <!-- Sub-section: SEO AI / GEO -->
+    <div class="rev d3 on">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
+        <span style="font-family:var(--fm);font-size:1.2rem;letter-spacing:0.08em;font-weight:700;text-transform:uppercase;color:var(--x5-blue);background:rgba(29,155,240,0.08);border:1px solid rgba(29,155,240,0.2);padding:4px 12px;border-radius:3px;">SEO for AI · GEO</span>
+        <h3 class="h-sub" style="color:var(--navy)">Generative Engine Optimization</h3>
+      </div>
+      <div class="ai-grid">
+
+        <!-- BEFORE -->
+        <div class="ai-box">
+          <div class="ai-box-lbl" style="color:#b02020">✕ Before GEO implementation — Huynchi is invisible</div>
+          <div class="ai-q"><span>🔍</span><em>"Top office design company in HCMC for multinational corporations?"</em></div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div class="ai-ans bad">
+              <div class="ai-ans-lbl" style="display:flex;align-items:center;gap:6px;">
+                <span style="font-size:0.85rem;">🤖</span> ChatGPT responds
+              </div>
+              There are several office interior design companies in Ho Chi Minh City such as [Competitor A], [Competitor B]... You should contact them directly for a consultation and detailed quote.
+            </div>
+            <div class="ai-ans bad">
+              <div class="ai-ans-lbl" style="display:flex;align-items:center;gap:6px;">
+                <svg width="13" height="13" viewBox="0 0 24 24" style="flex-shrink:0"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
+                Google AI Overview responds
+              </div>
+              No reliable information found about office design companies specializing in serving foreign corporations in HCMC. Please try searching further...
+            </div>
+          </div>
+        </div>
+
+        <!-- AFTER — with switcher -->
+        <div class="ai-box">
+          <div class="ai-box-lbl" style="color:#00916a">✓ After GEO implementation — Huynchi is cited</div>
+          <div class="ai-q"><span>🔍</span><em>"Top office design company in HCMC for multinational corporations?"</em></div>
+
+          <!-- Source switcher tabs -->
+          <div style="display:flex;gap:0;margin-bottom:0;border:1px solid var(--divider);border-radius:6px;overflow:hidden;">
+            <button class="geo-src-btn active" data-src="chatgpt" style="flex:1;padding:7px 10px;font-family:var(--fm);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;background:var(--navy);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:all 0.2s;">
+              <span>🤖</span> ChatGPT
+            </button>
+            <button class="geo-src-btn" data-src="google-ai" style="flex:1;padding:7px 10px;font-family:var(--fm);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;background:white;color:var(--text-muted);border:none;border-left:1px solid var(--divider);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;transition:all 0.2s;">
+              <svg width="11" height="11" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
+              Google AI
+            </button>
+          </div>
+
+          <!-- ChatGPT answer -->
+          <div class="geo-src-panel" id="geo-chatgpt" style="display:block;">
+            <div class="ai-ans good" style="border-radius:0 0 7px 7px;border-top:none;">
+              <div class="ai-ans-lbl">ChatGPT responds</div>
+              <span id="ai-tw">Trusted Design &amp; Build firms in HCMC serving large enterprises include Huynchi — specializing in commercial interior design and construction since 2003, with a client portfolio including FPT Software, Agoda, Baker McKenzie, and Heineken Vietnam. Huynchi has offices in both HCMC and Hanoi.</span>
+            </div>
+          </div>
+
+          <!-- Google AI Overview answer -->
+          <div class="geo-src-panel" id="geo-google-ai" style="display:none;">
+            <div class="ai-ans good" style="border-radius:0 0 7px 7px;border-top:none;">
+              <div class="ai-ans-lbl" style="display:flex;align-items:center;gap:6px;color:#1a6636;">
+                <svg width="11" height="11" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
+                Google AI Overview
+              </div>
+              <!-- Google AI Overview mockup layout -->
+              <div style="background:#f8fffe;border:1px solid rgba(0,160,80,0.15);border-radius:6px;padding:12px 14px;margin-bottom:0;">
+                <div style="font-size:0.78rem;line-height:1.75;color:#1a1e28;">
+                  According to search results, <strong style="color:#0a5c38;">Huynchi</strong> is one of the most reputable commercial interior design &amp; construction companies in HCMC for multinational corporations, operating since 2003. Project portfolio includes <strong>FPT Software, Agoda, Baker McKenzie, Heineken Vietnam</strong> and many other international names.
+                </div>
+                <!-- Source citations like Google AI Overview -->
+                <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.07);display:flex;flex-wrap:wrap;gap:6px;">
+                  <div style="display:flex;align-items:center;gap:5px;background:white;border:1px solid #e0e0e0;border-radius:4px;padding:3px 8px;">
+                    <div style="width:10px;height:10px;border-radius:2px;background:var(--orange);flex-shrink:0;"></div>
+                    <span style="font-family:var(--fm);font-size:0.56rem;color:#555;">huynchi.com</span>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:5px;background:white;border:1px solid #e0e0e0;border-radius:4px;padding:3px 8px;">
+                    <div style="width:10px;height:10px;border-radius:2px;background:#1565c0;flex-shrink:0;"></div>
+                    <span style="font-family:var(--fm);font-size:0.56rem;color:#555;">vneconomy.vn</span>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:5px;background:white;border:1px solid #e0e0e0;border-radius:4px;padding:3px 8px;">
+                    <div style="width:10px;height:10px;border-radius:2px;background:#c62828;flex-shrink:0;"></div>
+                    <span style="font-family:var(--fm);font-size:0.56rem;color:#555;">cafef.vn</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div style="margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+        <div style="background:white;border:1px solid var(--divider);border-radius:8px;padding:16px 18px;">
+          <div style="font-family:var(--fm);font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange);margin-bottom:7px;">Entity Building</div>
+          <div style="font-size:0.82rem;color:var(--navy);font-weight:600;margin-bottom:4px;">Knowledge Graph</div>
+          <div style="font-size:0.78rem;color:var(--text-body);line-height:1.65;">Google Knowledge Panel + Wikidata + Crunchbase</div>
+        </div>
+        <div style="background:white;border:1px solid var(--divider);border-radius:8px;padding:16px 18px;">
+          <div style="font-family:var(--fm);font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange);margin-bottom:7px;">Authority Content</div>
+          <div style="font-size:0.82rem;color:var(--navy);font-weight:600;margin-bottom:4px;">E-E-A-T Format</div>
+          <div style="font-size:0.78rem;color:var(--text-body);line-height:1.65;">Case study: Client → Challenge → Solution → Outcome</div>
+        </div>
+        <div style="background:white;border:1px solid var(--divider);border-radius:8px;padding:16px 18px;">
+          <div style="font-family:var(--fm);font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange);margin-bottom:7px;">Citation Building</div>
+          <div style="font-size:0.82rem;color:var(--navy);font-weight:600;margin-bottom:4px;">AI Source Trust</div>
+          <div style="font-size:0.78rem;color:var(--text-body);line-height:1.65;">PR: CafeF, VnEconomy, Vietnam Investment Review</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-section: Google Ads OPTIONAL -->
+    <div class="rev d4 on" style="margin-top:56px;">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;flex-wrap:wrap;">
+        <span style="font-family:var(--fm);font-size:1.2rem;letter-spacing:0.08em;font-weight:700;text-transform:uppercase;color:var(--orange);background:var(--orange-pale);border:1px solid rgba(232,97,42,0.22);padding:4px 12px;border-radius:3px;">Google Ads</span>
+        <span style="font-family:var(--fm);font-size:1.16rem;letter-spacing:0.06em;font-weight:700;text-transform:uppercase;color:#9a7108;background:rgba(245,158,11,0.1);border:1px dashed rgba(245,158,11,0.35);padding:4px 10px;border-radius:3px;">⚡ Optional</span>
+        <h3 class="h-sub" style="color:var(--navy)">Paid Search — when you need leads immediately</h3>
+      </div>
+
+      <!-- Rationale banner -->
+      <div style="background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.2);border-left:3px solid #F59E0B;border-radius:0 8px 8px 0;padding:16px 22px;margin-bottom:24px;display:flex;gap:14px;align-items:flex-start;">
+        <span style="font-size:1.2rem;flex-shrink:0;margin-top:1px;">💡</span>
+        <div>
+          <div style="font-family:var(--fm);font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:#9a7108;margin-bottom:5px;">Why You Should Also Run Google Ads</div>
+          <p style="font-size:0.875rem;color:var(--text-body);line-height:1.75;margin:0;">SEO takes 3–6 months to produce results. During that time, Google Ads can put Huynchi in the <strong>#1 position</strong> immediately for high-intent keywords. Not a replacement for SEO — run in parallel as a <em>short-term accelerator</em> while SEO gradually climbs the rankings.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+        <!-- SERP mockup -->
+        <div style="background:white;border:1px solid var(--divider);border-radius:10px;overflow:hidden;">
+          <div style="background:var(--warm-pebble);padding:10px 16px;border-bottom:1px solid var(--divider);font-family:var(--fm);font-size:1.18rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);">Google SERP — Search Result Preview</div>
+          <div style="padding:16px 18px;display:flex;flex-direction:column;gap:14px;">
+
+            <!-- Ad result #1 — Huynchi (with GG Ads) -->
+            <div style="border:1px solid rgba(29,155,240,0.25);border-radius:6px;padding:12px 14px;background:rgba(29,155,240,0.03);">
+              <div style="display:flex;align-items:center;gap:7px;margin-bottom:4px;">
+                <span style="font-family:var(--fm);font-size:0.54rem;background:#e8f0fe;color:#1a73e8;border:1px solid #c5d4fb;padding:1px 6px;border-radius:3px;letter-spacing:0.05em;">Ad</span>
+                <span style="font-size:0.72rem;color:#006621;">huynchi.com</span>
+              </div>
+              <div style="font-size:0.875rem;font-weight:600;color:#1a0dab;margin-bottom:3px;">Huynchi — Office Design &amp; Build | 20+ Years of Experience</div>
+              <div style="font-size:0.78rem;color:var(--text-body);line-height:1.6;">Commercial interior design for FPT, Agoda, Baker McKenzie. Free consultation · HCMC &amp; Hanoi · Hotline 24/7</div>
+              <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;">
+                <span style="font-size:0.72rem;color:#1a73e8;border:1px solid #c5d4fb;border-radius:3px;padding:2px 7px;">View Portfolio</span>
+                <span style="font-size:0.72rem;color:#1a73e8;border:1px solid #c5d4fb;border-radius:3px;padding:2px 7px;">Get a Quote</span>
+                <span style="font-size:0.72rem;color:#1a73e8;border:1px solid #c5d4fb;border-radius:3px;padding:2px 7px;">Featured Projects</span>
+              </div>
+            </div>
+
+            <!-- Organic result #2 — competitor -->
+            <div style="padding:4px 0;opacity:0.55;">
+              <div style="font-size:0.72rem;color:#006621;margin-bottom:3px;">competitor-a.com</div>
+              <div style="font-size:0.875rem;color:#1a0dab;margin-bottom:3px;">Interior Design Company ABC — Ho Chi Minh City</div>
+              <div style="font-size:0.78rem;color:var(--text-body);">Office, residential, commercial design...</div>
+            </div>
+
+            <!-- Organic result #3 — competitor -->
+            <div style="padding:4px 0;opacity:0.35;">
+              <div style="font-size:0.72rem;color:#006621;margin-bottom:3px;">competitor-b.vn</div>
+              <div style="font-size:0.875rem;color:#1a0dab;margin-bottom:3px;">Interior Design XYZ — Professional</div>
+              <div style="font-size:0.78rem;color:var(--text-body);">Full design &amp; build services...</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Strategy breakdown -->
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="background:white;border:1px solid var(--divider);border-radius:8px;padding:16px 18px;">
+            <div style="font-family:var(--fm);font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange);margin-bottom:7px;">Target Campaigns</div>
+            <div style="font-size:0.82rem;color:var(--navy);font-weight:600;margin-bottom:10px;">2 industry-specific campaigns</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="display:flex;justify-content:space-between;font-size:0.78rem;">
+                <span style="color:var(--text-body);">Workspace (HCMC + HN)</span>
+                <span style="font-family:var(--fm);color:var(--orange);font-size:0.72rem;">High intent</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:0.78rem;">
+                <span style="color:var(--text-body);">Healthcare / Lab / GMP</span>
+                <span style="font-family:var(--fm);color:var(--orange);font-size:0.72rem;">Niche intent</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:white;border:1px solid var(--divider);border-radius:8px;padding:16px 18px;">
+            <div style="font-family:var(--fm);font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange);margin-bottom:7px;">Approach</div>
+            <div style="font-size:0.82rem;color:var(--navy);font-weight:600;margin-bottom:10px;">B2B Low-Volume Strategy</div>
+            <div style="font-size:0.78rem;color:var(--text-body);line-height:1.7;">Small budget, high bids on <em>very specific</em> keywords — no wasted spend on broad terms. Every click = someone actively searching for a Design &amp; Build partner.</div>
+          </div>
+
+          <div style="background:white;border:1px solid var(--divider);border-radius:8px;padding:16px 18px;">
+            <div style="font-family:var(--fm);font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--x5-green);margin-bottom:7px;">Expected Outcome</div>
+            <div style="font-size:0.78rem;color:var(--text-body);line-height:1.7;">Measurable results from <strong>Week 1</strong> — while SEO gradually climbs from months 2–3. Ads turn off once organic SEO has stabilized.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ SECTION 4: LAYER 3 PIPELINE ═══ -->
+<section id="layer3" class="section bg-deep">
+  <div class="wrap">
+    <div class="pipe-intro rev on">
+      <div class="eyebrow eyebrow-dim" style="justify-content:center">Layer 3 — Lead Pipeline</div>
+      <h2 class="h-sec" style="color:var(--off-white)">From chat to <em class="orange italic">Google Sheet</em><br>in 60 seconds</h2>
+      <p>No HubSpot needed. With 10–15 deals per year, an automated Google Sheet is optimal — simple, transparent, no leads missed.</p>
+    </div>
+
+    <!-- Mini flow indicator -->
+    <div class="flow-row rev d2 on" id="flow-row">
+      <div class="fn"><div class="fbox lit" id="fb0"><span class="fbox-icon">💬</span><div class="fbox-name">Customer Chat</div><div class="fbox-desc">Website 24/7</div></div></div>
+      <div class="farrow lit" id="fa0"></div>
+      <div class="fn"><div class="fbox lit" id="fb1"><span class="fbox-icon">🤖</span><div class="fbox-name">AI Qualify</div><div class="fbox-desc">9 fields</div></div></div>
+      <div class="farrow lit" id="fa1"></div>
+      <div class="fn"><div class="fbox lit" id="fb2"><span class="fbox-icon">⚡</span><div class="fbox-name">n8n Trigger</div><div class="fbox-desc">Automation</div></div></div>
+      <div class="farrow lit" id="fa2"></div>
+      <div class="fn"><div class="fbox lit" id="fb3"><span class="fbox-icon">📊</span><div class="fbox-name">Google Sheet</div><div class="fbox-desc">Auto row</div></div></div>
+      <div class="farrow lit" id="fa3"></div>
+      <div class="fn"><div class="fbox lit" id="fb4"><span class="fbox-icon">📧</span><div class="fbox-name">Email Notify</div><div class="fbox-desc">Sales team</div></div></div>
+    </div>
+
+    <!-- ═══ 5 STEP DEMO PANELS ═══ -->
+    <div style="display:flex;flex-direction:column;gap:16px;margin-top:8px;">
+
+      <!-- STEP 1: Customer Chat -->
+      <div class="pipe-panel rev d1 on">
+        <div class="pipe-panel-left">
+          <div class="pipe-step-num">01</div>
+          <div class="pipe-step-line"></div>
+        </div>
+        <div class="pipe-panel-body">
+          <div class="pipe-step-head">
+            <span class="pipe-step-icon">💬</span>
+            <div>
+              <div class="pipe-step-title">Customer Chat</div>
+              <div class="pipe-step-sub">Visitor accesses huynchi.com at 11:47 PM — outside business hours. Chatbot activates immediately.</div>
+            </div>
+          </div>
+          <div class="pipe-demo-box">
+            <div class="pipe-demo-label">💬 Demo — Real conversation</div>
+            <div class="pipe-chat-sim">
+              <div class="pcs-bubble bot">
+                <div class="pcs-name">Huynchi AI</div>
+                Hello! I'm Huynchi's space design assistant.
+
+What type of project are you looking for?
+              </div>
+              <div class="pcs-bubble user">We need to design a new office of approximately 800m²</div>
+              <div class="pcs-bubble bot">
+                <div class="pcs-name">Huynchi AI</div>
+                800m² — a scale large enough to create a truly deep space. Is this a new build or a renovation?
+              </div>
+              <div class="pcs-bubble user">New build, estimated 4 months</div>
+              <div class="pcs-bubble bot">
+                <div class="pcs-name">Huynchi AI</div>
+                4 months is a feasible timeline for this scale. What is your expected investment budget?
+              </div>
+              <div class="pcs-bubble user">Around 2–3 billion VND, flexible</div>
+              <div class="pcs-bubble bot">
+                <div class="pcs-name">Huynchi AI</div>
+                To connect with a Huynchi Design Consultant — could you share your name, company, and email?
+              </div>
+              <div class="pcs-bubble user">Nguyen Van C — TechCorp Vietnam — <a href="https://x5digital.io/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d0b3febeb7a5a9b5be90a4b5b3b8b3bfa2a0fea6be">[email&nbsp;protected]</a></div>
+              <div class="pcs-bubble bot">
+                <div class="pcs-name">Huynchi AI</div>
+                ✅ Thank you! Your information has been recorded. A Design Consultant will reach out within 24 hours.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2: AI Qualify -->
+      <div class="pipe-panel rev d2 on">
+        <div class="pipe-panel-left">
+          <div class="pipe-step-num">02</div>
+          <div class="pipe-step-line"></div>
+        </div>
+        <div class="pipe-panel-body">
+          <div class="pipe-step-head">
+            <span class="pipe-step-icon">🤖</span>
+            <div>
+              <div class="pipe-step-title">AI Qualify</div>
+              <div class="pipe-step-sub">AI analyzes the entire conversation, automatically extracts 9 fields, and calculates the Lead Score.</div>
+            </div>
+          </div>
+          <div class="pipe-demo-box">
+            <div class="pipe-demo-label">🤖 Demo — AI extracting data from conversation</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;">
+              <div class="qfield qf-done"><span class="qf-icon">✓</span><div><div class="qf-label">Contact Name</div><div class="qf-val">Nguyen Van C</div></div></div>
+              <div class="qfield qf-done"><span class="qf-icon">✓</span><div><div class="qf-label">Company</div><div class="qf-val">TechCorp Vietnam</div></div></div>
+              <div class="qfield qf-done"><span class="qf-icon">✓</span><div><div class="qf-label">Email</div><div class="qf-val"><a href="https://x5digital.io/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="87e4a9e9e0f2fee2e9c7f3e2e4efe4e8f5f7a9f1e9">[email&nbsp;protected]</a></div></div></div>
+              <div class="qfield qf-done"><span class="qf-icon">✓</span><div><div class="qf-label">Project Type</div><div class="qf-val">Workspace</div></div></div>
+              <div class="qfield qf-done"><span class="qf-icon">✓</span><div><div class="qf-label">Area</div><div class="qf-val">800 m²</div></div></div>
+              <div class="qfield qf-done"><span class="qf-icon">✓</span><div><div class="qf-label">Build Type</div><div class="qf-val">New build</div></div></div>
+              <div class="qfield qf-done"><span class="qf-icon">✓</span><div><div class="qf-label">Timeline</div><div class="qf-val">4 months</div></div></div>
+              <div class="qfield qf-done"><span class="qf-icon">✓</span><div><div class="qf-label">Estimated Budget</div><div class="qf-val">2–3 billion VND</div></div></div>
+              <div class="qfield qf-pending"><span class="qf-icon">…</span><div><div class="qf-label">Phone Number</div><div class="qf-val" style="color:rgba(255,255,255,0.3);">Not captured</div></div></div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(0,212,170,0.08);border:1px solid rgba(0,212,170,0.2);border-radius:6px;padding:10px 14px;">
+              <div style="font-family:var(--fm);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--x5-green);">Lead Score</div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <div style="display:flex;gap:3px;">
+                  <div style="width:24px;height:8px;background:var(--x5-green);border-radius:2px;"></div>
+                  <div style="width:24px;height:8px;background:var(--x5-green);border-radius:2px;"></div>
+                  <div style="width:24px;height:8px;background:var(--x5-green);border-radius:2px;"></div>
+                  <div style="width:24px;height:8px;background:rgba(0,212,170,0.25);border-radius:2px;"></div>
+                </div>
+                <span style="font-family:var(--fd);font-size:1.4rem;font-weight:700;color:var(--x5-green);">8.5<span style="font-size:0.8rem;font-weight:400;color:rgba(255,255,255,0.3);"> / 10</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3: n8n Trigger -->
+      <div class="pipe-panel rev d3 on">
+        <div class="pipe-panel-left">
+          <div class="pipe-step-num">03</div>
+          <div class="pipe-step-line"></div>
+        </div>
+        <div class="pipe-panel-body">
+          <div class="pipe-step-head">
+            <span class="pipe-step-icon">⚡</span>
+            <div>
+              <div class="pipe-step-title">n8n Trigger</div>
+              <div class="pipe-step-sub">As soon as a lead is qualified, the n8n workflow fires automatically — logging to Sheet and sending email in parallel in &lt;5 seconds.</div>
+            </div>
+          </div>
+          <div class="pipe-demo-box">
+            <div class="pipe-demo-label">⚡ Demo — n8n Workflow executing</div>
+            <!-- n8n workflow mockup -->
+            <div style="background:#1a1a2e;border-radius:8px;padding:16px 18px;overflow-x:auto;">
+              <div style="font-family:var(--fm);font-size:0.58rem;color:rgba(255,255,255,0.3);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;">n8n · Workflow: Huynchi Lead Capture · ● Active</div>
+              <div style="display:flex;align-items:center;gap:0;min-width:600px;">
+                <!-- Node 1 -->
+                <div class="n8n-node n8n-trigger">
+                  <div class="n8n-node-icon">⚡</div>
+                  <div class="n8n-node-name">Webhook</div>
+                  <div class="n8n-node-sub">Chatbot fires</div>
+                </div>
+                <div class="n8n-edge n8n-edge-active"></div>
+                <!-- Node 2 -->
+                <div class="n8n-node n8n-active">
+                  <div class="n8n-node-icon">🔄</div>
+                  <div class="n8n-node-name">Parse JSON</div>
+                  <div class="n8n-node-sub">9 fields</div>
+                </div>
+                <div class="n8n-edge n8n-edge-active"></div>
+                <!-- Node 3 — split -->
+                <div style="display:flex;flex-direction:column;gap:6px;">
+                  <!-- Branch A -->
+                  <div style="display:flex;align-items:center;gap:0;">
+                    <div class="n8n-edge-short n8n-edge-active"></div>
+                    <div class="n8n-node n8n-active" style="min-width:90px;">
+                      <div class="n8n-node-icon">📊</div>
+                      <div class="n8n-node-name">Google Sheet</div>
+                      <div class="n8n-node-sub">Append row</div>
+                    </div>
+                    <div class="n8n-edge-short n8n-edge-active"></div>
+                    <div class="n8n-node n8n-done" style="min-width:80px;">
+                      <div class="n8n-node-icon">✓</div>
+                      <div class="n8n-node-name">Row added</div>
+                      <div class="n8n-node-sub">0.8s</div>
+                    </div>
+                  </div>
+                  <!-- Branch B -->
+                  <div style="display:flex;align-items:center;gap:0;">
+                    <div class="n8n-edge-short n8n-edge-active"></div>
+                    <div class="n8n-node n8n-active" style="min-width:90px;">
+                      <div class="n8n-node-icon">📧</div>
+                      <div class="n8n-node-name">Send Email</div>
+                      <div class="n8n-node-sub">Gmail SMTP</div>
+                    </div>
+                    <div class="n8n-edge-short n8n-edge-active"></div>
+                    <div class="n8n-node n8n-done" style="min-width:80px;">
+                      <div class="n8n-node-icon">✓</div>
+                      <div class="n8n-node-name">Sent</div>
+                      <div class="n8n-node-sub">1.2s</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top:10px;font-family:var(--fm);font-size:0.6rem;color:var(--x5-green);">✓ Execution completed · Total time: 1.4s · 2 outputs triggered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 4: Google Sheet -->
+      <div class="pipe-panel rev d4 on">
+        <div class="pipe-panel-left">
+          <div class="pipe-step-num">04</div>
+          <div class="pipe-step-line"></div>
+        </div>
+        <div class="pipe-panel-body">
+          <div class="pipe-step-head">
+            <span class="pipe-step-icon">📊</span>
+            <div>
+              <div class="pipe-step-title">Google Sheet CRM</div>
+              <div class="pipe-step-sub">New rows appear automatically with all 9 fields. Sales team opens the Sheet in the morning and immediately sees all leads from the night before.</div>
+            </div>
+          </div>
+          <div class="pipe-demo-box" style="padding:0;overflow:hidden;">
+            <div class="pipe-demo-label" style="padding:10px 16px;margin-bottom:0;border-bottom:1px solid rgba(255,255,255,0.07);">📊 Demo — Google Sheet auto-updated</div>
+            <div style="background:white;">
+              <div style="background:#1a73e8;padding:8px 14px;display:flex;align-items:center;gap:10px;">
+                <div style="display:flex;gap:5px;"><div style="width:10px;height:10px;border-radius:50%;background:#ea4335;"></div><div style="width:10px;height:10px;border-radius:50%;background:#fbbc04;"></div><div style="width:10px;height:10px;border-radius:50%;background:#34a853;"></div></div>
+                <span style="font-family:var(--fm);font-size:0.65rem;color:rgba(255,255,255,0.85);">📊 Huynchi · Lead CRM · Google Sheets</span>
+              </div>
+              <div style="overflow-x:auto;">
+                <table style="width:100%;border-collapse:collapse;font-size:0.68rem;font-family:var(--fm);">
+                  <thead>
+                    <tr style="background:#f8f9fa;">
+                      <th style="padding:6px 10px;text-align:left;border:1px solid #e0e0e0;color:#333;white-space:nowrap;">Timestamp</th>
+                      <th style="padding:6px 10px;text-align:left;border:1px solid #e0e0e0;color:#333;">Name</th>
+                      <th style="padding:6px 10px;text-align:left;border:1px solid #e0e0e0;color:#333;">Company</th>
+                      <th style="padding:6px 10px;text-align:left;border:1px solid #e0e0e0;color:#333;">Email</th>
+                      <th style="padding:6px 10px;text-align:left;border:1px solid #e0e0e0;color:#333;">Type</th>
+                      <th style="padding:6px 10px;text-align:left;border:1px solid #e0e0e0;color:#333;">m²</th>
+                      <th style="padding:6px 10px;text-align:left;border:1px solid #e0e0e0;color:#333;">Budget</th>
+                      <th style="padding:6px 10px;text-align:left;border:1px solid #e0e0e0;color:#333;">Timeline</th>
+                      <th style="padding:6px 10px;text-align:left;border:1px solid #e0e0e0;color:#333;">Score</th>
+                      <th style="padding:6px 10px;text-align:left;border:1px solid #e0e0e0;color:#333;">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="sheet-body">
+                    <tr>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;white-space:nowrap;">14/03 09:23</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">Nguyen A</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">Tech Corp</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">a@tech...</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">Workspace</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">500</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">Flexible</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">4 months</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;"><span style="background:#e8f5e9;color:#2e7d32;padding:1px 5px;border-radius:3px;">9.2</span></td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#34a853;font-weight:600;">✓ Called</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;white-space:nowrap;">15/03 14:07</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">Tran B</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">Pharma Ltd</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">b@pharma...</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">Lab/GMP</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">200</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">Under construction</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#444;">6 months</td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;"><span style="background:#e8f5e9;color:#2e7d32;padding:1px 5px;border-radius:3px;">8.7</span></td>
+                      <td style="padding:5px 10px;border:1px solid #e0e0e0;color:#fbbc04;font-weight:600;">⏳ Pending</td>
+                    </tr>
+                  <tr class="nr"><td>2026-03-20 13:53</td><td>Le Van C</td><td>Multinational Corp</td><td>Workspace</td><td>800m²</td><td>Flexible</td><td>4 months</td><td>c.le@corp...</td><td><span style="color:#1a73e8;font-weight:600">🆕 New</span></td></tr></tbody>
+                </table>
+              </div>
+              <div class="sheet-ts" id="sheet-ts" style="font-family:var(--fm);font-size:0.6rem;color:#2e7d32;text-align:center;padding:8px;background:#f0faf5;border-top:1px solid #c8e6c9;">⚡ New lead: 2026-03-20 13:53 · Response &lt; 60 seconds · Auto-logged to Sheet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 5: Email Notify -->
+      <div class="pipe-panel rev d5 on">
+        <div class="pipe-panel-left">
+          <div class="pipe-step-num">05</div>
+        </div>
+        <div class="pipe-panel-body">
+          <div class="pipe-step-head">
+            <span class="pipe-step-icon">📧</span>
+            <div>
+              <div class="pipe-step-title">Email Notify Sales Team</div>
+              <div class="pipe-step-sub">Sales team receives an email immediately — with full lead info, no need to open the Sheet. Respond within minutes while the prospect is still "hot".</div>
+            </div>
+          </div>
+          <div class="pipe-demo-box" style="padding:0;overflow:hidden;">
+            <div class="pipe-demo-label" style="padding:10px 16px;margin-bottom:0;border-bottom:1px solid rgba(255,255,255,0.07);">📧 Demo — Email received by Sales Team</div>
+            <!-- Email client mockup -->
+            <div style="background:white;">
+              <!-- Email toolbar -->
+              <div style="background:#f1f3f4;padding:8px 14px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #e0e0e0;">
+                <div style="display:flex;gap:5px;"><div style="width:10px;height:10px;border-radius:50%;background:#ea4335;"></div><div style="width:10px;height:10px;border-radius:50%;background:#fbbc04;"></div><div style="width:10px;height:10px;border-radius:50%;background:#34a853;"></div></div>
+                <span style="font-size:0.7rem;color:#5f6368;font-family:var(--fm);">Gmail — <a href="https://x5digital.io/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bfccded3daccffd7cac6d1dcd7d691dcd0d2">[email&nbsp;protected]</a></span>
+              </div>
+              <!-- Email header -->
+              <div style="padding:16px 20px;border-bottom:1px solid #f1f3f4;">
+                <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px;">
+                  <div>
+                    <div style="font-size:1rem;font-weight:700;color:#202124;margin-bottom:4px;">🔔 [Huynchi Lead] Workspace 800m² — TechCorp Vietnam — Score 8.5/10</div>
+                    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;">
+                      <span style="font-size:0.7rem;background:#fce8e6;color:#c5221f;padding:2px 7px;border-radius:3px;font-family:var(--fm);">HIGH PRIORITY</span>
+                      <span style="font-size:0.7rem;background:#e8f5e9;color:#1e7e34;padding:2px 7px;border-radius:3px;font-family:var(--fm);">Score 8.5/10</span>
+                      <span style="font-size:0.7rem;background:#e8f0fe;color:#1967d2;padding:2px 7px;border-radius:3px;font-family:var(--fm);">Workspace</span>
+                    </div>
+                  </div>
+                  <div style="font-family:var(--fm);font-size:0.6rem;color:#80868b;white-space:nowrap;">23:47 today</div>
+                </div>
+                <div style="font-size:0.72rem;color:#5f6368;font-family:var(--fm);">
+                  <span>From: <strong style="color:#202124;">Huynchi AI (<a href="https://x5digital.io/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2e40415c4b5e42576e465b57404d4647004d4143">[email&nbsp;protected]</a>)</strong></span> &nbsp;·&nbsp;
+                  <span>To: <strong style="color:#202124;"><a href="https://x5digital.io/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b382a272e380b233e322528232265282426">[email&nbsp;protected]</a></strong></span>
+                </div>
+              </div>
+              <!-- Email body -->
+              <div style="padding:18px 20px;font-size:0.8rem;color:#202124;line-height:1.8;">
+                <p style="color:#202124;margin-bottom:14px;">Hi Sales team,</p>
+                <p style="color:#202124;margin-bottom:14px;">There is <strong>1 new lead</strong> just captured at <strong>23:47</strong> via the AI Chatbot on the website. Details:</p>
+
+                <table style="width:100%;border-collapse:collapse;font-size:0.75rem;margin-bottom:16px;">
+                  <tbody><tr style="background:#f8f9fa;"><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#5f6368;font-weight:600;width:35%;">Contact Name</td><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#202124;font-weight:600;">Nguyen Van C</td></tr>
+                  <tr><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#5f6368;font-weight:600;">Company</td><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#202124;">TechCorp Vietnam</td></tr>
+                  <tr style="background:#f8f9fa;"><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#5f6368;font-weight:600;">Email</td><td style="padding:6px 10px;border:1px solid #e0e0e0;"><a style="color:#1a73e8;"><span class="__cf_email__" data-cfemail="aac984c4cddfd3cfc4eadecfc9c2c9c5d8da84dcc4">[email&nbsp;protected]</span></a></td></tr>
+                  <tr><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#5f6368;font-weight:600;">Project Type</td><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#202124;">Workspace (new build)</td></tr>
+                  <tr style="background:#f8f9fa;"><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#5f6368;font-weight:600;">Area</td><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#202124;">800 m²</td></tr>
+                  <tr><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#5f6368;font-weight:600;">Estimated Budget</td><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#202124;">2–3 billion VND</td></tr>
+                  <tr style="background:#f8f9fa;"><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#5f6368;font-weight:600;">Timeline</td><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#202124;">4 months</td></tr>
+                  <tr><td style="padding:6px 10px;border:1px solid #e0e0e0;color:#5f6368;font-weight:600;">Lead Score</td><td style="padding:6px 10px;border:1px solid #e0e0e0;"><strong style="color:#2e7d32;">8.5 / 10 ★ HIGH PRIORITY</strong></td></tr>
+                </tbody></table>
+
+                <div style="background:#fce8e6;border-left:3px solid #ea4335;padding:10px 14px;border-radius:0 6px 6px 0;margin-bottom:16px;font-size:0.78rem;color:#c5221f;">
+                  ⚡ <strong>Recommended action:</strong> Follow up within 2–4 hours to maximize closing opportunity. Lead is "hot".
+                </div>
+
+                <div style="text-align:center;margin-bottom:14px;">
+                  <a href="https://x5digital.io/huynchi-growth-engine-demo.html#" style="background:#E8612A;color:white;padding:9px 22px;border-radius:5px;text-decoration:none;font-weight:700;font-size:0.8rem;display:inline-block;">📊 View in Google Sheet →</a>
+                </div>
+
+                <hr style="border:none;border-top:1px solid #e0e0e0;margin:14px 0;">
+                <p style="font-size:0.7rem;color:#9aa0a6;">Automated email from Huynchi AI Chatbot · Powered by Cazzed Digital Solution · Please do not reply to this email</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /5 step panels -->
+  </div>
+</section>
+
+<!-- ═══ SECTION 5: LAYER 4 CHATBOT ═══ -->
+<section id="layer4" class="section bg-stone">
+  <div class="wrap">
+    <div class="chat-layout">
+      <div class="chat-info rl on">
+        <div class="eyebrow">Layer 4 — AI Automation</div>
+        <h3>AI Chatbot —<br><em>Try it</em> right here</h3>
+        <p>Chatbot trained from Huynchi's knowledge base — services, projects, expertise, brand voice. Operates 24/7, naturally qualifies leads, missing no opportunity even at 2AM.</p>
+        <ul class="feat-list">
+          <li>Auto-classifies: Workspace / Regulated Space / Education</li>
+          <li>Captures 9 fields of information through natural conversation flow</li>
+          <li>Refined tone — accurately reflecting Huynchi's brand philosophy</li>
+          <li>After qualifying → n8n trigger → log to Sheet → notify sales team</li>
+        </ul>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
+          <span class="tag to" style="font-weight:800;font-size:0.85rem;">Huynchi Brand Voice</span>
+          <span class="tag tb" style="font-weight:800;font-size:0.85rem;">Powered by Cazzed Digital Solution</span>
+          <span class="tag tg" style="font-weight:800;font-size:0.85rem;">Live Demo ↓</span>
+        </div>
+      </div>
+
+      <div class="rr on">
+        <div class="phone">
+          <div class="ph-notch"></div>
+          <div class="ph-header">
+            <div class="ph-avatar">H</div>
+            <div class="ph-info">
+              <div class="ph-name">Huynchi AI</div>
+              <div class="ph-status">● Online — 24/7</div>
+            </div>
+            <div class="ph-badge">CDS</div>
+          </div>
+          <div class="chat-area" id="chat-area"><div class="cb cb-bot"><div class="cb-sender">Huynchi AI</div><span>Hello! I'm Huynchi's space design consultant assistant.
+
+What type of project are you looking for a solution for?</span></div></div>
+          <div class="lead-cap" id="lead-cap">
+            <div class="lc-lbl">✅ Lead Captured → Google Sheet</div>
+            <div class="lc-txt">Information captured automatically · Sales team notified immediately</div>
+          </div>
+          <div class="sug-wrap" id="sug-wrap"><button class="sug-btn">🏢 Office / Workspace</button><button class="sug-btn">🏥 Lab / GMP / Healthcare</button><button class="sug-btn">🎓 Education</button></div>
+          <div class="chat-in-row">
+            <input type="text" class="chat-in" id="chat-in" placeholder="Type a message..." autocomplete="off">
+            <button class="chat-send" id="chat-send">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 6: LAYER 5 DASHBOARD ═══ -->
+<section id="layer5" class="section bg-deep">
+  <div class="wrap">
+    <div class="eyebrow eyebrow-dim rev on">Layer 5 — Revenue Intelligence</div>
+    <h2 class="h-sec rev d1 on" style="color:var(--off-white)">Entire System —<br><em class="orange italic">1 dashboard</em></h2>
+    <p class="rev d2 on" style="color:rgba(255,255,255,0.38);max-width:560px;margin-top:10px;margin-bottom:44px;font-size:0.9375rem;">Connected with GA4 + Google Search Console + Google Sheet. Built once, automatically updated daily. Huynchi leadership can understand the entire system at a glance in 5 minutes.</p>
+
+    <!-- Looker Studio Mockup Frame -->
+    <div class="rev d3 on" style="background:#f1f3f4;border-radius:14px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,0.5);">
+
+      <!-- LS Header bar -->
+      <div style="background:#fff;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e0e0e0;">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
+          <span style="font-size:0.8rem;font-weight:700;color:#202124;font-family:var(--fd);letter-spacing:-0.01em;">Huynchi Growth Dashboard</span>
+          <span style="font-size:0.72rem;color:#80868b;">· Looker Studio</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="font-size:0.7rem;color:#80868b;font-family:var(--fm);">Updated: today 08:00 ICT</span>
+          <span style="font-size:0.7rem;background:#e8f5e9;color:#2e7d32;padding:3px 9px;border-radius:3px;font-family:var(--fm);letter-spacing:0.06em;">● Live</span>
+        </div>
+      </div>
+
+      <!-- LS Filter bar -->
+      <div style="background:#fff;padding:7px 20px;display:flex;gap:10px;align-items:center;border-bottom:1px solid #e8eaed;">
+        <span style="font-size:0.68rem;color:#80868b;font-family:var(--fm);text-transform:uppercase;letter-spacing:0.1em;">Period:</span>
+        <span style="font-size:0.72rem;background:#e8f0fe;color:#1967d2;padding:3px 10px;border-radius:3px;font-family:var(--fm);cursor:pointer;">Last 12 Weeks ▾</span>
+        <span style="font-size:0.68rem;color:#80868b;font-family:var(--fm);text-transform:uppercase;letter-spacing:0.1em;margin-left:8px;">Channel:</span>
+        <span style="font-size:0.72rem;background:#f1f3f4;color:#202124;padding:3px 10px;border-radius:3px;font-family:var(--fm);cursor:pointer;">All ▾</span>
+        <span style="font-size:0.68rem;color:#80868b;font-family:var(--fm);text-transform:uppercase;letter-spacing:0.1em;margin-left:8px;">Data:</span>
+        <span style="font-size:0.72rem;color:#5f6368;font-family:var(--fm);">GA4 · GSC · Google Sheet</span>
+      </div>
+
+      <!-- Dashboard canvas -->
+      <div style="padding:16px 16px 20px;display:flex;flex-direction:column;gap:12px;">
+
+        <!-- ROW 1 — 6 KPI tiles -->
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;">
+          <div class="ls-tile" style="border-top:3px solid #E8612A;">
+            <div class="ls-tile-lbl">Organic Sessions</div>
+            <div class="ls-tile-val" id="dv1">847</div>
+            <div class="ls-tile-delta" style="color:#2e7d32;">↑ +312%</div>
+          </div>
+          <div class="ls-tile" style="border-top:3px solid #1D9BF0;">
+            <div class="ls-tile-lbl">Keywords Top 10</div>
+            <div class="ls-tile-val" id="dv2">12</div>
+            <div class="ls-tile-delta" style="color:#2e7d32;">↑ from 0</div>
+          </div>
+          <div class="ls-tile" style="border-top:3px solid #00D4AA;">
+            <div class="ls-tile-lbl">Chatbot Leads</div>
+            <div class="ls-tile-val" id="dv3">7</div>
+            <div class="ls-tile-delta" style="color:#2e7d32;">↑ this month</div>
+          </div>
+          <div class="ls-tile" style="border-top:3px solid #8B5CF6;">
+            <div class="ls-tile-lbl">Lead Score Avg.</div>
+            <div class="ls-tile-val" id="dv4">8.4</div>
+            <div class="ls-tile-delta" style="color:#2e7d32;">↑ /10</div>
+          </div>
+          <div class="ls-tile" style="border-top:3px solid #F59E0B;">
+            <div class="ls-tile-lbl">Conversion Rate</div>
+            <div class="ls-tile-val" id="dv5">38%</div>
+            <div class="ls-tile-delta" style="color:#2e7d32;">↑ chat→lead</div>
+          </div>
+          <div class="ls-tile" style="border-top:3px solid #E8612A;background:rgba(232,97,42,0.04);">
+            <div class="ls-tile-lbl">Pipeline Estimated</div>
+            <div class="ls-tile-val" id="dv6" style="font-size:1.15rem;">4.2B</div>
+            <div class="ls-tile-delta" style="color:#2e7d32;">↑ billion VND</div>
+          </div>
+        </div>
+
+        <!-- ROW 2 — Traffic line + Donut -->
+        <div style="display:grid;grid-template-columns:1.8fr 1fr;gap:8px;">
+          <div class="ls-card">
+            <div class="ls-card-hd">
+              <span class="ls-card-ttl">Traffic by channel — 12 weeks</span>
+              <span style="font-family:var(--fm);font-size:0.56rem;color:#80868b;letter-spacing:0.08em;">GA4 · Organic vs Paid</span>
+            </div>
+            <canvas id="trafficChart" style="display: block; box-sizing: border-box; width: 100%; max-height: 180px;"></canvas>
+          </div>
+          <div class="ls-card">
+            <div class="ls-card-hd">
+              <span class="ls-card-ttl">Traffic Source</span>
+              <span style="font-family:var(--fm);font-size:0.56rem;color:#80868b;">12 weeks</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <canvas id="donutChart" style="display: block; box-sizing: border-box; max-height: 150px; max-width: 150px;"></canvas>
+              <div style="display:flex;flex-direction:column;gap:7px;flex:1;" id="donut-legend"><div style="display:flex;align-items:center;gap:6px;"><div style="width:8px;height:8px;border-radius:2px;background:#E8612A;flex-shrink:0;"></div><span style="font-size:0.68rem;color:#5f6368;">Organic</span><span style="font-family:&#39;DM Mono&#39;,monospace;font-size:0.65rem;color:#202124;margin-left:auto;">58%</span></div><div style="display:flex;align-items:center;gap:6px;"><div style="width:8px;height:8px;border-radius:2px;background:#00D4AA;flex-shrink:0;"></div><span style="font-size:0.68rem;color:#5f6368;">Chatbot</span><span style="font-family:&#39;DM Mono&#39;,monospace;font-size:0.65rem;color:#202124;margin-left:auto;">18%</span></div><div style="display:flex;align-items:center;gap:6px;"><div style="width:8px;height:8px;border-radius:2px;background:#1D9BF0;flex-shrink:0;"></div><span style="font-size:0.68rem;color:#5f6368;">Direct</span><span style="font-family:&#39;DM Mono&#39;,monospace;font-size:0.65rem;color:#202124;margin-left:auto;">12%</span></div><div style="display:flex;align-items:center;gap:6px;"><div style="width:8px;height:8px;border-radius:2px;background:#F59E0B;flex-shrink:0;"></div><span style="font-size:0.68rem;color:#5f6368;">Google Ads</span><span style="font-family:&#39;DM Mono&#39;,monospace;font-size:0.65rem;color:#202124;margin-left:auto;">8%</span></div><div style="display:flex;align-items:center;gap:6px;"><div style="width:8px;height:8px;border-radius:2px;background:#8B5CF6;flex-shrink:0;"></div><span style="font-size:0.68rem;color:#5f6368;">Referral</span><span style="font-family:&#39;DM Mono&#39;,monospace;font-size:0.65rem;color:#202124;margin-left:auto;">4%</span></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 3 — SEO keywords + Lead pipeline table -->
+        <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:8px;">
+          <div class="ls-card">
+            <div class="ls-card-hd">
+              <span class="ls-card-ttl">SEO — Keyword Positions</span>
+              <span style="font-family:var(--fm);font-size:0.56rem;color:#80868b;">Google Search Console</span>
+            </div>
+            <canvas id="kwRankChart" style="display: block; box-sizing: border-box; width: 100%; max-height: 190px;"></canvas>
+          </div>
+          <div class="ls-card">
+            <div class="ls-card-hd">
+              <span class="ls-card-ttl">Lead Pipeline</span>
+              <span style="font-family:var(--fm);font-size:0.56rem;color:#80868b;">Google Sheet · realtime</span>
+            </div>
+            <table style="width:100%;border-collapse:collapse;font-size:0.7rem;">
+              <thead>
+                <tr style="border-bottom:1px solid #e8eaed;">
+                  <th style="text-align:left;padding:5px 8px;color:#5f6368;font-weight:600;font-family:var(--fm);font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;">Company</th>
+                  <th style="text-align:left;padding:5px 8px;color:#5f6368;font-weight:600;font-family:var(--fm);font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;">Type</th>
+                  <th style="text-align:left;padding:5px 8px;color:#5f6368;font-weight:600;font-family:var(--fm);font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;">Score</th>
+                  <th style="text-align:left;padding:5px 8px;color:#5f6368;font-weight:600;font-family:var(--fm);font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;">Stage</th>
+                  <th style="text-align:left;padding:5px 8px;color:#5f6368;font-weight:600;font-family:var(--fm);font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;">Source</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid #f1f3f4;">
+                  <td style="padding:6px 8px;color:#202124;font-weight:500;">Tech Corp VN</td>
+                  <td style="padding:6px 8px;color:#5f6368;">Workspace</td>
+                  <td style="padding:6px 8px;"><span style="background:#e8f5e9;color:#2e7d32;padding:1px 6px;border-radius:3px;font-family:var(--fm);">9.2</span></td>
+                  <td style="padding:6px 8px;"><span style="background:#e8f0fe;color:#1967d2;padding:1px 6px;border-radius:3px;font-family:var(--fm);font-size:0.6rem;">Proposal</span></td>
+                  <td style="padding:6px 8px;"><span style="color:#E8612A;font-family:var(--fm);font-size:0.6rem;">Chatbot</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid #f1f3f4;">
+                  <td style="padding:6px 8px;color:#202124;font-weight:500;">Pharma Ltd</td>
+                  <td style="padding:6px 8px;color:#5f6368;">Lab/GMP</td>
+                  <td style="padding:6px 8px;"><span style="background:#e8f5e9;color:#2e7d32;padding:1px 6px;border-radius:3px;font-family:var(--fm);">8.7</span></td>
+                  <td style="padding:6px 8px;"><span style="background:#fff3e0;color:#e65100;padding:1px 6px;border-radius:3px;font-family:var(--fm);font-size:0.6rem;">Contacted</span></td>
+                  <td style="padding:6px 8px;"><span style="color:#1D9BF0;font-family:var(--fm);font-size:0.6rem;">SEO</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid #f1f3f4;">
+                  <td style="padding:6px 8px;color:#202124;font-weight:500;">Multinational Co.</td>
+                  <td style="padding:6px 8px;color:#5f6368;">Workspace</td>
+                  <td style="padding:6px 8px;"><span style="background:#e8f5e9;color:#2e7d32;padding:1px 6px;border-radius:3px;font-family:var(--fm);">8.1</span></td>
+                  <td style="padding:6px 8px;"><span style="background:#f3e5f5;color:#6a1b9a;padding:1px 6px;border-radius:3px;font-family:var(--fm);font-size:0.6rem;">Won ✓</span></td>
+                  <td style="padding:6px 8px;"><span style="color:#E8612A;font-family:var(--fm);font-size:0.6rem;">Chatbot</span></td>
+                </tr>
+                <tr style="border-bottom:1px solid #f1f3f4;">
+                  <td style="padding:6px 8px;color:#202124;font-weight:500;">Education Group</td>
+                  <td style="padding:6px 8px;color:#5f6368;">Education</td>
+                  <td style="padding:6px 8px;"><span style="background:#fff3e0;color:#e65100;padding:1px 6px;border-radius:3px;font-family:var(--fm);">6.5</span></td>
+                  <td style="padding:6px 8px;"><span style="background:#f1f3f4;color:#5f6368;padding:1px 6px;border-radius:3px;font-family:var(--fm);font-size:0.6rem;">New</span></td>
+                  <td style="padding:6px 8px;"><span style="color:#F59E0B;font-family:var(--fm);font-size:0.6rem;">Google Ads</span></td>
+                </tr>
+                <tr>
+                  <td style="padding:6px 8px;color:#202124;font-weight:500;">Healthcare VN</td>
+                  <td style="padding:6px 8px;color:#5f6368;">Lab/GMP</td>
+                  <td style="padding:6px 8px;"><span style="background:#e8f5e9;color:#2e7d32;padding:1px 6px;border-radius:3px;font-family:var(--fm);">7.8</span></td>
+                  <td style="padding:6px 8px;"><span style="background:#e8f0fe;color:#1967d2;padding:1px 6px;border-radius:3px;font-family:var(--fm);font-size:0.6rem;">Proposal</span></td>
+                  <td style="padding:6px 8px;"><span style="color:#1D9BF0;font-family:var(--fm);font-size:0.6rem;">SEO</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ROW 4 — Layer attribution stacked bar -->
+        <div class="ls-card">
+          <div class="ls-card-hd">
+            <span class="ls-card-ttl">Layer Attribution — Where do leads come from?</span>
+            <span style="font-family:var(--fm);font-size:0.56rem;color:#80868b;">GA4 · Multi-touch attribution · 12 weeks</span>
+          </div>
+          <canvas id="attrChart" style="display: block; box-sizing: border-box; width: 100%; max-height: 130px;"></canvas>
+        </div>
+
+      </div><!-- /dashboard canvas -->
+    </div><!-- /LS frame -->
+
+    <!-- Data source note -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;justify-content:center;">
+      <span style="font-family:var(--fm);font-size:0.6rem;color:rgba(255,255,255,0.25);display:flex;align-items:center;gap:5px;"><span style="width:6px;height:6px;border-radius:50%;background:#4285F4;display:inline-block;"></span>Google Analytics 4</span>
+      <span style="font-family:var(--fm);font-size:0.6rem;color:rgba(255,255,255,0.25);display:flex;align-items:center;gap:5px;"><span style="width:6px;height:6px;border-radius:50%;background:#34A853;display:inline-block;"></span>Google Search Console</span>
+      <span style="font-family:var(--fm);font-size:0.6rem;color:rgba(255,255,255,0.25);display:flex;align-items:center;gap:5px;"><span style="width:6px;height:6px;border-radius:50%;background:#E8612A;display:inline-block;"></span>Google Sheet (Leads CRM)</span>
+      <span style="font-family:var(--fm);font-size:0.6rem;color:rgba(255,255,255,0.25);display:flex;align-items:center;gap:5px;"><span style="width:6px;height:6px;border-radius:50%;background:#FBBC05;display:inline-block;"></span>Google Ads (Optional)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 7: CTA ═══ -->
+<section id="cta" class="bg-navy">
+  <div class="cta-in wrap">
+    <div class="eyebrow rev" style="justify-content:center">Cazzed Digital Solution × Huynchi · 2026</div>
+    <h2 class="h-sec rev d1">Is Huynchi Ready to Launch Its<br><em>Growth Engine</em>?</h2>
+    <p class="cta-sub rev d2">Strategic Package — Full Layer 1+2+4. Simplified Layer 3. Optional Layer 5 Dashboard.</p>
+    <div class="cta-btns rev d3">
+      <a href="https://x5digital.io/packages.html" target="_blank" class="btn-p">Get Started with the Strategic Package</a>
+      <a href="https://x5digital.io/huynchi-x5-proposal.html" target="_blank" class="btn-o">Quay lại proposal</a>
+    </div>
+    <div class="cta-layers rev d4">
+      <span class="tag ts">L1 · Foundation</span>
+      <span class="tag ts">L2 · SEO Full</span>
+      <span class="tag ta">L3 · Pipeline</span>
+      <span class="tag to">L4 · AI Chatbot</span>
+      <span class="tag tg">L5 · Dashboard</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="fl-left"><span style="color:var(--orange);font-weight:700;">Huynchi</span> <span style="color:rgba(255,255,255,0.35);">×</span> <span style="color:var(--x5-blue);font-weight:700;">Cazzed Digital Solution</span> <span style="color:rgba(255,255,255,0.85);">— Growth Engine Demo · March 2026</span></div>
+  <div class="fl-right">
+    <div><span style="color:rgba(255,255,255,0.75);">Prepared by</span> <span style="color:var(--x5-blue);font-weight:600;">Cazzed Digital Solution</span></div>
+    <div><span style="color:var(--orange);">huynchi.com</span> <span style="color:rgba(255,255,255,0.4);">·</span> <span style="color:var(--orange);">HCMC &amp; Hanoi</span></div>
+    <div style="color:rgba(255,255,255,0.75);">Confidential — For Huynchi review only</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ══════════════════════════════════════
+   PROGRESS BAR
+══════════════════════════════════════ */
+const pb = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const s = window.scrollY, d = document.documentElement.scrollHeight - window.innerHeight;
+  pb.style.width = (d > 0 ? s / d * 100 : 0) + '%';
+}, { passive: true });
+
+/* ══════════════════════════════════════
+   STICKY NAV
+══════════════════════════════════════ */
+const nav = document.getElementById('layer-nav');
+const heroEl = document.getElementById('hero');
+new IntersectionObserver(([e]) => nav.classList.toggle('show', !e.isIntersecting), { threshold: 0 }).observe(heroEl);
+
+// Active pill
+const pills = document.querySelectorAll('.npill');
+const secIds = ['layer1', 'layer2', 'layer3', 'layer4', 'layer5'];
+window.addEventListener('scroll', () => {
+  const sy = window.scrollY + 80;
+  secIds.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const next = secIds[i + 1] ? document.getElementById(secIds[i + 1]) : null;
+    const inView = el.offsetTop <= sy && (!next || next.offsetTop > sy);
+    pills[i] && pills[i].classList.toggle('active', inView);
+  });
+}, { passive: true });
+
+/* ══════════════════════════════════════
+   HERO PARTICLES
+══════════════════════════════════════ */
+const cv = document.getElementById('hero-canvas');
+const cx = cv.getContext('2d');
+let W, H, dots;
+function resizeCv() { W = cv.width = cv.offsetWidth; H = cv.height = cv.offsetHeight; }
+function mkDots() {
+  dots = Array.from({ length: 55 }, () => ({
+    x: Math.random() * W, y: Math.random() * H,
+    vx: (Math.random() - .5) * .28, vy: (Math.random() - .5) * .28,
+    r: Math.random() * 1.4 + .4
+  }));
+}
+function drawCv() {
+  cx.clearRect(0, 0, W, H);
+  for (let i = 0; i < dots.length; i++) {
+    for (let j = i + 1; j < dots.length; j++) {
+      const dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y;
+      const d = Math.sqrt(dx * dx + dy * dy);
+      if (d < 120) {
+        cx.beginPath();
+        cx.strokeStyle = `rgba(232,97,42,${(1 - d / 120) * .09})`;
+        cx.lineWidth = .7;
+        cx.moveTo(dots[i].x, dots[i].y);
+        cx.lineTo(dots[j].x, dots[j].y);
+        cx.stroke();
+      }
+    }
+    cx.beginPath(); cx.arc(dots[i].x, dots[i].y, dots[i].r, 0, Math.PI * 2);
+    cx.fillStyle = 'rgba(232,97,42,0.18)'; cx.fill();
+    dots[i].x += dots[i].vx; dots[i].y += dots[i].vy;
+    if (dots[i].x < 0 || dots[i].x > W) dots[i].vx *= -1;
+    if (dots[i].y < 0 || dots[i].y > H) dots[i].vy *= -1;
+  }
+  requestAnimationFrame(drawCv);
+}
+resizeCv(); mkDots(); drawCv();
+window.addEventListener('resize', () => { resizeCv(); mkDots(); }, { passive: true });
+
+/* ══════════════════════════════════════
+   HERO ENTRANCE
+══════════════════════════════════════ */
+[['hero-ew', 0], ['hero-hl', 180], ['hero-metrics', 360]].forEach(([id, delay]) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.style.cssText = 'opacity:0;transform:translateY(22px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1)';
+  setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }, delay + 200);
+});
+
+/* ══════════════════════════════════════
+   COUNTERS (hero)
+══════════════════════════════════════ */
+function countUp(el, to, dur = 1400) {
+  const t0 = performance.now();
+  function step(now) {
+    const p = Math.min((now - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(e * to);
+    if (p < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+const cntObs = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.isIntersecting) { countUp(en.target, +en.target.dataset.to); cntObs.unobserve(en.target); }
+  });
+}, { threshold: .5 });
+document.querySelectorAll('.cnt').forEach(el => cntObs.observe(el));
+
+/* ══════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════ */
+const revObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); revObs.unobserve(e.target); } });
+}, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.rev, .rl, .rr').forEach(el => revObs.observe(el));
+
+/* ══════════════════════════════════════
+   GEO SOURCE SWITCHER
+══════════════════════════════════════ */
+document.querySelectorAll('.geo-src-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const src = btn.dataset.src;
+    // Update button styles
+    document.querySelectorAll('.geo-src-btn').forEach(b => {
+      const isActive = b.dataset.src === src;
+      b.style.background = isActive ? 'var(--navy)' : 'white';
+      b.style.color = isActive ? 'white' : 'var(--text-muted)';
+    });
+    // Toggle panels
+    document.querySelectorAll('.geo-src-panel').forEach(p => {
+      p.style.display = p.id === 'geo-' + src ? 'block' : 'none';
+    });
+    // If switching to google-ai and typewriter not started yet, no need to re-trigger
+  });
+});
+
+
+let kwInited = false;
+function initKwChart() {
+  const labels = [
+    'office interior design Vietnam',
+    'office interior design company HCMC',
+    'hospital interior design Vietnam',
+    'office design Hanoi',
+    'office fit-out Ho Chi Minh City',
+    'lab GMP room design Vietnam'
+  ];
+  new Chart(document.getElementById('kwChart'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Current (not ranked — outside Top 50)',
+          data: [50, 50, 50, 50, 50, 50],
+          backgroundColor: 'rgba(232,228,220,0.5)',
+          borderRadius: 4, barPercentage: .38,
+        },
+        {
+          label: 'After 90 days (target position)',
+          data: [2, 1, 3, 2, 1, 4],
+          backgroundColor: 'rgba(232,97,42,0.78)',
+          borderRadius: 4, barPercentage: .38,
+        }
+      ]
+    },
+    options: {
+      indexAxis: 'y', responsive: true,
+      animation: { duration: 1400, easing: 'easeOutQuart' },
+      scales: {
+        x: {
+          reverse: true, min: 0, max: 52,
+          ticks: { callback: v => v === 0 ? '#1' : v === 50 ? 'Not ranked' : `#${v}`, font: { family: 'DM Mono', size: 10 }, color: '#9DA5B0' },
+          grid: { color: 'rgba(0,0,0,0.06)' }
+        },
+        y: { ticks: { font: { family: 'DM Sans', size: 11 }, color: '#585E6A' }, grid: { display: false } }
+      },
+      plugins: {
+        legend: { labels: { font: { family: 'DM Mono', size: 10 }, color: '#585E6A', boxWidth: 12, boxHeight: 12 } },
+        tooltip: {
+          backgroundColor: 'rgba(17,35,55,0.94)',
+          callbacks: {
+            label: ctx => ctx.datasetIndex === 0
+              ? '  Current: Not in Top 50'
+              : `  After 90 days: Top #${ctx.raw}`
+          }
+        }
+      }
+    }
+  });
+}
+const kwChartEl = document.getElementById('kwChart');
+if (kwChartEl) {
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting && !kwInited) { kwInited = true; initKwChart(); }
+  }, { threshold: .25 }).observe(kwChartEl);
+}
+
+/* ══════════════════════════════════════
+   AI TYPEWRITER — scroll triggered
+══════════════════════════════════════ */
+let aiTyped = false;
+function startAiTypewriter() {
+  const el = document.getElementById('ai-tw');
+  if (!el) return;
+  const text = 'Trusted Design & Build firms in HCMC serving large enterprises include Huynchi — specializing in commercial interior design and construction since 2003, with a client portfolio including FPT Software, Agoda, Baker McKenzie, and Heineken Vietnam. Huynchi has offices in both HCMC and Hanoi.';
+  el.innerHTML = '<span class="caret"></span>';
+  const caretEl = el.querySelector('.caret');
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      el.insertBefore(document.createTextNode(text[i]), caretEl);
+      i++;
+      setTimeout(type, 22 + Math.random() * 14);
+    } else { caretEl.remove(); }
+  }
+  type();
+}
+const aiTwEl = document.getElementById('ai-tw');
+if (aiTwEl) {
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting && !aiTyped) { aiTyped = true; startAiTypewriter(); }
+  }, { threshold: .4 }).observe(aiTwEl);
+}
+
+/* ══════════════════════════════════════
+   PIPELINE FLOW ANIMATION
+══════════════════════════════════════ */
+let pipelineDone = false;
+new IntersectionObserver(([e]) => {
+  if (e.isIntersecting && !pipelineDone) { pipelineDone = true; runPipeline(); }
+}, { threshold: .4 }).observe(document.getElementById('flow-row'));
+
+function runPipeline() {
+  [0,1,2,3,4].forEach((i, idx) => {
+    setTimeout(() => {
+      document.getElementById('fb' + i).classList.add('lit');
+      if (i < 4) setTimeout(() => document.getElementById('fa' + i).classList.add('lit'), 220);
+    }, idx * 480);
+  });
+  setTimeout(addSheetRow, 5 * 480 + 500);
+}
+
+function addSheetRow() {
+  const body = document.getElementById('sheet-body');
+  const now = new Date();
+  const ts = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
+  const tr = document.createElement('tr');
+  tr.className = 'nr';
+  tr.innerHTML = `<td>${ts}</td><td>Le Van C</td><td>Multinational Corp</td><td>Workspace</td><td>800m²</td><td>Flexible</td><td>4 months</td><td>c.le@corp...</td><td><span style="color:#1a73e8;font-weight:600">🆕 New</span></td>`;
+  body.appendChild(tr);
+  document.getElementById('sheet-ts').textContent = `⚡ New lead: ${ts} · Response < 60 seconds · Auto-logged to Sheet`;
+}
+function pad(n) { return String(n).padStart(2, '0'); }
+
+/* ══════════════════════════════════════
+   CHATBOT — LIVE CLAUDE API
+══════════════════════════════════════ */
+const HUYNCHI_SYSTEM = `You are Huynchi's AI space design advisor — Vietnam's leading commercial interior design & build company, established in 2003.
+
+## VỀ HUYNCHI
+- Specialties: Workspace (offices), Regulated Space (lab rooms, GMP, healthcare), Education (schools, campuses)
+- Process: Understand & Define → Design → Deliver → Aftercare
+- Offices: HCMC & Hanoi
+- International partner: DKO Architecture (Australia)
+- Notable clients: FPT Software, Agoda, Baker McKenzie, Heineken, XIAOMI, Standard Chartered, Allianz, Roche Vietnam, Philips, Pfizer, De Heus, Dentsu Aegis, CMC Corp, Marvell
+
+## TRIẾT LÝ THƯƠNG HIỆU
+"Space is never neutral. It shapes us." — Space is never neutral. It defines us.
+Huynchi sees space as a driver of human potential.
+
+## NHIỆM VỤ CỦA BẠN
+Advise and qualify leads in a natural flow. You need to gather the following information (not necessarily in strict order):
+1. Project Type (Workspace / Regulated Space / Education)
+2. Build type (new build / renovation / fit-out)
+3. Estimated area (m²)
+4. Estimated Budget
+5. Project completion timeline
+6. Location (HCMC / Hanoi / other province)
+7. Contact Name
+8. Company
+9. Email
+
+## CÁCH NÓI CHUYỆN
+- English, concise, refined — not verbose
+- Warm, professional tone — like a true Design Consultant
+- DO NOT ask multiple questions at once — one question at a time
+- When clients ask about specific projects (FPT, Agoda...) → share briefly
+- Once you have the core info (project type + area + contact) → suggest a free 30-minute consultation with a Design Consultant
+- Always remember conversation context — do not re-ask for information already provided
+
+## LEAD CAPTURE
+When you have: name + email + project type → append a hidden JSON tag at the end of the message (hidden, not shown to client):
+<!--LEAD_CAPTURED:{"name":"...","email":"...","company":"...","project_type":"...","area":"...","budget":"...","timeline":"...","location":"..."}-->
+
+Only add this tag once when name + email + project type have been collected.`;
+
+let chatHistory = [];
+let chatStarted = false;
+let leadCaptured = false;
+
+const chatArea = document.getElementById('chat-area');
+const sugWrap  = document.getElementById('sug-wrap');
+const chatIn   = document.getElementById('chat-in');
+const chatSend = document.getElementById('chat-send');
+
+function scrollChat() { chatArea.scrollTop = chatArea.scrollHeight; }
+
+function addUsrMsg(text) {
+  const b = document.createElement('div');
+  b.className = 'cb cb-usr';
+  b.innerHTML = `<div class="cb-sender">You</div>${text}`;
+  chatArea.appendChild(b); scrollChat();
+}
+
+function showTyping() {
+  const tw = document.createElement('div');
+  tw.className = 'typing-wrap'; tw.id = 'typing-ind';
+  tw.innerHTML = '<div class="tdot"></div><div class="tdot"></div><div class="tdot"></div>';
+  chatArea.appendChild(tw); scrollChat();
+  return tw;
+}
+
+function setSugs(arr) {
+  sugWrap.innerHTML = '';
+  arr.forEach(s => {
+    const btn = document.createElement('button');
+    btn.className = 'sug-btn'; btn.textContent = s;
+    btn.onclick = () => sendMessage(s);
+    sugWrap.appendChild(btn);
+  });
+}
+
+function setInputDisabled(val) {
+  chatIn.disabled = val;
+  chatSend.disabled = val;
+  chatSend.style.opacity = val ? '0.4' : '1';
+}
+
+async function streamBotMsg(userText) {
+  setInputDisabled(true);
+  sugWrap.innerHTML = '';
+
+  // Add to history
+  chatHistory.push({ role: 'user', content: userText });
+
+  const tw = showTyping();
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 400,
+        system: HUYNCHI_SYSTEM,
+        messages: chatHistory
+      })
+    });
+
+    const data = await res.json();
+    tw.remove();
+
+    const rawText = data.content?.[0]?.text || 'Sorry, an error occurred. Please try again.';
+
+    // Check for lead capture tag
+    const leadMatch = rawText.match(/<!--LEAD_CAPTURED:(.*?)-->/s);
+    const cleanText = rawText.replace(/<!--LEAD_CAPTURED:.*?-->/s, '').trim();
+
+    // Add bot message with streaming effect
+    const b = document.createElement('div');
+    b.className = 'cb cb-bot';
+    b.innerHTML = `<div class="cb-sender">Huynchi AI</div><span class="bot-text"></span>`;
+    chatArea.appendChild(b);
+    const textSpan = b.querySelector('.bot-text');
+
+    // Typewriter stream
+    await new Promise(resolve => {
+      let i = 0;
+      const chars = cleanText.split('');
+      function tick() {
+        if (i < chars.length) {
+          textSpan.textContent += chars[i++];
+          scrollChat();
+          setTimeout(tick, 16 + Math.random() * 10);
+        } else resolve();
+      }
+      tick();
+    });
+
+    // Add to history
+    chatHistory.push({ role: 'assistant', content: rawText });
+
+    // Handle lead capture
+    if (leadMatch && !leadCaptured) {
+      leadCaptured = true;
+      try {
+        const leadData = JSON.parse(leadMatch[1]);
+        setTimeout(() => {
+          document.getElementById('lead-cap').classList.add('show');
+          // Update lead cap text with actual data
+          document.querySelector('.lc-txt').textContent =
+            `${leadData.name || 'Customer'} · ${leadData.project_type || ''} · Auto-logged to Sheet`;
+        }, 600);
+      } catch(e) {
+        document.getElementById('lead-cap').classList.add('show');
+      }
+      setSugs(['Thank you Huynchi! 🙏', 'I have more questions']);
+    } else {
+      // Contextual suggestions based on conversation stage
+      const lower = cleanText.toLowerCase();
+      if (!chatHistory.some(m => m.role === 'user' && m.content.length > 5) ) {
+        setSugs(['🏢 Office / Workspace', '🏥 Lab / GMP / Healthcare', '🎓 Education']);
+      } else if (lower.includes('area') || lower.includes('m²') || lower.includes('how big')) {
+        setSugs(['< 200m²', '200–500m²', '500–1,000m²', '> 1,000m²']);
+      } else if (lower.includes('budget') || lower.includes('cost') || lower.includes('how much')) {
+        setSugs(['< 1B VND', '1–3B VND', '3–5B VND', '> 5B VND']);
+      } else if (lower.includes('timeline') || lower.includes('months') || lower.includes('deadline')) {
+        setSugs(['2–3 months', '4–6 months', '6–12 months']);
+      } else if (lower.includes('name') || lower.includes('email') || lower.includes('contact')) {
+        setSugs([]);
+      } else {
+        setSugs([]);
+      }
+    }
+
+  } catch (err) {
+    tw?.remove();
+    const b = document.createElement('div');
+    b.className = 'cb cb-bot';
+    b.innerHTML = `<div class="cb-sender">Huynchi AI</div>Sorry, a connection error occurred. Please try again.`;
+    chatArea.appendChild(b); scrollChat();
+  }
+
+  setInputDisabled(false);
+  chatIn.focus();
+}
+
+function sendMessage(text) {
+  const msg = (text || chatIn.value).trim();
+  if (!msg) return;
+  chatIn.value = '';
+  addUsrMsg(msg);
+  streamBotMsg(msg);
+}
+
+chatSend.onclick = () => sendMessage(chatIn.value);
+chatIn.onkeydown = e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(chatIn.value); } };
+
+// Init chatbot on visible
+new IntersectionObserver(([e]) => {
+  if (e.isIntersecting && !chatStarted) {
+    chatStarted = true;
+    setTimeout(async () => {
+      const tw = showTyping();
+      await new Promise(r => setTimeout(r, 900));
+      tw.remove();
+      const b = document.createElement('div');
+      b.className = 'cb cb-bot';
+      b.innerHTML = `<div class="cb-sender">Huynchi AI</div>`;
+      const sp = document.createElement('span');
+      b.appendChild(sp);
+      chatArea.appendChild(b);
+      const greeting = 'Hello! I\'m Huynchi\'s space design assistant.\n\nWhat type of project are you looking for?';
+      let i = 0;
+      await new Promise(resolve => {
+        function tick() {
+          if (i < greeting.length) { sp.textContent += greeting[i++]; scrollChat(); setTimeout(tick, 18); }
+          else resolve();
+        }
+        tick();
+      });
+      chatHistory.push({ role: 'assistant', content: greeting });
+      setSugs(['🏢 Office / Workspace', '🏥 Lab / GMP / Healthcare', '🎓 Education']);
+    }, 500);
+  }
+}, { threshold: .25 }).observe(document.getElementById('layer4'));
+
+
+/* ══════════════════════════════════════
+   DASHBOARD
+══════════════════════════════════════ */
+let dashDone = false;
+new IntersectionObserver(([e]) => {
+  if (e.isIntersecting && !dashDone) { dashDone = true; initDash(); }
+}, { threshold: .25 }).observe(document.getElementById('layer5'));
+
+function animCount(id, to, isFloat, prefix, suffix) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const t0 = performance.now(), dur = 1800;
+  function step(now) {
+    const p = Math.min((now - t0) / dur, 1), ease = 1 - Math.pow(1 - p, 3);
+    const val = isFloat ? (ease * to).toFixed(1) : Math.round(ease * to);
+    el.textContent = (prefix||'') + val + (suffix||'');
+    if (p < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+function initDash() {
+  animCount('dv1', 847, false, '', '');
+  animCount('dv2', 12, false, '', '');
+  animCount('dv3', 7, false, '', '');
+  animCount('dv4', 8.4, true, '', '');
+  animCount('dv5', 38, false, '', '%');
+  animCount('dv6', 4.2, true, '', 'B');
+
+  const weeks = ['W1','W2','W3','W4','W5','W6','W7','W8','W9','W10','W11','W12'];
+  const mono = { family: 'DM Mono', size: 9 };
+  const gridCol = 'rgba(0,0,0,0.05)';
+
+  // ── CHART 1: Traffic line (Organic + Paid)
+  new Chart(document.getElementById('trafficChart'), {
+    type: 'line',
+    data: {
+      labels: weeks,
+      datasets: [
+        {
+          label: 'Organic (SEO)',
+          data: [45, 78, 120, 162, 198, 248, 315, 382, 448, 582, 685, 847],
+          borderColor: '#E8612A', backgroundColor: ctx => {
+            const g = ctx.chart.ctx.createLinearGradient(0,0,0,180);
+            g.addColorStop(0,'rgba(232,97,42,0.12)'); g.addColorStop(1,'rgba(232,97,42,0)'); return g;
+          }, fill: true, tension: .4, pointRadius: 2.5, borderWidth: 2, pointBackgroundColor: '#E8612A'
+        },
+        {
+          label: 'Google Ads (optional)',
+          data: [120, 115, 108, 95, 80, 70, 55, 42, 30, 20, 14, 8],
+          borderColor: '#F59E0B', backgroundColor: 'rgba(245,158,11,0)',
+          tension: .4, pointRadius: 2, borderWidth: 1.5, borderDash: [4,3],
+          pointBackgroundColor: '#F59E0B'
+        }
+      ]
+    },
+    options: {
+      responsive: true, animation: { duration: 2000, easing: 'easeOutQuart' },
+      scales: {
+        x: { ticks: { font: mono, color: '#9aa0a6' }, grid: { color: gridCol } },
+        y: { ticks: { font: mono, color: '#9aa0a6' }, grid: { color: gridCol } }
+      },
+      plugins: {
+        legend: { labels: { font: { family: 'DM Mono', size: 9 }, color: '#5f6368', boxWidth: 10, boxHeight: 2, padding: 12 } },
+        tooltip: { backgroundColor: 'rgba(32,33,36,0.92)', titleFont: mono, bodyFont: { family: 'DM Sans', size: 11 } }
+      }
+    }
+  });
+
+  // ── CHART 2: Traffic source donut
+  const donutData = [
+    { label: 'Organic', value: 58, color: '#E8612A' },
+    { label: 'Chatbot', value: 18, color: '#00D4AA' },
+    { label: 'Direct',  value: 12, color: '#1D9BF0' },
+    { label: 'Google Ads', value: 8, color: '#F59E0B' },
+    { label: 'Referral', value: 4, color: '#8B5CF6' },
+  ];
+  new Chart(document.getElementById('donutChart'), {
+    type: 'doughnut',
+    data: {
+      labels: donutData.map(d => d.label),
+      datasets: [{ data: donutData.map(d => d.value), backgroundColor: donutData.map(d => d.color), borderWidth: 2, borderColor: '#fff', hoverOffset: 6 }]
+    },
+    options: {
+      responsive: true, cutout: '66%',
+      animation: { duration: 1600, easing: 'easeOutQuart' },
+      plugins: { legend: { display: false }, tooltip: { backgroundColor: 'rgba(32,33,36,0.92)', titleFont: mono, bodyFont: { family: 'DM Sans', size: 11 } } }
+    }
+  });
+  // Donut legend
+  const leg = document.getElementById('donut-legend');
+  if (leg) donutData.forEach(d => {
+    leg.innerHTML += `<div style="display:flex;align-items:center;gap:6px;"><div style="width:8px;height:8px;border-radius:2px;background:${d.color};flex-shrink:0;"></div><span style="font-size:0.68rem;color:#5f6368;">${d.label}</span><span style="font-family:'DM Mono',monospace;font-size:0.65rem;color:#202124;margin-left:auto;">${d.value}%</span></div>`;
+  });
+
+  // ── CHART 3: SEO keyword ranks (horizontal bar — reversed axis)
+  new Chart(document.getElementById('kwRankChart'), {
+    type: 'bar',
+    data: {
+      labels: [
+        'office fit-out HCMC',
+        'office design Hanoi',
+        'hospital design VN',
+        'office interior design company',
+        'lab GMP interior VN',
+        'office interior design VN'
+      ],
+      datasets: [
+        { label: 'Before', data: [50,50,50,50,50,50], backgroundColor: 'rgba(232,228,220,0.6)', borderRadius: 3, barPercentage: .4 },
+        { label: 'After 90 days', data: [1,2,3,1,4,2], backgroundColor: '#E8612A', borderRadius: 3, barPercentage: .4 }
+      ]
+    },
+    options: {
+      indexAxis: 'y', responsive: true,
+      animation: { duration: 1600, easing: 'easeOutQuart' },
+      scales: {
+        x: { reverse: true, min: 0, max: 52, ticks: { callback: v => v===0?'#1':v===50?'—':`#${v}`, font: mono, color: '#9aa0a6' }, grid: { color: gridCol } },
+        y: { ticks: { font: { family: 'DM Sans', size: 9 }, color: '#5f6368' }, grid: { display: false } }
+      },
+      plugins: {
+        legend: { labels: { font: { family: 'DM Mono', size: 9 }, color: '#5f6368', boxWidth: 10, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(32,33,36,0.92)', titleFont: mono, callbacks: { label: ctx => ctx.datasetIndex===0?' Not ranked (>50)':` Top #${ctx.raw}` } }
+      }
+    }
+  });
+
+  // ── CHART 4: Layer attribution stacked bar
+  new Chart(document.getElementById('attrChart'), {
+    type: 'bar',
+    data: {
+      labels: weeks,
+      datasets: [
+        { label: 'L4 · AI Chatbot', data: [0,0,1,1,0,1,1,0,1,1,0,1], backgroundColor: 'rgba(232,97,42,0.75)', borderRadius: 2 },
+        { label: 'L2 · SEO Organic', data: [0,0,0,0,1,0,1,1,1,0,1,1], backgroundColor: 'rgba(29,155,240,0.65)', borderRadius: 2 },
+        { label: 'L2 · Google Ads (opt)', data: [1,1,1,1,0,1,0,0,0,1,1,0], backgroundColor: 'rgba(245,158,11,0.65)', borderRadius: 2 }
+      ]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: { stacked: true, ticks: { font: mono, color: '#9aa0a6' }, grid: { color: gridCol } },
+        y: { stacked: true, ticks: { font: mono, color: '#9aa0a6', stepSize: 1 }, grid: { color: gridCol } }
+      },
+      animation: { duration: 1400, easing: 'easeOutQuart' },
+      plugins: {
+        legend: { labels: { font: { family: 'DM Mono', size: 9 }, color: '#5f6368', boxWidth: 10, boxHeight: 8 } },
+        tooltip: { backgroundColor: 'rgba(32,33,36,0.92)', titleFont: mono, callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.raw} lead` } }
+      }
+    }
+  });
+}
+
+})();
+</script>
+
+
+<div id="afVNgrVagReSNPR" style="color-scheme: initial; forced-color-adjust: initial; math-depth: initial; position: relative; position-anchor: initial; text-size-adjust: initial; appearance: initial; color: initial; font: initial; font-palette: initial; font-synthesis: initial; position-area: initial; text-orientation: initial; text-rendering: initial; text-spacing-trim: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; accent-color: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; anchor-name: initial; anchor-scope: initial; animation-composition: initial; animation: initial; animation-trigger: initial; app-region: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; baseline-source: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-decoration-break: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-animation: initial; caret-color: initial; caret-shape: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-block-size: initial; contain-intrinsic-size: initial; contain-intrinsic-inline-size: initial; container: initial; content: initial; content-visibility: initial; corner-shape: initial; corner-block-end-shape: initial; corner-block-start-shape: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; dynamic-range-limit: initial; empty-cells: initial; field-sizing: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: 0px !important; hyphenate-character: initial; hyphenate-limit-chars: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; initial-letter: initial; inline-size: initial; inset-block: initial; inset-inline: initial; interactivity: initial; interest-delay: initial; interpolate-size: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; math-shift: initial; math-style: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; object-view-box: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-block: initial; overflow-clip-margin: initial; overflow-inline: initial; overflow-wrap: initial; overflow: initial; overlay: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position-try: initial; position-visibility: initial; print-color-adjust: initial; quotes: initial; r: initial; reading-flow: initial; reading-order: initial; resize: initial; rotate: initial; ruby-align: initial; ruby-position: initial; rx: initial; ry: initial; scale: initial; scroll-behavior: initial; scroll-initial-target: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-marker-group: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; scroll-target-group: initial; scroll-timeline: initial; scrollbar-color: initial; scrollbar-gutter: initial; scrollbar-width: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-autospace: initial; text-box: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-emphasis: initial; text-emphasis-position: initial; text-indent: initial; text-justify: initial; text-overflow: initial; text-shadow: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; text-wrap: initial; timeline-scope: initial; timeline-trigger: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; translate: initial; trigger-scope: initial; user-select: initial; vector-effect: initial; vertical-align: initial; view-timeline: initial; view-transition-class: initial; view-transition-group: initial; view-transition-name: initial; visibility: initial; border-spacing: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-user-drag: initial; white-space-collapse: initial; widows: initial; width: 0px !important; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><div style="all: initial;"><template shadowrootmode="closed"><div></div></template></div></div></body></html>

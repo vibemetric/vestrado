@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiny Twins Clothing — CAZZED DIGITAL Growth Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400&family=Jost:wght@400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Josefin Sans',sans-serif;background:#fff;color:#374151;line-height:1.6;font-size:16px;}
+:root{
+  --coral:#D66C54;--gold:#EFBC67;--dark-teal:#10394B;
+  --cream:#EFE9DB;--white:#fff;--text:#374151;--muted:#6B7280;
+  --border:#F0E8DC;--navy:#020044;
+}
+.x5-nav{background:var(--dark-teal);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+.logo-x5{font-family:'Josefin Sans',sans-serif;font-size:24px;font-weight:700;color:var(--gold);letter-spacing:1px;}
+.logo-digital{font-family:'Josefin Sans',sans-serif;font-size:18px;font-weight:400;color:rgba(255,255,255,0.75);letter-spacing:0.05em;}
+.x5-credit{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:400;color:rgba(255,255,255,0.40);}
+.container{max-width:760px;margin:0 auto;padding:0 40px;}
+@media(max-width:768px){.container{padding:0 24px;}.x5-nav{padding:14px 24px;}}
+.sdiv{width:100%;height:1px;background:linear-gradient(90deg,var(--coral),var(--gold),transparent);opacity:0.3;margin:24px 0;}
+.doc-hero{padding:72px 0 56px;border-bottom:1px solid var(--border);}
+.dh-eyebrow{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--coral);margin-bottom:20px;}
+.dh-title{font-family:'Jost',sans-serif;font-size:clamp(32px,6vw,52px);font-weight:400;color:var(--dark-teal);line-height:1.2;letter-spacing:-1px;margin-bottom:20px;}
+.dh-title em{font-style:normal;color:var(--coral);}
+.dh-sub{font-family:'Josefin Sans',sans-serif;font-size:15px;font-weight:400;color:var(--muted);line-height:1.6;}
+.sec-hdr{padding:64px 0 40px;}
+.sec-ey{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--coral);margin-bottom:12px;}
+.sec-ttl{font-family:'Jost',sans-serif;font-size:clamp(26px,5vw,38px);font-weight:400;color:var(--dark-teal);line-height:1.25;letter-spacing:-0.5px;margin-bottom:8px;}
+.sec-ttl em{font-style:normal;color:var(--coral);}
+.sec-lead{font-family:'Josefin Sans',sans-serif;font-size:15px;font-weight:400;color:var(--text);line-height:1.75;max-width:560px;}
+.mirror-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px;}
+@media(max-width:600px){.mirror-grid{grid-template-columns:1fr;}}
+.stat-block{position:relative;overflow:hidden;background:#fff;border:1px solid var(--border);border-left:3px solid var(--coral);border-radius:12px;padding:28px 24px;transition:transform 0.2s ease;}
+.stat-block:hover{transform:translateY(-2px);}
+.stat-ghost{position:absolute;top:-20px;left:-8px;font-family:'Josefin Sans',sans-serif;font-size:160px;font-weight:700;color:var(--navy);opacity:0.04;line-height:1;letter-spacing:-6px;pointer-events:none;user-select:none;animation:ghostReveal 0.8s ease forwards;}
+@media(max-width:768px){.stat-ghost{display:none;}}
+.stat-ey{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);margin-bottom:8px;}
+.stat-hero{font-family:'Josefin Sans',sans-serif;font-size:clamp(48px,10vw,88px);font-weight:700;color:var(--dark-teal);letter-spacing:-3px;line-height:0.95;margin-bottom:4px;}
+.stat-acc{color:var(--gold);}
+.stat-div{width:48px;height:3px;background:var(--coral);margin:16px 0;}
+.stat-prose{font-family:'Josefin Sans',sans-serif;font-size:15px;font-weight:400;color:var(--text);line-height:1.75;max-width:300px;}
+.hypo-card{position:relative;background:#fff;border:1px solid var(--border);border-radius:16px;padding:32px;overflow:hidden;margin-bottom:20px;transition:transform 0.2s ease;}
+.hypo-card:hover{transform:translateY(-2px);}
+.hypo-ghost{position:absolute;right:20px;top:4px;font-family:'Josefin Sans',sans-serif;font-size:120px;font-weight:700;color:var(--navy);opacity:0.04;line-height:1;pointer-events:none;user-select:none;animation:ghostReveal 0.8s ease forwards;}
+.hypo-row{display:flex;align-items:flex-start;gap:16px;padding:14px 0;}
+.hypo-divider{height:1px;background:var(--border);}
+.hypo-num-badge{display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;width:48px;margin-top:2px;}
+.num-circle{width:32px;height:32px;border-radius:50%;border:2px solid;display:flex;align-items:center;justify-content:center;font-family:'Josefin Sans',sans-serif;font-size:13px;font-weight:700;flex-shrink:0;}
+.nc-teal{border-color:var(--dark-teal);color:var(--dark-teal);}
+.nc-gold{border-color:var(--gold);color:#A07800;}
+.nc-coral{border-color:var(--coral);color:var(--coral);}
+.num-label{font-family:'Josefin Sans',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-align:center;line-height:1.3;}
+.nl-teal{color:var(--dark-teal);}
+.nl-gold{color:#A07800;}
+.nl-coral{color:var(--coral);}
+.hypo-text{font-family:'Josefin Sans',sans-serif;font-size:15px;font-weight:400;color:var(--text);line-height:1.7;padding-left:8px;}
+.hypo-question{font-family:'Josefin Sans',sans-serif;font-style:italic;font-size:16px;font-weight:400;color:var(--coral);line-height:1.65;padding-left:8px;}
+.stacked-rects{display:flex;flex-direction:column;gap:6px;margin:32px 0;}
+.rect-row{display:flex;align-items:center;gap:14px;}
+.rect-bar{height:44px;border-radius:8px;display:flex;align-items:center;padding:0 18px;flex-shrink:0;}
+.rect-info{display:flex;flex-direction:column;}
+.rect-label{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;color:#fff;letter-spacing:0.12em;text-transform:uppercase;}
+.rect-meta{font-family:'Josefin Sans',sans-serif;font-size:13px;font-weight:400;color:var(--muted);}
+.bridge-1-block{text-align:center;padding:40px 0 48px;max-width:600px;margin:0 auto;}
+.b1-ey{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:12px;}
+.b1-ttl{font-family:'Jost',sans-serif;font-size:24px;font-weight:400;color:var(--dark-teal);line-height:1.3;letter-spacing:-0.5px;margin-bottom:12px;}
+.b1-ttl em{font-style:normal;color:var(--coral);}
+.b1-sub{font-family:'Josefin Sans',sans-serif;font-size:15px;font-weight:400;color:var(--muted);line-height:1.65;}
+.bridge-3{border-left:3px solid var(--gold);padding:12px 0 12px 20px;margin:32px 0 56px;max-width:520px;}
+.b3-text{font-family:'Josefin Sans',sans-serif;font-size:16px;font-weight:700;color:var(--dark-teal);line-height:1.6;}
+.b3-text em{font-style:normal;color:var(--coral);}
+.layer-block{margin-bottom:72px;}
+.layer-hdr{padding:28px 0 0;margin-bottom:32px;}
+.layer-ey{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:12px;}
+.layer-disp{font-family:'Josefin Sans',sans-serif;font-size:clamp(32px,8vw,60px);font-weight:700;color:var(--dark-teal);line-height:1.0;letter-spacing:-2px;margin-bottom:12px;}
+.layer-disp-outline{color:transparent;-webkit-text-stroke:2px var(--coral);}
+.layer-tag{font-family:'Josefin Sans',sans-serif;font-size:14px;font-weight:400;color:var(--muted);max-width:480px;line-height:1.6;margin-bottom:20px;}
+.layer-metrics{display:flex;gap:28px;flex-wrap:wrap;padding-bottom:20px;}
+.lm-val{font-family:'Josefin Sans',sans-serif;font-size:22px;font-weight:700;color:var(--dark-teal);}
+.lm-lbl{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);}
+.layer-demo{background:var(--cream);border-radius:16px;padding:28px;margin-bottom:40px;overflow:hidden;min-height:200px;}
+.demo-lbl{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--dark-teal);opacity:0.5;margin-bottom:16px;}
+.flow-container{position:relative;}
+.flow-step{display:flex;gap:20px;}
+.flow-left{display:flex;flex-direction:column;align-items:center;width:40px;flex-shrink:0;}
+.flow-dot{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1;}
+.dot-obs{background:#FEF3EC;border:2px solid var(--coral);}
+.dot-brk{background:#FFF8ED;border:2px solid var(--gold);}
+.dot-bld{background:#E8F4F0;border:2px solid var(--dark-teal);}
+.dot-get{background:#FEF3EC;border:2px solid var(--coral);}
+.flow-line{width:2px;flex:1;min-height:32px;margin:4px auto;}
+.fl-obs{background:linear-gradient(var(--coral),var(--gold));}
+.fl-brk{background:linear-gradient(var(--gold),var(--dark-teal));}
+.fl-bld{background:linear-gradient(var(--dark-teal),var(--coral));}
+.flow-right{flex:1;padding-bottom:32px;}
+.flow-ey{font-family:'Josefin Sans',sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.3px;line-height:1.1;margin-bottom:6px;}
+.ey-obs{color:var(--coral);}
+.ey-brk{color:#A07800;}
+.ey-bld{color:var(--dark-teal);}
+.ey-get{color:var(--coral);}
+.flow-hl{font-family:'Josefin Sans',sans-serif;font-size:20px;font-weight:700;color:var(--dark-teal);line-height:1.3;letter-spacing:-0.4px;margin-bottom:12px;}
+.flow-hl em{font-style:normal;}
+.hl-obs em{color:var(--coral);}
+.hl-brk em{color:#A07800;}
+.hl-bld em{color:var(--dark-teal);}
+.hl-get em{color:var(--coral);}
+.flow-bullets{display:flex;flex-direction:column;gap:5px;}
+.flow-bullet{display:flex;align-items:flex-start;gap:8px;font-family:'Josefin Sans',sans-serif;font-size:14px;font-weight:400;color:var(--text);line-height:1.55;}
+.bdot{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:6px;}
+.bdot-obs{background:var(--coral);}
+.bdot-brk{background:var(--gold);}
+.bdot-muted{background:#CBD5E1;}
+.chips-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.chip{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;background:var(--cream);color:var(--dark-teal);}
+.outcome-bar{background:#FEF3EC;border-left:3px solid var(--coral);border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:10px;}
+.outcome-lbl{font-family:'Josefin Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:4px;}
+.outcome-val{font-family:'Josefin Sans',sans-serif;font-size:14px;font-weight:700;color:var(--dark-teal);line-height:1.5;}
+.flow-kalam{font-family:'Josefin Sans',sans-serif;font-style:italic;font-size:15px;font-weight:400;color:var(--coral);line-height:1.5;margin-top:4px;}
+.funnel-wrap{display:flex;flex-direction:column;gap:7px;}
+.funnel-stage{display:flex;align-items:center;gap:10px;}
+.funnel-bar-v{height:34px;min-width:4px;background:rgba(214,108,84,0.16);border-radius:4px;}
+.funnel-bar-v.hi{background:var(--coral);}
+.funnel-lbl{font-family:'Josefin Sans',sans-serif;font-size:13px;font-weight:400;color:var(--text);min-width:130px;}
+.funnel-val{font-family:'Josefin Sans',sans-serif;font-size:13px;font-weight:700;color:var(--coral);}
+.channel-chart{background:var(--cream);border-radius:12px;padding:20px 24px;margin:24px 0;}
+.ch-title{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--dark-teal);margin-bottom:16px;}
+.ch-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.ch-name{font-family:'Josefin Sans',sans-serif;font-size:13px;font-weight:400;color:var(--text);width:150px;flex-shrink:0;}
+.ch-bar-wrap{flex:1;height:28px;background:rgba(0,0,0,0.07);border-radius:4px;overflow:hidden;}
+.ch-bar{height:100%;border-radius:4px;}
+.ch-val{font-family:'Josefin Sans',sans-serif;font-size:13px;font-weight:700;color:var(--dark-teal);width:72px;text-align:right;}
+.ch-note{font-family:'Josefin Sans',sans-serif;font-size:12px;font-style:italic;color:var(--coral);margin-top:12px;}
+.ch-star{font-size:10px;margin-left:4px;color:var(--gold);}
+.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0;}
+@media(max-width:480px){.metric-grid{grid-template-columns:1fr;}}
+.metric-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;}
+.m-label{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--coral);margin-bottom:8px;}
+.m-val{font-family:'Josefin Sans',sans-serif;font-size:14px;font-weight:400;color:var(--muted);}
+.m-val span{font-family:'Josefin Sans',sans-serif;font-size:36px;font-weight:700;color:var(--dark-teal);}
+.m-trend{font-family:'Josefin Sans',sans-serif;font-size:12px;margin-top:6px;}
+.m-trend.up{color:var(--dark-teal);}
+.roas-compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0;}
+@media(max-width:480px){.roas-compare{grid-template-columns:1fr;}}
+.roas-box{text-align:center;padding:20px 16px;border-radius:10px;}
+.rb-before{background:rgba(239,188,103,0.15);}
+.rb-after{background:rgba(214,108,84,0.10);}
+.rb-label{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:8px;}
+.rb-before .rb-label{color:#A07800;}
+.rb-after .rb-label{color:var(--coral);}
+.rb-num{font-family:'Josefin Sans',sans-serif;font-size:40px;font-weight:700;color:var(--dark-teal);letter-spacing:-2px;line-height:1;}
+.rb-note{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:400;color:var(--muted);margin-top:6px;}
+.l5-chart-1{background:var(--dark-teal);border-radius:16px;padding:28px;margin-bottom:18px;}
+.l5-chart-2{background:var(--cream);border-radius:16px;padding:28px;}
+.l5-ey{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);margin-bottom:10px;}
+.l5-ttl-w{font-family:'Josefin Sans',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#fff;margin-bottom:4px;}
+.l5-ttl-d{font-family:'Josefin Sans',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--dark-teal);margin-bottom:4px;}
+.l5-sub-w{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:400;color:rgba(255,255,255,0.50);margin-bottom:20px;}
+.l5-sub-d{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:400;color:var(--muted);margin-bottom:20px;}
+.l5-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.l5-bar-name{font-family:'Josefin Sans',sans-serif;font-size:13px;font-weight:400;color:rgba(255,255,255,0.75);width:130px;flex-shrink:0;}
+.l5-bar-wrap{flex:1;height:36px;background:rgba(255,255,255,0.08);border-radius:6px;overflow:hidden;}
+.l5-bar{height:100%;border-radius:6px;}
+.l5-bar-val{font-family:'Josefin Sans',sans-serif;font-size:13px;font-weight:700;color:#fff;width:80px;text-align:right;}
+.l5-badge{font-family:'Josefin Sans',sans-serif;font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;background:rgba(239,188,103,0.2);color:var(--gold);}
+.l5-footer-w{font-family:'Josefin Sans',sans-serif;font-size:12px;font-style:italic;color:rgba(255,255,255,0.40);margin-top:16px;}
+.l5-2col{display:grid;grid-template-columns:55% 1fr;gap:20px;}
+@media(max-width:580px){.l5-2col{grid-template-columns:1fr;}}
+.l5-intel-card{background:rgba(255,255,255,0.65);border-radius:10px;padding:14px;margin-bottom:9px;}
+.l5-ic-title{font-family:'Josefin Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--dark-teal);margin-bottom:6px;}
+.l5-ic-body{font-family:'Josefin Sans',sans-serif;font-size:13px;font-weight:400;color:var(--text);line-height:1.5;}
+.l5-footer-d{font-family:'Josefin Sans',sans-serif;font-size:12px;font-style:italic;color:var(--coral);margin-top:14px;}
+.line-chart-wrap{margin-bottom:16px;}
+.lc-title{font-family:'Josefin Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--dark-teal);margin-bottom:10px;}
+.cascade-wrap{background:var(--cream);border-radius:16px;padding:32px 28px;margin:48px 0;}
+.cascade-title{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);text-align:center;margin-bottom:28px;}
+.cascade-list{max-width:480px;margin:0 auto;display:flex;flex-direction:column;gap:0;}
+.cn-row{display:flex;align-items:stretch;gap:0;}
+.cn-box{width:90px;padding:10px 6px;border-radius:8px;text-align:center;flex-shrink:0;display:flex;flex-direction:column;justify-content:center;}
+.cn-box-lbl{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#fff;line-height:1.2;}
+.cn-mid{flex:1;display:flex;align-items:center;padding:0 16px;}
+.cn-arrow-line{flex:1;height:1px;background:var(--coral);opacity:0.35;}
+.cn-arrow-text{font-family:'Josefin Sans',sans-serif;font-size:12px;font-style:italic;color:var(--muted);text-align:center;line-height:1.4;padding:0 12px;}
+.cn-connector{display:flex;justify-content:flex-start;padding:6px 0 6px 44px;}
+.cn-vert{width:1px;height:24px;background:rgba(214,108,84,0.3);}
+.ask-section{background:var(--dark-teal);padding:72px 0;}
+.ask-ey{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:16px;}
+.ask-ttl{font-family:'Jost',sans-serif;font-size:clamp(28px,5vw,42px);font-weight:400;color:#fff;line-height:1.2;letter-spacing:-0.5px;margin-bottom:16px;}
+.ask-ttl em{font-style:normal;color:var(--gold);}
+.ask-body{font-family:'Josefin Sans',sans-serif;font-size:16px;font-weight:400;color:rgba(255,255,255,0.72);line-height:1.75;max-width:520px;margin-bottom:32px;}
+.ask-prep{background:rgba(255,255,255,0.06);border-radius:12px;padding:24px;margin-bottom:32px;max-width:500px;}
+.ask-prep-ttl{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.40);margin-bottom:16px;}
+.ask-prep-item{display:flex;gap:12px;margin-bottom:12px;align-items:flex-start;}
+.ask-num{font-family:'Josefin Sans',sans-serif;font-size:14px;font-weight:700;color:var(--gold);flex-shrink:0;width:20px;}
+.ask-item-text{font-family:'Josefin Sans',sans-serif;font-size:14px;font-weight:400;color:rgba(255,255,255,0.68);line-height:1.55;}
+.cta-btn{display:inline-block;background:var(--gold);color:var(--dark-teal);font-family:'Josefin Sans',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.08em;text-decoration:none;padding:16px 40px;border-radius:40px;transition:opacity 0.2s ease;}
+.cta-btn:hover{opacity:0.9;}
+.ask-guarantee{font-family:'Josefin Sans',sans-serif;font-style:italic;font-size:15px;font-weight:400;color:rgba(255,255,255,0.45);max-width:440px;line-height:1.65;margin-top:20px;}
+.x5-footer{font-family:'Josefin Sans',sans-serif;font-size:12px;color:var(--muted);text-align:center;padding:28px 24px;}
+.demo-2col{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:560px){.demo-2col{grid-template-columns:1fr;}}
+.demo-panel{background:#fff;border-radius:10px;padding:16px;overflow:hidden;}
+.dp-label{font-family:'Josefin Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:10px;}
+.dp-label-coral{color:var(--coral);}
+.dp-label-teal{color:var(--dark-teal);}
+.email-node{display:flex;align-items:flex-start;gap:10px;margin-bottom:6px;}
+.email-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:3px;}
+.en-coral{background:var(--coral);}
+.en-gold{background:var(--gold);}
+.en-teal{background:var(--dark-teal);}
+.email-node-text{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:400;color:var(--text);line-height:1.5;}
+.email-arrow{width:1px;height:12px;background:rgba(214,108,84,0.3);margin:0 0 6px 4px;}
+.email-revenue-badge{display:inline-block;background:rgba(214,108,84,0.12);color:var(--coral);font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px;margin-top:8px;}
+.chat-bubble-right{background:var(--dark-teal);color:#fff;border-radius:12px 12px 2px 12px;padding:8px 12px;font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:400;line-height:1.5;margin-bottom:6px;}
+.chat-bubble-left{background:#f0f0f0;color:var(--text);border-radius:12px 12px 12px 2px;padding:8px 12px;font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:400;line-height:1.5;margin-bottom:6px;}
+.chat-bot{background:rgba(214,108,84,0.12);color:var(--dark-teal);border-radius:12px 12px 12px 2px;padding:8px 12px;font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:400;line-height:1.5;margin-bottom:6px;}
+.chat-label{font-family:'Josefin Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.chat-cta-row{display:flex;gap:6px;margin-top:6px;}
+.chat-cta{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;padding:5px 10px;border-radius:20px;background:var(--gold);color:var(--dark-teal);}
+.wa-msg{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px;}
+.wa-icon{width:24px;height:24px;border-radius:50%;background:var(--dark-teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.wa-icon svg{width:14px;height:14px;}
+.wa-bubble{background:#fff;border-radius:8px;padding:8px 10px;flex:1;}
+.wa-bubble-ttl{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;color:var(--dark-teal);margin-bottom:2px;}
+.wa-bubble-txt{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:400;color:var(--text);line-height:1.5;}
+.review-empty{border:1px dashed #ddd;border-radius:8px;padding:16px;text-align:center;}
+.review-empty-text{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:400;color:#ccc;}
+.stars-row{display:flex;gap:2px;margin-bottom:6px;}
+.star{color:var(--gold);font-size:16px;}
+.review-item{border-bottom:1px solid var(--border);padding:10px 0;}
+.review-header{display:flex;align-items:center;gap:8px;margin-bottom:4px;}
+.review-name{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:700;color:var(--dark-teal);}
+.review-badge{font-family:'Josefin Sans',sans-serif;font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;background:rgba(239,188,103,0.2);color:#A07800;}
+.review-text{font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:400;color:var(--text);line-height:1.5;}
+.review-count{font-family:'Josefin Sans',sans-serif;font-size:13px;font-weight:700;color:var(--dark-teal);margin-bottom:8px;}
+.review-avg{font-family:'Josefin Sans',sans-serif;font-size:28px;font-weight:700;color:var(--dark-teal);margin-bottom:4px;}
+@keyframes ghostReveal{from{opacity:0;transform:scale(0.95);}to{opacity:0.04;transform:scale(1);}}
+
+/* === ENGINE ACCORDION — Section 03 === */
+.engine-track-intro{display:flex;align-items:center;gap:20px;margin:32px 0 8px;padding:20px 24px;background:var(--cream);border-radius:12px;}
+.et-num{font-family:'Josefin Sans',sans-serif;font-size:48px;font-weight:700;color:var(--dark-teal);letter-spacing:-3px;line-height:1;flex-shrink:0;}
+.et-sep{width:2px;height:48px;background:var(--coral);opacity:0.3;flex-shrink:0;}
+.et-text p{font-family:'Josefin Sans',sans-serif;font-size:14px;color:var(--muted);line-height:1.65;}
+.et-text strong{color:var(--dark-teal);}
+.engine-progress{display:flex;gap:4px;margin:12px 0 4px;}
+.ep-seg{height:4px;border-radius:2px;flex:1;background:var(--border);transition:background 0.3s ease;}
+.ep-seg.active{background:var(--coral);}
+.ep-seg:nth-child(1).active{background:var(--dark-teal);}
+.ep-seg:nth-child(2).active{background:var(--coral);}
+.ep-seg:nth-child(3).active{background:#C4843A;}
+.ep-seg:nth-child(4).active{background:#2E7A5A;}
+.ep-seg:nth-child(5).active{background:var(--gold);}
+.engine-list{display:flex;flex-direction:column;gap:0;margin:8px 0 56px;border-radius:16px;overflow:hidden;border:1px solid var(--border);}
+.engine-card{border-bottom:1px solid var(--border);transition:background 0.25s ease;cursor:pointer;position:relative;overflow:hidden;}
+.engine-card:last-child{border-bottom:none;}
+.engine-card.is-open{background:#FDFAF6;}
+.engine-card:hover:not(.is-open){background:#FEFCF9;}
+.engine-ghost{position:absolute;right:-12px;top:-14px;font-family:'Josefin Sans',sans-serif;font-size:140px;font-weight:700;color:var(--navy);opacity:0;line-height:1;letter-spacing:-6px;pointer-events:none;user-select:none;transition:opacity 0.3s ease;}
+.engine-card.is-open .engine-ghost{opacity:0.035;}
+.engine-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--border);transition:background 0.25s ease;}
+.engine-card:nth-child(1).is-open::before{background:var(--dark-teal);}
+.engine-card:nth-child(2).is-open::before{background:var(--coral);}
+.engine-card:nth-child(3).is-open::before{background:#C4843A;}
+.engine-card:nth-child(4).is-open::before{background:#2E7A5A;}
+.engine-card:nth-child(5).is-open::before{background:var(--gold);}
+.engine-hdr{display:flex;align-items:center;gap:20px;padding:24px 28px;}
+.engine-badge{width:52px;height:52px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;font-family:'Josefin Sans',sans-serif;font-weight:700;transition:transform 0.2s ease;}
+.engine-card:hover .engine-badge{transform:scale(1.04);}
+.eb-letter{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.7;line-height:1;margin-bottom:2px;}
+.eb-num{font-size:24px;letter-spacing:-1px;line-height:1;}
+.eb-1{background:rgba(16,57,75,0.08);color:var(--dark-teal);}
+.eb-2{background:rgba(214,108,84,0.10);color:var(--coral);}
+.eb-3{background:rgba(196,132,58,0.12);color:#A07800;}
+.eb-4{background:rgba(46,122,90,0.10);color:#2E7A5A;}
+.eb-5{background:rgba(239,188,103,0.18);color:#8A6800;}
+.engine-title-group{flex:1;}
+.engine-code{font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--coral);margin-bottom:4px;}
+.engine-name{font-family:'Josefin Sans',sans-serif;font-size:16px;font-weight:700;color:var(--dark-teal);line-height:1.3;letter-spacing:-0.2px;}
+.engine-desc{font-family:'Josefin Sans',sans-serif;font-size:13px;font-weight:400;color:var(--muted);line-height:1.55;margin-top:3px;max-width:420px;}
+.engine-chevron{width:32px;height:32px;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--muted);transition:all 0.25s ease;background:#fff;}
+.engine-card.is-open .engine-chevron{background:var(--coral);border-color:var(--coral);color:#fff;transform:rotate(180deg);}
+.engine-body{max-height:0;overflow:hidden;transition:max-height 0.45s cubic-bezier(0.25,0.8,0.25,1);}
+.engine-card.is-open .engine-body{max-height:700px;}
+.engine-body-inner{padding:0 28px 28px 100px;}
+@media(max-width:600px){.engine-body-inner{padding:0 20px 24px 20px;}}
+.engine-tagline{font-family:'Josefin Sans',sans-serif;font-style:italic;font-size:15px;color:var(--coral);line-height:1.6;padding:12px 16px;border-left:3px solid var(--gold);margin-bottom:20px;background:rgba(239,188,103,0.07);border-radius:0 8px 8px 0;}
+.engine-bullets{display:flex;flex-direction:column;gap:8px;}
+.engine-bullet{display:flex;align-items:flex-start;gap:12px;font-family:'Josefin Sans',sans-serif;font-size:14px;color:var(--text);line-height:1.6;}
+.ebullet-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:7px;}
+.engine-card:nth-child(1) .ebullet-dot{background:var(--dark-teal);}
+.engine-card:nth-child(2) .ebullet-dot{background:var(--coral);}
+.engine-card:nth-child(3) .ebullet-dot{background:#C4843A;}
+.engine-card:nth-child(4) .ebullet-dot{background:#2E7A5A;}
+.engine-card:nth-child(5) .ebullet-dot{background:#8A6800;}
+</style>
+</head>
+<body>
+
+<nav class="x5-nav">
+  <div><span class="logo-x5">CAZZED</span><span class="logo-digital"> DIGITAL</span></div>
+  <div class="x5-credit">Growth Audit — Tiny Twins Clothing</div>
+</nav>
+
+<div class="doc-hero">
+  <div class="container">
+    <div class="dh-eyebrow">External Audit · March 2025</div>
+    <h1 class="dh-title">You've built something <em>real.</em><br>Here's what the data says next.</h1>
+    <div class="dh-sub">Prepared exclusively for the Founder of Tiny Twins Clothing — tinytwinsclothing.com</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="sec-hdr">
+    <div class="sec-ey">Section 01 — The Mirror</div>
+    <div class="sec-ttl">What you've already <em>built right.</em></div>
+    <p class="sec-lead">Before anything else — an honest look at what's working. Building a DTC brand from scratch, doing it sustainably, and setting up the infrastructure correctly takes real effort. These four things stood out.</p>
+  </div>
+
+  <div class="mirror-grid">
+
+    <div class="stat-block">
+      <div class="stat-ghost">CAPI</div>
+      <div class="stat-ey">Tracking Setup — Strength 01</div>
+      <div class="stat-hero">2<span class="stat-acc">/2</span></div>
+      <div class="stat-div"></div>
+      <div class="stat-prose">Meta Pixel and Server-Side CAPI both active — simultaneously. Enabling CAPI is a deliberate step, not a Shopify default. Facebook domain verification also confirmed in source code.</div>
+    </div>
+
+    <div class="stat-block">
+      <div class="stat-ghost">3×3</div>
+      <div class="stat-ey">Product Content — Strength 02</div>
+      <div class="stat-hero">3<span class="stat-acc">+3</span></div>
+      <div class="stat-div"></div>
+      <div class="stat-prose">3 professional lifestyle photos (mirrorless camera shoot) and 3 detailed accordion tabs — fabric specs, size guide, material care — on every product page. This is invested content, not dropship-style filler.</div>
+    </div>
+
+    <div class="stat-block">
+      <div class="stat-ghost">40</div>
+      <div class="stat-ey">International Reach — Strength 03</div>
+      <div class="stat-hero">40<span class="stat-acc">+</span></div>
+      <div class="stat-div"></div>
+      <div class="stat-prose">Countries in the localization dropdown. "Designed in Malaysia, Made in India" — a positioning that naturally reaches the SEA diaspora in the UK, Australia, Singapore, and the Middle East.</div>
+    </div>
+
+    <div class="stat-block">
+      <div class="stat-ghost">3</div>
+      <div class="stat-ey">Brand Story — Strength 04</div>
+      <div class="stat-hero">3<span class="stat-acc"> ch.</span></div>
+      <div class="stat-div"></div>
+      <div class="stat-prose">Facebook, Instagram, and Pinterest all set up as business accounts. Pinterest already ad-ready. The founder story — twin girls, 2 boys, conscious sourcing, honest about limitations — is unusually specific and memorable.</div>
+    </div>
+
+  </div>
+
+  <div class="sdiv"></div>
+
+  <div class="sec-hdr">
+    <div class="sec-ey">Section 02 — The Hidden Leak</div>
+    <div class="sec-ttl">Three growth gaps <em>visible from the outside.</em></div>
+    <p class="sec-lead">These are unconfirmed hypotheses — grounded in specific external signals, but requiring Shopify Analytics and Meta Ads Manager to verify. The audit call is where these go from hypothesis to fact.</p>
+  </div>
+
+  <div class="hypo-card">
+    <div class="hypo-ghost">01</div>
+    <div class="hypo-row">
+      <div class="hypo-num-badge">
+        <div class="num-circle nc-teal">01</div>
+        <div class="num-label nl-teal">What<br>we see</div>
+      </div>
+      <div class="hypo-text">Homepage captured with a raw <code style="font-size:13px;background:var(--cream);padding:1px 5px;border-radius:3px;">fbclid</code> parameter — session originated from a Facebook Ad. CAPI is active but no GA4 tag visible in page source code.</div>
+    </div>
+    <div class="hypo-divider"></div>
+    <div class="hypo-row">
+      <div class="hypo-num-badge">
+        <div class="num-circle nc-gold">02</div>
+        <div class="num-label nl-gold">Why it<br>matters</div>
+      </div>
+      <div class="hypo-text">ROAS measured 100% via Meta's self-reported data — known to over-attribute post-iOS 14. Actual ROAS may be 20–40% lower than what Meta reports. Budget could be scaling an unprofitable campaign without knowing it.</div>
+    </div>
+    <div class="hypo-divider"></div>
+    <div class="hypo-row">
+      <div class="hypo-num-badge">
+        <div class="num-circle nc-coral">03</div>
+        <div class="num-label nl-coral">The<br>question</div>
+      </div>
+      <div class="hypo-question">When you look at Meta's ROAS versus actual Shopify revenue — what's the gap?</div>
+    </div>
+  </div>
+
+  <div class="hypo-card">
+    <div class="hypo-ghost">02</div>
+    <div class="hypo-row">
+      <div class="hypo-num-badge">
+        <div class="num-circle nc-teal">01</div>
+        <div class="num-label nl-teal">What<br>we see</div>
+      </div>
+      <div class="hypo-text">Mailchimp user ID confirmed in page source. Ecomsend popup actively collecting emails. No Klaviyo detected — no post-purchase or abandoned cart flow visible from the outside.</div>
+    </div>
+    <div class="hypo-divider"></div>
+    <div class="hypo-row">
+      <div class="hypo-num-badge">
+        <div class="num-circle nc-gold">02</div>
+        <div class="num-label nl-gold">Why it<br>matters</div>
+      </div>
+      <div class="hypo-text">An email list exists with what appears to be zero automation revenue. Baby clothing has a natural repurchase cycle — size 0–3M buyers return for 3–6M in roughly 60 days. That cycle is currently not being captured.</div>
+    </div>
+    <div class="hypo-divider"></div>
+    <div class="hypo-row">
+      <div class="hypo-num-badge">
+        <div class="num-circle nc-coral">03</div>
+        <div class="num-label nl-coral">The<br>question</div>
+      </div>
+      <div class="hypo-question">How many subscribers are on the list right now — and what percentage have ever bought anything?</div>
+    </div>
+  </div>
+
+  <div class="hypo-card">
+    <div class="hypo-ghost">03</div>
+    <div class="hypo-row">
+      <div class="hypo-num-badge">
+        <div class="num-circle nc-teal">01</div>
+        <div class="num-label nl-teal">What<br>we see</div>
+      </div>
+      <div class="hypo-text">A personal WhatsApp number is the primary support channel. Instagram captions include "DM us" as a sales CTA. Posting cadence clusters with visible gaps — consistent with one or two people managing everything manually.</div>
+    </div>
+    <div class="hypo-divider"></div>
+    <div class="hypo-row">
+      <div class="hypo-num-badge">
+        <div class="num-circle nc-gold">02</div>
+        <div class="num-label nl-gold">Why it<br>matters</div>
+      </div>
+      <div class="hypo-text">If the team is 1–2 people handling content, DMs, packing, and customer support — growth is bottlenecked by available hours, not by market demand or budget.</div>
+    </div>
+    <div class="hypo-divider"></div>
+    <div class="hypo-row">
+      <div class="hypo-num-badge">
+        <div class="num-circle nc-coral">03</div>
+        <div class="num-label nl-coral">The<br>question</div>
+      </div>
+      <div class="hypo-question">How many hours per week are you personally spending on WhatsApp, DMs, and content creation right now?</div>
+    </div>
+  </div>
+
+  <div class="sdiv"></div>
+
+  <div class="sec-hdr">
+    <div class="sec-ey">Section 03 — The Engine</div>
+    <div class="sec-ttl">5 engines. Each one <em>powers your growth.</em></div>
+  </div>
+
+  <div class="engine-track-intro">
+    <div class="et-num">5</div>
+    <div class="et-sep"></div>
+    <div class="et-text">
+      <p><strong>Engines. Not layers.</strong> Each engine is an independent operating system — yet connected to create sustainable growth.</p>
+    </div>
+  </div>
+
+  <div class="engine-progress">
+    <div class="ep-seg" data-seg="0"></div>
+    <div class="ep-seg" data-seg="1"></div>
+    <div class="ep-seg" data-seg="2"></div>
+    <div class="ep-seg" data-seg="3"></div>
+    <div class="ep-seg" data-seg="4"></div>
+  </div>
+
+  <div class="engine-list">
+
+    <!-- E1 -->
+    <div class="engine-card" data-index="0">
+      <div class="engine-ghost">E1</div>
+      <div class="engine-hdr">
+        <div class="engine-badge eb-1"><span class="eb-letter">E</span><span class="eb-num">1</span></div>
+        <div class="engine-title-group">
+          <div class="engine-code">E1 — Tracking Setup &amp; Data Foundation</div>
+          <div class="engine-name">Data. Clean from day one.</div>
+          <div class="engine-desc">Accurate measurement foundation — before any decision is made.</div>
+        </div>
+        <div class="engine-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="engine-body">
+        <div class="engine-body-inner">
+          <div class="engine-tagline">Establish a robust tracking system and data foundation to ensure accurate measurement of user behavior.</div>
+          <div class="engine-bullets">
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Setup and configuration of Google Analytics 4 (GA4)</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Implementation of Google Tag Manager (client-side &amp; server-side)</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Event tracking, conversion tracking, and full user journey mapping</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Data layer standardization and data quality assurance</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Integration across platforms (Ads, CRM, Website)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- E2 -->
+    <div class="engine-card" data-index="1">
+      <div class="engine-ghost">E2</div>
+      <div class="engine-hdr">
+        <div class="engine-badge eb-2"><span class="eb-letter">E</span><span class="eb-num">2</span></div>
+        <div class="engine-title-group">
+          <div class="engine-code">E2 — Paid Media Campaigns</div>
+          <div class="engine-name">Paid Social &amp; Performance Marketing.</div>
+          <div class="engine-desc">Multi-channel, ROI optimized — Meta, TikTok, Google, all in one strategy.</div>
+        </div>
+        <div class="engine-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="engine-body">
+        <div class="engine-body-inner">
+          <div class="engine-tagline">Plan, execute, and optimize multi-channel advertising campaigns to maximize ROI.</div>
+          <div class="engine-bullets">
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Campaigns on Meta Ads (Facebook &amp; Instagram)</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>TikTok Ads (performance-driven &amp; creative-led strategies)</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Google Ads (Search, Display, YouTube, Performance Max/Shopping)</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Media planning and budget allocation</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>A/B testing, creative optimization, and audience targeting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- E3 -->
+    <div class="engine-card" data-index="2">
+      <div class="engine-ghost">E3</div>
+      <div class="engine-hdr">
+        <div class="engine-badge eb-3"><span class="eb-letter">E</span><span class="eb-num">3</span></div>
+        <div class="engine-title-group">
+          <div class="engine-code">E3 — Email Marketing Automation &amp; Omnichannel</div>
+          <div class="engine-name">Omnichannel. Automated. Always nurturing.</div>
+          <div class="engine-desc">Build automated marketing systems — nurture customers across every channel.</div>
+        </div>
+        <div class="engine-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="engine-body">
+        <div class="engine-body-inner">
+          <div class="engine-tagline">Build automated marketing systems to nurture customers and deliver seamless cross-channel experiences.</div>
+          <div class="engine-bullets">
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Setup of email automation flows (welcome, nurturing, retention)</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Customer segmentation and personalized messaging</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Platform optimization (CRM/CDP, email tools)</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Data synchronization across channels (Email, SMS, Website, Ads)</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Development of a consistent omnichannel marketing strategy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- E4 -->
+    <div class="engine-card" data-index="3">
+      <div class="engine-ghost">E4</div>
+      <div class="engine-hdr">
+        <div class="engine-badge eb-4"><span class="eb-letter">E</span><span class="eb-num">4</span></div>
+        <div class="engine-title-group">
+          <div class="engine-code">E4 — AI Chatbot &amp; Conversational Automation</div>
+          <div class="engine-name">AI. Always-on. Always converting.</div>
+          <div class="engine-desc">Leverage AI to automate customer interactions — 24/7, without additional headcount.</div>
+        </div>
+        <div class="engine-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="engine-body">
+        <div class="engine-body-inner">
+          <div class="engine-tagline">Leverage AI to automate customer interactions and enhance engagement across every touchpoint.</div>
+          <div class="engine-bullets">
+            <div class="engine-bullet"><div class="ebullet-dot"></div>AI chatbot deployment on Website, WhatsApp, Messenger</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Automated responses, lead capture, and customer support</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Integration with CRM and data systems</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Intelligent conversation flows (AI-driven scenarios)</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Conversion optimization from chat to sales</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- E5 -->
+    <div class="engine-card" data-index="4">
+      <div class="engine-ghost">E5</div>
+      <div class="engine-hdr">
+        <div class="engine-badge eb-5"><span class="eb-letter">E</span><span class="eb-num">5</span></div>
+        <div class="engine-title-group">
+          <div class="engine-code">E5 — Performance Measurement &amp; Advanced Analytics</div>
+          <div class="engine-name">Decide with data. Not instinct.</div>
+          <div class="engine-desc">Measure, analyze, and forecast — so every decision is backed by real data.</div>
+        </div>
+        <div class="engine-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="engine-body">
+        <div class="engine-body-inner">
+          <div class="engine-tagline">Measure, analyze, and forecast marketing performance to support data-driven decisions at every level.</div>
+          <div class="engine-bullets">
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Digital performance reporting and dashboards</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Trend analysis and insights generation</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Customer Lifetime Value (CLV) measurement</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Attribution modeling and channel performance evaluation</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Predictive analytics and forecasting models</div>
+            <div class="engine-bullet"><div class="ebullet-dot"></div>Data visualization via BI tools (e.g., Looker Studio)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bridge-1-block">
+    <div class="b1-ey">Applied to Tiny Twins — Engine by Engine</div>
+    <div class="b1-ttl">Here's what we found in the audit —<br>and <em>what we'd build first.</em></div>
+    <div class="b1-sub">Each engine addresses a specific gap we observed from the outside. Honest about what we could see — and what we couldn't.</div>
+  </div>
+
+</div>
+
+<div class="container">
+
+  <div class="layer-block">
+    <div class="layer-hdr">
+      <div class="layer-ey">Engine 01 — Tracking Setup &amp; Data Foundation</div>
+      <div class="layer-disp">Clean <span class="layer-disp-outline">Data.</span></div>
+      <div class="layer-tag">Meta Pixel is active — but whether it's tracking true ROAS or just inflated clicks is the question this engine answers.</div>
+      <div class="layer-metrics">
+        <div><div class="lm-val">14 days</div><div class="lm-lbl">Time to impact</div></div>
+        <div><div class="lm-val">GA4 + Shopify</div><div class="lm-lbl">Attribution platforms</div></div>
+        <div><div class="lm-val">100%</div><div class="lm-lbl">Channel coverage</div></div>
+      </div>
+    </div>
+
+    <div class="layer-demo">
+      <div class="demo-lbl">E1 Demo — Purchase Funnel with True Attribution</div>
+      <div class="funnel-wrap">
+        <div class="funnel-stage">
+          <div class="funnel-lbl">Store Visitors</div>
+          <div class="funnel-bar-v" style="width:100%;"></div>
+          <div class="funnel-val">100%</div>
+        </div>
+        <div class="funnel-stage">
+          <div class="funnel-lbl">Product Page View</div>
+          <div class="funnel-bar-v" style="width:45%;"></div>
+          <div class="funnel-val">45%</div>
+        </div>
+        <div class="funnel-stage">
+          <div class="funnel-lbl">Add to Cart</div>
+          <div class="funnel-bar-v" style="width:12%;"></div>
+          <div class="funnel-val">12%</div>
+        </div>
+        <div class="funnel-stage">
+          <div class="funnel-lbl">Reached Checkout</div>
+          <div class="funnel-bar-v" style="width:7%;"></div>
+          <div class="funnel-val">7%</div>
+        </div>
+        <div class="funnel-stage">
+          <div class="funnel-lbl">Purchase ✓</div>
+          <div class="funnel-bar-v hi" style="width:2.8%;min-width:28px;"></div>
+          <div class="funnel-val">2.8% CVR</div>
+        </div>
+        <div class="funnel-stage">
+          <div class="funnel-lbl">Email Captured</div>
+          <div class="funnel-bar-v" style="width:4%;background:rgba(239,188,103,0.5);"></div>
+          <div class="funnel-val" style="color:#A07800;">~4%</div>
+        </div>
+      </div>
+      <div style="margin-top:14px;padding:10px 14px;background:rgba(16,57,75,0.08);border-radius:8px;font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:700;color:var(--dark-teal);letter-spacing:0.06em;">TRUE ROAS = Revenue ÷ (Ad Spend + COGS + Shipping) · not what Meta reports</div>
+    </div>
+
+    <div class="flow-container">
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-obs">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" stroke="#D66C54" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="#D66C54"/></svg>
+          </div>
+          <div class="flow-line fl-obs"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-obs">What we observe</div>
+          <div class="flow-hl hl-obs">Tracking active — true ROAS <em>unverifiable</em></div>
+          <div class="flow-bullets">
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>Meta Pixel + CAPI active — confirmed from source code</div>
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>No GA4 tag visible in page source</div>
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>ROAS currently measured via Meta's self-reported data only</div>
+            <div class="flow-bullet"><div class="bdot bdot-muted"></div>Actual attribution model: not verifiable externally</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-brk">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#EFBC67" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="flow-line fl-brk"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-brk">If broken</div>
+          <div class="flow-hl hl-brk">Budget scaling an <em>unprofitable</em> campaign</div>
+          <div class="flow-bullets">
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>Reported ROAS could be 20–40% higher than reality</div>
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>Cart abandonment revenue invisible — no recovery trigger</div>
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>No channel-level breakdown: Meta vs. organic vs. email</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-bld">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="#10394B" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="flow-line fl-bld"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-bld">CAZZED DIGITAL builds</div>
+          <div class="flow-hl hl-bld">Independent attribution — <em>clean from day one</em></div>
+          <div class="chips-row">
+            <div class="chip">GA4 + Shopify Setup</div>
+            <div class="chip">Meta Pixel Rebuild</div>
+            <div class="chip">UTM Taxonomy</div>
+            <div class="chip">Attribution Dashboard</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-get">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="#D66C54" stroke-width="2" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="#D66C54" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-get">You get</div>
+          <div class="flow-hl hl-get">Every RM of ad spend <em>attributed</em></div>
+          <div class="outcome-bar">
+            <div class="outcome-lbl">Measurable</div>
+            <div class="outcome-val">True ROAS per campaign visible — within 14 days of deployment</div>
+          </div>
+          <div class="flow-kalam">"For the first time, you know which campaign is actually profitable."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bridge-3">
+    <div class="b3-text">With true attribution in place, the next question is: are we spending on the <em>right audience</em>?</div>
+  </div>
+
+  <div class="layer-block">
+    <div class="layer-hdr">
+      <div class="layer-ey">Engine 02 — Paid Media Campaigns</div>
+      <div class="layer-disp">Social <span class="layer-disp-outline">Proof.</span></div>
+      <div class="layer-tag">Tydal Reviews is installed — but product pages appear empty. Every Malaysian parent needs to see other parents' reviews before buying for their baby.</div>
+      <div class="layer-metrics">
+        <div><div class="lm-val">60 days</div><div class="lm-lbl">To 10+ reviews</div></div>
+        <div><div class="lm-val">3 SKUs</div><div class="lm-lbl">Top products first</div></div>
+        <div><div class="lm-val">CVR ↑</div><div class="lm-lbl">Measurable via GA4</div></div>
+      </div>
+    </div>
+
+    <div class="layer-demo">
+      <div class="demo-lbl">E2 Demo — Product Page: Before vs. After Reviews</div>
+      <div class="demo-2col">
+        <div class="demo-panel">
+          <div class="dp-label dp-label-teal" style="color:#A07800;">Before · Product Page Now</div>
+          <div style="font-family:'Josefin Sans',sans-serif;font-size:14px;font-weight:700;color:var(--dark-teal);margin-bottom:10px;">Rainpaws Sleeveless Co-ords</div>
+          <div style="font-family:'Josefin Sans',sans-serif;font-size:18px;font-weight:700;color:var(--coral);margin-bottom:12px;">RM46.80</div>
+          <div class="review-empty">
+            <div class="review-empty-text">No reviews yet</div>
+            <div style="margin-top:4px;font-family:'Josefin Sans',sans-serif;font-size:10px;color:#ccc;">★★★★★</div>
+          </div>
+          <div style="margin-top:10px;font-family:'Josefin Sans',sans-serif;font-size:12px;font-weight:400;color:#bbb;font-style:italic;">Visitor lands. No social proof. Hesitates. Leaves.</div>
+        </div>
+        <div class="demo-panel">
+          <div class="dp-label dp-label-coral">After · With Review Automation</div>
+          <div style="font-family:'Josefin Sans',sans-serif;font-size:14px;font-weight:700;color:var(--dark-teal);margin-bottom:6px;">Rainpaws Sleeveless Co-ords</div>
+          <div class="review-count">4.8 / 5 · <span style="color:var(--muted);font-weight:400;">24 reviews</span></div>
+          <div class="stars-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <div class="review-item">
+            <div class="review-header">
+              <div class="review-name">Nurul A.</div>
+              <div class="review-badge">Verified Purchase</div>
+            </div>
+            <div class="review-text">"Perfect fit for my 6-month-old. The fabric is so soft — worth every ringgit."</div>
+          </div>
+          <div class="review-item" style="border:none;">
+            <div class="review-header">
+              <div class="review-name">Priya K.</div>
+              <div class="review-badge" style="background:rgba(214,108,84,0.1);color:var(--coral);">📷 Photo Review</div>
+            </div>
+            <div class="review-text">"Bought for twins — both wearing it right now!"</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flow-container">
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-obs">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" stroke="#D66C54" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="#D66C54"/></svg>
+          </div>
+          <div class="flow-line fl-obs"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-obs">What we observe</div>
+          <div class="flow-hl hl-obs">Reviews installed — widget <em>effectively empty</em></div>
+          <div class="flow-bullets">
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>Tydal Reviews app confirmed installed from source code</div>
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>Widget iframe height: 162px — consistent with 0–1 reviews</div>
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>Config includes "no_reviews_yet" translation string</div>
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>Blog articles show 5 comments each — audience does engage</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-brk">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#EFBC67" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="flow-line fl-brk"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-brk">If broken</div>
+          <div class="flow-hl hl-brk">Parents arrive — find no proof — <em>abandon</em></div>
+          <div class="flow-bullets">
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>Empty product pages reduce conversion — especially for baby clothing where parents need trust</div>
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>No UGC available for Meta ads — paid creative cost stays high</div>
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>No post-purchase review request flow in place — reviews accumulate passively or not at all</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-bld">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="#10394B" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="flow-line fl-bld"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-bld">CAZZED DIGITAL builds</div>
+          <div class="flow-hl hl-bld">Auto review engine — reviews become <em>free ad creative</em></div>
+          <div class="chips-row">
+            <div class="chip">Post-Purchase Review Request</div>
+            <div class="chip">Photo Review Incentive</div>
+            <div class="chip">Review Syndication</div>
+            <div class="chip">Star Ratings on Grid</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-get">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="#D66C54" stroke-width="2" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="#D66C54" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-get">You get</div>
+          <div class="flow-hl hl-get">CVR improves — every page <em>earns its conversion</em></div>
+          <div class="outcome-bar">
+            <div class="outcome-lbl">Measurable</div>
+            <div class="outcome-val">Minimum 10 verified reviews on top 3 products — within 60 days. CVR measured via GA4 baseline vs. post-implementation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bridge-3">
+    <div class="b3-text">Getting people to the store is one thing. Getting them to <em>come back</em> is another.</div>
+  </div>
+
+  <div class="layer-block">
+    <div class="layer-hdr">
+      <div class="layer-ey">Engine 03 — Email Marketing Automation &amp; Omnichannel</div>
+      <div class="layer-disp">Email as <span class="layer-disp-outline">Revenue.</span></div>
+      <div class="layer-tag">Every email address collected is potential revenue. Right now, that potential is sitting in Mailchimp with no automation to activate it.</div>
+      <div class="layer-metrics">
+        <div><div class="lm-val">45 days</div><div class="lm-lbl">To automation live</div></div>
+        <div><div class="lm-val">15–20%</div><div class="lm-lbl">Email revenue target</div></div>
+        <div><div class="lm-val">4 flows</div><div class="lm-lbl">Core sequences</div></div>
+      </div>
+    </div>
+
+    <div class="layer-demo">
+      <div class="demo-lbl">E3 Demo — Email Automation Flow</div>
+      <div class="email-node">
+        <div class="email-dot en-teal"></div>
+        <div class="email-node-text"><strong>New Subscriber</strong> — Welcome Series (3 emails: brand story → bestsellers → first-order offer)</div>
+      </div>
+      <div class="email-arrow"></div>
+      <div class="email-node">
+        <div class="email-dot en-gold"></div>
+        <div class="email-node-text"><strong>Abandoned Cart</strong> — Recovery Email 1 (1h) → Recovery Email 2 (24h with 5% off)</div>
+      </div>
+      <div class="email-arrow"></div>
+      <div class="email-node">
+        <div class="email-dot en-coral"></div>
+        <div class="email-node-text"><strong>Post-Purchase (Day 7)</strong> — Thank You + Review Request with product photo</div>
+      </div>
+      <div class="email-arrow"></div>
+      <div class="email-node">
+        <div class="email-dot en-teal"></div>
+        <div class="email-node-text"><strong>Size Progression (Day 60)</strong> — "Has your little one grown?" — next size cohort trigger aligned to baby growth cycle</div>
+      </div>
+      <div class="email-arrow"></div>
+      <div class="email-node">
+        <div class="email-dot en-gold"></div>
+        <div class="email-node-text"><strong>Win-back (Day 120+)</strong> — "We miss you" — new arrivals, personalised by last size purchased</div>
+      </div>
+      <div class="email-revenue-badge">Est. 15–20% of monthly revenue from email automation alone · DTC fashion benchmark</div>
+    </div>
+
+    <div class="flow-container">
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-obs">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" stroke="#D66C54" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="#D66C54"/></svg>
+          </div>
+          <div class="flow-line fl-obs"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-obs">What we observe</div>
+          <div class="flow-hl hl-obs">Mailchimp confirmed — <em>no automation</em> visible</div>
+          <div class="flow-bullets">
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>Mailchimp user ID confirmed in source code</div>
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>Ecomsend popup actively collecting emails on-site</div>
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>No Klaviyo detected — Mailchimp used for broadcast only</div>
+            <div class="flow-bullet"><div class="bdot bdot-muted"></div>Automation sequences: not verifiable externally</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-brk">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#EFBC67" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="flow-line fl-brk"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-brk">If broken</div>
+          <div class="flow-hl hl-brk">15–20% of monthly revenue <em>left uncaptured</em></div>
+          <div class="flow-bullets">
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>Baby clothing has a predictable repurchase cycle — it's not being triggered</div>
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>Every abandoned cart is lost revenue with no recovery attempt</div>
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>Email list growing with zero revenue being attributed to it</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-bld">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="#10394B" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="flow-line fl-bld"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-bld">CAZZED DIGITAL builds</div>
+          <div class="flow-hl hl-bld">Automated revenue engine — <em>no ad spend required</em></div>
+          <div class="chips-row">
+            <div class="chip">Welcome Series</div>
+            <div class="chip">Abandoned Cart (1h + 24h)</div>
+            <div class="chip">Size Progression Trigger</div>
+            <div class="chip">Win-back Flow</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-get">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="#D66C54" stroke-width="2" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="#D66C54" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-get">You get</div>
+          <div class="flow-hl hl-get">Email becomes a channel — not just a <em>newsletter</em></div>
+          <div class="outcome-bar">
+            <div class="outcome-lbl">Measurable</div>
+            <div class="outcome-val">Email revenue from ~RM0 to 15–20% of monthly revenue — within 60 days. Abandoned cart recovery: 5–10% (Shopify average).</div>
+          </div>
+          <div class="flow-kalam">"Every address on the list stops being a cost and starts being an asset."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bridge-3">
+    <div class="b3-text">Retention flows handle existing customers. <em>E4 handles everything else</em> — automatically.</div>
+  </div>
+
+  <div class="layer-block">
+    <div class="layer-hdr">
+      <div class="layer-ey">Engine 04 — AI Chatbot &amp; Conversational Automation</div>
+      <div class="layer-disp">Always <span class="layer-disp-outline">On.</span></div>
+      <div class="layer-tag">A founder can't be online 24/7 answering WhatsApp, packing orders, and writing Instagram captions. This layer makes sure someone always is.</div>
+      <div class="layer-metrics">
+        <div><div class="lm-val">Week 1–2</div><div class="lm-lbl">Shopify Inbox live</div></div>
+        <div><div class="lm-val">85%+</div><div class="lm-lbl">Malaysians on WhatsApp</div></div>
+        <div><div class="lm-val">10–15h</div><div class="lm-lbl">Founder hours freed/wk</div></div>
+      </div>
+    </div>
+
+    <div class="layer-demo">
+      <div class="demo-lbl">L4 Demo — 2-Channel Automation: On-site + Off-site</div>
+      <div class="demo-2col">
+        <div class="demo-panel">
+          <div class="dp-label dp-label-teal">Shopify Inbox · On-site</div>
+          <div class="chat-label">Visitor at 2am — no one online</div>
+          <div class="chat-bubble-right">What size for my 8-month-old?</div>
+          <div class="chat-bot">For 8 months we recommend <strong>6–12M</strong>. Our sizing runs true — here's the guide 👇</div>
+          <div class="chat-cta-row">
+            <div class="chat-cta">View Size Guide</div>
+            <div class="chat-cta" style="background:var(--coral);color:#fff;">Add to Cart</div>
+          </div>
+          <div style="margin-top:10px;font-family:'Josefin Sans',sans-serif;font-size:11px;font-style:italic;color:var(--muted);">Converts browser → buyer. Zero founder involvement.</div>
+        </div>
+        <div class="demo-panel" style="background:#E8F7E4;">
+          <div class="dp-label" style="color:#2E7D32;font-family:'Josefin Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:10px;">WhatsApp · Off-site via n8n</div>
+          <div class="wa-msg">
+            <div class="wa-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.18-1.62A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg></div>
+            <div class="wa-bubble"><div class="wa-bubble-ttl">Order Confirmed ✓</div><div class="wa-bubble-txt">Your Tiny Twins order #1234 is confirmed! We'll notify you when it ships 📦</div></div>
+          </div>
+          <div class="wa-msg">
+            <div class="wa-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.18-1.62A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z"/></svg></div>
+            <div class="wa-bubble"><div class="wa-bubble-ttl">60 days later — Size Trigger</div><div class="wa-bubble-txt">Has your little one grown? New 3–6M arrivals just landed 👶 Shop now →</div></div>
+          </div>
+          <div style="margin-top:6px;font-family:'Josefin Sans',sans-serif;font-size:11px;font-style:italic;color:var(--muted);">Retains customers. No extra ad spend.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flow-container">
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-obs">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" stroke="#D66C54" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="#D66C54"/></svg>
+          </div>
+          <div class="flow-line fl-obs"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-obs">What we observe</div>
+          <div class="flow-hl hl-obs">Personal WhatsApp is support — <em>no automation</em></div>
+          <div class="flow-bullets">
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>+60165533047 personal WhatsApp as primary customer channel</div>
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>"DM us" as a sales CTA on Instagram — manual by default</div>
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>No on-site chat widget visible on product or cart pages</div>
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>Posting clusters with gaps — consistent with manual content creation</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-brk">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#EFBC67" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="flow-line fl-brk"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-brk">If broken</div>
+          <div class="flow-hl hl-brk">Founder's time is the <em>bottleneck</em></div>
+          <div class="flow-bullets">
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>Estimated 10–15h/week on WhatsApp, DMs, and manual content</div>
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>Visitors with questions at 2am leave without buying</div>
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>Growth ceiling set by one person's available hours — not by market demand</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-bld">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="#10394B" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="flow-line fl-bld"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-bld">CAZZED DIGITAL builds</div>
+          <div class="flow-hl hl-bld">Two-channel system — <em>brand operates without you</em></div>
+          <div class="chips-row">
+            <div class="chip">Shopify Inbox Setup</div>
+            <div class="chip">WhatsApp Order Notifications</div>
+            <div class="chip">n8n Repurchase Trigger</div>
+            <div class="chip">Content Calendar Workflow</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-get">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="#D66C54" stroke-width="2" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="#D66C54" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-get">You get</div>
+          <div class="flow-hl hl-get">Your time goes to <em>product and strategy</em></div>
+          <div class="outcome-bar">
+            <div class="outcome-lbl">Measurable</div>
+            <div class="outcome-val">Shopify Inbox live: Week 1–2 · WhatsApp automation deployed: Month 1–2 · "Where is my order?" inquiries: estimated 70–80% reduction</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bridge-3">
+    <div class="b3-text">When the systems run themselves, the final engine turns accumulated data into <em>decisions.</em></div>
+  </div>
+
+  <div class="layer-block">
+    <div class="layer-hdr">
+      <div class="layer-ey">Engine 05 — Performance Measurement &amp; Advanced Analytics</div>
+      <div class="layer-disp">Decide with <span class="layer-disp-outline">Data.</span></div>
+      <div class="layer-tag">Shopify tells you how much you sold. This layer tells you why — and where to scale next.</div>
+      <div class="layer-metrics">
+        <div><div class="lm-val">Month 2–3</div><div class="lm-lbl">After L1–L3 baseline</div></div>
+        <div><div class="lm-val">5 sources</div><div class="lm-lbl">Connected data feeds</div></div>
+        <div><div class="lm-val">40+</div><div class="lm-lbl">Markets analyzed</div></div>
+      </div>
+    </div>
+
+    <div class="l5-chart-1">
+      <div class="l5-ey">Chart 01 · Available from Day 1</div>
+      <div class="l5-ttl-w">Ad Performance — True ROAS by Channel</div>
+      <div class="l5-sub-w">True ROAS = Revenue ÷ (Ad Spend + COGS + Shipping) · not what Meta shows</div>
+      <div class="l5-bar-row">
+        <div class="l5-bar-name">Meta (FB / IG)</div>
+        <div class="l5-bar-wrap"><div class="l5-bar" style="width:75%;background:#D66C54;"></div></div>
+        <div class="l5-bar-val">3.8x ROAS</div>
+      </div>
+      <div class="l5-bar-row">
+        <div class="l5-bar-name">Google Shopping</div>
+        <div class="l5-bar-wrap"><div class="l5-bar" style="width:42%;background:#EFBC67;"></div></div>
+        <div class="l5-bar-val">2.1x ROAS</div>
+      </div>
+      <div class="l5-bar-row">
+        <div class="l5-bar-name">Email <span class="l5-badge">★ Scale</span></div>
+        <div class="l5-bar-wrap"><div class="l5-bar" style="width:20%;background:#2E7A5A;"></div></div>
+        <div class="l5-bar-val">6.4x ROAS</div>
+      </div>
+      <div class="l5-bar-row">
+        <div class="l5-bar-name">Organic / Social <span class="l5-badge">★ Free</span></div>
+        <div class="l5-bar-wrap"><div class="l5-bar" style="width:15%;background:rgba(255,255,255,0.35);"></div></div>
+        <div class="l5-bar-val">∞</div>
+      </div>
+      <div class="l5-footer-w">✓ Available when E1 tracking is clean · ★ = scale these first · Simulated using DTC fashion SEA benchmarks</div>
+    </div>
+
+    <div class="l5-chart-2">
+      <div class="l5-ey">Chart 02 · Activates after E1–E3 mature (60+ days clean data)</div>
+      <div class="l5-ttl-d">Growth Intelligence — Who Buys, Where &amp; When</div>
+      <div class="l5-sub-d">Cohort analysis + geography + SKU performance · Predictive, not retroactive</div>
+      <div class="l5-2col">
+        <div>
+          <div class="lc-title">Repurchase Rate by Size Cohort</div>
+          <svg viewBox="0 0 220 120" width="100%" style="overflow:visible;margin-bottom:8px;">
+            <defs><linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#D66C54;stop-opacity:0.15"/><stop offset="100%" style="stop-color:#D66C54;stop-opacity:0.05"/></linearGradient></defs>
+            <polygon points="10,108 10,84 52,70 94,52 136,40 178,28 220,18 220,108" fill="url(#lineGrad)"/>
+            <polyline points="10,84 52,70 94,52 136,40 178,28 220,18" fill="none" stroke="#D66C54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="84" r="4" fill="#D66C54"/><circle cx="52" cy="70" r="4" fill="#D66C54"/><circle cx="94" cy="52" r="4" fill="#D66C54"/><circle cx="136" cy="40" r="4" fill="#D66C54"/><circle cx="178" cy="28" r="4" fill="#D66C54"/><circle cx="220" cy="18" r="4" fill="#EFBC67"/>
+            <text x="10" y="100" font-family="Josefin Sans" font-size="9" fill="#6B7280">M1 8%</text>
+            <text x="52" y="86" font-family="Josefin Sans" font-size="9" fill="#6B7280">M2 18%</text>
+            <text x="94" y="67" font-family="Josefin Sans" font-size="9" fill="#6B7280">M3 29%</text>
+            <text x="178" y="43" font-family="Josefin Sans" font-size="9" fill="#6B7280">M5</text>
+            <text x="200" y="14" font-family="Josefin Sans" font-size="10" font-weight="700" fill="#10394B">+41%</text>
+          </svg>
+          <div style="font-family:'Josefin Sans',sans-serif;font-size:12px;font-style:italic;color:var(--muted);">0–3M buyers return for 3–6M in ~60 days</div>
+        </div>
+        <div>
+          <div class="l5-intel-card">
+            <div class="l5-ic-title">Revenue by Market</div>
+            <div class="l5-ic-body">
+              🇲🇾 MY <span style="color:var(--coral);font-weight:700;">68%</span> &nbsp; 🇸🇬 SG <span style="color:var(--dark-teal);font-weight:700;">18%</span> &nbsp; 🇦🇺 AU <span style="color:var(--muted);">8%</span><br>
+              <span style="font-size:11px;font-style:italic;color:var(--muted);">Singapore: highest AOV — underserved by paid ads</span>
+            </div>
+          </div>
+          <div class="l5-intel-card">
+            <div class="l5-ic-title">SKU ROAS Ranking</div>
+            <div class="l5-ic-body">
+              🟢 Co-ords Set 0–3M &nbsp; <strong>4.2x</strong><br>
+              🟡 Baby Essentials Set &nbsp; <strong>2.8x</strong><br>
+              🔴 Padded Briefs 12–18M &nbsp; <strong style="color:var(--coral);">1.1x ← review</strong>
+            </div>
+          </div>
+          <div class="l5-intel-card" style="margin-bottom:0;">
+            <div class="l5-ic-title">Seasonal Demand Signal</div>
+            <div class="l5-ic-body">Raya: <strong>+340%</strong> search volume · Year-End: <strong>+180%</strong> CVR<br><span style="font-size:11px;font-style:italic;color:var(--muted);">Pre-plan inventory 6 weeks ahead</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="l5-footer-d">⚡ Activates when E1–E3 have 60+ days of clean data · Simulated using DTC fashion SEA benchmarks — not Tiny Twins' actual numbers</div>
+    </div>
+
+    <div style="height:40px;"></div>
+
+    <div class="flow-container">
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-obs">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" stroke="#D66C54" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="#D66C54"/></svg>
+          </div>
+          <div class="flow-line fl-obs"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-obs">What we observe</div>
+          <div class="flow-hl hl-obs">Shipping to 40+ countries — <em>no data on which ones matter</em></div>
+          <div class="flow-bullets">
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>Localization dropdown active for 40+ countries</div>
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>"Designed in Malaysia, Made in India" — naturally appeals to SEA diaspora</div>
+            <div class="flow-bullet"><div class="bdot bdot-obs"></div>Shopify shows total revenue — not revenue by geography or SKU profitability</div>
+            <div class="flow-bullet"><div class="bdot bdot-muted"></div>Actual international order volume: not verifiable externally</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-brk">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#EFBC67" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="flow-line fl-brk"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-brk">If broken</div>
+          <div class="flow-hl hl-brk">Scaling decisions made on <em>incomplete data</em></div>
+          <div class="flow-bullets">
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>No view of which SKUs are profitable after COGS and shipping</div>
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>International demand signal exists — no system to act on it</div>
+            <div class="flow-bullet"><div class="bdot bdot-brk"></div>Seasonal budget planning based on instinct, not cohort data</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-bld">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="#10394B" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="flow-line fl-bld"></div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-bld">CAZZED DIGITAL builds</div>
+          <div class="flow-hl hl-bld">Intelligence engine on top — <em>not replacing Shopify</em></div>
+          <div class="chips-row">
+            <div class="chip">Geography Revenue Segmentation</div>
+            <div class="chip">SKU ROAS Ranking</div>
+            <div class="chip">Cohort LTV Model</div>
+            <div class="chip">Seasonal Demand Map</div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-left">
+          <div class="flow-dot dot-get">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="#D66C54" stroke-width="2" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="#D66C54" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="flow-right">
+          <div class="flow-ey ey-get">You get</div>
+          <div class="flow-hl hl-get">Full picture — not <em>disconnected fragments</em></div>
+          <div class="outcome-bar">
+            <div class="outcome-lbl">Measurable</div>
+            <div class="outcome-val">Cohort repurchase model + geography revenue map — within 60 days of E1–E3 baseline data</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cascade-wrap">
+    <div class="cascade-title">How the 5 Engines Compound</div>
+    <div class="cascade-list">
+      <div class="cn-row">
+        <div class="cn-box" style="background:#10394B;"><div class="cn-box-lbl">E1<br>Data</div></div>
+        <div class="cn-mid"><div class="cn-arrow-line"></div><div class="cn-arrow-text">Clean attribution enables smarter ad targeting</div><div class="cn-arrow-line"></div></div>
+        <div class="cn-box" style="background:#1E5570;"><div class="cn-box-lbl">E2<br>Paid Media</div></div>
+      </div>
+      <div class="cn-connector"><div class="cn-vert"></div></div>
+      <div style="display:flex;justify-content:flex-end;">
+        <div style="display:flex;align-items:stretch;gap:0;max-width:480px;flex:1;">
+          <div class="cn-box" style="background:#D66C54;"><div class="cn-box-lbl">E3<br>Email</div></div>
+          <div class="cn-mid"><div class="cn-arrow-line"></div><div class="cn-arrow-text">Traffic with no retention is renting customers</div><div class="cn-arrow-line"></div></div>
+          <div class="cn-box" style="background:#1E5570;visibility:hidden;"></div>
+        </div>
+      </div>
+      <div class="cn-connector"><div class="cn-vert"></div></div>
+      <div class="cn-row">
+        <div class="cn-box" style="background:#C4843A;"><div class="cn-box-lbl">E4<br>AI Chat</div></div>
+        <div class="cn-mid"><div class="cn-arrow-line"></div><div class="cn-arrow-text">Automating retention frees founder time for growth</div><div class="cn-arrow-line"></div></div>
+        <div class="cn-box" style="background:#EFBC67;"><div class="cn-box-lbl" style="color:#10394B;">E5<br>Analytics</div></div>
+      </div>
+      <div class="cn-connector"><div class="cn-vert"></div></div>
+      <div style="text-align:center;font-family:'Josefin Sans',sans-serif;font-size:12px;font-style:italic;color:var(--muted);padding:8px 0;">E5 intelligence reveals which data to track next — feeding E1. The system compounds.</div>
+    </div>
+  </div>
+
+  <div class="sdiv"></div>
+
+  <div class="sec-hdr">
+    <div class="sec-ey">Section 04 — The Destination</div>
+    <div class="sec-ttl">What your mornings look like <em>after.</em></div>
+    <p class="sec-lead">Not a list of features. A simulation of the numbers you see every day once the 5 engines are running.</p>
+    <div style="display:inline-block;margin-top:10px;background:var(--cream);border-radius:6px;padding:6px 12px;font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;">Simulated · Based on DTC Fashion Southeast Asia Benchmarks · Not Tiny Twins' actual numbers</div>
+  </div>
+
+  <div style="margin-bottom:16px;font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral);">H1 Dependency — True ROAS vs. Meta Reported</div>
+  <div class="roas-compare">
+    <div class="roas-box rb-before">
+      <div class="rb-label">Meta Reported (Before L1)</div>
+      <div class="rb-num">5.2<span style="font-size:20px;font-weight:400;">x</span></div>
+      <div class="rb-note">Over-attributed · iOS 14 gap · "Looks great"</div>
+    </div>
+    <div class="roas-box rb-after">
+      <div class="rb-label">True ROAS (After E1 + E2)</div>
+      <div class="rb-num">4.8<span style="font-size:20px;font-weight:400;">x</span></div>
+      <div class="rb-note">Real · Verified by GA4 · Optimised on truth</div>
+    </div>
+  </div>
+
+  <div style="margin-bottom:16px;font-family:'Josefin Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--coral);">Purchase Funnel — After CVR Optimisation</div>
+  <div style="background:var(--cream);border-radius:12px;padding:20px 24px;margin-bottom:24px;">
+    <div class="funnel-wrap">
+      <div class="funnel-stage"><div class="funnel-lbl">Store Visitors</div><div class="funnel-bar-v" style="width:100%;"></div><div class="funnel-val">100%</div></div>
+      <div class="funnel-stage"><div class="funnel-lbl">Product Page</div><div class="funnel-bar-v" style="width:50%;"></div><div class="funnel-val">50%</div></div>
+      <div class="funnel-stage"><div class="funnel-lbl">Add to Cart</div><div class="funnel-bar-v" style="width:15%;"></div><div class="funnel-val">15%  <span style="font-size:11px;color:var(--dark-teal);font-weight:700;">↑ +3pp</span></div></div>
+      <div class="funnel-stage"><div class="funnel-lbl">Checkout</div><div class="funnel-bar-v" style="width:9%;"></div><div class="funnel-val">9%</div></div>
+      <div class="funnel-stage"><div class="funnel-lbl">Purchase ✓</div><div class="funnel-bar-v hi" style="width:3.2%;min-width:28px;"></div><div class="funnel-val">3.2% CVR  <span style="font-size:11px;color:var(--dark-teal);font-weight:700;">↑ +0.4pp</span></div></div>
+      <div class="funnel-stage"><div class="funnel-lbl">Repeat Purchase</div><div class="funnel-bar-v" style="width:8%;background:rgba(239,188,103,0.5);"></div><div class="funnel-val" style="color:#A07800;">29% (3-mo cohort)</div></div>
+    </div>
+  </div>
+
+  <div class="channel-chart">
+    <div class="ch-title">H2 Dependency — Revenue by Channel · True ROAS After Automation</div>
+    <div class="ch-row">
+      <div class="ch-name">Meta (FB / IG)</div>
+      <div class="ch-bar-wrap"><div class="ch-bar" style="width:75%;background:var(--coral);"></div></div>
+      <div class="ch-val">3.8x ROAS</div>
+    </div>
+    <div class="ch-row">
+      <div class="ch-name">Google Shopping</div>
+      <div class="ch-bar-wrap"><div class="ch-bar" style="width:42%;background:var(--gold);"></div></div>
+      <div class="ch-val">2.1x ROAS</div>
+    </div>
+    <div class="ch-row">
+      <div class="ch-name">Email <span class="ch-star">★</span></div>
+      <div class="ch-bar-wrap"><div class="ch-bar" style="width:20%;background:#2E7A5A;"></div></div>
+      <div class="ch-val">6.4x ROAS</div>
+    </div>
+    <div class="ch-row">
+      <div class="ch-name">Organic / Social <span class="ch-star">★</span></div>
+      <div class="ch-bar-wrap"><div class="ch-bar" style="width:15%;background:var(--dark-teal);opacity:0.5;"></div></div>
+      <div class="ch-val">∞ free</div>
+    </div>
+    <div class="ch-note">★ Email revenue: previously ~RM0 (no automation). After E3: 15–20% of monthly revenue. Highest margin channel in the store.</div>
+  </div>
+
+  <div class="metric-grid">
+    <div class="metric-card">
+      <div class="m-label">True ROAS</div>
+      <div class="m-val"><span>4.8</span>x</div>
+      <div class="m-trend up">↑ +0.6x vs. un-optimised truth</div>
+    </div>
+    <div class="metric-card">
+      <div class="m-label">Avg. Order Value</div>
+      <div class="m-val">RM<span>112</span></div>
+      <div class="m-trend up">↑ Bundle + upsell active</div>
+    </div>
+    <div class="metric-card">
+      <div class="m-label">Repeat Purchase Rate</div>
+      <div class="m-val"><span>29</span>%</div>
+      <div class="m-trend up">↑ 3-month cohort · size progression</div>
+    </div>
+    <div class="metric-card">
+      <div class="m-label">Email Revenue Share</div>
+      <div class="m-val"><span>18</span>%</div>
+      <div class="m-trend up">↑ from ~RM0 after E3 automation</div>
+    </div>
+  </div>
+
+  <div class="sdiv"></div>
+
+</div>
+
+<div class="ask-section">
+  <div class="container">
+    <div class="ask-ey">Section 05 — The Ask</div>
+    <div class="ask-ttl">30 minutes.<br>You walk away knowing your <em>real ROAS.</em></div>
+    <p class="ask-body">We'll look at your Shopify Analytics and Meta Ads Manager together — and show you exactly where the gap between reported and true ROAS is. Whether we work together or not, you leave with a concrete answer to Hypothesis 1.</p>
+    <div class="ask-prep">
+      <div class="ask-prep-ttl">Before the call, it helps to have:</div>
+      <div class="ask-prep-item">
+        <div class="ask-num">①</div>
+        <div class="ask-item-text">Shopify Analytics → Sales by channel, last 90 days</div>
+      </div>
+      <div class="ask-prep-item">
+        <div class="ask-num">②</div>
+        <div class="ask-item-text">Meta Ads Manager → Campaign ROAS breakdown, last 90 days</div>
+      </div>
+      <div class="ask-prep-item">
+        <div class="ask-num">③</div>
+        <div class="ask-item-text">Mailchimp → List size + last campaign open rate</div>
+      </div>
+    </div>
+    <a href="https://calendly.com/x5digital/30min" target="_blank" class="cta-btn">Book Your Free 30-Min Audit Call →</a>
+    <div class="ask-guarantee">Whether we work together or not — you'll know exactly what your True ROAS is and which of the three hypotheses above are confirmed.</div>
+  </div>
+</div>
+
+<div class="x5-footer">
+  CAZZED DIGITAL · Growth Audit for Tiny Twins Clothing · tinytwinsclothing.com · March 2025<br>
+  <span style="opacity:0.6;">All benchmarks are DTC fashion Southeast Asia industry data — not Tiny Twins' actual numbers. Actual figures to be confirmed in the audit call.</span>
+</div>
+
+<script>
+(function(){
+  var cards = document.querySelectorAll('.engine-card');
+  var segs  = document.querySelectorAll('.ep-seg');
+  function updateProgress(){
+    segs.forEach(function(s,i){
+      s.classList.toggle('active', cards[i] && cards[i].classList.contains('is-open'));
+    });
+  }
+  cards.forEach(function(card){
+    card.addEventListener('click', function(){
+      var wasOpen = card.classList.contains('is-open');
+      cards.forEach(function(c){ c.classList.remove('is-open'); });
+      if(!wasOpen) card.classList.add('is-open');
+      updateProgress();
+    });
+  });
+  if(cards.length){ cards[0].classList.add('is-open'); updateProgress(); }
+})();
+</script>
+
+</body>
+</html>
